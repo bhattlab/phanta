@@ -1,0 +1,34 @@
+# Sample file specifies sample names and names of files containing sample reads
+# Format: Tab-delimited, three columns
+# sample_name  read1_file  [read2_file]
+# if paired end, all samples must be paired end
+# if single end, all samples must be single end
+# If using Bhatt Lab workflows, sample file is also outputted
+# at the end of the preprocessing workflow as
+# preprocessing/01_processing/classification_input.txt
+sample_file: /labs/asbhatt/mchakra/phaging/phage_abundance/testing/samp_file.txt
+
+# In which directory should results be outputted?
+outdir: /labs/asbhatt/mchakra/phaging/phage_abundance/testing
+
+# Specifications for Kraken2
+confidence_threshold: 0.0 # increase to reduce false positives for Kraken2
+# maximum 1.0
+# see: https://github.com/DerrickWood/kraken2/blob/master/docs/MANUAL.markdown#confidence-scoring
+database: /labs/asbhatt/data/program_indices/kraken2/humgut_mgv_human_refseq
+# are the files gzipped?
+gzipped: True # True or False
+
+# Specifications for filtering Kraken2 reports prior to running Bracken
+# what fraction of a viral genome should be covered to consider it a true positive?
+cov_thresh_viral: 0.50
+# how many unique minimizers should be covered in a viral genome "", if cov_thresh is not met?
+minimizer_thresh_viral: 300
+# same for bacterial
+cov_thresh_bacterial: 0.02
+minimizer_thresh_bacterial: 10000
+
+# Specifications for Bracken
+read_length: 150 #or 100
+taxonomic_level: 'S' # which taxonomic level do we care about (for abundances)?
+filter_thresh: 10 # do not assign reads to species with < this number of reads assigned by Kraken2
