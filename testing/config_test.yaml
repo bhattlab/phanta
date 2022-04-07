@@ -6,10 +6,10 @@
 # If using Bhatt Lab workflows, sample file is also outputted
 # at the end of the preprocessing workflow as
 # preprocessing/01_processing/classification_input.txt
-sample_file: /labs/asbhatt/mchakra/phaging/phage_abundance/testing/samp_file.txt
+sample_file: /labs/asbhatt/mchakra/phaging/phage_abundance_pipeline/testing/samp_file.txt
 
 # In which directory should results be outputted?
-outdir: /labs/asbhatt/mchakra/phaging/phage_abundance/testing
+outdir: /labs/asbhatt/mchakra/phaging/phage_abundance_pipeline/testing
 
 # Specifications for Kraken2
 confidence_threshold: 0.0 # increase to reduce false positives for Kraken2

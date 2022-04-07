@@ -14,7 +14,7 @@ def get_sample_reads(sample_file):
       line = line.rstrip('\n').split('\t')
       if len(line) == 1 or line[0] == 'Sample' or line[0] == '#Sample' or line[0].startswith('#'):
         continue
-      else: # no header
+      else: # not header
         sample = line[0]
 
       if (len(line) == 3): # paired end
@@ -90,6 +90,7 @@ rule filter_kraken:
   input:
     krak_report = join(outdir, "classification/{samp}.krak.report")
   output:
+    # skipping the third outfile for simplicity because its name changes according to level
     krak_species = join(outdir, "classification/{samp}.krak.report.species"),
     krak_report_filtered = join(outdir, "classification/{samp}.krak.report.filtered")
   params:
@@ -111,7 +112,6 @@ rule bracken:
     krak_report = join(outdir, "classification/{samp}.krak.report.filtered")
   output:
     join(outdir, "classification/{samp}.krak.report.filtered.bracken")
-    # skipping the other outfile for simplicity because its name changes according to level
   params:
     db = config['database'],
     readlen = config['read_length'],
