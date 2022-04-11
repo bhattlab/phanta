@@ -90,10 +90,10 @@ rule filter_kraken:
   input:
     krak_report = join(outdir, "classification/{samp}.krak.report")
   output:
-    # skipping the last outfile for simplicity because its name changes according to thresholds
-    krak_species = join(outdir, "classification/{samp}.krak.report.species"),
+    krak_species = temp(join(outdir, "classification/{samp}.krak.report.species")),
     krak_species_final = join(outdir, "classification/{samp}.krak.report.species.final"),
-    krak_report_filtered = join(outdir, "classification/{samp}.krak.report.filtered")
+    krak_report_filtered = join(outdir, "classification/{samp}.krak.report.filtered"),
+    filtering_decisions = join(outdir, "classification/{samp}.krak.report.filtering_decisions.txt")
   params:
     db = config['database'],
     cov_thresh_bacterial = config['cov_thresh_bacterial'],

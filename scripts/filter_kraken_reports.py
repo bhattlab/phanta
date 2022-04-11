@@ -180,9 +180,7 @@ Note - will also make a dictionary that stores this info - taxid_to_lowest_rank.
 species_to_keep = set()
 taxid_to_lowest_rank = {}
 
-last_period_pos = kraken_report.rfind('.')
-out_fname = kraken_report[:last_period_pos] + '.filtered_' + str(max_cov_bacteria) + \
-'_' + str(max_cov_virus) + '_' + str(max_minimizers_bacteria) + '_' + str(max_minimizers_virus) + '.txt'
+out_fname = kraken_report + '.filtering_decisions.txt'
 
 with open(out_fname, 'w') as outfile:
 
@@ -257,7 +255,7 @@ with open(out_fname, 'w') as outfile:
       species_to_keep.add(species)
 
       # write out to file
-      outfile.write('\t'.join([species, superkingdom, 'NA', 'NA', 'True']) + '\n')
+      outfile.write('\t'.join([species, superkingdom, str(max_cov), str(max_minimizers), 'True']) + '\n')
 
 """
 STEP SIX
