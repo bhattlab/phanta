@@ -95,16 +95,16 @@ STEP FOUR
 Read in the modified Kraken report and make two dictionaries.
 1) species_to_superkingdom: species taxid to superkingdom
 2) species_genome_info:
-species taxid to list of: [cov, rank, unique_minimizers] for every taxon
-found by Kraken and falling under that taxid
+species taxid to list of: [taxid, cov, rank, unique_minimizers] for every taxon
+found by Kraken and falling under that species taxid
 """
 with open(kraken_report + '.species', 'r') as infile:
   # figure out the column number for all the features of interest
 
   header=infile.readline().rstrip('\n').split('\t')
 
-  unique_minimizers_col, cov_col, species_col, rank_col = \
-  None, None, None, None
+  unique_minimizers_col, cov_col, species_col, rank_col, taxid_col = \
+  None, None, None, None, None
 
   for i in range(len(header)):
     if header[i] == 'cov':
@@ -115,11 +115,14 @@ with open(kraken_report + '.species', 'r') as infile:
       rank_col = i
     elif header[i] == 'uniqminimizers':
       unique_minimizers_col = i
+    elif header[i] == 'ncbi_taxa':
+      taxid_col = i
 
   assert unique_minimizers_col != None
   assert cov_col != None
   assert species_col != None
   assert rank_col != None
+  assert taxid_col != None
 
   # now go through report!
   # first initialize the dictionaries
@@ -131,8 +134,9 @@ with open(kraken_report + '.species', 'r') as infile:
     i += 1
     line=line.rstrip('\n').split('\t')
 
-    unique_minimizers, cov, species_taxid, rank = \
-    int(line[unique_minimizers_col]), line[cov_col], line[species_col], line[rank_col]
+    unique_minimizers, cov, species_taxid, rank, taxid = \
+    int(line[unique_minimizers_col]), line[cov_col], line[species_col], line[rank_col], \
+    line[taxid_col]
 
     if cov == '':
       cov = 0
@@ -152,9 +156,9 @@ with open(kraken_report + '.species', 'r') as infile:
     # regardless, add to the species_genome_info dictionary
     if not species_taxid in species_genome_info:
       # initialize
-      species_genome_info[species_taxid] = [[cov, rank, unique_minimizers]]
+      species_genome_info[species_taxid] = [[taxid, cov, rank, unique_minimizers]]
     else:
-      species_genome_info[species_taxid].append([cov, rank, unique_minimizers])
+      species_genome_info[species_taxid].append([taxid, cov, rank, unique_minimizers])
 
 #    if i > 100 and i < 200:
       # print('other', i)
@@ -164,19 +168,17 @@ with open(kraken_report + '.species', 'r') as infile:
 STEP FIVE
 Go through species_genome_info and figure out - using species_to_superkingdom as well -
 which species should be "kept" in the Kraken report.
-
 Output a file containing info about these decisions.
-
 Here we will use the parameters that were passed in:
 max_cov_bacteria, max_cov_virus, max_minimizers_bacteria, max_minimizers_virus
-
 Recall: if max_cov is passed, definitely keep. If not, keep if max_minimizers threshold is passed.
-
 Recall - we only care about the coverages/minimizer values for the GENOMES in
 each species - i.e., the entries in species_genome_info that don't have a 'lower rank'
 right afterwards.
+Note - will also make a dictionary that stores this info - taxid_to_lowest_rank.
 """
 species_to_keep = set()
+taxid_to_lowest_rank = {}
 
 last_period_pos = kraken_report.rfind('.')
 out_fname = kraken_report[:last_period_pos] + '.filtered_' + str(max_cov_bacteria) + \
@@ -192,12 +194,17 @@ with open(out_fname, 'w') as outfile:
     lines_to_consider = species_genome_info[species]
     relevant_coverages, relevant_unique_minimizer_vals = [], []
     for i in range(len(lines_to_consider)):
+
+      taxid_to_lowest_rank[lines_to_consider[i][0]] = 'False'
+
       if i == (len(lines_to_consider) - 1): # special case - last line in the Kraken report for this species taxid
-        relevant_coverages.append(lines_to_consider[i][0])
-        relevant_unique_minimizer_vals.append(lines_to_consider[i][2])
+        relevant_coverages.append(lines_to_consider[i][1])
+        relevant_unique_minimizer_vals.append(lines_to_consider[i][3])
+        # update taxid_to_lowest_rank
+        taxid_to_lowest_rank[lines_to_consider[i][0]] = 'True'
       else: # not the last line in the Kraken report for this species taxid
-        this_rank = lines_to_consider[i][1]
-        next_rank = lines_to_consider[i+1][1]
+        this_rank = lines_to_consider[i][2]
+        next_rank = lines_to_consider[i+1][2]
         if this_rank == 'S':
           continue # since it's not the last line in the Kraken report, next_rank must be "lower"
           # sanity check
@@ -206,8 +213,10 @@ with open(out_fname, 'w') as outfile:
           if int(this_rank[1:]) < int(next_rank[1:]): # e.g., S1 < S2
             continue
           else: # e.g., S3 > S2
-            relevant_coverages.append(lines_to_consider[i][0])
-            relevant_unique_minimizer_vals.append(lines_to_consider[i][2])
+            relevant_coverages.append(lines_to_consider[i][1])
+            relevant_unique_minimizer_vals.append(lines_to_consider[i][3])
+            # update taxid_to_lowest_rank
+            taxid_to_lowest_rank[lines_to_consider[i][0]] = 'True'
 
     # now we can get the maximum coverage from the relevant coverages
     max_cov = max(relevant_coverages)
@@ -252,6 +261,41 @@ with open(out_fname, 'w') as outfile:
 
 """
 STEP SIX
+Use taxid_to_lowest_rank to make a version of the .krak.report.species file that
+includes information about whether each taxid is a 'lowest rank' taxid or not.
+"""
+
+with open(kraken_report + '.species', 'r') as infile:
+  with open(kraken_report + '.species.final', 'w') as outfile:
+
+    # figure out the column number for the ncbi_taxid
+
+    header=infile.readline()
+    header=header.rstrip('\n').split('\t')
+
+    taxid_col = None
+
+    for i in range(len(header)):
+      if header[i] == 'ncbi_taxa':
+        taxid_col = i
+
+    assert taxid_col != None
+
+    # write a version of the header out to file
+    header.append('lowest_rank')
+    outfile.write('\t'.join(header) + '\n')
+
+    for line in infile:
+      line=line.rstrip('\n').split('\t')
+      taxid = line[taxid_col]
+      # lowest_rank?
+      lowest_rank = taxid_to_lowest_rank[taxid]
+      # write out
+      line.append(lowest_rank)
+      outfile.write('\t'.join(line) + '\n')
+
+"""
+STEP SEVEN
 Go through the original Kraken report and make a new filtered version,
 where lines from species to filter out are removed.
 """

@@ -90,8 +90,9 @@ rule filter_kraken:
   input:
     krak_report = join(outdir, "classification/{samp}.krak.report")
   output:
-    # skipping the third outfile for simplicity because its name changes according to level
+    # skipping the last outfile for simplicity because its name changes according to thresholds
     krak_species = join(outdir, "classification/{samp}.krak.report.species"),
+    krak_species_final = join(outdir, "classification/{samp}.krak.report.species.final"),
     krak_report_filtered = join(outdir, "classification/{samp}.krak.report.filtered")
   params:
     db = config['database'],
