@@ -164,7 +164,9 @@ with open(kraken_report + '.species', 'r') as infile:
 STEP FIVE
 Go through species_genome_info and figure out - using species_to_superkingdom as well -
 which species should be "kept" in the Kraken report.
-Output the species that are filtered out.
+
+Output a file containing info about these decisions.
+
 Here we will use the parameters that were passed in:
 max_cov_bacteria, max_cov_virus, max_minimizers_bacteria, max_minimizers_virus
 
@@ -183,7 +185,7 @@ out_fname = kraken_report[:last_period_pos] + '.filtered_' + str(max_cov_bacteri
 with open(out_fname, 'w') as outfile:
 
   # write out a header first
-  header = ['species_taxid', 'superkingdom', 'max_cov', 'max_uniq_minimizers']
+  header = ['species_taxid', 'superkingdom', 'max_cov', 'max_uniq_minimizers', 'kept']
   outfile.write('\t'.join(header) + '\n')
 
   for species in species_genome_info:
@@ -221,19 +223,32 @@ with open(out_fname, 'w') as outfile:
         species_to_keep.add(species)
       elif max_minimizers >= max_minimizers_bacteria:
         species_to_keep.add(species)
+
+      # write out to file
+      if species in species_to_keep:
+        keep = 'True'
       else:
-        outfile.write('\t'.join([species, superkingdom, str(max_cov), str(max_minimizers)]) + '\n')
+        keep = 'False'
+      outfile.write('\t'.join([species, superkingdom, str(max_cov), str(max_minimizers), keep]) + '\n')
 
     elif superkingdom == '10239': # viruses
       if max_cov >= max_cov_virus:
         species_to_keep.add(species)
       elif max_minimizers >= max_minimizers_virus:
         species_to_keep.add(species)
+
+      # write out to file
+      if species in species_to_keep:
+        keep = 'True'
       else:
-        outfile.write('\t'.join([species, superkingdom, str(max_cov), str(max_minimizers)]) + '\n')
+        keep = 'False'
+      outfile.write('\t'.join([species, superkingdom, str(max_cov), str(max_minimizers), keep]) + '\n')
 
     else:
       species_to_keep.add(species)
+
+      # write out to file
+      outfile.write('\t'.join([species, superkingdom, 'NA', 'NA', 'True']) + '\n')
 
 """
 STEP SIX
