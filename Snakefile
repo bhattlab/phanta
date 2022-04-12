@@ -101,7 +101,7 @@ rule filter_kraken:
     minimizer_thresh_bacterial = config['minimizer_thresh_bacterial'],
     minimizer_thresh_viral = config['minimizer_thresh_viral']
   shell: """
-    python scripts/filter_kraken_reports.py {input.krak_report} {params.db} \
+    python pipeline_scripts/filter_kraken_reports.py {input.krak_report} {params.db} \
     {params.cov_thresh_bacterial} {params.cov_thresh_viral} {params.minimizer_thresh_bacterial} \
     {params.minimizer_thresh_viral}
   """
@@ -142,6 +142,6 @@ rule scale_bracken:
     paired = paired_end
   threads: 1
   shell: """
-    python scripts/scale_bracken.py {params.db} {input.bracken_report} \
+    python pipeline_scripts/scale_bracken.py {params.db} {input.bracken_report} \
     {input.filtering_decisions} {params.readlen} {params.paired}
     """
