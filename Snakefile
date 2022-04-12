@@ -61,7 +61,7 @@ outdir = config['outdir']
 
 rule all:
   input:
-    expand(join(outdir, "classification/{samp}.krak.report.filtered.bracken"), samp=sample_names)
+    expand(join(outdir, "classification/{samp}.krak.report.filtered.bracken.tsv"), samp=sample_names)
 
 ##### STEP THREE - Run Kraken2, and filter report based on user-defined thresholds.
 
@@ -126,4 +126,22 @@ rule bracken:
   shell: """
     bracken -d {params.db} -i {input.krak_report} -o {params.outspec} -r {params.readlen} \
     -l {params.level} -t {params.threshold}
+    """
+
+##### STEP FIVE - Correct species abundances reported by Bracken for genome length.
+
+rule scale_bracken:
+  input:
+    bracken_report = join(outdir, "classification/{samp}.krak.report.filtered.bracken"),
+    filtering_decisions = join(outdir, "classification/{samp}.krak.report.filtering_decisions.txt")
+  output:
+    join(outdir, "classification/{samp}.krak.report.filtered.bracken.tsv")
+  params:
+    db = config['database'],
+    readlen = config['read_length'],
+    paired = paired_end
+  threads: 1
+  shell: """
+    python scripts/scale_bracken.py {params.db} {input.bracken_report} \
+    {input.filtering_decisions} {params.readlen} {params.paired}
     """
