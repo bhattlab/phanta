@@ -31,4 +31,5 @@ minimizer_thresh_bacterial: 10000
 # Specifications for Bracken
 read_length: 150 #or 100
 taxonomic_level: 'S' # which taxonomic level do we care about (for abundances)?
+# TODO: adapt pipeline for taxonomic levels other than species
 filter_thresh: 10 # do not assign reads to species with < this number of reads assigned by Kraken2
