@@ -2,15 +2,16 @@ import pandas as pd
 import glob, os, sys
 from Bio import SeqIO
 
-def get_taxa(name):
+def get_taxid(name):
+    # get taxid from provided fasta file header
     lst_pipe = name.rfind("|")
     tax_start = name.rfind("kraken:taxid|")+12
     next_pipe = name.find("|", tax_start+1)
     if lst_pipe>tax_start:
-        taxa=name[tax_start+1:next_pipe]
+        taxid=name[tax_start+1:next_pipe]
     else:
-        taxa=name[tax_start+1:]
-    return taxa
+        taxid=name[tax_start+1:]
+    return taxid
 
 def make_dicts(nodes_file):
   with open(nodes_file, 'r') as infile:
@@ -52,18 +53,19 @@ def genome_length(FastaFile):
     #FastaFile = open(path, 'rU')
     for rec in SeqIO.parse(FastaFile, 'fasta'):
         name = rec.id
-        taxa = get_taxa(name)
+        taxid = get_taxid(name)
         seq = rec.seq
         seqLen = len(rec)
         d.append(
         {
             'Record_name': name,
-            'Taxonomy': taxa,
+            'Taxonomy': taxid,
             'Length': seqLen,
         }
         )
     #FastaFile.close()
     df =  pd.DataFrame(d)
+    # return the sum of genome lengths for all genomes falling under this taxid
     return df.groupby('Taxonomy').sum()
 
 def main():
@@ -74,6 +76,7 @@ def main():
     child_parent, taxid_rank = make_dicts(kraken_lib + '/taxonomy/nodes.dmp')
     lengths['Taxonomy']= lengths.index
     lengths['species_level_taxa'] = lengths.apply(lambda x: taxid_to_species_taxid(str(x['Taxonomy']), child_parent, taxid_rank ), axis=1)
+    # now we have a data frame with taxid, length of genome, species taxid
     lengths.to_csv(kraken_lib+"/library/taxa_genome_size.txt", sep="\t")
     a=lengths.groupby('species_level_taxa')['Length'].apply(list).rename("lengths")
     b=lengths.groupby('species_level_taxa')['Length'].max().rename("max")
