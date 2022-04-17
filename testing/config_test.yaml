@@ -12,7 +12,7 @@ sample_file: /labs/asbhatt/mchakra/phaging/phage_abundance_pipeline/testing/samp
 outdir: /labs/asbhatt/mchakra/phaging/phage_abundance_pipeline/testing
 
 # Specifications for Kraken2
-confidence_threshold: 0.0 # increase to reduce false positives for Kraken2
+confidence_threshold: 0.1 # increase to reduce false positives for Kraken2
 # maximum 1.0
 # see: https://github.com/DerrickWood/kraken2/blob/master/docs/MANUAL.markdown#confidence-scoring
 database: /labs/asbhatt/data/program_indices/kraken2/humgut_mgv_human_refseq
