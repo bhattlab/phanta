@@ -64,7 +64,7 @@ def taxid_to_desired_rank(taxid, desired_rank, child_parent, taxid_rank):
 """
 STEP THREE
 Adapted from /labs/asbhatt/yishay/scripts/kraken_species_filter_low_rank.py
-Make a version of the modified Kraken report that:
+Make a modified version of the Kraken report that:
 1) Only includes lines representing species and strains
 2) Has two extra columns: 1) coverage, 2) species level taxid
 """
