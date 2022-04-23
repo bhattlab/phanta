@@ -9,14 +9,15 @@ import snakemake
 def get_sample_reads(sample_file):
   sample_reads = {}
   paired_end = ''
-  with open(sample_file) as sf:
-    for line in sf.readlines():
+  with open(sample_file, 'r') as sf:
+    for line in sf:
+      print(line)
       line = line.rstrip('\n').split('\t')
       if len(line) == 1 or line[0] == 'Sample' or line[0] == '#Sample' or line[0].startswith('#'):
         continue
       else: # not header
         sample = line[0]
-
+        #print(sample)
       if (len(line) == 3): # paired end
         reads = [line[1], line[2]]
         if paired_end != '' and not paired_end:
@@ -32,12 +33,16 @@ def get_sample_reads(sample_file):
       if sample in sample_reads:
         raise ValueError("Non-unique sample encountered!")
       else:
+        #print('here')
         sample_reads[sample] = reads
 
     return (sample_reads, paired_end)
 
 # call function, determine whether reads are paired or single ended
 sample_reads, paired_end = get_sample_reads(config['sample_file'])
+
+#print(sample_reads, paired_end)
+
 if paired_end:
   paired_string = '--paired'
 else:
@@ -61,7 +66,8 @@ outdir = config['outdir']
 
 rule all:
   input:
-    expand(join(outdir, "classification/{samp}.krak.report.filtered.bracken.tsv"), samp=sample_names)
+    expand(join(outdir, "classification/{samp}.krak.report.filtered.bracken.tsv"), samp=sample_names),
+    expand(join(outdir, "classification/{samp}.krak.report_bracken_species.filtered.to_merge"), samp=sample_names)
 
 ##### STEP THREE - Run Kraken2, and filter report based on user-defined thresholds.
 
@@ -112,7 +118,8 @@ rule bracken:
   input:
     krak_report = join(outdir, "classification/{samp}.krak.report.filtered")
   output:
-    join(outdir, "classification/{samp}.krak.report.filtered.bracken")
+    brack_report_1 = join(outdir, "classification/{samp}.krak.report.filtered.bracken"),
+    brack_report_2 = join(outdir, "classification/{samp}.krak.report_bracken_species.filtered")
   params:
     db = config['database'],
     readlen = config['read_length'],
@@ -127,8 +134,20 @@ rule bracken:
     bracken -d {params.db} -i {input.krak_report} -o {params.outspec} -r {params.readlen} \
     -l {params.level} -t {params.threshold}
     """
+##### STEP FIVE - Merge final Bracken reports into usable tables - 1) counts table, 2) normalized counts - normalize by TOTAL READS in sample, 3) normalized counts - normalize by BRACKEN-CLASSIFIED READS in sample.
 
-##### STEP FIVE - Correct species abundances reported by Bracken for genome length.
+rule prepare_to_merge: # do this rule for each Bracken report individually
+  input:
+    brack_report = join(outdir, "classification/{samp}.krak.report_bracken_species.filtered")
+  output:
+    brack_to_merge = join(outdir, "classification/{samp}.krak.report_bracken_species.filtered.to_merge")
+  params:
+    db = config['database']
+  shell: """
+    python pipeline_scripts/prepare_brack_report_for_merging.py {input.brack_report} {params.db}
+    """
+
+##### STEP XXX - Correct species abundances reported by Bracken for genome length.
 
 rule scale_bracken:
   input:
