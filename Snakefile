@@ -67,7 +67,8 @@ outdir = config['outdir']
 rule all:
   input:
     expand(join(outdir, "classification/{samp}.krak.report.filtered.bracken.tsv"), samp=sample_names),
-    expand(join(outdir, "classification/{samp}.krak.report_bracken_species.filtered.to_merge"), samp=sample_names)
+    expand(join(outdir, "classification/{samp}.krak.report_bracken_species.filtered.to_merge"), samp=sample_names),
+    join(outdir, "classification/total_reads.tsv")
 
 ##### STEP THREE - Run Kraken2, and filter report based on user-defined thresholds.
 
@@ -145,6 +146,33 @@ rule prepare_to_merge: # do this rule for each Bracken report individually
     db = config['database']
   shell: """
     python pipeline_scripts/prepare_brack_report_for_merging.py {input.brack_report} {params.db}
+    """
+
+# Now we will calculate the total reads in each sample, for normalization
+# Also calculate the total reads ultimately classified by Bracken
+
+rule tot_reads_per_sample: # will need for normalization
+  input:
+    brack_report = join(outdir, "classification/{samp}.krak.report_bracken_species.filtered")
+  output:
+    tot_reads_file = temp(join(outdir, "classification/{samp}_total_reads.txt"))
+  params:
+    krak_brack_dir = join(outdir, "classification")
+  shell: """
+    bash pipeline_scripts/calc_total_reads.sh {wildcards.samp} \
+    {params.krak_brack_dir} {output.tot_reads_file}
+    """
+
+rule tot_reads_all: # aggregate outputs of the previous rule
+  input:
+    expand(join(outdir, "classification/{samp}_total_reads.txt"), samp=sample_names)
+  output:
+    outf=join(outdir, "classification/total_reads.tsv")
+  params:
+    classdir=join(outdir, "classification")
+  shell: """
+    echo -e 'Samp_Name\tTot_Reads\tUnclassified_Krak\tBrack_Classified\tUnclassified_Brack' > {output.outf}
+    cat {params.classdir}/*total_reads.txt >> {output.outf}
     """
 
 ##### STEP XXX - Correct species abundances reported by Bracken for genome length.
