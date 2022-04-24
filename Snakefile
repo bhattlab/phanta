@@ -69,7 +69,8 @@ rule all:
     expand(join(outdir, "classification/{samp}.krak.report.filtered.bracken.tsv"), samp=sample_names),
     expand(join(outdir, "classification/{samp}.krak.report_bracken_species.filtered.to_merge"), samp=sample_names),
     join(outdir, "classification/total_reads.tsv"),
-    expand(join(outdir, "classification/{samp}.krak.report_bracken_species.filtered.to_merge.norm_brack"), samp=sample_names)
+    expand(join(outdir, "classification/{samp}.krak.report_bracken_species.filtered.to_merge.norm_brack"), samp=sample_names),
+    join(outdir, "classification/counts_norm_out_of_bracken_classified.txt")
 
 ##### STEP THREE - Run Kraken2, and filter report based on user-defined thresholds.
 
@@ -185,6 +186,28 @@ rule prepare_to_merge_normed: # normalized versions of to_merge files produced i
     expand(join(outdir, "classification/{samp}.krak.report_bracken_species.filtered.to_merge.norm_brack"), samp=sample_names)
   shell: """
     python pipeline_scripts/prep_to_merge_normed.py {input.tot_reads_file}
+    """
+
+rule merge_counts_normed: # make the 3 tables we want! :)
+  input:
+    expand(join(outdir, "classification/{samp}.krak.report_bracken_species.filtered.to_merge"), samp=sample_names),
+    expand(join(outdir, "classification/{samp}.krak.report_bracken_species.filtered.to_merge.norm_tot"), samp=sample_names),
+    expand(join(outdir, "classification/{samp}.krak.report_bracken_species.filtered.to_merge.norm_brack"), samp=sample_names)
+  output:
+    list1=join(outdir, "classification/counts_tables.txt"),
+    list2=join(outdir, "classification/norm_tot_tables.txt"),
+    list3=join(outdir, "classification/norm_brack_tables.txt"),
+    counts=join(outdir, "classification/counts.txt"),
+    norm_tot=join(outdir, "classification/counts_norm_out_of_tot.txt"),
+    norm_brack=join(outdir, "classification/counts_norm_out_of_bracken_classified.txt")
+  params:
+    classdir=join(outdir, "classification")
+  shell: """
+    ls {params.classdir}/*to_merge | rev | cut -d'/' -f 1 | rev > {params.classdir}/counts_tables.txt
+    ls {params.classdir}/*norm_tot | rev | cut -d'/' -f 1 | rev > {params.classdir}/norm_tot_tables.txt
+    ls {params.classdir}/*norm_brack | rev | cut -d'/' -f 1 | rev > {params.classdir}/norm_brack_tables.txt
+    Rscript pipeline_scripts/merging_bracken_tables.R {params.classdir} {output.list1} \
+    {output.list2} {output.list3}
     """
 
 ##### STEP XXX - Correct species abundances reported by Bracken for genome length.
