@@ -238,7 +238,6 @@ with open(out_fname, 'w') as outfile:
         parent_node = child_parent[species]
         if parent_node in parent_node_to_reads:
           parent_node_to_reads[parent_node] += reads
-          #print('here')
         else:
           # initialize
           parent_node_to_reads[parent_node] = reads
@@ -249,8 +248,6 @@ with open(out_fname, 'w') as outfile:
 
       # write out to file
       outfile.write('\t'.join([species, superkingdom, str(max_cov), str(max_minimizers), 'True']) + '\n')
-
-#print(parent_node_to_reads)
 
 """
 STEP SIX
@@ -305,7 +302,6 @@ with open(kraken_report, 'r') as infile:
           assert not line[6] in parent_node_to_reads # there should never be a species in parent_node_to_reads
           outfile.write('\t'.join(line) + '\n')
       else:
-        print(discard, str(discard) == 'False', line[6], line[6] in parent_node_to_reads)
         # if discard is False, we want to know whether we have to add reads to this line
         if (str(discard) == 'False') and (line[6] in parent_node_to_reads):
           line[2] = str(int(line[2]) + parent_node_to_reads[line[6]])
