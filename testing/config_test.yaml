@@ -27,6 +27,8 @@ minimizer_thresh_viral: 300
 # same for bacterial
 cov_thresh_bacterial: 0.02
 minimizer_thresh_bacterial: 10000
+# discard reads belonging to "false positive" species? True or False. If False, will add them to the parent node (e.g., genus)
+discard: True # True or False
 
 # Specifications for Bracken
 read_length: 150 #or 100
