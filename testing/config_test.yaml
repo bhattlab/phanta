@@ -22,11 +22,11 @@ gzipped: True # True or False
 # Specifications for filtering Kraken2 reports prior to running Bracken
 # what fraction of a viral genome should be covered to consider it a true positive?
 cov_thresh_viral: 0.50
-# how many unique minimizers should be covered in a viral genome "", if cov_thresh is not met?
-minimizer_thresh_viral: 300
+# how many unique minimizers should be covered in a viral genome ""?
+minimizer_thresh_viral: 0
 # same for bacterial
 cov_thresh_bacterial: 0.02
-minimizer_thresh_bacterial: 10000
+minimizer_thresh_bacterial: 0
 
 # Specifications for Bracken
 read_length: 150 # if you change this, make sure you have an appropriate Bracken database built for this read length

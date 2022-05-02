@@ -226,9 +226,7 @@ with open(out_fname, 'w') as outfile:
     superkingdom = species_to_superkingdom[species]
 
     if superkingdom == '2': # bacteria
-      if max_cov >= max_cov_bacteria:
-        species_to_keep.add(species)
-      elif max_minimizers >= max_minimizers_bacteria:
+      if (max_cov >= max_cov_bacteria) and (max_minimizers >= max_minimizers_bacteria):
         species_to_keep.add(species)
 
       # write out to file
@@ -239,9 +237,7 @@ with open(out_fname, 'w') as outfile:
       outfile.write('\t'.join([species, superkingdom, str(max_cov), str(max_minimizers), keep]) + '\n')
 
     elif superkingdom == '10239': # viruses
-      if max_cov >= max_cov_virus:
-        species_to_keep.add(species)
-      elif max_minimizers >= max_minimizers_virus:
+      if (max_cov >= max_cov_virus) and (max_minimizers >= max_minimizers_virus):
         species_to_keep.add(species)
 
       # write out to file
