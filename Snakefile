@@ -108,12 +108,11 @@ rule filter_kraken:
     cov_thresh_bacterial = config['cov_thresh_bacterial'],
     cov_thresh_viral = config['cov_thresh_viral'],
     minimizer_thresh_bacterial = config['minimizer_thresh_bacterial'],
-    minimizer_thresh_viral = config['minimizer_thresh_viral'],
-    discard = config['discard']
+    minimizer_thresh_viral = config['minimizer_thresh_viral']
   shell: """
     python pipeline_scripts/filter_kraken_reports.py {input.krak_report} {params.db} \
     {params.cov_thresh_bacterial} {params.cov_thresh_viral} {params.minimizer_thresh_bacterial} \
-    {params.minimizer_thresh_viral} {params.discard}
+    {params.minimizer_thresh_viral}
   """
 
 ##### STEP FOUR - Run Bracken on filtered Kraken2 report.

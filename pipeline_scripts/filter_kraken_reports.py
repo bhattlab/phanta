@@ -11,7 +11,6 @@ above which a BACTERIAL species should be counted as a TRUE POSITIVE
 in this species" above which a BACTERIAL species should be counted as a TRUE POSITIVE
 6. same as #5 but for VIRAL species
 Note: only 3 or 5, or 4 or 6, have to be "passed" for a species to be counted as true positive.
-7. Should reads from false positive species be discarded? (True or False)
 """
 
 import sys
@@ -19,9 +18,9 @@ import pandas as pd
 import numpy as np
 
 kraken_report, kraken_db, max_cov_bacteria, max_cov_virus, \
-max_minimizers_bacteria, max_minimizers_virus, discard = \
+max_minimizers_bacteria, max_minimizers_virus = \
 sys.argv[1], sys.argv[2], float(sys.argv[3]), float(sys.argv[4]), \
-int(sys.argv[5]), int(sys.argv[6]), sys.argv[7]
+int(sys.argv[5]), int(sys.argv[6])
 
 """
 STEP TWO
@@ -94,7 +93,7 @@ species_kraken.to_csv(kraken_report + ".species", sep="\t", index=False)
 """
 STEP FOUR
 Read in the modified Kraken report and make two dictionaries.
-1) species_info: species taxid to [superkingdom, num_reads_assigned]
+1) species_to_superkingdom: species taxid to superkingdom
 2) species_genome_info:
 species taxid to list of: [taxid, cov, rank, unique_minimizers] for every taxon
 found by Kraken and falling under that species taxid
@@ -104,12 +103,30 @@ with open(kraken_report + '.species', 'r') as infile:
 
   header=infile.readline().rstrip('\n').split('\t')
 
-  unique_minimizers_col, cov_col, species_col, rank_col, taxid_col, reads_col = \
-  header.index('uniqminimizers'), header.index('cov'), header.index('species_level_taxa'), header.index('rank'), header.index('ncbi_taxa'), header.index('fragments')  
+  unique_minimizers_col, cov_col, species_col, rank_col, taxid_col = \
+  None, None, None, None, None
+
+  for i in range(len(header)):
+    if header[i] == 'cov':
+      cov_col = i
+    elif header[i] == 'species_level_taxa':
+      species_col = i
+    elif header[i] == 'rank':
+      rank_col = i
+    elif header[i] == 'uniqminimizers':
+      unique_minimizers_col = i
+    elif header[i] == 'ncbi_taxa':
+      taxid_col = i
+
+  assert unique_minimizers_col != None
+  assert cov_col != None
+  assert species_col != None
+  assert rank_col != None
+  assert taxid_col != None
 
   # now go through report!
   # first initialize the dictionaries
-  species_info = {}
+  species_to_superkingdom = {}
   species_genome_info = {}
 
   i = 0
@@ -117,9 +134,9 @@ with open(kraken_report + '.species', 'r') as infile:
     i += 1
     line=line.rstrip('\n').split('\t')
 
-    unique_minimizers, cov, species_taxid, rank, taxid, reads = \
+    unique_minimizers, cov, species_taxid, rank, taxid = \
     int(line[unique_minimizers_col]), line[cov_col], line[species_col], line[rank_col], \
-    line[taxid_col], int(line[reads_col])
+    line[taxid_col]
 
     if cov == '':
       cov = 0
@@ -128,10 +145,13 @@ with open(kraken_report + '.species', 'r') as infile:
 
     # add to dictionaries
     if rank == 'S':
-      # can add to the species_info dictionary
+      # can add to the species_to_superkingdom dictionary
       # look up superkingdom
       superkingdom = taxid_to_desired_rank(species_taxid, 'superkingdom', child_parent, taxid_rank)
-      species_info[species_taxid] = [superkingdom, reads]
+      species_to_superkingdom[species_taxid] = superkingdom
+      # if i > 100 and i < 200:
+        # print('superkingdom', i)
+        # print(species_to_superkingdom[species_taxid])
 
     # regardless, add to the species_genome_info dictionary
     if not species_taxid in species_genome_info:
@@ -140,23 +160,25 @@ with open(kraken_report + '.species', 'r') as infile:
     else:
       species_genome_info[species_taxid].append([taxid, cov, rank, unique_minimizers])
 
+#    if i > 100 and i < 200:
+      # print('other', i)
+      # print(species_genome_info[species_taxid])
+
 """
 STEP FIVE
-Go through species_genome_info and figure out - using species_info as well -
+Go through species_genome_info and figure out - using species_to_superkingdom as well -
 which species should be "kept" in the Kraken report.
 Output a file containing info about these decisions.
 Here we will use the parameters that were passed in:
 max_cov_bacteria, max_cov_virus, max_minimizers_bacteria, max_minimizers_virus
 Recall: if max_cov is passed, definitely keep. If not, keep if max_minimizers threshold is passed.
-Also recall - we only care about the coverages/minimizer values for the GENOMES in
+Recall - we only care about the coverages/minimizer values for the GENOMES in
 each species - i.e., the entries in species_genome_info that don't have a 'lower rank'
-right afterwards. This info (whether each taxid corresponds to a "lowest rank") will be stored in a dictionary taxid_to_lowest_rank.
-
-We will also make a dictionary parent_node_to_reads that stores the number of reads that should (if the user desires) be added to the parent node of "false positive" species that will be removed from the Kraken report.
+right afterwards.
+Note - will also make a dictionary that stores this info - taxid_to_lowest_rank.
 """
 species_to_keep = set()
 taxid_to_lowest_rank = {}
-parent_node_to_reads = {}
 
 out_fname = kraken_report + '.filtering_decisions.txt'
 
@@ -201,7 +223,7 @@ with open(out_fname, 'w') as outfile:
 
     # should we keep this species?
     # figure out based on superkingdom
-    superkingdom, reads = species_info[species]
+    superkingdom = species_to_superkingdom[species]
 
     if superkingdom == '2': # bacteria
       if max_cov >= max_cov_bacteria:
@@ -214,13 +236,6 @@ with open(out_fname, 'w') as outfile:
         keep = 'True'
       else:
         keep = 'False'
-        # record in parent_node_to_reads
-        parent_node = child_parent[species]
-        if parent_node in parent_node_to_reads:
-          parent_node_to_reads[parent_node] += reads
-        else:
-          # initialize
-          parent_node_to_reads[parent_node] = reads
       outfile.write('\t'.join([species, superkingdom, str(max_cov), str(max_minimizers), keep]) + '\n')
 
     elif superkingdom == '10239': # viruses
@@ -234,14 +249,6 @@ with open(out_fname, 'w') as outfile:
         keep = 'True'
       else:
         keep = 'False'
-        # record in parent_node_to_reads
-        parent_node = child_parent[species]
-        if parent_node in parent_node_to_reads:
-          parent_node_to_reads[parent_node] += reads
-          #print('here')
-        else:
-          # initialize
-          parent_node_to_reads[parent_node] = reads
       outfile.write('\t'.join([species, superkingdom, str(max_cov), str(max_minimizers), keep]) + '\n')
 
     else:
@@ -249,8 +256,6 @@ with open(out_fname, 'w') as outfile:
 
       # write out to file
       outfile.write('\t'.join([species, superkingdom, str(max_cov), str(max_minimizers), 'True']) + '\n')
-
-#print(parent_node_to_reads)
 
 """
 STEP SIX
@@ -291,7 +296,6 @@ with open(kraken_report + '.species', 'r') as infile:
 STEP SEVEN
 Go through the original Kraken report and make a new filtered version,
 where lines from species to filter out are removed.
-If discard is False, add the reads from those species directly to their parent nodes. 
 """
 with open(kraken_report, 'r') as infile:
   with open(kraken_report + '.filtered', 'w') as outfile:
@@ -302,11 +306,6 @@ with open(kraken_report, 'r') as infile:
         species_taxid = taxid_to_desired_rank(line[6], 'species', child_parent, taxid_rank)
         # do we care about this species?
         if species_taxid in species_to_keep:
-          assert not line[6] in parent_node_to_reads # there should never be a species in parent_node_to_reads
           outfile.write('\t'.join(line) + '\n')
       else:
-        print(discard, str(discard) == 'False', line[6], line[6] in parent_node_to_reads)
-        # if discard is False, we want to know whether we have to add reads to this line
-        if (str(discard) == 'False') and (line[6] in parent_node_to_reads):
-          line[2] = str(int(line[2]) + parent_node_to_reads[line[6]])
         outfile.write('\t'.join(line) + '\n')
