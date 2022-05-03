@@ -1,6 +1,6 @@
-no rank_1|no rank_root	0.9964
-no rank_1|no rank_cellular organisms	0.956
-no rank_1|no rank_131567|superkingdom_Bacteria	0.9559
+no rank_1|no rank_root	0.9963
+no rank_1|no rank_cellular organisms	0.9559
+no rank_1|no rank_131567|superkingdom_Bacteria	0.9558
 no rank_1|no rank_131567|superkingdom_2|clade_Terrabacteria group	0.6014
 no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_Firmicutes	0.516
 no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_Clostridia	0.4129
@@ -238,11 +238,11 @@ no rank_1|no rank_131567|superkingdom_2|clade_1783257|phylum_74201|class_Opituta
 no rank_1|no rank_131567|superkingdom_2|clade_1783257|phylum_74201|class_414999|order_Opitutales	0.0024
 no rank_1|no rank_131567|superkingdom_2|clade_1783257|phylum_74201|class_414999|order_415000|no rank_environmental samples	0.0024
 no rank_1|no rank_131567|superkingdom_2|clade_1783257|phylum_74201|class_414999|order_415000|no rank_592833|species_uncultured Opitutales bacterium	0.0024
-no rank_1|no rank_131567|superkingdom_2|clade_FCB group	0.1132
-no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_Bacteroidetes/Chlorobi group	0.1132
-no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_Bacteroidetes	0.1132
-no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_Bacteroidia	0.1126
-no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_Bacteroidales	0.1126
+no rank_1|no rank_131567|superkingdom_2|clade_FCB group	0.1131
+no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_Bacteroidetes/Chlorobi group	0.1131
+no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_Bacteroidetes	0.1131
+no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_Bacteroidia	0.1125
+no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_Bacteroidales	0.1125
 no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_Prevotellaceae	0.0962
 no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_171552|genus_Prevotella	0.0759
 no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_171552|genus_838|no rank_environmental samples	0.028
@@ -259,14 +259,13 @@ no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|cla
 no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_171550|genus_239759|no rank_538948|species_Alistipes sp. CAG:435	0.0021
 no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_171550|genus_239759|no rank_538948|species_Alistipes sp. CAG:514	0.0001
 no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_171550|genus_239759|species_Alistipes onderdonkii	0.0027
-no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_Bacteroidaceae	0.0039
-no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_815|genus_Bacteroides	0.0039
+no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_Bacteroidaceae	0.0038
+no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_815|genus_Bacteroides	0.0038
 no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_815|genus_816|no rank_unclassified Bacteroides	0.0018
 no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_815|genus_816|no rank_2646097|species_Bacteroides sp. Marseille-P3684	0.0018
-no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_815|genus_816|no rank_environmental samples	0.001
+no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_815|genus_816|no rank_environmental samples	0.0009
 no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_815|genus_816|no rank_139043|species_Bacteroides sp. CAG:770	0.0009
-no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_815|genus_816|no rank_139043|species_Bacteroides sp. CAG:1076	0.0001
-no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_815|genus_816|species_Bacteroides ovatus	0.0011
+no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_815|genus_816|species_Bacteroides ovatus	0.0012
 no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|no rank_environmental samples	0.0031
 no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|no rank_189693|species_uncultured Bacteroidales bacterium	0.0031
 no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|no rank_Bacteroidales incertae sedis	0.002
@@ -385,12 +384,12 @@ no rank_1|no rank_131567|superkingdom_2157|phylum_2283796|class_Thermoplasmata	0
 no rank_1|no rank_131567|superkingdom_2157|phylum_2283796|class_183967|order_Methanomassiliicoccales	0.0
 no rank_1|no rank_131567|superkingdom_2157|phylum_2283796|class_183967|order_1235850|no rank_unclassified Methanomassiliicoccales	0.0
 no rank_1|no rank_131567|superkingdom_2157|phylum_2283796|class_183967|order_1235850|no rank_1577790|species_Methanomassiliicoccales archaeon Mx-06	0.0
-no rank_1|superkingdom_Viruses	0.0405
-no rank_1|superkingdom_10239|clade_Duplodnaviria	0.0405
-no rank_1|superkingdom_10239|clade_2731341|kingdom_Heunggongvirae	0.0405
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_Uroviricota	0.0405
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_Caudoviricetes	0.0405
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_Caudovirales	0.0405
+no rank_1|superkingdom_Viruses	0.0404
+no rank_1|superkingdom_10239|clade_Duplodnaviria	0.0404
+no rank_1|superkingdom_10239|clade_2731341|kingdom_Heunggongvirae	0.0404
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_Uroviricota	0.0404
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_Caudoviricetes	0.0404
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_Caudovirales	0.0404
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_Podoviridae	0.0213
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10744|genus_Uetakevirus	0.0203
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10744|genus_542960|species_Escherichia virus phiV10	0.0203
@@ -444,7 +443,6 @@ no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_mgv_g_4000092	0.0009
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_4000092|species_OTU-42396	0.0009
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_mgv_g_4000016	0.0007
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_4000016|species_OTU-58416	0.0
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_4000016|species_OTU-01501	0.0007
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_mgv_g_4002182	0.0002
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_4002182|species_OTU-02618	0.0002
@@ -456,14 +454,6 @@ no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_4000686|species_OTU-10002	0.0001
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_mgv_g_4001057	0.0001
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_4001057|species_OTU-54589	0.0001
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_mgv_g_4001489	0.0
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_4001489|species_OTU-54836	0.0
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_mgv_g_4001821	0.0
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_4001821|species_OTU-64386	0.0
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_mgv_g_4001062	0.0
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_4001062|species_OTU-02652	0.0
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_mgv_g_4000730	0.0
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_4000730|species_OTU-19579	0.0
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_mgv_g_4000141	0.0
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_4000141|species_OTU-36661	0.0
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_mgv_g_4001088	0.0
