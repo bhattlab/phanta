@@ -1,2 +1,0 @@
-sample18.krak.report_bracken_species.filtered.to_merge
-sample20.krak.report_bracken_species.filtered.to_merge
