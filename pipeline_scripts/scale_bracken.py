@@ -35,7 +35,7 @@ def main():
     ## step 4 - output
     tmp_merged_df.rename(columns={'median': 'median_genome_length', 'max_cov':'breadth'}, inplace=True)
     processed_report = tmp_merged_df.drop(['tmp_scaling', 'species_level_taxa', 'max','mean','species_taxid','superkingdom','max_uniq_minimizers','kept'], axis=1)
-    processed_report.to_csv(bracken_report+'.tsv', sep="\t", index=False)
+    processed_report.to_csv(bracken_report+'.scaled', sep="\t", index=False)
 
 if __name__ == "__main__":
     main()

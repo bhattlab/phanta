@@ -66,10 +66,10 @@ outdir = config['outdir']
 
 rule all:
   input:
-    expand(join(outdir, "classification/{samp}.krak.report.filtered.bracken.tsv"), samp=sample_names),
-    expand(join(outdir, "classification/{samp}.krak.report_bracken_species.filtered.to_merge"), samp=sample_names),
+    expand(join(outdir, "classification/{samp}.krak.report.filtered.bracken.scaled"), samp=sample_names),
     join(outdir, "classification/total_reads.tsv"),
-    expand(join(outdir, "classification/{samp}.krak.report_bracken_species.filtered.to_merge.norm_brack"), samp=sample_names),
+    join(outdir, "classification/counts.txt"),
+    join(outdir, "classification/counts_norm_out_of_tot.txt"),    
     join(outdir, "classification/counts_norm_out_of_bracken_classified.txt")
 
 ##### STEP THREE - Run Kraken2, and filter report based on user-defined thresholds.
@@ -143,7 +143,7 @@ rule prepare_to_merge_counts: # do this rule for each Bracken report individuall
   input:
     brack_report = join(outdir, "classification/{samp}.krak.report_bracken_species.filtered")
   output:
-    brack_to_merge = join(outdir, "classification/{samp}.krak.report_bracken_species.filtered.to_merge")
+    brack_to_merge = temp(join(outdir, "classification/{samp}.krak.report_bracken_species.filtered.to_merge"))
   params:
     db = config['database']
   shell: """
@@ -182,8 +182,8 @@ rule prepare_to_merge_normed: # normalized versions of to_merge files produced i
     counts_files=expand(join(outdir, "classification/{samp}.krak.report_bracken_species.filtered.to_merge"), samp=sample_names),
     tot_reads_file=join(outdir, "classification/total_reads.tsv")
   output:
-    expand(join(outdir, "classification/{samp}.krak.report_bracken_species.filtered.to_merge.norm_tot"), samp=sample_names),
-    expand(join(outdir, "classification/{samp}.krak.report_bracken_species.filtered.to_merge.norm_brack"), samp=sample_names)
+    temp(expand(join(outdir, "classification/{samp}.krak.report_bracken_species.filtered.to_merge.norm_tot"), samp=sample_names)),
+    temp(expand(join(outdir, "classification/{samp}.krak.report_bracken_species.filtered.to_merge.norm_brack"), samp=sample_names))
   shell: """
     python pipeline_scripts/prep_to_merge_normed.py {input.tot_reads_file}
     """
@@ -194,9 +194,9 @@ rule merge_counts_normed: # make the 3 tables we want! :)
     expand(join(outdir, "classification/{samp}.krak.report_bracken_species.filtered.to_merge.norm_tot"), samp=sample_names),
     expand(join(outdir, "classification/{samp}.krak.report_bracken_species.filtered.to_merge.norm_brack"), samp=sample_names)
   output:
-    list1=join(outdir, "classification/counts_tables.txt"),
-    list2=join(outdir, "classification/norm_tot_tables.txt"),
-    list3=join(outdir, "classification/norm_brack_tables.txt"),
+    list1=temp(join(outdir, "classification/counts_tables.txt")),
+    list2=temp(join(outdir, "classification/norm_tot_tables.txt")),
+    list3=temp(join(outdir, "classification/norm_brack_tables.txt")),
     counts=join(outdir, "classification/counts.txt"),
     norm_tot=join(outdir, "classification/counts_norm_out_of_tot.txt"),
     norm_brack=join(outdir, "classification/counts_norm_out_of_bracken_classified.txt")
@@ -217,7 +217,7 @@ rule scale_bracken:
     bracken_report = join(outdir, "classification/{samp}.krak.report.filtered.bracken"),
     filtering_decisions = join(outdir, "classification/{samp}.krak.report.filtering_decisions.txt")
   output:
-    join(outdir, "classification/{samp}.krak.report.filtered.bracken.tsv")
+    join(outdir, "classification/{samp}.krak.report.filtered.bracken.scaled")
   params:
     db = config['database'],
     readlen = config['read_length'],
