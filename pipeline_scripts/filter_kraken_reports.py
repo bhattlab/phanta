@@ -257,7 +257,6 @@ with open(out_fname, 'w') as outfile:
 STEP SIX
 Use taxid_to_lowest_rank to make a version of the .krak.report.species file that
 includes information about whether each taxid is a 'lowest rank' taxid or not.
-"""
 
 with open(kraken_report + '.species', 'r') as infile:
   with open(kraken_report + '.species.final', 'w') as outfile:
@@ -287,6 +286,7 @@ with open(kraken_report + '.species', 'r') as infile:
       # write out
       line.append(lowest_rank)
       outfile.write('\t'.join(line) + '\n')
+"""
 
 """
 STEP SEVEN

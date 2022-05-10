@@ -100,7 +100,7 @@ rule filter_kraken:
     krak_report = join(outdir, "classification/{samp}.krak.report")
   output:
     krak_species = temp(join(outdir, "classification/{samp}.krak.report.species")),
-    krak_species_final = join(outdir, "classification/{samp}.krak.report.species.final"),
+    #krak_species_final = join(outdir, "classification/{samp}.krak.report.species.final"),
     krak_report_filtered = join(outdir, "classification/{samp}.krak.report.filtered"),
     filtering_decisions = join(outdir, "classification/{samp}.krak.report.filtering_decisions.txt")
   params:
