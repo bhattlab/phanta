@@ -115,6 +115,21 @@ rule filter_kraken:
     {params.minimizer_thresh_viral}
   """
 
+# need the below rule for protection against Bracken erroring if all species with
+# # >= thresh reads have been removed from the report
+rule process_filtered_kraken:
+  input:
+    krak_report_filtered = join(outdir, "classification/{samp}.krak.report.filtered")
+  log:
+    join(outdir, "process_filtered_kraken.log")
+  params:
+    threshold = config['filter_thresh'],
+    db = config['database']
+  shell: """
+    python pipeline_scripts/process_filtered_kraken.py {input.krak_report_filtered} \
+    {params.threshold} {params.db}
+    """
+
 ##### STEP FOUR - Run Bracken on filtered Kraken2 report.
 
 rule bracken:
@@ -128,15 +143,22 @@ rule bracken:
     readlen = config['read_length'],
     level = config['taxonomic_level'],
     threshold = config['filter_thresh'],
-    outspec = join(outdir, "classification/{samp}.krak.report.filtered.bracken"),
+    possible_1 = join(outdir, "classification/{samp}.krak.report.filtered.bracken.temp"),
+    possible_2 = join(outdir, "classification/{samp}.krak.report_bracken_species.filtered.temp")
   threads: 1
   resources:
     mem = 64,
     time = 1
   shell: """
-    bracken -d {params.db} -i {input.krak_report} -o {params.outspec} -r {params.readlen} \
+    # protection against Bracken error
+    [ -f {params.possible_1} ] && \
+    ( cp {params.possible_1} {output.brack_report_1};
+    cp {params.possible_2} {output.brack_report_2} ) \
+    || bracken -d {params.db} -i {input.krak_report} \
+    -o {output.brack_report_1} -r {params.readlen} \
     -l {params.level} -t {params.threshold}
     """
+
 ##### STEP FIVE - Merge final Bracken reports into usable tables - 1) counts table, 2) normalized counts - normalize by TOTAL READS in sample, 3) normalized counts - normalize by BRACKEN-CLASSIFIED READS in sample.
 
 rule prepare_to_merge_counts: # do this rule for each Bracken report individually
@@ -217,13 +239,16 @@ rule scale_bracken:
     bracken_report = join(outdir, "classification/{samp}.krak.report.filtered.bracken"),
     filtering_decisions = join(outdir, "classification/{samp}.krak.report.filtering_decisions.txt")
   output:
-    join(outdir, "classification/{samp}.krak.report.filtered.bracken.scaled")
+    scaled_bracken = join(outdir, "classification/{samp}.krak.report.filtered.bracken.scaled")
   params:
     db = config['database'],
     readlen = config['read_length'],
-    paired = paired_end
+    paired = paired_end,
+    possible = join(outdir, "classification/{samp}.krak.report.filtered.bracken.scaled.temp")
   threads: 1
   shell: """
+    [ -f {params.possible} ] && \
+    cp {params.possible} {output.scaled_bracken} || \
     python pipeline_scripts/scale_bracken.py {params.db} {input.bracken_report} \
     {input.filtering_decisions} {params.readlen} {params.paired}
     """
