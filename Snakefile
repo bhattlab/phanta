@@ -70,7 +70,8 @@ rule all:
     join(outdir, "classification/total_reads.tsv"),
     join(outdir, "classification/counts.txt"),
     join(outdir, "classification/counts_norm_out_of_tot.txt"),    
-    join(outdir, "classification/counts_norm_out_of_bracken_classified.txt")
+    join(outdir, "classification/counts_norm_out_of_bracken_classified.txt"),
+    expand(join(outdir, "processed_filtered_kraken/{samp}.txt"), samp=sample_names)
 
 ##### STEP THREE - Run Kraken2, and filter report based on user-defined thresholds.
 
@@ -120,14 +121,15 @@ rule filter_kraken:
 rule process_filtered_kraken:
   input:
     krak_report_filtered = join(outdir, "classification/{samp}.krak.report.filtered")
-  log:
-    join(outdir, "process_filtered_kraken.log")
+  output:
+    completed = join(outdir, "processed_filtered_kraken/{samp}.txt")
   params:
     threshold = config['filter_thresh'],
     db = config['database']
   shell: """
     python pipeline_scripts/process_filtered_kraken.py {input.krak_report_filtered} \
     {params.threshold} {params.db}
+    touch {output.completed}
     """
 
 ##### STEP FOUR - Run Bracken on filtered Kraken2 report.
