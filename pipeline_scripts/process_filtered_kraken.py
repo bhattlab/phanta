@@ -33,7 +33,7 @@ if bracken_will_fail:
     pass
 
   # output an empty scaled Bracken species report
-  with open(kraken_filtered + 'bracken.scaled.temp', 'w') as outfile:
+  with open(kraken_filtered + '.bracken.scaled.temp', 'w') as outfile:
     pass
 
   # output a Kraken-style Bracken report
