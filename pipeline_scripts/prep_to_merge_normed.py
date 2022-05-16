@@ -32,7 +32,7 @@ for samp in sample_names:
         for line in infile:
           line=line.rstrip('\n').split('\t')
           taxon_name, num_reads = line[0], float(line[1])
-          frac_reads_tot = str(round(num_reads/total_reads, 4))
-          frac_reads_brack = str(round(num_reads/brack_classified_reads, 4))
+          frac_reads_tot = str(round(num_reads/total_reads, 10))
+          frac_reads_brack = str(round(num_reads/brack_classified_reads, 10))
           outfile1.write(taxon_name + '\t' + frac_reads_tot + '\n')
           outfile2.write(taxon_name + '\t' + frac_reads_brack + '\n')
