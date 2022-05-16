@@ -13,6 +13,7 @@ outfname = orig_prefix + '_' + rank + '.txt'
 
 with open(orig, 'r') as infile:
   with open(outfname, 'w') as outfile:
+    outfile.write(infile.readline())
     for line in infile:
       line_split=line.split('\t')
       tax_name = line_split[0].split('|')
