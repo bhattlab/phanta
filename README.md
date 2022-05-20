@@ -44,8 +44,12 @@ The main outputs are found within the classification subdirectory, specifically:
 	- Similar to counts.txt, but each count has been normalized out of the total number of reads in the relevant sample
 - counts_norm_out_of_bracken_classified.txt 
 	- Similar to counts.txt, but each count has been normalized out of the total number of Bracken-classified reads in the relevant sample
+- merged_community_abundance.txt
+	- Species-level version of counts_norm_out_of_bracken_classified.txt, where each value has been corrected for genome length.
 
-To filter any of these tables to a given taxonomic level, you may use the script reduce_merged_table_to_specific_rank.py within the post_pipeline_scripts subdirectory. The necessary arguments to the script are: 1) full path to the original table (e.g., < output_directory > /counts.txt), and 2) the taxonomic level of interest (e.g., species, genus, superkingdom...)
+To filter any of the first three tables to a given taxonomic level, you may use the script reduce_merged_table_to_specific_rank.py within the post_pipeline_scripts subdirectory. The necessary arguments to the script are: 1) full path to the original table (e.g., < output_directory > /counts.txt), and 2) the taxonomic level of interest (e.g., species, genus, superkingdom...)
+
+To change the merged_community_abundance.txt to a higher level than species (e.g., genus, superkingdom), you may use the script merged_community_table_summed_to_higher_rank.py within the post_pipeline_scripts subdirectory. The necessary arguments to the script are: 1) full path to the Kraken2 database (which you also specified in the config file), 2) full path to merged_community_abundance.txt, 3) full path of desired output file, 4) taxonomic level of interest.
 
 Additional useful outputs within the classification subdirectory include the following per-sample outputs:
 - The original and filtered Kraken2 reports for each sample (.krak.report and .krak.report.filtered)
