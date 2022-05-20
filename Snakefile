@@ -255,16 +255,18 @@ rule scale_bracken:
     {input.filtering_decisions} {params.readlen} {params.paired}
     """
 
-# merge the scaled reports
 rule merge_community_abundance:
   input:
     expand(join(outdir, "classification/{samp}.krak.report.filtered.bracken.scaled"), samp=sample_names)
   output:
     list=temp(join(outdir, "classification/scaled_reports.txt")),
-    merged_scaled=join(outdir, "classification/merged_community_abundance.txt")
+    merged_temp=temp(join(outdir, "classification/merged_community_abundance_temp.txt")),
+    merged_final=join(outdir, "classification/merged_community_abundance.txt")
   params:
-    classdir=join(outdir, "classification")
+    classdir=join(outdir, "classification"),
+    db=config['database']
   shell: """
     ls {params.classdir}/*scaled | rev | cut -d'/' -f 1 | rev > {params.classdir}/scaled_reports.txt
     Rscript pipeline_scripts/merging_community_abundance.R {params.classdir} {output.list}
+    python pipeline_scripts/merging_community_abundance.py {params.db} {output.merged_temp} {params.classdir}
     """
