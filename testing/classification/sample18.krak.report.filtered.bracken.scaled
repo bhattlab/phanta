@@ -1,4 +1,4 @@
-name	taxonomy_id	taxonomy_lvl	kraken_assigned_reads	added_reads	new_est_reads	fraction_total_reads	median_genome_length	community_abundnace	genetic_abundance	depth	reads_per_million_bases	reads_per_million_reads	RPMPM	copies_per_million_reads	breadth
+name	taxonomy_id	taxonomy_lvl	kraken_assigned_reads	added_reads	new_est_reads	fraction_total_reads	median_genome_length	community_abundance	genetic_abundance	depth	reads_per_million_bases	reads_per_million_reads	RPMPM	copies_per_million_reads	breadth
 Faecalibacterium prausnitzii	853	S	166791	167397	334188	0.05079	1893102.0	0.011633529256724045	0.05079	52.9587946132855	176529.3154	50790.4568	26829.223552544372	8.048815996669378	1.034188748641645
 Faecalibacterium sp. CAG:74	1262897	S	9904	1724	11628	0.00177	2359592.0	0.0003252697224824031	0.00177	1.4783911794920477	4927.9706	1767.2431	748.9612960856851	0.224689754774845	0.406053683609366
 uncultured Ruminococcaceae bacterium	541003	S	58770	6641	65411	0.00994	1755746.5	0.002454889005713647	0.00994	11.176613480362912	37255.3783	9941.2743	5662.135322653534	1.6986509233495315	0.9681105589854272

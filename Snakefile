@@ -66,11 +66,11 @@ outdir = config['outdir']
 
 rule all:
   input:
-    expand(join(outdir, "classification/{samp}.krak.report.filtered.bracken.scaled"), samp=sample_names),
     join(outdir, "classification/total_reads.tsv"),
     join(outdir, "classification/counts.txt"),
     join(outdir, "classification/counts_norm_out_of_tot.txt"),    
     join(outdir, "classification/counts_norm_out_of_bracken_classified.txt"),
+    join(outdir, "classification/merged_community_abundance.txt"),
     expand(join(outdir, "processed_filtered_kraken/{samp}.txt"), samp=sample_names)
 
 ##### STEP THREE - Run Kraken2, and filter report based on user-defined thresholds.
@@ -253,4 +253,18 @@ rule scale_bracken:
     cp {params.possible} {output.scaled_bracken} || \
     python pipeline_scripts/scale_bracken.py {params.db} {input.bracken_report} \
     {input.filtering_decisions} {params.readlen} {params.paired}
+    """
+
+# merge the scaled reports
+rule merge_community_abundance:
+  input:
+    expand(join(outdir, "classification/{samp}.krak.report.filtered.bracken.scaled"), samp=sample_names)
+  output:
+    list=temp(join(outdir, "classification/scaled_reports.txt")),
+    merged_scaled=join(outdir, "classification/merged_community_abundance.txt")
+  params:
+    classdir=join(outdir, "classification")
+  shell: """
+    ls {params.classdir}/*scaled | rev | cut -d'/' -f 1 | rev > {params.classdir}/scaled_reports.txt
+    Rscript pipeline_scripts/merging_community_abundance.R {params.classdir} {output.list}
     """

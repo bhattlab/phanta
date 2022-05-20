@@ -1,4 +1,4 @@
-name	taxonomy_id	taxonomy_lvl	kraken_assigned_reads	added_reads	new_est_reads	fraction_total_reads	median_genome_length	community_abundnace	genetic_abundance	depth	reads_per_million_bases	reads_per_million_reads	RPMPM	copies_per_million_reads	breadth
+name	taxonomy_id	taxonomy_lvl	kraken_assigned_reads	added_reads	new_est_reads	fraction_total_reads	median_genome_length	community_abundance	genetic_abundance	depth	reads_per_million_bases	reads_per_million_reads	RPMPM	copies_per_million_reads	breadth
 Ruminococcus sp. CAG:254	1262953	S	459225	53539	512764	0.07844	1427779.0	0.030227913369715968	0.07844	107.74020349087638	359134.0116	78436.8554	54936.27194967431	16.480841248049863	0.9753600555266354
 uncultured Ruminococcus sp.	165186	S	1156	240	1396	0.00021	1774663.0	6.510809280552768e-05	0.00021	0.2359884665426619	786.6282	213.5443	120.32951632648559	0.03609876654622885	0.0860371602884082
 Ruminococcus bromii	40518	S	34438	30367	64805	0.00991	1495817.0	0.0036452453422034454	0.00991	12.997244983844949	43324.1499	9913.1382	6627.239989290634	1.9881671307489253	0.9075320512820512
