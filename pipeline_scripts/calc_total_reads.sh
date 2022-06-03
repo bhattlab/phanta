@@ -7,7 +7,19 @@
 
 root=$(grep 'root' $2/$1.krak.report | head -n 1 | cut -f 2 | xargs)
 unclassified_krak=$(grep 'unclassified' $2/$1.krak.report | head -n 1 | cut -f 2 | xargs)
-tot_reads=$(($root+$unclassified_krak))
+if [[ -z $root ]] && [[ -z $unclassified_krak ]]
+then
+  echo "No reads in sample"
+  exit 64
+elif [[ -z $root ]]
+then
+  tot_reads=$unclassified_krak
+elif [[ -z $unclassified_krak ]]
+then
+  tot_reads=$root
+else
+  tot_reads=$(($root+$unclassified_krak))
+fi
 
 # next - calculate total BRACKEN-CLASSIFIED reads in the sample
 tot_reads_bracken=$(head -n 1 $2/$1.krak.report_bracken_species.filtered | cut -f 2 | xargs)
