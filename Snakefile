@@ -259,14 +259,23 @@ rule merge_community_abundance:
   input:
     expand(join(outdir, "classification/{samp}.krak.report.filtered.bracken.scaled"), samp=sample_names)
   output:
-    list=temp(join(outdir, "classification/scaled_reports.txt")),
+    list1=temp(join(outdir, "classification/scaled_reports.txt")),
+    list2=join(outdir, "classification/samples_that_failed_bracken.txt"),
     merged_temp=temp(join(outdir, "classification/merged_community_abundance_temp.txt")),
     merged_final=join(outdir, "classification/merged_community_abundance.txt")
   params:
     classdir=join(outdir, "classification"),
     db=config['database']
   shell: """
-    ls {params.classdir}/*scaled | rev | cut -d'/' -f 1 | rev > {params.classdir}/scaled_reports.txt
-    Rscript pipeline_scripts/merging_community_abundance.R {params.classdir} {output.list}
+    if [ -e {params.classdir}/*.krak.report.filtered.bracken.scaled.temp]
+    then
+      ls {params.classdir}/*.krak.report.filtered.bracken.scaled.temp | rev | \
+      cut -d'/' -f 1 | rev | cut -d'.' -f 1 > {params.classdir}/samples_that_failed_bracken.txt
+    else
+      touch {params.classdir}/samples_that_failed_bracken.txt
+    fi    
+    ls {params.classdir}/*scaled | rev | cut -d'/' -f 1 | rev | grep -v -f {params.classdir}/samples_that_failed_bracken.txt \
+    > {params.classdir}/scaled_reports.txt
+    Rscript pipeline_scripts/merging_community_abundance.R {params.classdir} {output.list1}
     python pipeline_scripts/merging_community_abundance.py {params.db} {output.merged_temp} {params.classdir}
     """
