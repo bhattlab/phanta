@@ -268,7 +268,7 @@ rule merge_community_abundance:
     classdir=join(outdir, "classification"),
     db=config['database']
   shell: """
-    if [ -e {params.classdir}/*.krak.report.filtered.bracken.scaled.temp]
+    if [[ -e {params.classdir}/*.krak.report.filtered.bracken.scaled.temp ]]
     then
       ls {params.classdir}/*.krak.report.filtered.bracken.scaled.temp | rev | \
       cut -d'/' -f 1 | rev | cut -d'.' -f 1 > {params.classdir}/samples_that_failed_bracken.txt
