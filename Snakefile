@@ -136,7 +136,8 @@ rule process_filtered_kraken:
 
 rule bracken:
   input:
-    krak_report = join(outdir, "classification/{samp}.krak.report.filtered")
+    krak_report = join(outdir, "classification/{samp}.krak.report.filtered"),
+    good_to_go = join(outdir, "processed_filtered_kraken/{samp}.txt")
   output:
     brack_report_1 = join(outdir, "classification/{samp}.krak.report.filtered.bracken"),
     brack_report_2 = join(outdir, "classification/{samp}.krak.report_bracken_species.filtered")
