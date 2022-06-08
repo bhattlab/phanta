@@ -66,11 +66,11 @@ outdir = config['outdir']
 
 rule all:
   input:
-    join(outdir, "classification/total_reads.tsv"),
-    join(outdir, "classification/counts.txt"),
-    join(outdir, "classification/counts_norm_out_of_tot.txt"),    
-    join(outdir, "classification/counts_norm_out_of_bracken_classified.txt"),
-    join(outdir, "classification/merged_community_abundance.txt"),
+    join(outdir, "final_merged_outputs/total_reads.tsv"),
+    join(outdir, "final_merged_outputs/counts.txt"),
+    join(outdir, "final_merged_outputs/counts_norm_out_of_tot.txt"),    
+    join(outdir, "final_merged_outputs/counts_norm_out_of_bracken_classified.txt"),
+    join(outdir, "final_merged_outputs/merged_community_abundance.txt"),
 
 ##### STEP THREE - Run Kraken2, and filter report based on user-defined thresholds.
 
@@ -193,7 +193,7 @@ rule tot_reads_all: # aggregate outputs of the previous rule
   input:
     expand(join(outdir, "classification/{samp}_total_reads.txt"), samp=sample_names)
   output:
-    outf=join(outdir, "classification/total_reads.tsv")
+    outf=join(outdir, "final_merged_outputs/total_reads.tsv")
   params:
     classdir=join(outdir, "classification")
   shell: """
@@ -204,12 +204,14 @@ rule tot_reads_all: # aggregate outputs of the previous rule
 rule prepare_to_merge_normed: # normalized versions of to_merge files produced in an earlier rule
   input:
     counts_files=expand(join(outdir, "classification/{samp}.krak.report_bracken_species.filtered.to_merge"), samp=sample_names),
-    tot_reads_file=join(outdir, "classification/total_reads.tsv")
+    tot_reads_file=join(outdir, "final_merged_outputs/total_reads.tsv")
   output:
     temp(expand(join(outdir, "classification/{samp}.krak.report_bracken_species.filtered.to_merge.norm_tot"), samp=sample_names)),
     temp(expand(join(outdir, "classification/{samp}.krak.report_bracken_species.filtered.to_merge.norm_brack"), samp=sample_names))
+  params:
+    classdir=join(outdir, "classification")
   shell: """
-    python pipeline_scripts/prep_to_merge_normed.py {input.tot_reads_file}
+    python pipeline_scripts/prep_to_merge_normed.py {input.tot_reads_file} {params.classdir}
     """
 
 rule merge_counts_normed: # make the 3 tables we want! :)
@@ -221,20 +223,21 @@ rule merge_counts_normed: # make the 3 tables we want! :)
     list1=temp(join(outdir, "classification/counts_tables.txt")),
     list2=temp(join(outdir, "classification/norm_tot_tables.txt")),
     list3=temp(join(outdir, "classification/norm_brack_tables.txt")),
-    counts=join(outdir, "classification/counts.txt"),
-    norm_tot=join(outdir, "classification/counts_norm_out_of_tot.txt"),
-    norm_brack=join(outdir, "classification/counts_norm_out_of_bracken_classified.txt")
+    counts=join(outdir, "final_merged_outputs/counts.txt"),
+    norm_tot=join(outdir, "final_merged_outputs/counts_norm_out_of_tot.txt"),
+    norm_brack=join(outdir, "final_merged_outputs/counts_norm_out_of_bracken_classified.txt")
   params:
-    classdir=join(outdir, "classification")
+    classdir=join(outdir, "classification"),
+    finaldir=join(outdir, "final_merged_outputs")
   shell: """
     ls {params.classdir}/*to_merge | rev | cut -d'/' -f 1 | rev > {params.classdir}/counts_tables.txt
     ls {params.classdir}/*norm_tot | rev | cut -d'/' -f 1 | rev > {params.classdir}/norm_tot_tables.txt
     ls {params.classdir}/*norm_brack | rev | cut -d'/' -f 1 | rev > {params.classdir}/norm_brack_tables.txt
-    Rscript pipeline_scripts/merging_bracken_tables.R {params.classdir} {output.list1} \
+    Rscript pipeline_scripts/merging_bracken_tables.R {params.classdir} {params.finaldir} {output.list1} \
     {output.list2} {output.list3}
     """
 
-##### STEP XXX - Correct species abundances reported by Bracken for genome length.
+##### STEP SIX - Correct species abundances reported by Bracken for genome length.
 
 rule scale_bracken:
   input:
@@ -262,9 +265,10 @@ rule merge_community_abundance:
     list1=temp(join(outdir, "classification/scaled_reports.txt")),
     list2=join(outdir, "classification/samples_that_failed_bracken.txt"),
     merged_temp=temp(join(outdir, "classification/merged_community_abundance_temp.txt")),
-    merged_final=join(outdir, "classification/merged_community_abundance.txt")
+    merged_final=join(outdir, "final_merged_outputs/merged_community_abundance.txt")
   params:
     classdir=join(outdir, "classification"),
+    finaldir=join(outdir, "final_merged_outputs"),
     db=config['database']
   shell: """
     count=`find {params.classdir} -maxdepth 1 -name "*.krak.report.filtered.bracken.scaled.temp" | wc -l` 
@@ -278,5 +282,5 @@ rule merge_community_abundance:
     ls {params.classdir}/*scaled | rev | cut -d'/' -f 1 | rev | grep -v -f {params.classdir}/samples_that_failed_bracken.txt \
     > {params.classdir}/scaled_reports.txt
     Rscript pipeline_scripts/merging_community_abundance.R {params.classdir} {output.list1}
-    python pipeline_scripts/merging_community_abundance.py {params.db} {output.merged_temp} {params.classdir}
+    python pipeline_scripts/merging_community_abundance.py {params.db} {output.merged_temp} {params.finaldir}
     """

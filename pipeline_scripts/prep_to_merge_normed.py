@@ -1,6 +1,7 @@
 import sys
 
 tot_reads_file = sys.argv[1]
+indir = sys.argv[2]
 
 # make a dictionary from sample name to total number of reads and number of Bracken-classified reads
 with open(tot_reads_file, 'r') as infile:
@@ -15,8 +16,7 @@ sample_names = samp_name_to_reads.keys()
 
 for samp in sample_names:
   # file to normalize
-  counts_table = tot_reads_file[:tot_reads_file.rfind('/')] + \
-  '/' + samp + '.krak.report_bracken_species.filtered.to_merge'
+  counts_table = indir + '/' + samp + '.krak.report_bracken_species.filtered.to_merge'
 
   # files to produce
   outf1 = counts_table + '.norm_tot'
