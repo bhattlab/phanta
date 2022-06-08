@@ -71,7 +71,6 @@ rule all:
     join(outdir, "classification/counts_norm_out_of_tot.txt"),    
     join(outdir, "classification/counts_norm_out_of_bracken_classified.txt"),
     join(outdir, "classification/merged_community_abundance.txt"),
-    expand(join(outdir, "processed_filtered_kraken/{samp}.txt"), samp=sample_names)
 
 ##### STEP THREE - Run Kraken2, and filter report based on user-defined thresholds.
 
@@ -122,7 +121,7 @@ rule process_filtered_kraken:
   input:
     krak_report_filtered = join(outdir, "classification/{samp}.krak.report.filtered")
   output:
-    completed = join(outdir, "processed_filtered_kraken/{samp}.txt")
+    completed = temp(join(outdir, "processed_filtered_kraken/{samp}.txt"))
   params:
     threshold = config['filter_thresh'],
     db = config['database']
