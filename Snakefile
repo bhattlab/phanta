@@ -71,6 +71,7 @@ rule all:
     join(outdir, "final_merged_outputs/counts_norm_out_of_tot.txt"),    
     join(outdir, "final_merged_outputs/counts_norm_out_of_bracken_classified.txt"),
     join(outdir, "final_merged_outputs/merged_community_abundance.txt"),
+    join(outdir, "pipeline_completed.txt")
 
 ##### STEP THREE - Run Kraken2, and filter report based on user-defined thresholds.
 
@@ -283,4 +284,31 @@ rule merge_community_abundance:
     > {params.classdir}/scaled_reports.txt
     Rscript pipeline_scripts/merging_community_abundance.R {params.classdir} {output.list1}
     python pipeline_scripts/merging_community_abundance.py {params.db} {output.merged_temp} {params.finaldir}
+    """
+
+##### STEP SEVEN - Move and/or delete certain "intermediate" files.
+
+rule deal_with_intermediate:
+  input: # all the outputs except pipeline_completed.txt
+    join(outdir, "final_merged_outputs/total_reads.tsv"),
+    join(outdir, "final_merged_outputs/counts.txt"),
+    join(outdir, "final_merged_outputs/counts_norm_out_of_tot.txt"),
+    join(outdir, "final_merged_outputs/counts_norm_out_of_bracken_classified.txt"),
+    join(outdir, "final_merged_outputs/merged_community_abundance.txt")
+  output:
+    completed=join(outdir, "pipeline_completed.txt")
+  params:
+    delete=config['delete_intermediate'],
+    classdir=join(outdir, "classification"),
+    intdir=join(outdir, "classification/intermediate")
+  shell: """
+    mkdir {params.intdir}
+    mv {params.classdir}/*krak.report {params.intdir}
+    mv {params.classdir}/*krak.report.filtered {params.intdir}
+    mv {params.classdir}/*krak.report.filtered.bracken {params.intdir}
+    mv {params.classdir}/*krak.report.filtering_decisions.txt {params.intdir}
+    if [[ {params.delete} == 'True' ]]; then
+      rm -r {params.intdir}
+    fi
+    touch {output.completed}
     """

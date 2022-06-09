@@ -11,6 +11,10 @@ sample_file: /path/to/sample/file
 # In which directory should results be outputted?
 outdir: /path/to/output/directory
 
+# Delete intermediate files?
+# Kraken report, filtered Kraken report, information about filtering decisions, species-level Bracken report
+delete_intermediate: False # True or False
+
 # Specifications for Kraken2
 confidence_threshold: 0.1 # increase to reduce false positives for Kraken2
 # minimum 0.0 (default for Kraken2), maximum 1.0
