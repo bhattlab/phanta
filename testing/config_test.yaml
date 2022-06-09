@@ -1,3 +1,5 @@
+pipeline_directory: /labs/asbhatt/mchakra/phaging/phage_abundance_pipeline
+
 # Sample file specifies sample names and names of files containing sample reads
 # Format: Tab-delimited, three columns
 # sample_name  read1_file  [read2_file]
