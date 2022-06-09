@@ -1,454 +1,444 @@
-Taxon	sample18	sample20
-no rank_1|no rank_131567|superkingdom_2|clade_1783257|phylum_256845|class_1313211|no rank_1368584|species_Lentisphaeria bacterium	0	4.25033e-05
-no rank_1|no rank_131567|superkingdom_2|clade_1783257|phylum_256845|class_1313211|no rank_unclassified Lentisphaeria	0	4.25033e-05
-no rank_1|no rank_131567|superkingdom_2|clade_1783257|phylum_256845|class_Lentisphaeria	0	4.25033e-05
-no rank_1|no rank_131567|superkingdom_2|clade_1783257|phylum_74201|class_203494|order_48461|family_1647988|genus_239934|species_Akkermansia muciniphila	0.0025860402	0.1573035288
-no rank_1|no rank_131567|superkingdom_2|clade_1783257|phylum_74201|class_203494|order_48461|family_1647988|genus_Akkermansia	0.0025860402	0.1573035288
-no rank_1|no rank_131567|superkingdom_2|clade_1783257|phylum_74201|class_203494|order_48461|family_1647988|no rank_1951308|species_Akkermansiaceae bacterium UBA3385	0	2.00285e-05
-no rank_1|no rank_131567|superkingdom_2|clade_1783257|phylum_74201|class_203494|order_48461|family_1647988|no rank_unclassified Akkermansiaceae	0	2.00285e-05
-no rank_1|no rank_131567|superkingdom_2|clade_1783257|phylum_74201|class_203494|order_48461|family_Akkermansiaceae	0.0025860402	0.1573235574
-no rank_1|no rank_131567|superkingdom_2|clade_1783257|phylum_74201|class_203494|order_Verrucomicrobiales	0.0025860402	0.1573235574
-no rank_1|no rank_131567|superkingdom_2|clade_1783257|phylum_74201|class_414999|order_415000|no rank_592833|species_uncultured Opitutales bacterium	0	0.0023956272
-no rank_1|no rank_131567|superkingdom_2|clade_1783257|phylum_74201|class_414999|order_415000|no rank_environmental samples	0	0.0023956272
-no rank_1|no rank_131567|superkingdom_2|clade_1783257|phylum_74201|class_414999|order_Opitutales	0	0.0023956272
-no rank_1|no rank_131567|superkingdom_2|clade_1783257|phylum_74201|class_Opitutae	0	0.0023956272
-no rank_1|no rank_131567|superkingdom_2|clade_1783257|phylum_74201|class_Verrucomicrobiae	0.0025860402	0.1573235574
-no rank_1|no rank_131567|superkingdom_2|clade_1783257|phylum_Lentisphaerae	0	4.25033e-05
-no rank_1|no rank_131567|superkingdom_2|clade_1783257|phylum_Verrucomicrobia	0.0025860402	0.1597193375
-no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_117747|order_200666|family_84566|genus_84567|species_Pedobacter himalayensis	0	0.0006109469
-no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_117747|order_200666|family_84566|genus_Pedobacter	0	0.0006109469
-no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_117747|order_200666|family_Sphingobacteriaceae	0	0.0006109469
-no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_117747|order_Sphingobacteriales	0	0.0006109469
-no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_171550|genus_239759|no rank_538948|species_Alistipes sp. CAG:435	0	0.0021432065
-no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_171550|genus_239759|no rank_538948|species_Alistipes sp. CAG:514	0	5.99327e-05
-no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_171550|genus_239759|no rank_538948|species_uncultured Alistipes sp.	0.000695342	0
-no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_171550|genus_239759|no rank_environmental samples	0.000695342	0.0022032921
+Taxon	sample18	sample19
+no rank_1|no rank_131567|superkingdom_2|clade_1783257|phylum_256845|class_1313211|order_278082|family_255528|genus_172900|species_Victivallis vadensis	0	0.0011216656
+no rank_1|no rank_131567|superkingdom_2|clade_1783257|phylum_256845|class_1313211|order_278082|family_255528|genus_Victivallis	0	0.0011216656
+no rank_1|no rank_131567|superkingdom_2|clade_1783257|phylum_256845|class_1313211|order_278082|family_Victivallaceae	0	0.0011216656
+no rank_1|no rank_131567|superkingdom_2|clade_1783257|phylum_256845|class_1313211|order_Victivallales	0	0.0011216656
+no rank_1|no rank_131567|superkingdom_2|clade_1783257|phylum_256845|class_Lentisphaeria	0	0.0011216656
+no rank_1|no rank_131567|superkingdom_2|clade_1783257|phylum_74201|class_203494|order_48461|family_1647988|genus_239934|species_Akkermansia muciniphila	0.0025860402	0
+no rank_1|no rank_131567|superkingdom_2|clade_1783257|phylum_74201|class_203494|order_48461|family_1647988|genus_Akkermansia	0.0025860402	0
+no rank_1|no rank_131567|superkingdom_2|clade_1783257|phylum_74201|class_203494|order_48461|family_1647988|no rank_1951308|species_Akkermansiaceae bacterium UBA3385	0	0.000168486
+no rank_1|no rank_131567|superkingdom_2|clade_1783257|phylum_74201|class_203494|order_48461|family_1647988|no rank_unclassified Akkermansiaceae	0	0.000168486
+no rank_1|no rank_131567|superkingdom_2|clade_1783257|phylum_74201|class_203494|order_48461|family_Akkermansiaceae	0.0025860402	0.000168486
+no rank_1|no rank_131567|superkingdom_2|clade_1783257|phylum_74201|class_203494|order_Verrucomicrobiales	0.0025860402	0.000168486
+no rank_1|no rank_131567|superkingdom_2|clade_1783257|phylum_74201|class_414999|order_415000|no rank_592833|species_uncultured Opitutales bacterium	0	9.30786e-05
+no rank_1|no rank_131567|superkingdom_2|clade_1783257|phylum_74201|class_414999|order_415000|no rank_environmental samples	0	9.30786e-05
+no rank_1|no rank_131567|superkingdom_2|clade_1783257|phylum_74201|class_414999|order_Opitutales	0	9.30786e-05
+no rank_1|no rank_131567|superkingdom_2|clade_1783257|phylum_74201|class_Opitutae	0	9.30786e-05
+no rank_1|no rank_131567|superkingdom_2|clade_1783257|phylum_74201|class_Verrucomicrobiae	0.0025860402	0.000168486
+no rank_1|no rank_131567|superkingdom_2|clade_1783257|phylum_Lentisphaerae	0	0.0011216656
+no rank_1|no rank_131567|superkingdom_2|clade_1783257|phylum_Verrucomicrobia	0.0025860402	0.0002615646
+no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_171550|genus_239759|no rank_538948|species_uncultured Alistipes sp.	0.000695342	0.0016158505
+no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_171550|genus_239759|no rank_environmental samples	0.000695342	0.0016158505
 no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_171550|genus_239759|species_Alistipes communis	0.001316107	0
-no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_171550|genus_239759|species_Alistipes onderdonkii	0	0.0026651716
-no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_171550|genus_Alistipes	0.0020116009	0.0048684637
-no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_171551|no rank_348577|species_uncultured Porphyromonadaceae bacterium	0.0021361488	0.0001768933
-no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_171551|no rank_environmental samples	0.0021361488	0.0001768933
-no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_171552|genus_1926672|species_Prevotellamassilia timonensis	0.1859353192	0
+no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_171550|genus_239759|species_Alistipes senegalensis	0	0.0148627167
+no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_171550|genus_Alistipes	0.0020116009	0.0164785672
+no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_171551|no rank_348577|species_uncultured Porphyromonadaceae bacterium	0.0021361488	0
+no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_171551|no rank_environmental samples	0.0021361488	0
+no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_171552|genus_1926672|species_Prevotellamassilia timonensis	0.1859353192	0.0008876742
 no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_171552|genus_577309|no rank_910950|species_uncultured Paraprevotella sp.	0.0009754229	0
 no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_171552|genus_577309|no rank_environmental samples	0.0009754229	0
-no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_171552|genus_838|no rank_2638335|species_Prevotella sp. 885	0	0.0076879009
 no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_171552|genus_838|no rank_2638335|species_Prevotella sp. Marseille-P4119	0.0001599378	0
+no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_171552|genus_838|no rank_2638335|species_Prevotella sp. P5-108	0	0.0014740237
 no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_171552|genus_838|no rank_2638335|species_Prevotella sp. UBA7782	0.0008233833	0
 no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_171552|genus_838|no rank_84374|species_Prevotella sp. CAG:520	0.003040792	0
-no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_171552|genus_838|no rank_84374|species_Prevotella sp. CAG:924	0.0177726852	0.0001070227
-no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_171552|genus_838|no rank_84374|species_uncultured Prevotella sp.	0.0111238005	0.0280514204
-no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_171552|genus_838|no rank_environmental samples	0.0319374296	0.0281585961
-no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_171552|genus_838|no rank_unclassified Prevotella	0.0009834729	0.0076879009
-no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_171552|genus_838|species_Prevotella copri	0.0064438363	0.0393118928
-no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_171552|genus_838|species_Prevotella stercorea	0.0037918768	0.0009073998
+no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_171552|genus_838|no rank_84374|species_Prevotella sp. CAG:924	0.0177726852	0
+no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_171552|genus_838|no rank_84374|species_uncultured Prevotella sp.	0.0111238005	0.0068136273
+no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_171552|genus_838|no rank_environmental samples	0.0319374296	0.0068136273
+no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_171552|genus_838|no rank_unclassified Prevotella	0.0009834729	0.0014740237
+no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_171552|genus_838|species_Prevotella copri	0.0064438363	0.0029445436
+no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_171552|genus_838|species_Prevotella stercorea	0.0037918768	0.0094454207
 no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_171552|genus_Paraprevotella	0.0009754229	0
-no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_171552|genus_Prevotella	0.0431569193	0.0760659425
-no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_171552|genus_Prevotellamassilia	0.1859353192	0
-no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_171552|no rank_224577|species_uncultured Prevotellaceae bacterium	0	0.0204073988
-no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_171552|no rank_environmental samples	0	0.0204073988
-no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_1853231|genus_283168|species_Odoribacter splanchnicus	0	0.0015120782
-no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_1853231|genus_574697|species_Butyricimonas faecihominis	0	0.0001548772
-no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_1853231|genus_Butyricimonas	0	0.0001548772
-no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_1853231|genus_Odoribacter	0	0.0015120782
-no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_2005473|genus_2518495|species_Duncaniella dubosii	0	0.0001030476
-no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_2005473|genus_Duncaniella	0	0.0001030476
-no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_2005519|genus_397864|species_Barnesiella intestinihominis	0.0002319325	0
-no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_2005519|genus_Barnesiella	0.0002319325	0
-no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_2005525|genus_375288|no rank_512311|species_uncultured Parabacteroides sp.	0	0.0005273163
-no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_2005525|genus_375288|no rank_environmental samples	0	0.0005273163
-no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_2005525|genus_Parabacteroides	0	0.0005273163
-no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_815|genus_816|no rank_139043|species_Bacteroides sp. CAG:1076	0	8.94404e-05
+no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_171552|genus_Prevotella	0.0431569193	0.0206779199
+no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_171552|genus_Prevotellamassilia	0.1859353192	0.0008876742
+no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_1853231|genus_574697|no rank_2637652|species_Butyricimonas sp. An62	0	0.0055187532
+no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_1853231|genus_574697|no rank_unclassified Butyricimonas	0	0.0055187532
+no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_1853231|genus_574697|species_Butyricimonas virosa	0	0.0028301377
+no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_1853231|genus_Butyricimonas	0	0.0083490432
+no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_2005519|genus_397864|species_Barnesiella intestinihominis	0.0002319325	0.0003342298
+no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_2005519|genus_Barnesiella	0.0002319325	0.0003342298
+no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_2005525|genus_375288|species_Parabacteroides gordonii	0	0.0057071955
+no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_2005525|genus_Parabacteroides	0	0.0057071955
+no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_815|genus_816|no rank_139043|species_Bacteroides sp. CAG:1060	0	0.0009996428
 no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_815|genus_816|no rank_139043|species_Bacteroides sp. CAG:530	0.0024086354	0
-no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_815|genus_816|no rank_139043|species_Bacteroides sp. CAG:545	0.0024962746	0
-no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_815|genus_816|no rank_139043|species_Bacteroides sp. CAG:770	0	0.0009318621
-no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_815|genus_816|no rank_2646097|species_Bacteroides sp. Marseille-P3684	0	0.001757466
+no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_815|genus_816|no rank_139043|species_Bacteroides sp. CAG:545	0.0024962746	0.0012100217
 no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_815|genus_816|no rank_2646097|species_Bacteroides sp. OM08-17BH	0.0001058657	0
-no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_815|genus_816|no rank_environmental samples	0.0049050618	0.0010213026
-no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_815|genus_816|no rank_unclassified Bacteroides	0.0001058657	0.001757466
-no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_815|genus_816|species_Bacteroides ovatus	0	0.0011494241
-no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_815|genus_Bacteroides	0.0050109276	0.0039283455
-no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_Bacteroidaceae	0.0050109276	0.0039283455
-no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_Barnesiellaceae	0.0002319325	0
-no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_Muribaculaceae	0	0.0001030476
-no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_Odoribacteraceae	0	0.0016671083
-no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_Porphyromonadaceae	0.0021361488	0.0001768933
-no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_Prevotellaceae	0.2300679652	0.0964734942
-no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_Rikenellaceae	0.0020116009	0.0048684637
-no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_Tannerellaceae	0	0.0005273163
+no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_815|genus_816|no rank_environmental samples	0.0049050618	0.0022096645
+no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_815|genus_816|no rank_unclassified Bacteroides	0.0001058657	0
+no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_815|genus_Bacteroides	0.0050109276	0.0022096645
+no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_Bacteroidaceae	0.0050109276	0.0022096645
+no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_Barnesiellaceae	0.0002319325	0.0003342298
+no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_Odoribacteraceae	0	0.0083490432
+no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_Porphyromonadaceae	0.0021361488	0
+no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_Prevotellaceae	0.2300679652	0.0215657465
+no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_Rikenellaceae	0.0020116009	0.0164785672
+no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|family_Tannerellaceae	0	0.0057071955
 no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|no rank_185291|species_Bacteroidales bacterium	0.0022120927	0
+no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|no rank_185291|species_Bacteroidales bacterium 52_46	0	0.0016909532
 no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|no rank_185291|species_Bacteroidales bacterium UBA1256	0.0004852812	0
-no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|no rank_189693|species_uncultured Bacteroidales bacterium	0.0001796832	0.0031197124
-no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|no rank_333046|genus_909656|species_Phocaeicola plebeius	0.001479842	0.0016379063
-no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|no rank_333046|genus_909656|species_Phocaeicola vulgatus	0.0003862505	0.0003625013
-no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|no rank_333046|genus_Phocaeicola	0.0018660925	0.0020004076
-no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|no rank_Bacteroidales incertae sedis	0.0018660925	0.0020004076
-no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|no rank_environmental samples	0.0001796832	0.0031197124
-no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|no rank_unclassified Bacteroidales	0.0026973739	0
-no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_Bacteroidales	0.2442024839	0.1128654004
-no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_Bacteroidia	0.2442024839	0.1128654004
-no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_Sphingobacteriia	0	0.0006109469
+no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|no rank_189693|species_uncultured Bacteroidales bacterium	0.0001796832	0.0010307197
+no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|no rank_333046|genus_909656|species_Phocaeicola plebeius	0.001479842	0.006266124
+no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|no rank_333046|genus_909656|species_Phocaeicola vulgatus	0.0003862505	0
+no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|no rank_333046|genus_Phocaeicola	0.0018660925	0.006266124
+no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|no rank_Bacteroidales incertae sedis	0.0018660925	0.006266124
+no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|no rank_environmental samples	0.0001796832	0.0010307197
+no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_171549|no rank_unclassified Bacteroidales	0.0026973739	0.0016909532
+no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_200643|order_Bacteroidales	0.2442024839	0.0636330053
+no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|class_Bacteroidia	0.2442024839	0.0636330053
 no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|no rank_50742|species_uncultured Bacteroidetes bacterium	2.977e-05	0
 no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_976|no rank_environmental samples	2.977e-05	0
-no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_Bacteroidetes	0.2442324058	0.1134763473
-no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_Bacteroidetes/Chlorobi group	0.2442324058	0.1134763473
+no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_68336|phylum_Bacteroidetes	0.2442324058	0.0636330053
+no rank_1|no rank_131567|superkingdom_2|clade_1783270|clade_Bacteroidetes/Chlorobi group	0.2442324058	0.0636330053
 no rank_1|no rank_131567|superkingdom_2|clade_1783272|clade_1798711|phylum_1798710|order_1906119|species_Candidatus Gastranaerophilales bacterium HUM_12	9.09807e-05	0
 no rank_1|no rank_131567|superkingdom_2|clade_1783272|clade_1798711|phylum_1798710|order_Candidatus Gastranaerophilales	9.09807e-05	0
 no rank_1|no rank_131567|superkingdom_2|clade_1783272|clade_1798711|phylum_Candidatus Melainabacteria	9.09807e-05	0
 no rank_1|no rank_131567|superkingdom_2|clade_1783272|clade_Cyanobacteria/Melainabacteria group	9.09807e-05	0
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_1737404|order_1737405|family_1570339|genus_150022|species_Finegoldia magna	0	0.0018991947
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_1737404|order_1737405|family_1570339|genus_162289|species_Peptoniphilus grossensis	0	0.0009466924
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_1737404|order_1737405|family_1570339|genus_165779|no rank_293427|species_uncultured Anaerococcus sp.	0	0.0007618489
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_1737404|order_1737405|family_1570339|genus_165779|no rank_environmental samples	0	0.0007618489
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_1737404|order_1737405|family_1570339|genus_Anaerococcus	0	0.0007618489
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_1737404|order_1737405|family_1570339|genus_Finegoldia	0	0.0018991947
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_1737404|order_1737405|family_1570339|genus_Peptoniphilus	0	0.0009466924
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_1737404|order_1737405|family_Peptoniphilaceae	0	0.0036078889
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_1737404|order_Tissierellales	0	0.0036078889
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|no rank_218638|species_uncultured Clostridia bacterium	0	0.0002554785
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|no rank_environmental samples	0	0.0002554785
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_186803|genus_1407607|species_Fusicatenibacter saccharivorans	0.0065033762	0.0010665579
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_1737404|order_1737405|family_1570339|genus_162289|species_Peptoniphilus lacrimalis	0	0.0010223411
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_1737404|order_1737405|family_1570339|genus_165779|species_Anaerococcus senegalensis	0	0.0004114653
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_1737404|order_1737405|family_1570339|genus_Anaerococcus	0	0.0004114653
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_1737404|order_1737405|family_1570339|genus_Peptoniphilus	0	0.0010223411
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_1737404|order_1737405|family_Peptoniphilaceae	0	0.0014339588
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_1737404|order_Tissierellales	0	0.0014339588
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_186803|genus_1407607|species_Fusicatenibacter saccharivorans	0.0065033762	0.0008747255
 no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_186803|genus_189330|no rank_2627917|species_Dorea sp. AF36-15AT	0.0003100028	0
 no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_186803|genus_189330|no rank_unclassified Dorea	0.0003100028	0
 no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_186803|genus_189330|species_Dorea longicatena	0.0001057138	0
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_186803|genus_2039240|species_Anaerotignum faecicola	0.0005202154	0.0049199875
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_186803|genus_2039240|species_Anaerotignum lactatifermentans	9.52336e-05	0
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_186803|genus_207244|species_Anaerostipes hadrus	0	8.27133e-05
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_186803|genus_1918452|species_Extibacter muris	0	0.0155627104
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_186803|genus_2039240|species_Anaerotignum faecicola	0.0005202154	0
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_186803|genus_2039240|species_Anaerotignum lactatifermentans	9.52336e-05	0.0072778015
 no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_186803|genus_2316020|species_[Ruminococcus] gnavus	0.0049404517	0
 no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_186803|genus_2316020|species_[Ruminococcus] torques	0.0550428923	0
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_186803|genus_28050|species_Lachnospira eligens	0.0016370458	0.0024784934
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_186803|genus_265975|no rank_2629782|species_Oribacterium sp. UBA3737	0	0.0013396615
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_186803|genus_265975|no rank_unclassified Oribacterium	0	0.0013396615
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_186803|genus_28050|species_Lachnospira eligens	0.0016370458	0.0031311578
 no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_186803|genus_33042|species_Coprococcus comes	0.003318139	0
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_186803|genus_572511|species_Blautia obeum	0	0.0757159782
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_186803|genus_572511|species_Blautia wexlerae	0	0.003773927
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_186803|genus_830|no rank_135026|species_Butyrivibrio sp. CAG:318	0	0.000116349
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_186803|genus_830|no rank_environmental samples	0	0.000116349
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_186803|genus_572511|species_Blautia massiliensis	0	0.0027309655
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_186803|genus_572511|species_Blautia wexlerae	0	0.000233839
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_186803|genus_830|species_Butyrivibrio crossotus	0	0.0018032264
 no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_186803|genus_841|no rank_2637578|species_Roseburia sp.	0.0093506633	0
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_186803|genus_841|no rank_2637578|species_Roseburia sp. AF12-17LB	0	4.49495e-05
 no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_186803|genus_841|no rank_512313|species_uncultured Roseburia sp.	0.0002231231	0
 no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_186803|genus_841|no rank_environmental samples	0.0002231231	0
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_186803|genus_841|no rank_unclassified Roseburia	0.0093506633	4.49495e-05
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_186803|genus_841|no rank_unclassified Roseburia	0.0093506633	0
 no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_186803|genus_841|species_Roseburia hominis	0.0010585055	0
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_186803|genus_841|species_Roseburia inulinivorans	0.0025948497	0.0010076954
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_186803|genus_Anaerostipes	0	8.27133e-05
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_186803|genus_Anaerotignum	0.000615449	0.0049199875
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_186803|genus_Blautia	0	0.0794900581
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_186803|genus_Butyrivibrio	0	0.000116349
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_186803|genus_841|species_Roseburia inulinivorans	0.0025948497	0.0011237983
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_186803|genus_Anaerotignum	0.000615449	0.0072778015
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_186803|genus_Blautia	0	0.0029648046
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_186803|genus_Butyrivibrio	0	0.0018032264
 no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_186803|genus_Coprococcus	0.003318139	0
 no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_186803|genus_Dorea	0.0004157167	0
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_186803|genus_Fusicatenibacter	0.0065033762	0.0010665579
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_186803|genus_Lachnospira	0.0016370458	0.0024784934
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_186803|genus_Extibacter	0	0.0155627104
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_186803|genus_Fusicatenibacter	0.0065033762	0.0008747255
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_186803|genus_Lachnospira	0.0016370458	0.0031311578
 no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_186803|genus_Mediterraneibacter	0.059983344	0
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_186803|genus_Roseburia	0.0132274453	0.0010527978
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_186803|no rank_186928|species_[Eubacterium] rectale	0.0018136912	0.0055451531
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_186803|no rank_186928|species_Lachnospiraceae bacterium UBA3273	0	0.0006543675
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_186803|genus_Oribacterium	0	0.0013396615
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_186803|genus_Roseburia	0.0132274453	0.0011237983
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_186803|no rank_186928|species_[Eubacterium] rectale	0.0018136912	0.0113979384
 no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_186803|no rank_186928|species_Lachnospiraceae bacterium UBA7026	0.0004942426	0
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_186803|no rank_unclassified Lachnospiraceae	0.0023079338	0.0061996735
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_186806|genus_1730|no rank_84372|species_Eubacterium sp. CAG:180	0.0009533992	0.0111869325
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_186803|no rank_unclassified Lachnospiraceae	0.0023079338	0.0113979384
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_186806|genus_1730|no rank_2624479|species_Eubacterium sp. AM28-29	0	0.0011716325
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_186806|genus_1730|no rank_84372|species_Eubacterium sp. CAG:180	0.0009533992	0
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_186806|genus_1730|no rank_84372|species_Eubacterium sp. CAG:248	0	0.0001838721
 no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_186806|genus_1730|no rank_84372|species_Eubacterium sp. CAG:251	0.0006892664	0
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_186806|genus_1730|no rank_84372|species_Eubacterium sp. CAG:274	0	0.0001151259
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_186806|genus_1730|no rank_84372|species_uncultured Eubacterium sp.	0.0002424128	0.0279927108
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_186806|genus_1730|no rank_environmental samples	0.0018853822	0.0392947692
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_186806|genus_Eubacterium	0.0018853822	0.0392947692
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_186806|genus_1730|no rank_84372|species_uncultured Eubacterium sp.	0.0002424128	0.0001733608
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_186806|genus_1730|no rank_environmental samples	0.0018853822	0.0003572329
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_186806|genus_1730|no rank_unclassified Eubacterium	0	0.0011716325
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_186806|genus_1730|species_Eubacterium ventriosum	0	0.0244231527
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_186806|genus_Eubacterium	0.0018853822	0.0259521704
 no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_186807|no rank_208050|species_Peptococcaceae bacterium UBA7702	4.90597e-05	0
 no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_186807|no rank_unclassified Peptococcaceae	4.90597e-05	0
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_216572|genus_459786|no rank_2629304|species_Oscillibacter sp. 57_20	0.0001418631	0.0010884211
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_216572|genus_459786|no rank_2629304|species_Oscillibacter sp. ER4	0.0189918878	0
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_216572|genus_459786|no rank_876090|species_Oscillibacter sp. CAG:155	0	0.0008454795
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_216572|genus_459786|no rank_2629304|species_Oscillibacter sp.	0	0.0003060473
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_216572|genus_459786|no rank_2629304|species_Oscillibacter sp. 57_20	0.0001418631	0.0003598226
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_216572|genus_459786|no rank_2629304|species_Oscillibacter sp. CAG:241_62_21	0	0.0008806667
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_216572|genus_459786|no rank_2629304|species_Oscillibacter sp. ER4	0.0189918878	0.0001174527
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_216572|genus_459786|no rank_876090|species_Oscillibacter sp. CAG:155	0	0.0129892624
 no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_216572|genus_459786|no rank_876090|species_Oscillibacter sp. CAG:241	0.0002457543	0
 no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_216572|genus_459786|no rank_876090|species_uncultured Oscillibacter sp.	0.00087381	0
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_216572|genus_459786|no rank_environmental samples	0.0011197162	0.0008454795
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_216572|genus_459786|no rank_unclassified Oscillibacter	0.019133751	0.0010884211
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_216572|genus_Oscillibacter	0.0202534672	0.0019339006
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_31979|genus_1485|no rank_2614128|species_Clostridium sp. AM34-11AC	0	0.0032193964
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_31979|genus_1485|no rank_2614128|species_Clostridium sp. OF03-18AA	0	0.0011955967
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_31979|genus_1485|no rank_2614128|species_Clostridium sp. OM08-29	0	0.000403017
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_216572|genus_459786|no rank_environmental samples	0.0011197162	0.0129892624
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_216572|genus_459786|no rank_unclassified Oscillibacter	0.019133751	0.0016641417
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_216572|genus_Oscillibacter	0.0202534672	0.0146534041
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_31979|genus_1485|no rank_2614128|species_Clostridium sp. AF37-5	0	0.0001534045
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_31979|genus_1485|no rank_2614128|species_Clostridium sp. AM49-4BH	0	0.0001278117
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_31979|genus_1485|no rank_2614128|species_Clostridium sp. CAG:354_28_25	0	5.2709e-05
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_31979|genus_1485|no rank_2614128|species_Clostridium sp. OM08-29	0	0.0001136442
 no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_31979|genus_1485|no rank_59619|species_Clostridium sp. CAG:138	0.0001178649	0
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_31979|genus_1485|no rank_59619|species_Clostridium sp. CAG:217	0.0004860407	0.0002369789
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_31979|genus_1485|no rank_59619|species_Clostridium sp. CAG:217	0.0004860407	0.0040360462
 no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_31979|genus_1485|no rank_59619|species_Clostridium sp. CAG:221	9.4626e-05	0
 no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_31979|genus_1485|no rank_59619|species_Clostridium sp. CAG:253	0.0013341817	0
 no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_31979|genus_1485|no rank_59619|species_Clostridium sp. CAG:302	0.0002369448	0
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_31979|genus_1485|no rank_59619|species_Clostridium sp. CAG:343	0	7.79737e-05
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_31979|genus_1485|no rank_59619|species_Clostridium sp. CAG:343	0	0.0002679628
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_31979|genus_1485|no rank_59619|species_Clostridium sp. CAG:452	0	1.173e-05
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_31979|genus_1485|no rank_59619|species_Clostridium sp. CAG:465	0	0.0001380183
 no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_31979|genus_1485|no rank_59619|species_Clostridium sp. CAG:510	0.000320635	0
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_31979|genus_1485|no rank_59619|species_Clostridium sp. CAG:568	0	1.33014e-05
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_31979|genus_1485|no rank_59619|species_Clostridium sp. CAG:628	0	0.0001324024
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_31979|genus_1485|no rank_59619|species_Clostridium sp. CAG:678	0	0.0005741005
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_31979|genus_1485|no rank_59619|species_uncultured Clostridium sp.	0.0001201432	0
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_31979|genus_1485|no rank_environmental samples	0.0027108919	0.0010350626
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_31979|genus_1485|no rank_unclassified Clostridium	0	0.004818163
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_31979|genus_1485|no rank_59619|species_Clostridium sp. CAG:568	0	0.0091320612
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_31979|genus_1485|no rank_59619|species_uncultured Clostridium sp.	0.0001201432	0.0001019142
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_31979|genus_1485|no rank_environmental samples	0.0027108919	0.0136883421
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_31979|genus_1485|no rank_unclassified Clostridium	0	0.0004477217
 no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_31979|genus_1485|species_Clostridium disporicum	0.0002928395	0
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_31979|genus_1485|species_Clostridium fessum	0	0.0008422688
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_31979|genus_1485|species_Clostridium jeddahense	0	0.0014258485
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_31979|genus_580596|no rank_2633649|species_Butyricicoccus sp. OM04-18BH	7.26023e-05	2.9049e-05
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_31979|genus_580596|no rank_unclassified Butyricicoccus	7.26023e-05	2.9049e-05
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_31979|genus_Butyricicoccus	7.26023e-05	2.9049e-05
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_31979|genus_Clostridium	0.0030037314	0.0081214959
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_424536|genus_270497|no rank_2617981|species_Catabacter sp. UBA1750	0	0.0197727541
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_424536|genus_270497|no rank_2617981|species_Catabacter sp. UBA4636	0	0.000139894
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_424536|genus_270497|no rank_unclassified Catabacter	0	0.0199126481
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_424536|genus_Catabacter	0	0.0199126481
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_541000|genus_1263|no rank_129701|species_Ruminococcus sp. CAG:254	0.0008135106	0.0783962859
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_31979|genus_580596|no rank_2633649|species_Butyricicoccus sp. OM04-18BH	7.26023e-05	0
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_31979|genus_580596|no rank_unclassified Butyricicoccus	7.26023e-05	0
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_31979|genus_Butyricicoccus	7.26023e-05	0
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_31979|genus_Clostridium	0.0030037314	0.0141362162
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_541000|genus_1263|no rank_129701|species_Ruminococcus sp. CAG:254	0.0008135106	0.0003060473
 no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_541000|genus_1263|no rank_129701|species_Ruminococcus sp. CAG:382	0.0002480326	0
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_541000|genus_1263|no rank_129701|species_uncultured Ruminococcus sp.	0.0007996888	0.0002134339
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_541000|genus_1263|no rank_2608920|species_Ruminococcus sp. AM40-10AC	0	0.0004991846
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_541000|genus_1263|no rank_129701|species_uncultured Ruminococcus sp.	0.0007996888	0.0033002531
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_541000|genus_1263|no rank_2608920|species_Ruminococcus sp. AM42-11	0	0.0267728159
 no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_541000|genus_1263|no rank_2608920|species_Ruminococcus sp. Zagget11	0.0055562045	0
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_541000|genus_1263|no rank_environmental samples	0.0018613839	0.0786097198
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_541000|genus_1263|no rank_unclassified Ruminococcus	0.0055562045	0.0004991846
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_541000|genus_1263|species_Ruminococcus bicirculans	0.000416628	0.0003230557
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_541000|genus_1263|species_Ruminococcus bromii	0	0.0099080109
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_541000|genus_204475|no rank_2630008|species_Gemmiger sp. An194	0	0.0074732439
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_541000|genus_204475|no rank_unclassified Gemmiger	0	0.0074732439
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_541000|genus_204475|species_Gemmiger formicilis	0.0008768478	0.0136946278
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_541000|genus_2048137|species_Agathobaculum butyriciproducens	0.0002310212	0.0001157374
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_541000|genus_1263|no rank_environmental samples	0.0018613839	0.0036063004
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_541000|genus_1263|no rank_unclassified Ruminococcus	0.0055562045	0.0267728159
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_541000|genus_1263|species_Ruminococcus bicirculans	0.000416628	0.0026162549
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_541000|genus_1263|species_Ruminococcus bromii	0	0.0012931983
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_541000|genus_204475|species_Gemmiger formicilis	0.0008768478	0.0009240831
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_541000|genus_2048137|species_Agathobaculum butyriciproducens	0.0002310212	5.78885e-05
 no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_541000|genus_2048137|species_Agathobaculum desmolans	6.85014e-05	0
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_541000|genus_216851|no rank_259314|species_Faecalibacterium sp. CAG:74	0.0017661503	0.0585544257
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_541000|genus_216851|no rank_259314|species_uncultured Faecalibacterium sp.	0	6.55896e-05
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_541000|genus_216851|no rank_2646395|species_Faecalibacterium sp. UBA1360	0	3.34828e-05
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_541000|genus_216851|no rank_environmental samples	0.0017661503	0.0586201682
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_541000|genus_216851|no rank_unclassified Faecalibacterium	0	3.34828e-05
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_541000|genus_216851|species_Faecalibacterium prausnitzii	0.0507590513	0.0142066551
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_541000|genus_292632|no rank_2685293|species_Subdoligranulum sp. APC924/74	0.0034274981	0.0018388033
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_541000|genus_292632|no rank_unclassified Subdoligranulum	0.0034274981	0.0018388033
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_541000|genus_Agathobaculum	0.0002996745	0.0001157374
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_541000|genus_Faecalibacterium	0.0525253535	0.0728603061
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_541000|genus_Gemmiger	0.0008768478	0.0211678717
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_541000|genus_Ruminococcus	0.0078343683	0.0893401239
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_541000|genus_Subdoligranulum	0.0034274981	0.0018388033
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_541000|no rank_2305133|species_Ruminococcaceae bacterium	0.0083708357	0.0018825297
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_541000|genus_216851|no rank_259314|species_Faecalibacterium sp. CAG:74	0.0017661503	0.0062565267
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_541000|genus_216851|no rank_259314|species_uncultured Faecalibacterium sp.	0	0.0179154204
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_541000|genus_216851|no rank_2646395|species_Faecalibacterium sp. UBA1819	0	0.0003479403
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_541000|genus_216851|no rank_environmental samples	0.0017661503	0.0241720994
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_541000|genus_216851|no rank_unclassified Faecalibacterium	0	0.0003479403
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_541000|genus_216851|species_Faecalibacterium prausnitzii	0.0507590513	0.08264069
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_541000|genus_244127|no rank_905010|species_Anaerotruncus sp. CAG:528	0	0.0001512718
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_541000|genus_244127|no rank_environmental samples	0	0.0001512718
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_541000|genus_292632|no rank_2685293|species_Subdoligranulum sp. APC924/74	0.0034274981	0.0056564669
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_541000|genus_292632|no rank_unclassified Subdoligranulum	0.0034274981	0.0056564669
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_541000|genus_Agathobaculum	0.0002996745	5.78885e-05
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_541000|genus_Anaerotruncus	0	0.0001512718
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_541000|genus_Faecalibacterium	0.0525253535	0.1071607297
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_541000|genus_Gemmiger	0.0008768478	0.0009240831
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_541000|genus_Ruminococcus	0.0078343683	0.0342887219
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_541000|genus_Subdoligranulum	0.0034274981	0.0056564669
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_541000|no rank_2305133|species_Ruminococcaceae bacterium	0.0083708357	0.0043935838
 no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_541000|no rank_2305133|species_Ruminococcaceae bacterium UBA5891	5.86287e-05	0
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_541000|no rank_541002|species_uncultured Ruminococcaceae bacterium	0.0099351272	0.0272362131
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_541000|no rank_552397|species_[Eubacterium] siraeum	0.000289498	0
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_541000|no rank_environmental samples	0.0099351272	0.0272362131
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_541000|no rank_Ruminococcaceae incertae sedis	0.000289498	0
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_541000|no rank_unclassified Ruminococcaceae	0.0084294643	0.0018825297
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_Catabacteriaceae	0	0.0199126481
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_Clostridiaceae	0.0030763338	0.0081506978
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_Eubacteriaceae	0.0018853822	0.0392947692
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_Lachnospiraceae	0.0880090574	0.0954070892
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_Oscillospiraceae	0.0202534672	0.0019339006
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_541000|no rank_541002|species_uncultured Ruminococcaceae bacterium	0.0099351272	0.0111726303
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_541000|no rank_552397|species_[Eubacterium] siraeum	0.000289498	0.0003995829
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_541000|no rank_environmental samples	0.0099351272	0.0111726303
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_541000|no rank_Ruminococcaceae incertae sedis	0.000289498	0.0003995829
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_541000|no rank_unclassified Ruminococcaceae	0.0084294643	0.0043935838
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_990719|no rank_1917874|species_Christensenellaceae bacterium Phil1	0	4.1893e-05
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_990719|no rank_unclassified Christensenellaceae	0	4.1893e-05
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_Christensenellaceae	0	4.1893e-05
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_Clostridiaceae	0.0030763338	0.0141362162
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_Eubacteriaceae	0.0018853822	0.0259521704
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_Lachnospiraceae	0.0880090574	0.045476586
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_Oscillospiraceae	0.0202534672	0.0146534041
 no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_Peptococcaceae	4.90597e-05	0
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_Ruminococcaceae	0.0836184392	0.2144421968
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|no rank_39779|species_Clostridiales bacterium	0.0383645582	0.0085450001
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|family_Ruminococcaceae	0.0836184392	0.1642057204
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|no rank_39779|species_Clostridiales bacterium	0.0383645582	0.0288159748
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|no rank_39779|species_Clostridiales bacterium CCNA10	0	0.0011533519
 no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|no rank_39779|species_Clostridiales bacterium DTU035	6.0907e-05	0
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|no rank_50559|species_uncultured Clostridiales bacterium	0.0136342006	0.0259539279
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|no rank_538999|family_543314|no rank_1284678|species_Clostridiales bacterium UBA643	0	5.04536e-05
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|no rank_538999|family_543314|no rank_unclassified Clostridiales Family XIII. Incertae Sedis	0	5.04536e-05
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|no rank_538999|family_Clostridiales Family XIII. Incertae Sedis	0	5.04536e-05
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|no rank_39779|species_Clostridiales bacterium UBA4696	0	7.78448e-05
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|no rank_50559|species_uncultured Clostridiales bacterium	0.0136342006	0.0148124451
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|no rank_538999|family_543314|no rank_1284678|species_Clostridiales bacterium UBA643	0	2.51358e-05
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|no rank_538999|family_543314|no rank_unclassified Clostridiales Family XIII. Incertae Sedis	0	2.51358e-05
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|no rank_538999|family_Clostridiales Family XIII. Incertae Sedis	0	2.51358e-05
 no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|no rank_538999|genus_1686313|species_Fenollaria timonensis	0.0004735859	0
 no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|no rank_538999|genus_2717089|species_Massilistercora timonensis	2.35426e-05	0
 no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|no rank_538999|genus_Fenollaria	0.0004735859	0
 no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|no rank_538999|genus_Massilistercora	2.35426e-05	0
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|no rank_Clostridiales incertae sedis	0.0004971285	5.04536e-05
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|no rank_environmental samples	0.0136342006	0.0259539279
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|no rank_unclassified Clostridiales	0.0384254651	0.0085450001
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_Clostridiales	0.2494492931	0.4136914477
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|no rank_Clostridiales incertae sedis	0.0004971285	2.51358e-05
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|no rank_environmental samples	0.0136342006	0.0148124451
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_186802|no rank_unclassified Clostridiales	0.0384254651	0.0300473238
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_186801|order_Clostridiales	0.2494492931	0.3093515042
 no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_526524|order_526525|family_128827|genus_100883|no rank_512291|species_Coprobacillus sp. CAG:826	0.0005293287	0
 no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_526524|order_526525|family_128827|genus_100883|no rank_environmental samples	0.0005293287	0
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_526524|order_526525|family_128827|genus_100883|species_Coprobacillus cateniformis	0	0.000458363
 no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_526524|order_526525|family_128827|genus_123375|no rank_168828|species_uncultured Solobacterium sp.	5.86287e-05	0
 no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_526524|order_526525|family_128827|genus_123375|no rank_environmental samples	5.86287e-05	0
 no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_526524|order_526525|family_128827|genus_135858|species_Catenibacterium mitsuokai	0.0002512223	0
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_526524|order_526525|family_128827|genus_1505663|species_Erysipelatoclostridium ramosum	0	0.019175873
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_526524|order_526525|family_128827|genus_1573535|species_Holdemanella biformis	0.0001941125	0.0001611456
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_526524|order_526525|family_128827|genus_1573535|species_Holdemanella biformis	0.0001941125	0.0006708971
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_526524|order_526525|family_128827|genus_61170|species_Holdemania filiformis	0	0.0013867339
 no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_526524|order_526525|family_128827|genus_Catenibacterium	0.0002512223	0
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_526524|order_526525|family_128827|genus_Coprobacillus	0.0005293287	0.000458363
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_526524|order_526525|family_128827|genus_Erysipelatoclostridium	0	0.019175873
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_526524|order_526525|family_128827|genus_Holdemanella	0.0001941125	0.0001611456
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_526524|order_526525|family_128827|genus_Coprobacillus	0.0005293287	0
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_526524|order_526525|family_128827|genus_Holdemanella	0.0001941125	0.0006708971
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_526524|order_526525|family_128827|genus_Holdemania	0	0.0013867339
 no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_526524|order_526525|family_128827|genus_Solobacterium	5.86287e-05	0
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_526524|order_526525|family_128827|no rank_134224|species_uncultured Erysipelotrichaceae bacterium	0	0.0003103659
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_526524|order_526525|family_128827|no rank_environmental samples	0	0.0003103659
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_526524|order_526525|family_Erysipelotrichaceae	0.001033444	0.0201060534
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_526524|order_Erysipelotrichales	0.001033444	0.0201060534
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_909932|order_1843488|family_909930|genus_33024|no rank_2639160|species_Phascolarctobacterium sp. CAG:266	0.000531607	0
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_526524|order_526525|family_Erysipelotrichaceae	0.001033444	0.0020577834
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_526524|order_Erysipelotrichales	0.001033444	0.0020577834
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_909932|order_1843488|family_909930|genus_33024|no rank_2639160|species_Phascolarctobacterium sp. CAG:266	0.000531607	0.0020771303
 no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_909932|order_1843488|family_909930|genus_33024|no rank_512295|species_uncultured Phascolarctobacterium sp.	0.0007389337	0
 no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_909932|order_1843488|family_909930|genus_33024|no rank_environmental samples	0.0007389337	0
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_909932|order_1843488|family_909930|genus_33024|no rank_unclassified Phascolarctobacterium	0.000531607	0
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_909932|order_1843488|family_909930|genus_33024|no rank_unclassified Phascolarctobacterium	0.000531607	0.0020771303
 no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_909932|order_1843488|family_909930|genus_33024|species_Phascolarctobacterium faecium	0.0026083677	0
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_909932|order_1843488|family_909930|genus_33024|species_Phascolarctobacterium succinatutens	0.1284456677	0.0014836407
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_909932|order_1843488|family_909930|genus_Phascolarctobacterium	0.1323248799	0.0014836407
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_909932|order_1843488|family_Acidaminococcaceae	0.1323248799	0.0014836407
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_909932|order_1843488|family_909930|genus_33024|species_Phascolarctobacterium succinatutens	0.1284456677	0.0019362176
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_909932|order_1843488|family_909930|genus_Phascolarctobacterium	0.1323248799	0.0040135002
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_909932|order_1843488|family_Acidaminococcaceae	0.1323248799	0.0040135002
 no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_909932|order_1843489|family_31977|genus_209879|species_Allisonella histaminiformans	6.8957e-05	0
 no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_909932|order_1843489|family_31977|genus_29465|no rank_135095|species_uncultured Veillonella sp.	0.0007690075	0
 no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_909932|order_1843489|family_31977|genus_29465|no rank_environmental samples	0.0007690075	0
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_909932|order_1843489|family_31977|genus_29465|species_Veillonella atypica	0	0.0008408928
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_909932|order_1843489|family_31977|genus_29465|species_Veillonella infantium	0	0.0004241158
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_909932|order_1843489|family_31977|genus_29465|species_Veillonella parvula	0.0015585198	0.0002414127
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_909932|order_1843489|family_31977|genus_29465|species_Veillonella rogosae	0	0.0011338293
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_909932|order_1843489|family_31977|genus_39948|no rank_135034|species_Dialister sp. CAG:486	0.0004324243	0.0001210886
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_909932|order_1843489|family_31977|genus_39948|no rank_2638756|species_Dialister sp. UBA1703	0	0.00028942
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_909932|order_1843489|family_31977|genus_39948|no rank_environmental samples	0.0004324243	0.0001210886
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_909932|order_1843489|family_31977|genus_39948|no rank_unclassified Dialister	0	0.00028942
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_909932|order_1843489|family_31977|genus_39948|species_Dialister invisus	0	0.0032271938
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_909932|order_1843489|family_31977|genus_39948|species_Dialister succinatiphilus	0.0009833211	0.0008317195
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_909932|order_1843489|family_31977|genus_906|no rank_2626256|species_Megasphaera sp. NM10	0	0.0001666497
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_909932|order_1843489|family_31977|genus_906|no rank_unclassified Megasphaera	0	0.0001666497
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_909932|order_1843489|family_31977|genus_29465|species_Veillonella atypica	0	0.0004503115
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_909932|order_1843489|family_31977|genus_29465|species_Veillonella parvula	0.0015585198	0.0018390258
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_909932|order_1843489|family_31977|genus_39948|no rank_135034|species_Dialister sp. CAG:486	0.0004324243	0.0612336798
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_909932|order_1843489|family_31977|genus_39948|no rank_135034|species_uncultured Dialister sp.	0	3.86939e-05
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_909932|order_1843489|family_31977|genus_39948|no rank_environmental samples	0.0004324243	0.0612723737
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_909932|order_1843489|family_31977|genus_39948|species_Dialister invisus	0	3.71705e-05
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_909932|order_1843489|family_31977|genus_39948|species_Dialister succinatiphilus	0.0009833211	0
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_909932|order_1843489|family_31977|genus_906|no rank_2626256|species_Megasphaera sp. NM10	0	0.0001686383
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_909932|order_1843489|family_31977|genus_906|no rank_unclassified Megasphaera	0	0.0001686383
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_909932|order_1843489|family_31977|genus_906|species_Megasphaera stantonii	0	0.0001771692
 no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_909932|order_1843489|family_31977|genus_Allisonella	6.8957e-05	0
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_909932|order_1843489|family_31977|genus_Dialister	0.0014158973	0.0044697276
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_909932|order_1843489|family_31977|genus_Megasphaera	0	0.0001666497
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_909932|order_1843489|family_31977|genus_Veillonella	0.0023276792	0.0026405564
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_909932|order_1843489|family_31977|genus_Dialister	0.0014158973	0.0613095442
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_909932|order_1843489|family_31977|genus_Megasphaera	0	0.0003458075
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_909932|order_1843489|family_31977|genus_Veillonella	0.0023276792	0.0022894897
 no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_909932|order_1843489|family_31977|no rank_135094|species_uncultured Veillonellaceae bacterium	6.91089e-05	0
 no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_909932|order_1843489|family_31977|no rank_42214|species_Veillonellaceae bacterium UBA1822	0.0005079125	0
 no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_909932|order_1843489|family_31977|no rank_environmental samples	6.91089e-05	0
 no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_909932|order_1843489|family_31977|no rank_unclassified Veillonellaceae	0.0005079125	0
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_909932|order_1843489|family_Veillonellaceae	0.0043897068	0.0072770866
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_909932|order_Acidaminococcales	0.1323248799	0.0014836407
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_909932|order_Veillonellales	0.0043897068	0.0072770866
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_91061|order_1385|family_90964|genus_1279|no rank_129707|species_Staphylococcus sp. CAG:324	0	0.0006473346
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_91061|order_1385|family_90964|genus_1279|no rank_91994|species_Staphylococcus sp. M0911	0	0.0033337579
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_91061|order_1385|family_90964|genus_1279|no rank_environmental samples	0	0.0006473346
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_91061|order_1385|family_90964|genus_1279|no rank_unclassified Staphylococcus	0	0.0033337579
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_91061|order_1385|family_90964|genus_Staphylococcus	0	0.0039812453
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_91061|order_1385|family_Staphylococcaceae	0	0.0039812453
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_909932|order_1843489|family_Veillonellaceae	0.0043897068	0.0639449938
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_909932|order_909929|family_1843491|genus_158846|species_Megamonas funiformis	0	6.73335e-05
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_909932|order_909929|family_1843491|genus_Megamonas	0	6.73335e-05
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_909932|order_909929|family_Selenomonadaceae	0	6.73335e-05
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_909932|order_Acidaminococcales	0.1323248799	0.0040135002
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_909932|order_Selenomonadales	0	6.73335e-05
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_909932|order_Veillonellales	0.0043897068	0.0639449938
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_91061|order_1385|family_186817|genus_1386|no rank_185979|species_Bacillus sp. FJAT-22090	0	0.0014584852
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_91061|order_1385|family_186817|genus_1386|no rank_185979|species_Bacillus sp. FJAT-27916	0	0.0021976298
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_91061|order_1385|family_186817|genus_1386|no rank_unclassified Bacillus	0	0.0036562673
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_91061|order_1385|family_186817|genus_Bacillus	0	0.0036562673
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_91061|order_1385|family_Bacillaceae	0	0.0036562673
 no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_91061|order_1385|no rank_40298|species_Bacillales bacterium UBA6414	0.0125810112	0
 no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_91061|order_1385|no rank_40298|species_Bacillales bacterium UBA7057	0.0001632793	0
 no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_91061|order_1385|no rank_unclassified Bacillales	0.0127444424	0
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_91061|order_186826|family_1300|genus_1301|no rank_2608887|species_Streptococcus sp. 596553	0	3.0425e-05
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_91061|order_186826|family_1300|genus_1301|no rank_2608887|species_Streptococcus sp. C150	4.17691e-05	0
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_91061|order_186826|family_1300|genus_1301|no rank_2608887|species_Streptococcus sp. CCH5-D3	0.0039902421	0.0049164711
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_91061|order_186826|family_1300|genus_1301|no rank_unclassified Streptococcus	0.0040320112	0.004947049
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_91061|order_186826|family_1300|genus_1301|species group_671232|species_Streptococcus anginosus	0	0.0001669554
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_91061|order_186826|family_1300|genus_1301|species group_Streptococcus anginosus group	0	0.0001669554
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_91061|order_186826|family_1300|genus_1301|species_Streptococcus lutetiensis	5.75654e-05	0
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_91061|order_186826|family_1300|genus_1301|species_Streptococcus mitis	0	0.0003265722
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_91061|order_186826|family_1300|genus_1301|species_Streptococcus oralis	0	8.22546e-05
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_91061|order_186826|family_1300|genus_1301|species_Streptococcus parasanguinis	0.0055463318	0.0034167769
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_91061|order_186826|family_1300|genus_1301|species_Streptococcus peroris	0	0.0003447661
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_91061|order_186826|family_1300|genus_1301|species_Streptococcus pneumoniae	0	6.60483e-05
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_91061|order_186826|family_1300|genus_1301|species_Streptococcus pseudopneumoniae	0.001420302	0.0222758627
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_91061|order_186826|family_1300|genus_1301|species_Streptococcus salivarius	0.0676419782	0.0055705328
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_91061|order_186826|family_1300|genus_1301|species_Streptococcus sanguinis	0	0.0018479767
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_91061|order_186826|family_1300|genus_1301|species_Streptococcus thermophilus	0.0001224215	0
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_91061|order_186826|family_1300|genus_1301|no rank_2608887|species_Streptococcus sp. C150	4.17691e-05	0.0004238047
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_91061|order_186826|family_1300|genus_1301|no rank_2608887|species_Streptococcus sp. CCH5-D3	0.0039902421	0
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_91061|order_186826|family_1300|genus_1301|no rank_2608887|species_Streptococcus sp. oral taxon 431	0	0.0003299644
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_91061|order_186826|family_1300|genus_1301|no rank_unclassified Streptococcus	0.0040320112	0.000753769
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_91061|order_186826|family_1300|genus_1301|species group_119603|species_Streptococcus dysgalactiae	0	0.0005471985
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_91061|order_186826|family_1300|genus_1301|species group_Streptococcus dysgalactiae group	0	0.0005471985
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_91061|order_186826|family_1300|genus_1301|species_Streptococcus equinus	0	0.0001294874
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_91061|order_186826|family_1300|genus_1301|species_Streptococcus infantarius	0	0.0784265605
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_91061|order_186826|family_1300|genus_1301|species_Streptococcus lutetiensis	5.75654e-05	5.2709e-05
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_91061|order_186826|family_1300|genus_1301|species_Streptococcus oralis	0	0.0023601745
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_91061|order_186826|family_1300|genus_1301|species_Streptococcus parasanguinis	0.0055463318	0.0001264406
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_91061|order_186826|family_1300|genus_1301|species_Streptococcus pseudopneumoniae	0.001420302	0
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_91061|order_186826|family_1300|genus_1301|species_Streptococcus salivarius	0.0676419782	8.31766e-05
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_91061|order_186826|family_1300|genus_1301|species_Streptococcus thermophilus	0.0001224215	0.0002233277
 no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_91061|order_186826|family_1300|genus_1301|species_Streptococcus vestibularis	0.0001288008	0
 no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_91061|order_186826|family_1300|genus_1357|species_Lactococcus garvieae	0.0001322942	0
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_91061|order_186826|family_1300|genus_Lactococcus	0.0001322942	0
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_91061|order_186826|family_1300|genus_Streptococcus	0.0789498666	0.0390454062
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_91061|order_186826|family_1300|genus_1357|species_Lactococcus lactis	0	5.95642e-05
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_91061|order_186826|family_1300|genus_Lactococcus	0.0001322942	5.95642e-05
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_91061|order_186826|family_1300|genus_Streptococcus	0.0789498666	0.0827034533
 no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_91061|order_186826|family_186828|genus_117563|species_Granulicatella adiacens	0.0003230652	0
 no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_91061|order_186826|family_186828|genus_Granulicatella	0.0003230652	0
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_91061|order_186826|family_33958|genus_2767887|species_Ligilactobacillus ruminis	0	0.0001048823
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_91061|order_186826|family_33958|genus_Ligilactobacillus	0	0.0001048823
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_91061|order_186826|family_33958|no rank_81853|species_Lactobacillaceae bacterium UBA639	0	0.0001617572
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_91061|order_186826|family_33958|no rank_unclassified Lactobacillaceae	0	0.0001617572
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_91061|order_186826|family_33958|genus_2767893|species_Lentilactobacillus buchneri	0	0.0053604739
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_91061|order_186826|family_33958|genus_Lentilactobacillus	0	0.0053604739
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_91061|order_186826|family_81852|genus_1350|species_Enterococcus casseliflavus	0	4.87482e-05
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_91061|order_186826|family_81852|genus_Enterococcus	0	4.87482e-05
 no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_91061|order_186826|family_Carnobacteriaceae	0.0003230652	0
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_91061|order_186826|family_Lactobacillaceae	0	0.0002667924
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_91061|order_186826|family_Streptococcaceae	0.0790823127	0.0390454062
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_91061|order_Bacillales	0.0127444424	0.0039812453
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_91061|order_Lactobacillales	0.0794053778	0.0393121986
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_Bacilli	0.0921498202	0.0432934439
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_Clostridia	0.2494492931	0.4139469262
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_Erysipelotrichia	0.001033444	0.0201060534
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_Negativicutes	0.1367145867	0.0087607273
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_Tissierellia	0	0.0036078889
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|no rank_47928|species_Firmicutes bacterium CAG:103	0	0.0002065539
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|no rank_47928|species_Firmicutes bacterium CAG:110	0.0014792344	0.0008512893
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|no rank_47928|species_Firmicutes bacterium CAG:176	0.0002929914	0.0003248904
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|no rank_47928|species_Firmicutes bacterium CAG:238	0	0.0015590153
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|no rank_47928|species_Firmicutes bacterium CAG:552	0	9.49444e-05
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_91061|order_186826|family_Enterococcaceae	0	4.87482e-05
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_91061|order_186826|family_Lactobacillaceae	0	0.0053604739
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_91061|order_186826|family_Streptococcaceae	0.0790823127	0.0827630175
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_91061|order_Bacillales	0.0127444424	0.0036562673
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_91061|order_Lactobacillales	0.0794053778	0.0881723919
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_Bacilli	0.0921498202	0.0918288116
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_Clostridia	0.2494492931	0.3093515042
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_Erysipelotrichia	0.001033444	0.0020577834
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_Negativicutes	0.1367145867	0.0680259797
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|class_Tissierellia	0	0.0014339588
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|no rank_47928|species_Firmicutes bacterium CAG:103	0	0.0003049809
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|no rank_47928|species_Firmicutes bacterium CAG:110	0.0014792344	0.0011792494
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|no rank_47928|species_Firmicutes bacterium CAG:176	0.0002929914	0
 no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|no rank_47928|species_Firmicutes bacterium CAG:555	0.0004875596	0
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|no rank_47928|species_Firmicutes bacterium CAG:582	0	8.08786e-05
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|no rank_47928|species_Firmicutes bacterium CAG:83	0.0015858596	0.0003623484
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|no rank_47928|species_Firmicutes bacterium CAG:83	0.0015858596	6.87045e-05
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|no rank_47928|species_uncultured Firmicutes bacterium	0	0.0001514241
 no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|no rank_84086|species_Firmicutes bacterium	0.0006605597	0
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|no rank_84086|species_Firmicutes bacterium AM55-24TS	0	0.0043633165
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|no rank_84086|species_Firmicutes bacterium CAG:24053_14	9.78157e-05	0.0031025888
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|no rank_84086|species_Firmicutes bacterium AF25-13AC	0	0.0002388662
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|no rank_84086|species_Firmicutes bacterium CAG:24053_14	9.78157e-05	4.58538e-05
 no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|no rank_84086|species_Firmicutes bacterium CAG:321_26_22	0.0048272953	0
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|no rank_84086|species_Firmicutes bacterium OM08-11AC	0.002595761	0
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|no rank_84086|species_Firmicutes bacterium TM09-10	0.0003210906	0.016694169
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|no rank_environmental samples	0.0038457969	0.003480379
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|no rank_unclassified Firmicutes sensu stricto	0.0085028261	0.0241600742
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_1760|order_2037|family_2049|genus_1654|no rank_2609248|species_Actinomyces sp. HMSC035G02	0	0.0021554377
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_1760|order_2037|family_2049|genus_1654|no rank_unclassified Actinomyces	0	0.0021554377
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_1760|order_2037|family_2049|genus_184869|species_Varibaculum cambriense	0	5.397e-05
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_1760|order_2037|family_2049|genus_Actinomyces	0	0.0021554377
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_1760|order_2037|family_2049|genus_Varibaculum	0	5.397e-05
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_1760|order_2037|family_Actinomycetaceae	0	0.0022095606
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_1760|order_85004|family_31953|genus_1678|species_Bifidobacterium adolescentis	0.0380832621	0.0003247375
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_1760|order_85004|family_31953|genus_1678|species_Bifidobacterium bifidum	0	0.0001212415
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|no rank_84086|species_Firmicutes bacterium OM08-11AC	0.002595761	0.0018407015
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|no rank_84086|species_Firmicutes bacterium TM09-10	0.0003210906	0
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|no rank_environmental samples	0.0038457969	0.0017046636
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_1239|no rank_unclassified Firmicutes sensu stricto	0.0085028261	0.0021254215
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_1760|order_2037|family_2049|genus_184869|species_Varibaculum cambriense	0	0.0009054978
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_1760|order_2037|family_2049|genus_Varibaculum	0	0.0009054978
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_1760|order_2037|family_Actinomycetaceae	0	0.0009054978
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_1760|order_85004|family_31953|genus_1678|species_Bifidobacterium adolescentis	0.0380832621	0.0001233939
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_1760|order_85004|family_31953|genus_1678|species_Bifidobacterium catenulatum	0	0.0001151676
 no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_1760|order_85004|family_31953|genus_1678|species_Bifidobacterium pseudocatenulatum	0.0012236074	0
 no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_1760|order_85004|family_31953|genus_1678|species_Bifidobacterium ruminantium	8.2019e-06	0
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_1760|order_85004|family_31953|genus_Bifidobacterium	0.0393152234	0.0004461319
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_1760|order_85004|family_Bifidobacteriaceae	0.0393152234	0.0004461319
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_1760|order_85006|family_1268|genus_32207|species_Rothia mucilaginosa	0	0.0030073385
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_1760|order_85006|family_1268|genus_Rothia	0	0.0030073385
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_1760|order_85006|family_Micrococcaceae	0	0.0030073385
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_1760|order_85004|family_31953|genus_Bifidobacterium	0.0393152234	0.0002387138
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_1760|order_85004|family_Bifidobacteriaceae	0.0393152234	0.0002387138
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_1760|order_85006|family_1268|genus_32207|no rank_2689056|species_Rothia sp. HMSC078H08	0	0.0001541662
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_1760|order_85006|family_1268|genus_32207|no rank_unclassified Rothia (in: Bacteria)	0	0.0001541662
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_1760|order_85006|family_1268|genus_32207|species_Rothia mucilaginosa	0	0.0274613842
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_1760|order_85006|family_1268|genus_Rothia	0	0.0276157027
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_1760|order_85006|family_Micrococcaceae	0	0.0276157027
 no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_1760|order_85007|no rank_697024|genus_1847725|species_Lawsonella clevelandensis	0.001797743	0
 no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_1760|order_85007|no rank_697024|genus_Lawsonella	0.001797743	0
 no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_1760|order_85007|no rank_Corynebacteriales incertae sedis	0.001797743	0
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_1760|order_Actinomycetales	0	0.0022095606
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_1760|order_Bifidobacteriales	0.0393152234	0.0004461319
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_1760|order_85009|family_31957|genus_1912216|species_Cutibacterium acnes	0	0.02319287
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_1760|order_85009|family_31957|genus_Cutibacterium	0	0.02319287
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_1760|order_85009|family_Propionibacteriaceae	0	0.02319287
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_1760|order_Actinomycetales	0	0.0009054978
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_1760|order_Bifidobacteriales	0.0393152234	0.0002387138
 no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_1760|order_Corynebacteriales	0.001797743	0
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_1760|order_Micrococcales	0	0.0030073385
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_1760|order_Micrococcales	0	0.0276157027
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_1760|order_Propionibacteriales	0	0.02319287
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|no rank_2052158|species_Coriobacteriia bacterium	0	0.0001412174
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|no rank_unclassified Coriobacteriia	0	0.0001412174
 no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_1643822|family_1643826|genus_2126002|species_Rubneribacter badeniensis	0.000513988	0
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_1643822|family_1643826|genus_447020|species_Adlercreutzia equolifaciens	0	0.0002056365
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_1643822|family_1643826|genus_84108|species_Slackia isoflavoniconvertens	0.0008918847	0.0003326878
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_1643822|family_1643826|genus_84111|no rank_293421|species_Eggerthella sp. CAG:209	0	0.0007121598
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_1643822|family_1643826|genus_447020|species_Adlercreutzia equolifaciens	0	0.0025393242
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_1643822|family_1643826|genus_651554|species_Paraeggerthella hongkongensis	0	0.0025534916
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_1643822|family_1643826|genus_84108|species_Slackia isoflavoniconvertens	0.0008918847	0
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_1643822|family_1643826|genus_84111|no rank_293421|species_Eggerthella sp. CAG:298	0	0.0002373428
 no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_1643822|family_1643826|genus_84111|no rank_293421|species_Eggerthella sp. CAG:368	0.0001684435	0
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_1643822|family_1643826|genus_84111|no rank_environmental samples	0.0001684435	0.0007121598
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_1643822|family_1643826|genus_Adlercreutzia	0	0.0002056365
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_1643822|family_1643826|genus_Eggerthella	0.0001684435	0.0007121598
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_1643822|family_1643826|genus_84111|no rank_environmental samples	0.0001684435	0.0002373428
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_1643822|family_1643826|genus_84111|species_Eggerthella lenta	0	0.0003125978
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_1643822|family_1643826|genus_84162|no rank_655656|species_Cryptobacterium sp. CAG:338	0	0.0809494321
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_1643822|family_1643826|genus_84162|no rank_655656|species_uncultured Cryptobacterium sp.	0	0.0001141013
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_1643822|family_1643826|genus_84162|no rank_environmental samples	0	0.0810636857
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_1643822|family_1643826|genus_Adlercreutzia	0	0.0025393242
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_1643822|family_1643826|genus_Cryptobacterium	0	0.0810636857
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_1643822|family_1643826|genus_Eggerthella	0.0001684435	0.000550093
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_1643822|family_1643826|genus_Paraeggerthella	0	0.0025534916
 no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_1643822|family_1643826|genus_Rubneribacter	0.000513988	0
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_1643822|family_1643826|genus_Slackia	0.0008918847	0.0003326878
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_1643822|family_Eggerthellaceae	0.001574468	0.0012504841
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_84999|family_1643824|genus_133925|no rank_190763|species_uncultured Olsenella sp.	0	7.87381e-05
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_84999|family_1643824|genus_133925|no rank_2638792|species_Olsenella sp. GAM18	7.62476e-05	0.000112221
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_84999|family_1643824|genus_133925|no rank_environmental samples	0	7.87381e-05
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_84999|family_1643824|genus_133925|no rank_unclassified Olsenella	7.62476e-05	0.000112221
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_1643822|family_1643826|genus_Slackia	0.0008918847	0
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_1643822|family_1643826|no rank_1720314|species_Eggerthellaceae bacterium UBA5906	0	2.05656e-05
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_1643822|family_1643826|no rank_unclassified Eggerthellaceae	0	2.05656e-05
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_1643822|family_Eggerthellaceae	0.001574468	0.0867273125
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_84999|family_1643824|genus_133925|no rank_2638792|species_Olsenella sp. GAM18	7.62476e-05	0
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_84999|family_1643824|genus_133925|no rank_unclassified Olsenella	7.62476e-05	0
 no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_84999|family_1643824|genus_1380|no rank_2643817|species_Atopobium sp. ICM42b	0.0004240705	0
 no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_84999|family_1643824|genus_1380|no rank_unclassified Atopobium	0.0004240705	0
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_84999|family_1643824|genus_1380|species_Atopobium minutum	0	2.46152e-05
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_84999|family_1643824|genus_Atopobium	0.0004240705	2.46152e-05
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_84999|family_1643824|genus_Olsenella	7.62476e-05	0.000191112
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_84999|family_84107|genus_102106|no rank_165189|species_Collinsella sp. CAG:166	0.0075158597	0.0019271735
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_84999|family_84107|genus_102106|no rank_165189|species_uncultured Collinsella sp.	0.0162188738	0.005156202
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_84999|family_84107|genus_102106|no rank_2637548|species_Collinsella sp. 4_8_47FAA	6.24259e-05	0
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_84999|family_84107|genus_102106|no rank_2637548|species_Collinsella sp. AF02-46-1	5.6806e-05	0
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_84999|family_84107|genus_102106|no rank_2637548|species_Collinsella sp. AF23-2	0.0003645305	0.0010257364
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_84999|family_84107|genus_102106|no rank_2637548|species_Collinsella sp. AF25-2LB	0.0002472732	0.0016154316
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_84999|family_84107|genus_102106|no rank_2637548|species_Collinsella sp. AM33-4BH	0.0026899314	0.0015243094
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_84999|family_84107|genus_102106|no rank_2637548|species_Collinsella sp. OM04-5	0.0086360316	0.0009713077
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_84999|family_84107|genus_102106|no rank_2637548|species_Collinsella sp. TF06-26	0.0002647403	4.61727e-05
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_84999|family_84107|genus_102106|no rank_2637548|species_Collinsella sp. TF08-11AT	0.0002231231	0
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_84999|family_84107|genus_102106|no rank_2637548|species_Collinsella sp. TM09-10AT	0.0002796253	0
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_84999|family_84107|genus_102106|no rank_2637548|species_Collinsella sp. TM10-22	4.96673e-05	0
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_84999|family_84107|genus_102106|no rank_environmental samples	0.0237347336	0.0070835283
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_84999|family_84107|genus_102106|no rank_unclassified Collinsella	0.012874762	0.0051832634
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_84999|family_84107|genus_102106|species_Collinsella aerofaciens	0.0056550834	0.0007720925
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_84999|family_84107|genus_1473205|species_Senegalimassilia anaerobia	0.0004602198	0
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_84999|family_84107|genus_Collinsella	0.0422647309	0.0130390372
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_84999|family_84107|genus_Senegalimassilia	0.0004602198	0
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_84999|family_84107|no rank_331631|species_uncultured Coriobacteriaceae bacterium	0	7.44572e-05
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_84999|family_84107|no rank_environmental samples	0	7.44572e-05
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_84999|family_Atopobiaceae	0.0005003181	0.0002158801
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_84999|family_Coriobacteriaceae	0.0427249506	0.0131136473
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_Coriobacteriales	0.0432254207	0.0133295274
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_Eggerthellales	0.001574468	0.0012504841
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_Actinobacteria	0.0411131182	0.0056631839
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_Coriobacteriia	0.0448000406	0.0145800115
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_544448|no rank_658142|species_uncultured Tenericutes bacterium	0	0.0651734754
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_544448|no rank_environmental samples	0	0.0651734754
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_Actinobacteria	0.0859131588	0.0202433483
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_Firmicutes	0.4916960709	0.5173559516
-no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_Tenericutes	0	0.0651734754
-no rank_1|no rank_131567|superkingdom_2|clade_FCB group	0.2442324058	0.1134763473
-no rank_1|no rank_131567|superkingdom_2|clade_PVC group	0.0025860402	0.1597618408
-no rank_1|no rank_131567|superkingdom_2|clade_Terrabacteria group	0.5777003623	0.6027729282
-no rank_1|no rank_131567|superkingdom_2|no rank_2323|clade_1783234|phylum_95818|no rank_1895827|species_Candidatus Saccharibacteria bacterium	0.0067514089	0.0005549893
-no rank_1|no rank_131567|superkingdom_2|no rank_2323|clade_1783234|phylum_95818|no rank_unclassified Saccharibacteria	0.0067514089	0.0005549893
-no rank_1|no rank_131567|superkingdom_2|no rank_2323|clade_1783234|phylum_Candidatus Saccharibacteria	0.0067514089	0.0005549893
-no rank_1|no rank_131567|superkingdom_2|no rank_2323|clade_Bacteria candidate phyla	0.0067514089	0.0005549893
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_84999|family_1643824|genus_Atopobium	0.0004240705	0
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_84999|family_1643824|genus_Olsenella	7.62476e-05	0
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_84999|family_84107|genus_102106|no rank_165189|species_Collinsella sp. CAG:166	0.0075158597	0.0054076987
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_84999|family_84107|genus_102106|no rank_165189|species_uncultured Collinsella sp.	0.0162188738	0.0271609734
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_84999|family_84107|genus_102106|no rank_2637548|species_Collinsella sp. 4_8_47FAA	6.24259e-05	5.30137e-05
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_84999|family_84107|genus_102106|no rank_2637548|species_Collinsella sp. AF02-46-1	5.6806e-05	8.83561e-05
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_84999|family_84107|genus_102106|no rank_2637548|species_Collinsella sp. AF23-2	0.0003645305	0.0034046047
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_84999|family_84107|genus_102106|no rank_2637548|species_Collinsella sp. AF25-2LB	0.0002472732	0.0005394293
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_84999|family_84107|genus_102106|no rank_2637548|species_Collinsella sp. AM33-4BH	0.0026899314	0.0018172415
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_84999|family_84107|genus_102106|no rank_2637548|species_Collinsella sp. OM04-5	0.0086360316	0.0003672872
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_84999|family_84107|genus_102106|no rank_2637548|species_Collinsella sp. TF06-26	0.0002647403	0.0002062658
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_84999|family_84107|genus_102106|no rank_2637548|species_Collinsella sp. TF08-11AT	0.0002231231	8.71374e-05
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_84999|family_84107|genus_102106|no rank_2637548|species_Collinsella sp. TM09-10AT	0.0002796253	0.0003540338
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_84999|family_84107|genus_102106|no rank_2637548|species_Collinsella sp. TM10-22	4.96673e-05	4.31117e-05
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_84999|family_84107|genus_102106|no rank_environmental samples	0.0237347336	0.0325688245
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_84999|family_84107|genus_102106|no rank_unclassified Collinsella	0.012874762	0.0069610906
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_84999|family_84107|genus_102106|species_Collinsella aerofaciens	0.0056550834	0.0045344966
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_84999|family_84107|genus_1473205|species_Senegalimassilia anaerobia	0.0004602198	0.0144428728
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_84999|family_84107|genus_Collinsella	0.0422647309	0.0440645639
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_84999|family_84107|genus_Senegalimassilia	0.0004602198	0.0144428728
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_84999|family_Atopobiaceae	0.0005003181	0
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_84999|family_Coriobacteriaceae	0.0427249506	0.0585074368
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_Coriobacteriales	0.0432254207	0.0585074368
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_84998|order_Eggerthellales	0.001574468	0.0867273125
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_Actinobacteria	0.0411131182	0.0519529367
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_201174|class_Coriobacteriia	0.0448000406	0.1453762714
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_544448|class_31969|no rank_220136|species_uncultured Mollicutes bacterium	0	0.0001259836
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_544448|class_31969|no rank_environmental samples	0	0.0001259836
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_544448|class_Mollicutes	0	0.0001259836
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_Actinobacteria	0.0859131588	0.197329208
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_Firmicutes	0.4916960709	0.4765284274
+no rank_1|no rank_131567|superkingdom_2|clade_1783272|phylum_Tenericutes	0	0.0001259836
+no rank_1|no rank_131567|superkingdom_2|clade_FCB group	0.2442324058	0.0636330053
+no rank_1|no rank_131567|superkingdom_2|clade_PVC group	0.0025860402	0.0013833825
+no rank_1|no rank_131567|superkingdom_2|clade_Terrabacteria group	0.5777003623	0.6739837714
+no rank_1|no rank_131567|superkingdom_2|no rank_2323|clade_1783234|phylum_95818|no rank_1895827|species_Candidatus Saccharibacteria bacterium	0.0067514089	0
+no rank_1|no rank_131567|superkingdom_2|no rank_2323|clade_1783234|phylum_95818|no rank_unclassified Saccharibacteria	0.0067514089	0
+no rank_1|no rank_131567|superkingdom_2|no rank_2323|clade_1783234|phylum_Candidatus Saccharibacteria	0.0067514089	0
+no rank_1|no rank_131567|superkingdom_2|no rank_2323|clade_Bacteria candidate phyla	0.0067514089	0
 no rank_1|no rank_131567|superkingdom_2|no rank_48479|species_uncultured bacterium	0.0191222075	0
-no rank_1|no rank_131567|superkingdom_2|no rank_49928|species_bacterium LF-3	0	0.0041241971
-no rank_1|no rank_131567|superkingdom_2|no rank_Bacteria incertae sedis	0.0067514089	0.0005549893
+no rank_1|no rank_131567|superkingdom_2|no rank_Bacteria incertae sedis	0.0067514089	0
 no rank_1|no rank_131567|superkingdom_2|no rank_environmental samples	0.0191222075	0
-no rank_1|no rank_131567|superkingdom_2|no rank_unclassified Bacteria	0	0.0041241971
-no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_1236|order_135614|family_32033|genus_338|species_[Pseudomonas] cissicola	0	0.0001678728
-no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_1236|order_135614|family_32033|genus_Xanthomonas	0	0.0001678728
-no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_1236|order_135614|family_Xanthomonadaceae	0	0.0001678728
+no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_1236|order_135624|family_84642|genus_642|species_Aeromonas rivipollensis	0	0.0093960631
 no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_1236|order_135624|family_84642|genus_642|species_Aeromonas veronii	0.0005574279	0
-no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_1236|order_135624|family_84642|genus_Aeromonas	0.0005574279	0
-no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_1236|order_135624|family_Aeromonadaceae	0.0005574279	0
+no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_1236|order_135624|family_84642|genus_Aeromonas	0.0005574279	0.0093960631
+no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_1236|order_135624|family_Aeromonadaceae	0.0005574279	0.0093960631
 no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_1236|order_135625|family_712|genus_724|no rank_2609962|species_Haemophilus sp. CCUG 60358	0.0011206276	0
-no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_1236|order_135625|family_712|genus_724|no rank_unclassified Haemophilus	0.0011206276	0
-no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_1236|order_135625|family_712|genus_724|species_Haemophilus parainfluenzae	0.0042492107	0.0111429003
+no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_1236|order_135625|family_712|genus_724|no rank_2609962|species_Haemophilus sp. HMSC068C11	0	0.0001081601
+no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_1236|order_135625|family_712|genus_724|no rank_unclassified Haemophilus	0.0011206276	0.0001081601
+no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_1236|order_135625|family_712|genus_724|species_Haemophilus parainfluenzae	0.0042492107	0.0006113329
 no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_1236|order_135625|family_712|genus_724|species_Haemophilus paraphrohaemolyticus	0.0004280196	0
-no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_1236|order_135625|family_712|genus_Haemophilus	0.0057981616	0.0111429003
-no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_1236|order_135625|family_Pasteurellaceae	0.0057981616	0.0111429003
+no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_1236|order_135625|family_712|genus_Haemophilus	0.0057981616	0.0007196453
+no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_1236|order_135625|family_Pasteurellaceae	0.0057981616	0.0007196453
 no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_1236|order_72274|family_135621|genus_286|species group_136842|species_Pseudomonas lundensis	0.0017180019	0
 no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_1236|order_72274|family_135621|genus_286|species group_Pseudomonas chlororaphis group	0.0017180019	0
 no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_1236|order_72274|family_135621|genus_Pseudomonas	0.0017180019	0
@@ -460,305 +450,310 @@ no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_1236|order_72274|famil
 no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_1236|order_72274|family_Pseudomonadaceae	0.0017180019	0
 no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_1236|order_91347|family_1903411|genus_613|species_Serratia marcescens	0.0042522484	0
 no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_1236|order_91347|family_1903411|genus_Serratia	0.0042522484	0
-no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_1236|order_91347|family_1903414|genus_581|species_Morganella morganii	0	0.0001455509
-no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_1236|order_91347|family_1903414|genus_Morganella	0	0.0001455509
-no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_1236|order_91347|family_543|genus_160674|species_Raoultella terrigena	0	0.0141716434
+no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_1236|order_91347|family_543|genus_413496|species_Cronobacter sakazakii	0	0.0001319248
+no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_1236|order_91347|family_543|genus_447792|species_Phytobacter diazotrophicus	0	0.0004794081
 no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_1236|order_91347|family_543|genus_547|species group_354276|no rank_2757714|species_Enterobacter cloacae complex sp. ECNIH7	9.75119e-05	0
 no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_1236|order_91347|family_543|genus_547|species group_354276|no rank_unclassified Enterobacter cloacae complex	9.75119e-05	0
-no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_1236|order_91347|family_543|genus_547|species group_354276|species_Enterobacter cloacae	0.048850734	0
-no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_1236|order_91347|family_543|genus_547|species group_354276|species_Enterobacter hormaechei	0	0.0068274382
-no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_1236|order_91347|family_543|genus_547|species group_Enterobacter cloacae complex	0.0489482459	0.0068274382
-no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_1236|order_91347|family_543|genus_561|species_Escherichia coli	0	0.0133925179
-no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_1236|order_91347|family_543|genus_570|species_Klebsiella pneumoniae	0	0.0001356131
-no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_1236|order_91347|family_543|genus_620|species_Shigella flexneri	0	0.0002007441
-no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_1236|order_91347|family_543|genus_Enterobacter	0.0489482459	0.0068274382
-no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_1236|order_91347|family_543|genus_Escherichia	0	0.0133925179
-no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_1236|order_91347|family_543|genus_Klebsiella	0	0.0001356131
-no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_1236|order_91347|family_543|genus_Raoultella	0	0.0141716434
-no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_1236|order_91347|family_543|genus_Shigella	0	0.0002007441
-no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_1236|order_91347|family_Enterobacteriaceae	0.0489482459	0.0347282624
-no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_1236|order_91347|family_Morganellaceae	0	0.0001455509
+no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_1236|order_91347|family_543|genus_547|species group_354276|species_Enterobacter cloacae	0.048850734	0.0014382242
+no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_1236|order_91347|family_543|genus_547|species group_Enterobacter cloacae complex	0.0489482459	0.0014382242
+no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_1236|order_91347|family_543|genus_561|species_Escherichia coli	0	0.0005647174
+no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_1236|order_91347|family_543|genus_620|species_Shigella flexneri	0	0.0003514441
+no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_1236|order_91347|family_543|genus_Cronobacter	0	0.0001319248
+no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_1236|order_91347|family_543|genus_Enterobacter	0.0489482459	0.0014382242
+no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_1236|order_91347|family_543|genus_Escherichia	0	0.0005647174
+no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_1236|order_91347|family_543|genus_Phytobacter	0	0.0004794081
+no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_1236|order_91347|family_543|genus_Shigella	0	0.0003514441
+no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_1236|order_91347|family_Enterobacteriaceae	0.0489482459	0.0029660233
 no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_1236|order_91347|family_Yersiniaceae	0.0042522484	0
-no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_1236|order_91347|no rank_451511|genus_702|species_Plesiomonas shigelloides	0	0.0003027214
-no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_1236|order_91347|no rank_451511|genus_Plesiomonas	0	0.0003027214
-no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_1236|order_91347|no rank_Enterobacterales incertae sedis	0	0.0003027214
-no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_1236|order_Aeromonadales	0.0005574279	0
-no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_1236|order_Enterobacterales	0.0532004944	0.0351768405
-no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_1236|order_Pasteurellales	0.0057981616	0.0111429003
+no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_1236|order_Aeromonadales	0.0005574279	0.0093960631
+no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_1236|order_Enterobacterales	0.0532004944	0.0029660233
+no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_1236|order_Pasteurellales	0.0057981616	0.0007196453
 no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_1236|order_Pseudomonadales	0.0038682763	0
-no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_1236|order_Xanthomonadales	0	0.0001678728
-no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_28211|order_204441|family_41295|genus_191|no rank_2630922|species_Azospirillum sp. 47_25	0.0027552431	0.0003092957
-no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_28211|order_204441|family_41295|genus_191|no rank_unclassified Azospirillum	0.0027552431	0.0003092957
-no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_28211|order_204441|family_41295|genus_Azospirillum	0.0027552431	0.0003092957
-no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_28211|order_204441|family_433|genus_522|no rank_240134|species_Acidiphilium sp. CAG:727	0.00075473	8.17959e-05
-no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_28211|order_204441|family_433|genus_522|no rank_environmental samples	0.00075473	8.17959e-05
-no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_28211|order_204441|family_433|genus_Acidiphilium	0.00075473	8.17959e-05
-no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_28211|order_204441|family_Acetobacteraceae	0.00075473	8.17959e-05
-no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_28211|order_204441|family_Rhodospirillaceae	0.0027552431	0.0003092957
-no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_28211|order_Rhodospirillales	0.0035101251	0.0003912445
+no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_28211|order_204441|family_41295|genus_191|no rank_2630922|species_Azospirillum sp. 47_25	0.0027552431	0
+no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_28211|order_204441|family_41295|genus_191|no rank_unclassified Azospirillum	0.0027552431	0
+no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_28211|order_204441|family_41295|genus_Azospirillum	0.0027552431	0
+no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_28211|order_204441|family_433|genus_522|no rank_240134|species_Acidiphilium sp. CAG:727	0.00075473	0
+no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_28211|order_204441|family_433|genus_522|no rank_environmental samples	0.00075473	0
+no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_28211|order_204441|family_433|genus_Acidiphilium	0.00075473	0
+no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_28211|order_204441|family_Acetobacteraceae	0.00075473	0
+no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_28211|order_204441|family_Rhodospirillaceae	0.0027552431	0
+no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_28211|order_Rhodospirillales	0.0035101251	0
 no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_28216|order_206351|family_481|genus_482|species_Neisseria flavescens	0.0013937217	0
 no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_28216|order_206351|family_481|genus_Neisseria	0.0013937217	0
 no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_28216|order_206351|family_Neisseriaceae	0.0013937217	0
-no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_28216|order_80840|family_995019|genus_2494213|species_Mesosutterella multiformis	0.0020861777	0
+no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_28216|order_80840|family_75682|genus_846|species_Oxalobacter formigenes	0	0.0067127794
+no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_28216|order_80840|family_75682|genus_Oxalobacter	0	0.0067127794
+no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_28216|order_80840|family_995019|genus_2494213|species_Mesosutterella multiformis	0.0020861777	6.13923e-05
 no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_28216|order_80840|family_995019|genus_40544|no rank_2644090|species_Sutterella sp. AM11-39	0.0009183131	0
-no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_28216|order_80840|family_995019|genus_40544|no rank_286132|species_Sutterella sp. CAG:521	0.0020805579	0
-no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_28216|order_80840|family_995019|genus_40544|no rank_286132|species_uncultured Sutterella sp.	0.0005720091	0.000317093
-no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_28216|order_80840|family_995019|genus_40544|no rank_environmental samples	0.0026527189	0.000317093
+no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_28216|order_80840|family_995019|genus_40544|no rank_286132|species_Sutterella sp. CAG:521	0.0020805579	0.0003112268
+no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_28216|order_80840|family_995019|genus_40544|no rank_286132|species_uncultured Sutterella sp.	0.0005720091	0.0001975825
+no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_28216|order_80840|family_995019|genus_40544|no rank_environmental samples	0.0026527189	0.0005089617
 no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_28216|order_80840|family_995019|genus_40544|no rank_unclassified Sutterella	0.0009183131	0
-no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_28216|order_80840|family_995019|genus_40544|species_Sutterella wadsworthensis	0	0.0007123127
+no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_28216|order_80840|family_995019|genus_40544|species_Sutterella wadsworthensis	0	0.0021607639
 no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_28216|order_80840|family_995019|genus_577310|species_Parasutterella excrementihominis	0.0002372486	0
-no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_28216|order_80840|family_995019|genus_Mesosutterella	0.0020861777	0
+no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_28216|order_80840|family_995019|genus_Mesosutterella	0.0020861777	6.13923e-05
 no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_28216|order_80840|family_995019|genus_Parasutterella	0.0002372486	0
-no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_28216|order_80840|family_995019|genus_Sutterella	0.0035711839	0.0010294057
-no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_28216|order_80840|family_Sutterellaceae	0.0058947622	0.0010294057
-no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_28216|order_Burkholderiales	0.0058947622	0.0010294057
+no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_28216|order_80840|family_995019|genus_Sutterella	0.0035711839	0.002669878
+no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_28216|order_80840|family_Oxalobacteraceae	0	0.0067127794
+no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_28216|order_80840|family_Sutterellaceae	0.0058947622	0.0027312702
+no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_28216|order_Burkholderiales	0.0058947622	0.009444202
 no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_28216|order_Neisseriales	0.0013937217	0
-no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_Alphaproteobacteria	0.0035101251	0.0003912445
-no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_Betaproteobacteria	0.0072884838	0.0010294057
-no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_Gammaproteobacteria	0.063424512	0.0464877665
-no rank_1|no rank_131567|superkingdom_2|phylum_1224|subphylum_68525|class_28221|order_213115|family_194924|genus_35832|species_Bilophila wadsworthia	0.0002606393	0.0012491081
+no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_Alphaproteobacteria	0.0035101251	0
+no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_Betaproteobacteria	0.0072884838	0.009444202
+no rank_1|no rank_131567|superkingdom_2|phylum_1224|class_Gammaproteobacteria	0.063424512	0.013081884
+no rank_1|no rank_131567|superkingdom_2|phylum_1224|subphylum_68525|class_28221|order_213115|family_194924|genus_35832|species_Bilophila wadsworthia	0.0002606393	0
 no rank_1|no rank_131567|superkingdom_2|phylum_1224|subphylum_68525|class_28221|order_213115|family_194924|genus_872|species_Desulfovibrio desulfuricans	0.0011347531	0
-no rank_1|no rank_131567|superkingdom_2|phylum_1224|subphylum_68525|class_28221|order_213115|family_194924|genus_872|species_Desulfovibrio legallii	0	0.0183658639
-no rank_1|no rank_131567|superkingdom_2|phylum_1224|subphylum_68525|class_28221|order_213115|family_194924|genus_872|species_Desulfovibrio piger	0	0.0037068085
-no rank_1|no rank_131567|superkingdom_2|phylum_1224|subphylum_68525|class_28221|order_213115|family_194924|genus_Bilophila	0.0002606393	0.0012491081
-no rank_1|no rank_131567|superkingdom_2|phylum_1224|subphylum_68525|class_28221|order_213115|family_194924|genus_Desulfovibrio	0.0011347531	0.0220728253
-no rank_1|no rank_131567|superkingdom_2|phylum_1224|subphylum_68525|class_28221|order_213115|family_Desulfovibrionaceae	0.0013955443	0.0233220863
-no rank_1|no rank_131567|superkingdom_2|phylum_1224|subphylum_68525|class_28221|order_Desulfovibrionales	0.0013955443	0.0233220863
-no rank_1|no rank_131567|superkingdom_2|phylum_1224|subphylum_68525|class_29547|order_213849|family_72293|genus_209|species_Helicobacter magdeburgensis	0	7.70564e-05
-no rank_1|no rank_131567|superkingdom_2|phylum_1224|subphylum_68525|class_29547|order_213849|family_72293|genus_Helicobacter	0	7.70564e-05
+no rank_1|no rank_131567|superkingdom_2|phylum_1224|subphylum_68525|class_28221|order_213115|family_194924|genus_Bilophila	0.0002606393	0
+no rank_1|no rank_131567|superkingdom_2|phylum_1224|subphylum_68525|class_28221|order_213115|family_194924|genus_Desulfovibrio	0.0011347531	0
+no rank_1|no rank_131567|superkingdom_2|phylum_1224|subphylum_68525|class_28221|order_213115|family_Desulfovibrionaceae	0.0013955443	0
+no rank_1|no rank_131567|superkingdom_2|phylum_1224|subphylum_68525|class_28221|order_Desulfovibrionales	0.0013955443	0
 no rank_1|no rank_131567|superkingdom_2|phylum_1224|subphylum_68525|class_29547|order_213849|family_72294|genus_194|species_Campylobacter concisus	0.0091673348	0
-no rank_1|no rank_131567|superkingdom_2|phylum_1224|subphylum_68525|class_29547|order_213849|family_72294|genus_194|species_Campylobacter jejuni	0	6.46723e-05
-no rank_1|no rank_131567|superkingdom_2|phylum_1224|subphylum_68525|class_29547|order_213849|family_72294|genus_Campylobacter	0.0091673348	6.46723e-05
-no rank_1|no rank_131567|superkingdom_2|phylum_1224|subphylum_68525|class_29547|order_213849|family_Campylobacteraceae	0.0091673348	6.46723e-05
-no rank_1|no rank_131567|superkingdom_2|phylum_1224|subphylum_68525|class_29547|order_213849|family_Helicobacteraceae	0	7.70564e-05
-no rank_1|no rank_131567|superkingdom_2|phylum_1224|subphylum_68525|class_29547|order_Campylobacterales	0.0091673348	0.0001417287
-no rank_1|no rank_131567|superkingdom_2|phylum_1224|subphylum_68525|class_Deltaproteobacteria	0.0013955443	0.0233220863
-no rank_1|no rank_131567|superkingdom_2|phylum_1224|subphylum_68525|class_Epsilonproteobacteria	0.0091673348	0.0001417287
-no rank_1|no rank_131567|superkingdom_2|phylum_1224|subphylum_delta/epsilon subdivisions	0.0105628792	0.0234638149
-no rank_1|no rank_131567|superkingdom_2|phylum_203691|class_203692|order_136|family_137|genus_157|species_Treponema porcinum	0	0.006136683
+no rank_1|no rank_131567|superkingdom_2|phylum_1224|subphylum_68525|class_29547|order_213849|family_72294|genus_Campylobacter	0.0091673348	0
+no rank_1|no rank_131567|superkingdom_2|phylum_1224|subphylum_68525|class_29547|order_213849|family_Campylobacteraceae	0.0091673348	0
+no rank_1|no rank_131567|superkingdom_2|phylum_1224|subphylum_68525|class_29547|order_Campylobacterales	0.0091673348	0
+no rank_1|no rank_131567|superkingdom_2|phylum_1224|subphylum_68525|class_Deltaproteobacteria	0.0013955443	0
+no rank_1|no rank_131567|superkingdom_2|phylum_1224|subphylum_68525|class_Epsilonproteobacteria	0.0091673348	0
+no rank_1|no rank_131567|superkingdom_2|phylum_1224|subphylum_delta/epsilon subdivisions	0.0105628792	0
 no rank_1|no rank_131567|superkingdom_2|phylum_203691|class_203692|order_136|family_137|genus_157|species_Treponema succinifaciens	0.0085915285	0
-no rank_1|no rank_131567|superkingdom_2|phylum_203691|class_203692|order_136|family_137|genus_Treponema	0.0085915285	0.006136683
-no rank_1|no rank_131567|superkingdom_2|phylum_203691|class_203692|order_136|family_Spirochaetaceae	0.0085915285	0.006136683
-no rank_1|no rank_131567|superkingdom_2|phylum_203691|class_203692|order_1643686|family_143786|genus_29521|no rank_132529|species_Brachyspira sp. CAG:700	0.0015117384	6.52839e-05
-no rank_1|no rank_131567|superkingdom_2|phylum_203691|class_203692|order_1643686|family_143786|genus_29521|no rank_environmental samples	0.0015117384	6.52839e-05
-no rank_1|no rank_131567|superkingdom_2|phylum_203691|class_203692|order_1643686|family_143786|genus_Brachyspira	0.0015117384	6.52839e-05
-no rank_1|no rank_131567|superkingdom_2|phylum_203691|class_203692|order_1643686|family_Brachyspiraceae	0.0015117384	6.52839e-05
-no rank_1|no rank_131567|superkingdom_2|phylum_203691|class_203692|order_Brachyspirales	0.0015117384	6.52839e-05
-no rank_1|no rank_131567|superkingdom_2|phylum_203691|class_203692|order_Spirochaetales	0.0085915285	0.006136683
-no rank_1|no rank_131567|superkingdom_2|phylum_203691|class_Spirochaetia	0.0101034188	0.0062021198
-no rank_1|no rank_131567|superkingdom_2|phylum_32066|class_203490|order_203491|family_203492|genus_848|species_Fusobacterium nucleatum	0	3.44002e-05
-no rank_1|no rank_131567|superkingdom_2|phylum_32066|class_203490|order_203491|family_203492|genus_Fusobacterium	0	3.44002e-05
-no rank_1|no rank_131567|superkingdom_2|phylum_32066|class_203490|order_203491|family_Fusobacteriaceae	0	3.44002e-05
-no rank_1|no rank_131567|superkingdom_2|phylum_32066|class_203490|order_Fusobacteriales	0	3.44002e-05
-no rank_1|no rank_131567|superkingdom_2|phylum_32066|class_Fusobacteriia	0	3.44002e-05
-no rank_1|no rank_131567|superkingdom_2|phylum_Fusobacteria	0	3.44002e-05
-no rank_1|no rank_131567|superkingdom_2|phylum_Proteobacteria	0.084786152	0.0713726903
-no rank_1|no rank_131567|superkingdom_2|phylum_Spirochaetes	0.0101034188	0.0062021198
-no rank_1|no rank_131567|superkingdom_2157|phylum_2283796|class_183967|order_1235850|no rank_1577790|species_Methanomassiliicoccales archaeon Mx-06	0	1.42187e-05
-no rank_1|no rank_131567|superkingdom_2157|phylum_2283796|class_183967|order_1235850|no rank_unclassified Methanomassiliicoccales	0	1.42187e-05
-no rank_1|no rank_131567|superkingdom_2157|phylum_2283796|class_183967|order_Methanomassiliicoccales	0	1.42187e-05
-no rank_1|no rank_131567|superkingdom_2157|phylum_2283796|class_Thermoplasmata	0	1.42187e-05
-no rank_1|no rank_131567|superkingdom_2157|phylum_28890|clade_2283794|class_183925|order_2158|family_2159|genus_2172|species_Methanobrevibacter smithii	0	9.8308e-05
-no rank_1|no rank_131567|superkingdom_2157|phylum_28890|clade_2283794|class_183925|order_2158|family_2159|genus_Methanobrevibacter	0	9.8308e-05
-no rank_1|no rank_131567|superkingdom_2157|phylum_28890|clade_2283794|class_183925|order_2158|family_Methanobacteriaceae	0	9.8308e-05
-no rank_1|no rank_131567|superkingdom_2157|phylum_28890|clade_2283794|class_183925|order_Methanobacteriales	0	9.8308e-05
-no rank_1|no rank_131567|superkingdom_2157|phylum_28890|clade_2283794|class_Methanobacteria	0	9.8308e-05
-no rank_1|no rank_131567|superkingdom_2157|phylum_28890|clade_Methanomada group	0	9.8308e-05
-no rank_1|no rank_131567|superkingdom_2157|phylum_Candidatus Thermoplasmatota	0	1.42187e-05
-no rank_1|no rank_131567|superkingdom_2157|phylum_Euryarchaeota	0	9.8308e-05
-no rank_1|no rank_131567|superkingdom_Archaea	0	0.0001125267
-no rank_1|no rank_131567|superkingdom_Bacteria	0.945282603	0.9583001244
-no rank_1|no rank_cellular organisms	0.945282603	0.9584126512
+no rank_1|no rank_131567|superkingdom_2|phylum_203691|class_203692|order_136|family_137|genus_Treponema	0.0085915285	0
+no rank_1|no rank_131567|superkingdom_2|phylum_203691|class_203692|order_136|family_Spirochaetaceae	0.0085915285	0
+no rank_1|no rank_131567|superkingdom_2|phylum_203691|class_203692|order_1643686|family_143786|genus_29521|no rank_132529|species_Brachyspira sp. CAG:700	0.0015117384	0.1833256783
+no rank_1|no rank_131567|superkingdom_2|phylum_203691|class_203692|order_1643686|family_143786|genus_29521|no rank_environmental samples	0.0015117384	0.1833256783
+no rank_1|no rank_131567|superkingdom_2|phylum_203691|class_203692|order_1643686|family_143786|genus_Brachyspira	0.0015117384	0.1833256783
+no rank_1|no rank_131567|superkingdom_2|phylum_203691|class_203692|order_1643686|family_Brachyspiraceae	0.0015117384	0.1833256783
+no rank_1|no rank_131567|superkingdom_2|phylum_203691|class_203692|order_Brachyspirales	0.0015117384	0.1833256783
+no rank_1|no rank_131567|superkingdom_2|phylum_203691|class_203692|order_Spirochaetales	0.0085915285	0
+no rank_1|no rank_131567|superkingdom_2|phylum_203691|class_Spirochaetia	0.0101034188	0.1833256783
+no rank_1|no rank_131567|superkingdom_2|phylum_32066|class_203490|order_203491|family_203492|genus_180162|species_Cetobacterium somerae	0	0.0042633347
+no rank_1|no rank_131567|superkingdom_2|phylum_32066|class_203490|order_203491|family_203492|genus_Cetobacterium	0	0.0042633347
+no rank_1|no rank_131567|superkingdom_2|phylum_32066|class_203490|order_203491|family_Fusobacteriaceae	0	0.0042633347
+no rank_1|no rank_131567|superkingdom_2|phylum_32066|class_203490|order_Fusobacteriales	0	0.0042633347
+no rank_1|no rank_131567|superkingdom_2|phylum_32066|class_Fusobacteriia	0	0.0042633347
+no rank_1|no rank_131567|superkingdom_2|phylum_Fusobacteria	0	0.0042633347
+no rank_1|no rank_131567|superkingdom_2|phylum_Proteobacteria	0.084786152	0.022526086
+no rank_1|no rank_131567|superkingdom_2|phylum_Spirochaetes	0.0101034188	0.1833256783
+no rank_1|no rank_131567|superkingdom_2157|phylum_28890|clade_2283794|class_183925|order_2158|family_2159|genus_2172|species_Methanobrevibacter smithii	0	0.0001460923
+no rank_1|no rank_131567|superkingdom_2157|phylum_28890|clade_2283794|class_183925|order_2158|family_2159|genus_Methanobrevibacter	0	0.0001460923
+no rank_1|no rank_131567|superkingdom_2157|phylum_28890|clade_2283794|class_183925|order_2158|family_Methanobacteriaceae	0	0.0001460923
+no rank_1|no rank_131567|superkingdom_2157|phylum_28890|clade_2283794|class_183925|order_Methanobacteriales	0	0.0001460923
+no rank_1|no rank_131567|superkingdom_2157|phylum_28890|clade_2283794|class_Methanobacteria	0	0.0001460923
+no rank_1|no rank_131567|superkingdom_2157|phylum_28890|clade_Methanomada group	0	0.0001460923
+no rank_1|no rank_131567|superkingdom_2157|phylum_Euryarchaeota	0	0.0001460923
+no rank_1|no rank_131567|superkingdom_2759|clade_33154|kingdom_4751|subkingdom_451864|phylum_4890|clade_716545|subphylum_147537|class_4891|order_4892|family_4893|genus_4930|species_Saccharomyces eubayanus	0	1.8281e-06
+no rank_1|no rank_131567|superkingdom_2759|clade_33154|kingdom_4751|subkingdom_451864|phylum_4890|clade_716545|subphylum_147537|class_4891|order_4892|family_4893|genus_Saccharomyces	0	1.8281e-06
+no rank_1|no rank_131567|superkingdom_2759|clade_33154|kingdom_4751|subkingdom_451864|phylum_4890|clade_716545|subphylum_147537|class_4891|order_4892|family_Saccharomycetaceae	0	1.8281e-06
+no rank_1|no rank_131567|superkingdom_2759|clade_33154|kingdom_4751|subkingdom_451864|phylum_4890|clade_716545|subphylum_147537|class_4891|order_Saccharomycetales	0	1.8281e-06
+no rank_1|no rank_131567|superkingdom_2759|clade_33154|kingdom_4751|subkingdom_451864|phylum_4890|clade_716545|subphylum_147537|class_Saccharomycetes	0	1.8281e-06
+no rank_1|no rank_131567|superkingdom_2759|clade_33154|kingdom_4751|subkingdom_451864|phylum_4890|clade_716545|subphylum_147538|clade_716546|clade_715989|class_147550|subclass_222543|order_5125|family_110618|genus_5506|species group_569360|species_Fusarium poae	0	1.09683e-05
+no rank_1|no rank_131567|superkingdom_2759|clade_33154|kingdom_4751|subkingdom_451864|phylum_4890|clade_716545|subphylum_147538|clade_716546|clade_715989|class_147550|subclass_222543|order_5125|family_110618|genus_5506|species group_569360|species_Fusarium venenatum	0	1.9804e-06
+no rank_1|no rank_131567|superkingdom_2759|clade_33154|kingdom_4751|subkingdom_451864|phylum_4890|clade_716545|subphylum_147538|clade_716546|clade_715989|class_147550|subclass_222543|order_5125|family_110618|genus_5506|species group_Fusarium sambucinum species complex	0	1.29487e-05
+no rank_1|no rank_131567|superkingdom_2759|clade_33154|kingdom_4751|subkingdom_451864|phylum_4890|clade_716545|subphylum_147538|clade_716546|clade_715989|class_147550|subclass_222543|order_5125|family_110618|genus_Fusarium	0	1.29487e-05
+no rank_1|no rank_131567|superkingdom_2759|clade_33154|kingdom_4751|subkingdom_451864|phylum_4890|clade_716545|subphylum_147538|clade_716546|clade_715989|class_147550|subclass_222543|order_5125|family_Nectriaceae	0	1.29487e-05
+no rank_1|no rank_131567|superkingdom_2759|clade_33154|kingdom_4751|subkingdom_451864|phylum_4890|clade_716545|subphylum_147538|clade_716546|clade_715989|class_147550|subclass_222543|order_Hypocreales	0	1.29487e-05
+no rank_1|no rank_131567|superkingdom_2759|clade_33154|kingdom_4751|subkingdom_451864|phylum_4890|clade_716545|subphylum_147538|clade_716546|clade_715989|class_147550|subclass_Hypocreomycetidae	0	1.29487e-05
+no rank_1|no rank_131567|superkingdom_2759|clade_33154|kingdom_4751|subkingdom_451864|phylum_4890|clade_716545|subphylum_147538|clade_716546|clade_715989|class_Sordariomycetes	0	1.29487e-05
+no rank_1|no rank_131567|superkingdom_2759|clade_33154|kingdom_4751|subkingdom_451864|phylum_4890|clade_716545|subphylum_147538|clade_716546|clade_sordariomyceta	0	1.29487e-05
+no rank_1|no rank_131567|superkingdom_2759|clade_33154|kingdom_4751|subkingdom_451864|phylum_4890|clade_716545|subphylum_147538|clade_leotiomyceta	0	1.29487e-05
+no rank_1|no rank_131567|superkingdom_2759|clade_33154|kingdom_4751|subkingdom_451864|phylum_4890|clade_716545|subphylum_Pezizomycotina	0	1.29487e-05
+no rank_1|no rank_131567|superkingdom_2759|clade_33154|kingdom_4751|subkingdom_451864|phylum_4890|clade_716545|subphylum_Saccharomycotina	0	1.8281e-06
+no rank_1|no rank_131567|superkingdom_2759|clade_33154|kingdom_4751|subkingdom_451864|phylum_4890|clade_saccharomyceta	0	1.49291e-05
+no rank_1|no rank_131567|superkingdom_2759|clade_33154|kingdom_4751|subkingdom_451864|phylum_Ascomycota	0	1.49291e-05
+no rank_1|no rank_131567|superkingdom_2759|clade_33154|kingdom_4751|subkingdom_Dikarya	0	1.49291e-05
+no rank_1|no rank_131567|superkingdom_2759|clade_33154|kingdom_Fungi	0	1.49291e-05
+no rank_1|no rank_131567|superkingdom_2759|clade_Opisthokonta	0	1.49291e-05
+no rank_1|no rank_131567|superkingdom_Archaea	0	0.0001460923
+no rank_1|no rank_131567|superkingdom_Bacteria	0.945282603	0.9491157153
+no rank_1|no rank_131567|superkingdom_Eukaryota	0	1.49291e-05
+no rank_1|no rank_cellular organisms	0.945282603	0.9492767367
 no rank_1|no rank_root	1	1
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10662|genus_2733134|species_Faecalibacterium virus Taranis	0	0.0001160817
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10662|genus_4000073|species_OTU-02174	0	0.0001069414
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10662|genus_4002894|species_OTU-41835	0.0001439896	0
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10662|genus_mgv_g_4000073	0	0.0001069414
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10662|genus_mgv_g_4002894	0.0001439896	0
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10662|genus_Taranisvirus	0	0.0001160817
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10662|subfamily_857479|genus_1196844|species_OTU-68690	0	0.0002076369
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10662|subfamily_857479|genus_140410|species_OTU-46418	0	1.82806e-05
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10662|subfamily_857479|genus_Hpunavirus	0	0.0002076369
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10662|subfamily_857479|genus_Peduovirus	0	1.82806e-05
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10662|subfamily_Peduovirinae	0	0.0002260698
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_1623273|species_OTU-07848	9.37147e-05	0
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_2733190|species_Faecalibacterium virus Lugh	0	0.0001194068
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_4000001|species_OTU-51481	0	0.0001940169
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_4000001|species_OTU-73814	0	0.0003487412
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_4000004|species_OTU-50033	0	7.67506e-05
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_1623273|species_OTU-56749	0	0.0012354622
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_4000001|species_OTU-14197	0	1.58432e-05
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_4000001|species_OTU-59172	0	2.71162e-05
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_4000003|species_OTU-66645	0	8.97272e-05
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_4000004|species_OTU-73453	9.58411e-05	0
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_4000007|species_OTU-49803	0	5.18296e-05
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_4000007|species_OTU-72926	0	7.10937e-05
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_4000009|species_OTU-43299	0	0.0001184894
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_4000009|species_OTU-00169	0	0.0010442778
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_4000018|species_OTU-18765	0	6.03259e-05
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_4000018|species_OTU-21410	0	0.0002636973
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_4000018|species_OTU-32707	0.0011083246	0
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_4000028|species_OTU-19170	0	0.001853955
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_4000028|species_OTU-27938	0.0002617025	0
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_4000034|species_OTU-46645	0.0002357297	0
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_4000034|species_OTU-66818	0	9.0205e-06
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_4000036|species_OTU-08387	0	6.2379e-05
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_4000037|species_OTU-40777	0.0001142196	0
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_4000039|species_OTU-22003	3.7972e-06	0
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_4000077|species_OTU-48863	0.000182569	0
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_4000096|species_OTU-63967	0	0.0004297727
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_4000081|species_OTU-09096	0	0.0001313155
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_4000081|species_OTU-19168	0	2.36124e-05
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_4000081|species_OTU-45004	0	2.2851e-06
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_4000081|species_OTU-48657	0	9.1403e-06
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_4000081|species_OTU-49703	0	3.16863e-05
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_4000081|species_OTU-61940	0	0.0105672386
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_4000097|species_OTU-13424	0.0015260159	0
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_4000099|species_OTU-72714	0.0002761319	0
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_4000101|species_OTU-52322	7.42731e-05	0
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_4000115|species_OTU-16342	0.0001105743	0
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_4000174|species_OTU-47961	0	0.0010170217
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_4000177|species_OTU-65464	8.5057e-06	0
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_4000198|species_OTU-20266	4.34399e-05	0
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_4000222|species_OTU-71727	1.0784e-05	0
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_4000253|species_OTU-26521	0	0.0010231372
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_4000269|species_OTU-11758	0	0.0044677401
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_4000253|species_OTU-61459	0	9.5973e-05
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_4000283|species_OTU-22659	0.0017968317	0
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_4000303|species_OTU-03079	0	4.73772e-05
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_4000303|species_OTU-17819	0	0.0214591098
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_4000303|species_OTU-20936	0	1.5234e-06
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_4000303|species_OTU-22849	0	3.8085e-06
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_4000303|species_OTU-31167	0	5.1795e-06
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_4000303|species_OTU-59963	0	5.6365e-06
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_4000328|species_OTU-42398	0	0.0006044777
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_4000356|species_OTU-48378	0.0002887385	0
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_4000369|species_OTU-08610	0	0.0011735806
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_4000702|species_OTU-13072	0	2.85904e-05
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_4000724|species_OTU-38031	0	0.0002767302
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_4000374|species_OTU-43463	0	0.0001747318
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_4000768|species_OTU-50535	0	1.59955e-05
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_4000945|species_OTU-68674	0.0013820263	0
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_Lughvirus	0	0.0001194068
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_mgv_g_4000001	0	0.000542911
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_mgv_g_4000004	9.58411e-05	7.67506e-05
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_mgv_g_4000007	0	0.0001230761
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_mgv_g_4000009	0	0.0001184894
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_mgv_g_4000018	0.0011083246	0
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_mgv_g_4000028	0.0002617025	0
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_mgv_g_4000034	0.0002357297	9.0205e-06
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_mgv_g_4000036	0	6.2379e-05
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_4000964|species_OTU-60017	0	0.0001331435
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_4001041|species_OTU-29134	0	6.00212e-05
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_4001106|species_OTU-41788	0	1.72142e-05
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_4001519|species_OTU-44246	0	9.23169e-05
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_4001999|species_OTU-07192	0	5.68221e-05
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_mgv_g_4000001	0	4.29594e-05
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_mgv_g_4000003	0	8.97272e-05
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_mgv_g_4000004	9.58411e-05	0
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_mgv_g_4000009	0	0.0010442778
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_mgv_g_4000018	0.0011083246	0.0003240232
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_mgv_g_4000028	0.0002617025	0.001853955
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_mgv_g_4000034	0.0002357297	0
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_mgv_g_4000037	0.0001142196	0
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_mgv_g_4000039	3.7972e-06	0
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_mgv_g_4000077	0.000182569	0
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_mgv_g_4000096	0	0.0004297727
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_mgv_g_4000081	0	0.0107657352
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_mgv_g_4000097	0.0015260159	0
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_mgv_g_4000099	0.0002761319	0
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_mgv_g_4000101	7.42731e-05	0
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_mgv_g_4000115	0.0001105743	0
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_mgv_g_4000174	0	0.0010170217
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_mgv_g_4000177	8.5057e-06	0
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_mgv_g_4000198	4.34399e-05	0
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_mgv_g_4000222	1.0784e-05	0
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_mgv_g_4000253	0	0.0010231372
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_mgv_g_4000269	0	0.0044677401
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_mgv_g_4000253	0	9.5973e-05
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_mgv_g_4000283	0.0017968317	0
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_mgv_g_4000303	0	0.0215230918
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_mgv_g_4000328	0	0.0006044777
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_mgv_g_4000356	0.0002887385	0
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_mgv_g_4000369	0	0.0011735806
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_mgv_g_4000702	0	2.85904e-05
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_mgv_g_4000724	0	0.0002767302
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_mgv_g_4000374	0	0.0001747318
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_mgv_g_4000768	0	1.59955e-05
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_mgv_g_4000945	0.0013820263	0
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_Triavirus	9.37147e-05	0
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_mgv_g_4000964	0	0.0001331435
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_mgv_g_4001041	0	6.00212e-05
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_mgv_g_4001106	0	1.72142e-05
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_mgv_g_4001519	0	9.23169e-05
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_mgv_g_4001999	0	5.68221e-05
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10699|genus_Triavirus	9.37147e-05	0.0012354622
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10744|genus_4000002|species_OTU-04370	0.0001549255	0
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10744|genus_4000114|species_OTU-08072	0	3.3636e-06
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10744|genus_4000257|species_OTU-46420	0	1.72765e-05
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10744|genus_4000409|species_OTU-33626	0	0.0005358781
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10744|genus_4000680|species_OTU-35508	0	1.11609e-05
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10744|genus_4000923|species_OTU-04934	0	0.0002449291
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10744|genus_542960|species_Escherichia virus phiV10	0	0.0201046774
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10744|genus_4000089|species_OTU-54228	0	2.49835e-05
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10744|genus_4000209|species_OTU-74495	0	0.0004472647
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10744|genus_mgv_g_4000002	0.0001549255	0
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10744|genus_mgv_g_4000114	0	3.3636e-06
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10744|genus_mgv_g_4000257	0	1.72765e-05
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10744|genus_mgv_g_4000409	0	0.0005358781
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10744|genus_mgv_g_4000680	0	1.11609e-05
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10744|genus_mgv_g_4000923	0	0.0002449291
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10744|genus_Uetakevirus	0	0.0201046774
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10744|genus_mgv_g_4000089	0	2.49835e-05
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10744|genus_mgv_g_4000209	0	0.0004472647
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10744|no rank_196895|clade_1978007|genus_4000773|species_OTU-63021	4.92116e-05	0
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10744|no rank_196895|clade_1978007|genus_mgv_g_4000773	4.92116e-05	0
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10744|no rank_196895|clade_crAss-like viruses	4.92116e-05	0
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10744|no rank_196895|species_Escherichia phage TL-2011b	0	0.0002288757
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10744|no rank_unclassified Podoviridae	4.92116e-05	0.0002288757
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_10744|no rank_unclassified Podoviridae	4.92116e-05	0
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_2731643|subfamily_2731653|genus_110456|species_OTU-46067	0.0001661652	0
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_2731643|subfamily_2731653|genus_Teseptimavirus	0.0001661652	0
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_2731643|subfamily_Studiervirinae	0.0001661652	0
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_Autographiviridae	0.0001661652	0
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_Myoviridae	0.0001439896	0
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_Podoviridae	0.0002041371	0.0211464672
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_Siphoviridae	0.0076139792	0.0094692177
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_4000005|species_OTU-00659	0	0.0007551218
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_4000005|species_OTU-18903	0	0.0022152175
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_4000005|species_OTU-19218	0	0.0002846804
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_Myoviridae	0.0001439896	0.0004492451
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_Podoviridae	0.0002041371	0.0004724005
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|family_Siphoviridae	0.0076139792	0.0381312987
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_4000005|species_OTU-21493	0.0006534209	0
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_4000005|species_OTU-30071	7.89816e-05	0
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_4000005|species_OTU-39331	0	3.97513e-05
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_4000005|species_OTU-72541	0	0.0016135969
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_4000005|species_OTU-60142	0	0.0011900654
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_4000011|species_OTU-16533	3.4934e-06	0
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_4000011|species_OTU-39328	0.000704759	0
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_4000012|species_OTU-62035	4.92116e-05	0
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_4000016|species_OTU-01501	0	0.0006731729
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_4000016|species_OTU-21255	0.007044704	0
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_4000016|species_OTU-31141	0.0019461373	0
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_4000016|species_OTU-43417	0.0028103784	0
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_4000016|species_OTU-47793	0.0008924922	0
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_4000016|species_OTU-58416	0	3.6694e-06
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_4000020|species_OTU-07749	0	0.0016470797
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_4000020|species_OTU-49120	0	0.000285177
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_4000022|species_OTU-76400	0.010319555	0
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_4000047|species_OTU-20954	0	0.0013387474
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_4000051|species_OTU-13799	0	0.0035508493
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_4000051|species_OTU-45908	0	4.89005e-05
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_4000051|species_OTU-47952	0	5.66698e-05
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_4000065|species_OTU-24677	9.43223e-05	0
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_4000068|species_OTU-55343	0	0.0001201712
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_4000092|species_OTU-42396	0	0.0009014371
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_4000092|species_OTU-46557	0	3.40944e-05
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_4000075|species_OTU-52562	0	0.0006308322
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_4000095|species_OTU-38737	0.0009470199	0
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_4000106|species_OTU-13066	0	0.000942059
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_4000124|species_OTU-12357	0	0.0003211288
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_4000127|species_OTU-51474	0	9.445e-06
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_4000140|species_OTU-34158	0.0001564443	0
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_4000141|species_OTU-36661	0	2.23219e-05
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_4000189|species_OTU-76668	0	2.2089e-05
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_4000190|species_OTU-12579	0.000110878	0
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_4000190|species_OTU-24280	0.0132256227	0
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_4000190|species_OTU-48402	0.0012313537	0
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_4000190|species_OTU-48724	6.69825e-05	0
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_4000243|species_OTU-75609	0	0.0005341963
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_4000221|species_OTU-52919	0	0.0018510605
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_4000246|species_OTU-03222	8.01967e-05	0
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_4000246|species_OTU-25628	0.0017173944	0
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_4000349|species_OTU-72321	0.0001622161	0
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_4000380|species_OTU-63082	0	0.0001762817
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_4000391|species_OTU-48878	0.0004819397	0
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_4000399|species_OTU-29582	0.000339469	0
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_4000686|species_OTU-10002	0	0.0001203241
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_4000730|species_OTU-19579	0	5.504e-06
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_4000903|species_OTU-16329	0	2.15574e-05
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_4001057|species_OTU-54589	0	5.10651e-05
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_4001062|species_OTU-02652	0	5.0454e-06
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_4001088|species_OTU-54701	0	0.0004239629
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_4000531|species_OTU-44666	0	0.0003179297
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_4000794|species_OTU-14285	0	0.0008610151
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_4001273|species_OTU-42714	2.94662e-05	0
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_4001384|species_OTU-58267	0	0.0010532565
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_4001489|species_OTU-54836	0	4.55611e-05
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_4001821|species_OTU-64386	0	2.66028e-05
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_4002182|species_OTU-02618	0	0.0001901947
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_mgv_g_4000005	0.0007324026	0.0049086737
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_4001863|species_OTU-20284	0	3.12293e-05
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_mgv_g_4000005	0.0007324026	0.0011900654
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_mgv_g_4000011	0.0007082524	0
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_mgv_g_4000012	4.92116e-05	0
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_mgv_g_4000016	0.0126940157	0.0006769952
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_mgv_g_4000020	0	0.0016470797
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_mgv_g_4000016	0.0126940157	0
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_mgv_g_4000020	0	0.000285177
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_mgv_g_4000022	0.010319555	0
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_mgv_g_4000047	0	0.0013387474
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_mgv_g_4000051	0	0.0036567243
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_mgv_g_4000065	9.43223e-05	0
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_mgv_g_4000068	0	0.0001201712
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_mgv_g_4000092	0	0.0009356844
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_mgv_g_4000075	0	0.0006308322
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_mgv_g_4000095	0.0009470199	0
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_mgv_g_4000106	0	0.000942059
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_mgv_g_4000124	0	0.0003211288
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_mgv_g_4000127	0	9.445e-06
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_mgv_g_4000140	0.0001564443	0
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_mgv_g_4000141	0	2.23219e-05
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_mgv_g_4000189	0	2.2089e-05
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_mgv_g_4000190	0.0146351407	0
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_mgv_g_4000243	0	0.0005341963
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_mgv_g_4000221	0	0.0018510605
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_mgv_g_4000246	0.0017975911	0
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_mgv_g_4000349	0.0001622161	0
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_mgv_g_4000380	0	0.0001762817
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_mgv_g_4000391	0.0004819397	0
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_mgv_g_4000399	0.000339469	0
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_mgv_g_4000686	0	0.0001203241
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_mgv_g_4000730	0	5.504e-06
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_mgv_g_4000903	0	2.15574e-05
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_mgv_g_4001057	0	5.10651e-05
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_mgv_g_4001062	0	5.0454e-06
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_mgv_g_4001088	0	0.0004239629
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_mgv_g_4000531	0	0.0003179297
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_mgv_g_4000794	0	0.0008610151
 no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_mgv_g_4001273	2.94662e-05	0
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_mgv_g_4001384	0	0.0010532565
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_mgv_g_4001489	0	4.55611e-05
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_mgv_g_4001821	0	2.66028e-05
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_mgv_g_4002182	0	0.0001901947
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_Caudovirales	0.0512763808	0.0415810803
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_Caudoviricetes	0.0512763808	0.0415810803
-no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_Uroviricota	0.0512763808	0.0415810803
-no rank_1|superkingdom_10239|clade_2731341|kingdom_Heunggongvirae	0.0512763808	0.0415810803
-no rank_1|superkingdom_10239|clade_2731342|kingdom_2732090|phylum_2732410|class_2732411|order_2732094|family_10860|genus_4000854|species_OTU-02597	0	6.1156e-06
-no rank_1|superkingdom_10239|clade_2731342|kingdom_2732090|phylum_2732410|class_2732411|order_2732094|family_10860|genus_mgv_g_4000854	0	6.1156e-06
-no rank_1|superkingdom_10239|clade_2731342|kingdom_2732090|phylum_2732410|class_2732411|order_2732094|family_Inoviridae	0	6.1156e-06
-no rank_1|superkingdom_10239|clade_2731342|kingdom_2732090|phylum_2732410|class_2732411|order_Tubulavirales	0	6.1156e-06
-no rank_1|superkingdom_10239|clade_2731342|kingdom_2732090|phylum_2732410|class_Faserviricetes	0	6.1156e-06
-no rank_1|superkingdom_10239|clade_2731342|kingdom_2732090|phylum_Hofneiviricota	0	6.1156e-06
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_28883|genus_mgv_g_4001863	0	3.12293e-05
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_2731619|order_Caudovirales	0.0512763808	0.0505112087
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_2731618|class_Caudoviricetes	0.0512763808	0.0505112087
+no rank_1|superkingdom_10239|clade_2731341|kingdom_2731360|phylum_Uroviricota	0.0512763808	0.0505112087
+no rank_1|superkingdom_10239|clade_2731341|kingdom_Heunggongvirae	0.0512763808	0.0505112087
+no rank_1|superkingdom_10239|clade_2731342|kingdom_2732091|phylum_2732412|class_2732413|order_2732414|family_10841|genus_4000015|species_OTU-07194	0	0.0001995629
 no rank_1|superkingdom_10239|clade_2731342|kingdom_2732091|phylum_2732412|class_2732413|order_2732414|family_10841|genus_4000019|species_OTU-49403	0.0001932012	0
 no rank_1|superkingdom_10239|clade_2731342|kingdom_2732091|phylum_2732412|class_2732413|order_2732414|family_10841|genus_4000826|species_OTU-12622	0.003247815	0
+no rank_1|superkingdom_10239|clade_2731342|kingdom_2732091|phylum_2732412|class_2732413|order_2732414|family_10841|genus_4000942|species_OTU-07599	0	1.2187e-05
+no rank_1|superkingdom_10239|clade_2731342|kingdom_2732091|phylum_2732412|class_2732413|order_2732414|family_10841|genus_mgv_g_4000015	0	0.0001995629
 no rank_1|superkingdom_10239|clade_2731342|kingdom_2732091|phylum_2732412|class_2732413|order_2732414|family_10841|genus_mgv_g_4000019	0.0001932012	0
 no rank_1|superkingdom_10239|clade_2731342|kingdom_2732091|phylum_2732412|class_2732413|order_2732414|family_10841|genus_mgv_g_4000826	0.003247815	0
-no rank_1|superkingdom_10239|clade_2731342|kingdom_2732091|phylum_2732412|class_2732413|order_2732414|family_Microviridae	0.0034410162	0
-no rank_1|superkingdom_10239|clade_2731342|kingdom_2732091|phylum_2732412|class_2732413|order_Petitvirales	0.0034410162	0
-no rank_1|superkingdom_10239|clade_2731342|kingdom_2732091|phylum_2732412|class_Malgrandaviricetes	0.0034410162	0
-no rank_1|superkingdom_10239|clade_2731342|kingdom_2732091|phylum_Phixviricota	0.0034410162	0
-no rank_1|superkingdom_10239|clade_2731342|kingdom_Loebvirae	0	6.1156e-06
-no rank_1|superkingdom_10239|clade_2731342|kingdom_Sangervirae	0.0034410162	0
-no rank_1|superkingdom_10239|clade_Duplodnaviria	0.0512763808	0.0415810803
-no rank_1|superkingdom_10239|clade_Monodnaviria	0.0034410162	6.1156e-06
-no rank_1|superkingdom_Viruses	0.054717397	0.0415871959
+no rank_1|superkingdom_10239|clade_2731342|kingdom_2732091|phylum_2732412|class_2732413|order_2732414|family_10841|genus_mgv_g_4000942	0	1.2187e-05
+no rank_1|superkingdom_10239|clade_2731342|kingdom_2732091|phylum_2732412|class_2732413|order_2732414|family_Microviridae	0.0034410162	0.0002119023
+no rank_1|superkingdom_10239|clade_2731342|kingdom_2732091|phylum_2732412|class_2732413|order_Petitvirales	0.0034410162	0.0002119023
+no rank_1|superkingdom_10239|clade_2731342|kingdom_2732091|phylum_2732412|class_Malgrandaviricetes	0.0034410162	0.0002119023
+no rank_1|superkingdom_10239|clade_2731342|kingdom_2732091|phylum_Phixviricota	0.0034410162	0.0002119023
+no rank_1|superkingdom_10239|clade_2731342|kingdom_Sangervirae	0.0034410162	0.0002119023
+no rank_1|superkingdom_10239|clade_Duplodnaviria	0.0512763808	0.0505112087
+no rank_1|superkingdom_10239|clade_Monodnaviria	0.0034410162	0.0002119023
+no rank_1|superkingdom_Viruses	0.054717397	0.050723111

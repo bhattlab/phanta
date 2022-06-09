@@ -1,0 +1,494 @@
+100.00	6564345	0	R	1	root
+94.93	6231380	0	R1	131567	  cellular organisms
+94.91	6230323	0	D	2	    Bacteria
+67.40	4424262	0	D1	1783272	      Terrabacteria group
+47.65	3128097	0	P	1239	        Firmicutes
+30.94	2030690	0	C	186801	          Clostridia
+30.94	2030690	0	O	186802	            Clostridiales
+16.42	1077903	0	F	541000	              Ruminococcaceae
+10.72	703440	0	G	216851	                Faecalibacterium
+8.26	542482	542482	S	853	                  Faecalibacterium prausnitzii
+2.42	158674	0	G1	259314	                  environmental samples
+0.63	41070	41070	S	1262897	                    Faecalibacterium sp. CAG:74
+1.79	117603	117603	S	259315	                    uncultured Faecalibacterium sp.
+0.03	2284	0	G1	2646395	                  unclassified Faecalibacterium
+0.03	2284	2284	S	1946507	                    Faecalibacterium sp. UBA1819
+3.43	225083	0	G	1263	                Ruminococcus
+2.68	175746	0	G1	2608920	                  unclassified Ruminococcus
+2.68	175746	175746	S	2292372	                    Ruminococcus sp. AM42-11
+0.36	23673	0	G1	129701	                  environmental samples
+0.33	21664	21664	S	165186	                    uncultured Ruminococcus sp.
+0.03	2009	2009	S	1262953	                    Ruminococcus sp. CAG:254
+0.26	17174	17174	S	1160721	                  Ruminococcus bicirculans
+0.13	8489	8489	S	40518	                  Ruminococcus bromii
+1.12	73341	0	F1	541002	                environmental samples
+1.12	73341	73341	S	541003	                  uncultured Ruminococcaceae bacterium
+0.57	37131	0	G	292632	                Subdoligranulum
+0.57	37131	0	G1	2685293	                  unclassified Subdoligranulum
+0.57	37131	37131	S	2086273	                    Subdoligranulum sp. APC924/74
+0.44	28841	0	F1	2305133	                unclassified Ruminococcaceae
+0.44	28841	28841	S	1898205	                  Ruminococcaceae bacterium
+0.09	6066	0	G	204475	                Gemmiger
+0.09	6066	6066	S	745368	                  Gemmiger formicilis
+0.04	2623	0	F1	552397	                Ruminococcaceae incertae sedis
+0.04	2623	2623	S	39492	                  [Eubacterium] siraeum
+0.02	993	0	G	244127	                Anaerotruncus
+0.02	993	0	G1	905010	                  environmental samples
+0.02	993	993	S	1262700	                    Anaerotruncus sp. CAG:528
+0.01	380	0	G	2048137	                Agathobaculum
+0.01	380	380	S	1628085	                  Agathobaculum butyriciproducens
+4.55	298524	0	F	186803	              Lachnospiraceae
+1.56	102159	0	G	1918452	                Extibacter
+1.56	102159	102159	S	1796622	                  Extibacter muris
+1.14	74820	0	F1	186928	                unclassified Lachnospiraceae
+1.14	74820	74820	S	39491	                  [Eubacterium] rectale
+0.73	47774	0	G	2039240	                Anaerotignum
+0.73	47774	47774	S	160404	                  Anaerotignum lactatifermentans
+0.31	20554	0	G	28050	                Lachnospira
+0.31	20554	20554	S	39485	                  Lachnospira eligens
+0.30	19462	0	G	572511	                Blautia
+0.27	17927	17927	S	1737424	                  Blautia massiliensis
+0.02	1535	1535	S	418240	                  Blautia wexlerae
+0.18	11837	0	G	830	                Butyrivibrio
+0.18	11837	11837	S	45851	                  Butyrivibrio crossotus
+0.13	8794	0	G	265975	                Oribacterium
+0.13	8794	0	G1	2629782	                  unclassified Oribacterium
+0.13	8794	8794	S	1947016	                    Oribacterium sp. UBA3737
+0.11	7377	0	G	841	                Roseburia
+0.11	7377	7377	S	360807	                  Roseburia inulinivorans
+0.09	5742	0	G	1407607	                Fusicatenibacter
+0.09	5742	5742	S	1150298	                  Fusicatenibacter saccharivorans
+3.00	197241	0	O1	39779	              unclassified Clostridiales
+2.88	189158	189158	S	1898207	                Clostridiales bacterium
+0.12	7571	7571	S	2109688	                Clostridiales bacterium CCNA10
+0.01	511	511	S	1950886	                Clostridiales bacterium UBA4696
+2.60	170359	0	F	186806	              Eubacteriaceae
+2.60	170359	0	G	1730	                Eubacterium
+2.44	160322	160322	S	39496	                  Eubacterium ventriosum
+0.12	7691	0	G1	2624479	                  unclassified Eubacterium
+0.12	7691	7691	S	2292349	                    Eubacterium sp. AM28-29
+0.04	2345	0	G1	84372	                  environmental samples
+0.02	1207	1207	S	1262885	                    Eubacterium sp. CAG:248
+0.02	1138	1138	S	165185	                    uncultured Eubacterium sp.
+1.48	97234	0	O1	50559	              environmental samples
+1.48	97234	97234	S	172733	                uncultured Clostridiales bacterium
+1.47	96190	0	F	216572	              Oscillospiraceae
+1.47	96190	0	G	459786	                Oscillibacter
+1.30	85266	0	G1	876090	                  environmental samples
+1.30	85266	85266	S	1262910	                    Oscillibacter sp. CAG:155
+0.17	10924	0	G1	2629304	                  unclassified Oscillibacter
+0.03	2009	2009	S	1945593	                    Oscillibacter sp.
+0.01	771	771	S	1519439	                    Oscillibacter sp. ER4
+0.09	5781	5781	S	1897012	                    Oscillibacter sp. CAG:241_62_21
+0.04	2362	2362	S	1897011	                    Oscillibacter sp. 57_20
+1.41	92795	0	F	31979	              Clostridiaceae
+1.41	92795	0	G	1485	                Clostridium
+1.37	89855	0	G1	59619	                  environmental samples
+0.40	26494	26494	S	1262779	                    Clostridium sp. CAG:217
+0.91	59946	59946	S	1262821	                    Clostridium sp. CAG:568
+0.03	1759	1759	S	1262796	                    Clostridium sp. CAG:343
+0.01	906	906	S	1262811	                    Clostridium sp. CAG:465
+0.01	669	669	S	59620	                    uncultured Clostridium sp.
+0.00	77	77	S	1262810	                    Clostridium sp. CAG:452
+0.04	2939	0	G1	2614128	                  unclassified Clostridium
+0.01	839	839	S	2293035	                    Clostridium sp. AM49-4BH
+0.01	746	746	S	2293049	                    Clostridium sp. OM08-29
+0.01	346	346	S	1896989	                    Clostridium sp. CAG:354_28_25
+0.02	1007	1007	S	2293016	                    Clostridium sp. AF37-5
+0.00	275	0	F	990719	              Christensenellaceae
+0.00	275	0	F1	1917874	                unclassified Christensenellaceae
+0.00	275	275	S	1930012	                  Christensenellaceae bacterium Phil1
+0.00	165	0	O1	538999	              Clostridiales incertae sedis
+0.00	165	0	F	543314	                Clostridiales Family XIII. Incertae Sedis
+0.00	165	0	F1	1284678	                  unclassified Clostridiales Family XIII. Incertae Sedis
+0.00	165	165	S	1951596	                    Clostridiales bacterium UBA643
+9.18	602796	0	C	91061	          Bacilli
+8.82	578794	0	O	186826	            Lactobacillales
+8.28	543285	0	F	1300	              Streptococcaceae
+8.27	542894	0	G	1301	                Streptococcus
+7.84	514819	514819	S	102684	                  Streptococcus infantarius
+0.08	4948	0	G1	2608887	                  unclassified Streptococcus
+0.04	2782	2782	S	435842	                    Streptococcus sp. C150
+0.03	2166	2166	S	712633	                    Streptococcus sp. oral taxon 431
+0.24	15493	15493	S	1303	                  Streptococcus oralis
+0.05	3592	0	G1	119603	                  Streptococcus dysgalactiae group
+0.05	3592	3592	S	1334	                    Streptococcus dysgalactiae
+0.02	1466	1466	S	1308	                  Streptococcus thermophilus
+0.01	830	830	S	1318	                  Streptococcus parasanguinis
+0.01	850	850	S	1335	                  Streptococcus equinus
+0.01	346	346	S	150055	                  Streptococcus lutetiensis
+0.01	546	546	S	1304	                  Streptococcus salivarius
+0.01	391	0	G	1357	                Lactococcus
+0.01	391	391	S	1358	                  Lactococcus lactis
+0.54	35188	0	F	33958	              Lactobacillaceae
+0.54	35188	0	G	2767893	                Lentilactobacillus
+0.54	35188	35188	S	1581	                  Lentilactobacillus buchneri
+0.00	320	0	F	81852	              Enterococcaceae
+0.00	320	0	G	1350	                Enterococcus
+0.00	320	320	S	37734	                  Enterococcus casseliflavus
+0.37	24001	0	O	1385	            Bacillales
+0.37	24001	0	F	186817	              Bacillaceae
+0.37	24001	0	G	1386	                Bacillus
+0.37	24001	0	G1	185979	                  unclassified Bacillus
+0.22	14426	14426	S	1679169	                    Bacillus sp. FJAT-27916
+0.15	9574	9574	S	1581038	                    Bacillus sp. FJAT-22090
+6.80	446546	0	C	909932	          Negativicutes
+6.39	419757	0	O	1843489	            Veillonellales
+6.39	419757	0	F	31977	              Veillonellaceae
+6.13	402457	0	G	39948	                Dialister
+6.13	402213	0	G1	135034	                  environmental samples
+6.12	401959	401959	S	1262870	                    Dialister sp. CAG:486
+0.00	254	254	S	278064	                    uncultured Dialister sp.
+0.00	244	244	S	218538	                  Dialister invisus
+0.23	15029	0	G	29465	                Veillonella
+0.18	12072	12072	S	29466	                  Veillonella parvula
+0.05	2956	2956	S	39777	                  Veillonella atypica
+0.03	2270	0	G	906	                Megasphaera
+0.02	1107	0	G1	2626256	                  unclassified Megasphaera
+0.02	1107	1107	S	1273103	                    Megasphaera sp. NM10
+0.02	1163	1163	S	2144175	                  Megasphaera stantonii
+0.40	26346	0	O	1843488	            Acidaminococcales
+0.40	26346	0	F	909930	              Acidaminococcaceae
+0.40	26346	0	G	33024	                Phascolarctobacterium
+0.21	13635	0	G1	2639160	                  unclassified Phascolarctobacterium
+0.21	13635	13635	S	1262915	                    Phascolarctobacterium sp. CAG:266
+0.19	12710	12710	S	626940	                  Phascolarctobacterium succinatutens
+0.01	442	0	O	909929	            Selenomonadales
+0.01	442	0	F	1843491	              Selenomonadaceae
+0.01	442	0	G	158846	                Megamonas
+0.01	442	442	S	437897	                  Megamonas funiformis
+0.21	13952	0	P1	84086	          unclassified Firmicutes sensu stricto
+0.18	12083	12083	S	2292899	            Firmicutes bacterium OM08-11AC
+0.02	1568	1568	S	2292181	            Firmicutes bacterium AF25-13AC
+0.00	301	301	S	1897032	            Firmicutes bacterium CAG:24053_14
+0.21	13508	0	C	526524	          Erysipelotrichia
+0.21	13508	0	O	526525	            Erysipelotrichales
+0.21	13508	0	F	128827	              Erysipelotrichaceae
+0.14	9103	0	G	61170	                Holdemania
+0.14	9103	9103	S	61171	                  Holdemania filiformis
+0.07	4404	0	G	1573535	                Holdemanella
+0.07	4404	4404	S	1735	                  Holdemanella biformis
+0.17	11190	0	P1	47928	          environmental samples
+0.12	7741	7741	S	1263000	            Firmicutes bacterium CAG:110
+0.02	994	994	S	344338	            uncultured Firmicutes bacterium
+0.03	2002	2002	S	1262999	            Firmicutes bacterium CAG:103
+0.01	451	451	S	1262992	            Firmicutes bacterium CAG:83
+0.14	9413	0	C	1737404	          Tissierellia
+0.14	9413	0	O	1737405	            Tissierellales
+0.14	9413	0	F	1570339	              Peptoniphilaceae
+0.10	6711	0	G	162289	                Peptoniphilus
+0.10	6711	6711	S	33031	                  Peptoniphilus lacrimalis
+0.04	2701	0	G	165779	                Anaerococcus
+0.04	2701	2701	S	1288120	                  Anaerococcus senegalensis
+19.73	1295337	0	P	201174	        Actinobacteria
+14.54	954300	0	C	84998	          Coriobacteriia
+8.67	569308	0	O	1643822	            Eggerthellales
+8.67	569308	0	F	1643826	              Eggerthellaceae
+8.11	532130	0	G	84162	                Cryptobacterium
+8.11	532130	0	G1	655656	                  environmental samples
+8.09	531380	531380	S	1262868	                    Cryptobacterium sp. CAG:338
+0.01	749	749	S	655657	                    uncultured Cryptobacterium sp.
+0.26	16762	0	G	651554	                Paraeggerthella
+0.26	16762	16762	S	230658	                  Paraeggerthella hongkongensis
+0.25	16669	0	G	447020	                Adlercreutzia
+0.25	16669	16669	S	446660	                  Adlercreutzia equolifaciens
+0.06	3611	0	G	84111	                Eggerthella
+0.02	1558	0	G1	293421	                  environmental samples
+0.02	1558	1558	S	1262876	                    Eggerthella sp. CAG:298
+0.03	2052	2052	S	84112	                  Eggerthella lenta
+0.00	135	0	F1	1720314	                unclassified Eggerthellaceae
+0.00	135	135	S	1951647	                  Eggerthellaceae bacterium UBA5906
+5.85	384063	0	O	84999	            Coriobacteriales
+5.85	384063	0	F	84107	              Coriobacteriaceae
+4.41	289255	0	G	102106	                Collinsella
+3.26	213793	0	G1	165189	                  environmental samples
+2.72	178294	178294	S	165190	                    uncultured Collinsella sp.
+0.54	35498	35498	S	1262850	                    Collinsella sp. CAG:166
+0.70	45695	0	G1	2637548	                  unclassified Collinsella
+0.34	22349	22349	S	2292222	                    Collinsella sp. AF23-2
+0.18	11929	11929	S	2292315	                    Collinsella sp. AM33-4BH
+0.05	3541	3541	S	2292226	                    Collinsella sp. AF25-2LB
+0.04	2324	2324	S	2292343	                    Collinsella sp. TM09-10AT
+0.04	2411	2411	S	2292326	                    Collinsella sp. OM04-5
+0.02	1354	1354	S	2018038	                    Collinsella sp. TF06-26
+0.00	283	283	S	2292344	                    Collinsella sp. TM10-22
+0.01	572	572	S	2292333	                    Collinsella sp. TF08-11AT
+0.01	348	348	S	742722	                    Collinsella sp. 4_8_47FAA
+0.01	580	580	S	2292207	                    Collinsella sp. AF02-46-1
+0.45	29766	29766	S	74426	                  Collinsella aerofaciens
+1.44	94808	0	G	1473205	                Senegalimassilia
+1.44	94808	94808	S	1473216	                  Senegalimassilia anaerobia
+0.01	927	0	C1	2052158	            unclassified Coriobacteriia
+0.01	927	927	S	2052159	              Coriobacteriia bacterium
+5.20	341037	0	C	1760	          Actinobacteria
+2.76	181279	0	O	85006	            Micrococcales
+2.76	181279	0	F	1268	              Micrococcaceae
+2.76	181279	0	G	32207	                Rothia
+2.75	180266	180266	S	43675	                  Rothia mucilaginosa
+0.02	1012	0	G1	2689056	                  unclassified Rothia (in: Bacteria)
+0.02	1012	1012	S	1715008	                    Rothia sp. HMSC078H08
+2.32	152246	0	O	85009	            Propionibacteriales
+2.32	152246	0	F	31957	              Propionibacteriaceae
+2.32	152246	0	G	1912216	                Cutibacterium
+2.32	152246	152246	S	1747	                  Cutibacterium acnes
+0.09	5944	0	O	2037	            Actinomycetales
+0.09	5944	0	F	2049	              Actinomycetaceae
+0.09	5944	0	G	184869	                Varibaculum
+0.09	5944	5944	S	184870	                  Varibaculum cambriense
+0.02	1567	0	O	85004	            Bifidobacteriales
+0.02	1567	0	F	31953	              Bifidobacteriaceae
+0.02	1567	0	G	1678	                Bifidobacterium
+0.01	756	756	S	1686	                  Bifidobacterium catenulatum
+0.01	810	810	S	1680	                  Bifidobacterium adolescentis
+0.01	827	0	P	544448	        Tenericutes
+0.01	827	0	C	31969	          Mollicutes
+0.01	827	0	C1	220136	            environmental samples
+0.01	827	827	S	220137	              uncultured Mollicutes bacterium
+18.33	1203413	0	P	203691	      Spirochaetes
+18.33	1203413	0	C	203692	        Spirochaetia
+18.33	1203413	0	O	1643686	          Brachyspirales
+18.33	1203413	0	F	143786	            Brachyspiraceae
+18.33	1203413	0	G	29521	              Brachyspira
+18.33	1203413	0	G1	132529	                environmental samples
+18.33	1203413	1203413	S	1262760	                  Brachyspira sp. CAG:700
+6.36	417709	0	D1	1783270	      FCB group
+6.36	417709	0	D2	68336	        Bacteroidetes/Chlorobi group
+6.36	417709	0	P	976	          Bacteroidetes
+6.36	417709	0	C	200643	            Bacteroidia
+6.36	417709	0	O	171549	              Bacteroidales
+2.16	141565	0	F	171552	                Prevotellaceae
+2.07	135737	0	G	838	                  Prevotella
+0.94	62003	62003	S	363265	                    Prevotella stercorea
+0.68	44727	0	G1	84374	                    environmental samples
+0.68	44727	44727	S	159272	                      uncultured Prevotella sp.
+0.15	9676	0	G1	2638335	                    unclassified Prevotella
+0.15	9676	9676	S	2024225	                      Prevotella sp. P5-108
+0.29	19329	19329	S	165179	                    Prevotella copri
+0.09	5827	0	G	1926672	                  Prevotellamassilia
+0.09	5827	5827	S	1852370	                    Prevotellamassilia timonensis
+1.65	108171	0	F	171550	                Rikenellaceae
+1.65	108171	0	G	239759	                  Alistipes
+1.49	97564	97564	S	1288121	                    Alistipes senegalensis
+0.16	10607	0	G1	538948	                    environmental samples
+0.16	10607	10607	S	538949	                      uncultured Alistipes sp.
+0.83	54806	0	F	1853231	                Odoribacteraceae
+0.83	54806	0	G	574697	                  Butyricimonas
+0.55	36227	0	G1	2637652	                    unclassified Butyricimonas
+0.55	36227	36227	S	1965649	                      Butyricimonas sp. An62
+0.28	18578	18578	S	544645	                    Butyricimonas virosa
+0.63	41133	0	O1	333046	                Bacteroidales incertae sedis
+0.63	41133	0	G	909656	                  Phocaeicola
+0.63	41133	41133	S	310297	                    Phocaeicola plebeius
+0.57	37464	0	F	2005525	                Tannerellaceae
+0.57	37464	0	G	375288	                  Parabacteroides
+0.57	37464	37464	S	574930	                    Parabacteroides gordonii
+0.22	14505	0	F	815	                Bacteroidaceae
+0.22	14505	0	G	816	                  Bacteroides
+0.22	14505	0	G1	139043	                    environmental samples
+0.12	7943	7943	S	1262742	                      Bacteroides sp. CAG:545
+0.10	6562	6562	S	1262734	                      Bacteroides sp. CAG:1060
+0.17	11100	0	O1	185291	                unclassified Bacteroidales
+0.17	11100	11100	S	1897040	                  Bacteroidales bacterium 52_46
+0.10	6766	0	O1	189693	                environmental samples
+0.10	6766	6766	S	194843	                  uncultured Bacteroidales bacterium
+0.03	2194	0	F	2005519	                Barnesiellaceae
+0.03	2194	0	G	397864	                  Barnesiella
+0.03	2194	2194	S	487174	                    Barnesiella intestinihominis
+2.25	147869	0	P	1224	      Proteobacteria
+1.31	85874	0	C	1236	        Gammaproteobacteria
+0.94	61679	0	O	135624	          Aeromonadales
+0.94	61679	0	F	84642	            Aeromonadaceae
+0.94	61679	0	G	642	              Aeromonas
+0.94	61679	61679	S	948519	                Aeromonas rivipollensis
+0.30	19470	0	O	91347	          Enterobacterales
+0.30	19470	0	F	543	            Enterobacteriaceae
+0.14	9441	0	G	547	              Enterobacter
+0.14	9441	0	G1	354276	                Enterobacter cloacae complex
+0.14	9441	9441	S	550	                  Enterobacter cloacae
+0.06	3707	0	G	561	              Escherichia
+0.06	3707	3707	S	562	                Escherichia coli
+0.05	3147	0	G	447792	              Phytobacter
+0.05	3147	3147	S	395631	                Phytobacter diazotrophicus
+0.04	2307	0	G	620	              Shigella
+0.04	2307	2307	S	623	                Shigella flexneri
+0.01	866	0	G	413496	              Cronobacter
+0.01	866	866	S	28141	                Cronobacter sakazakii
+0.07	4724	0	O	135625	          Pasteurellales
+0.07	4724	0	F	712	            Pasteurellaceae
+0.07	4724	0	G	724	              Haemophilus
+0.06	4013	4013	S	729	                Haemophilus parainfluenzae
+0.01	710	0	G1	2609962	                unclassified Haemophilus
+0.01	710	710	S	1739522	                  Haemophilus sp. HMSC068C11
+0.94	61995	0	C	28216	        Betaproteobacteria
+0.94	61995	0	O	80840	          Burkholderiales
+0.67	44065	0	F	75682	            Oxalobacteraceae
+0.67	44065	0	G	846	              Oxalobacter
+0.67	44065	44065	S	847	                Oxalobacter formigenes
+0.27	17929	0	F	995019	            Sutterellaceae
+0.27	17526	0	G	40544	              Sutterella
+0.22	14184	14184	S	40545	                Sutterella wadsworthensis
+0.05	3341	0	G1	286132	                environmental samples
+0.03	2043	2043	S	1262977	                  Sutterella sp. CAG:521
+0.02	1297	1297	S	286133	                  uncultured Sutterella sp.
+0.01	403	0	G	2494213	              Mesosutterella
+0.01	403	403	S	2259133	                Mesosutterella multiformis
+0.43	27986	0	P	32066	      Fusobacteria
+0.43	27986	0	C	203490	        Fusobacteriia
+0.43	27986	0	O	203491	          Fusobacteriales
+0.43	27986	0	F	203492	            Fusobacteriaceae
+0.43	27986	0	G	180162	              Cetobacterium
+0.43	27986	27986	S	188913	                Cetobacterium somerae
+0.14	9081	0	D1	1783257	      PVC group
+0.11	7363	0	P	256845	        Lentisphaerae
+0.11	7363	0	C	1313211	          Lentisphaeria
+0.11	7363	0	O	278082	            Victivallales
+0.11	7363	0	F	255528	              Victivallaceae
+0.11	7363	0	G	172900	                Victivallis
+0.11	7363	7363	S	172901	                  Victivallis vadensis
+0.03	1717	0	P	74201	        Verrucomicrobia
+0.02	1106	0	C	203494	          Verrucomicrobiae
+0.02	1106	0	O	48461	            Verrucomicrobiales
+0.02	1106	0	F	1647988	              Akkermansiaceae
+0.02	1106	0	F1	1951308	                unclassified Akkermansiaceae
+0.02	1106	1106	S	1951360	                  Akkermansiaceae bacterium UBA3385
+0.01	611	0	C	414999	          Opitutae
+0.01	611	0	O	415000	            Opitutales
+0.01	611	0	O1	592833	              environmental samples
+0.01	611	611	S	592834	                uncultured Opitutales bacterium
+0.01	959	0	D	2157	    Archaea
+0.01	959	0	P	28890	      Euryarchaeota
+0.01	959	0	P1	2283794	        Methanomada group
+0.01	959	0	C	183925	          Methanobacteria
+0.01	959	0	O	2158	            Methanobacteriales
+0.01	959	0	F	2159	              Methanobacteriaceae
+0.01	959	0	G	2172	                Methanobrevibacter
+0.01	959	959	S	2173	                  Methanobrevibacter smithii
+0.00	98	0	D	2759	    Eukaryota
+0.00	98	0	D1	33154	      Opisthokonta
+0.00	98	0	K	4751	        Fungi
+0.00	98	0	K1	451864	          Dikarya
+0.00	98	0	P	4890	            Ascomycota
+0.00	98	0	P1	716545	              saccharomyceta
+0.00	85	0	P2	147538	                Pezizomycotina
+0.00	85	0	P3	716546	                  leotiomyceta
+0.00	85	0	P4	715989	                    sordariomyceta
+0.00	85	0	C	147550	                      Sordariomycetes
+0.00	85	0	C1	222543	                        Hypocreomycetidae
+0.00	85	0	O	5125	                          Hypocreales
+0.00	85	0	F	110618	                            Nectriaceae
+0.00	85	0	G	5506	                              Fusarium
+0.00	85	0	G1	569360	                                Fusarium sambucinum species complex
+0.00	72	72	S	36050	                                  Fusarium poae
+0.00	13	13	S	56646	                                  Fusarium venenatum
+0.00	12	0	P2	147537	                Saccharomycotina
+0.00	12	0	C	4891	                  Saccharomycetes
+0.00	12	0	O	4892	                    Saccharomycetales
+0.00	12	0	F	4893	                      Saccharomycetaceae
+0.00	12	0	G	4930	                        Saccharomyces
+0.00	12	12	S	1080349	                          Saccharomyces eubayanus
+5.07	332964	0	D	10239	  Viruses
+5.05	331573	0	D1	2731341	    Duplodnaviria
+5.05	331573	0	K	2731360	      Heunggongvirae
+5.05	331573	0	P	2731618	        Uroviricota
+5.05	331573	0	C	2731619	          Caudoviricetes
+5.05	331573	0	O	28883	            Caudovirales
+3.81	250307	0	F	10699	              Siphoviridae
+2.15	141285	0	G	4000303	                mgv_g_4000303
+2.15	140865	140865	S	4024959	                  OTU-17819
+0.00	25	25	S	4033164	                  OTU-22849
+0.00	37	37	S	4038851	                  OTU-59963
+0.00	311	311	S	4037535	                  OTU-03079
+0.00	34	34	S	4031453	                  OTU-31167
+0.00	10	10	S	4037304	                  OTU-20936
+1.08	70670	0	G	4000081	                mgv_g_4000081
+1.06	69367	69367	S	4041009	                  OTU-61940
+0.01	862	862	S	4041907	                  OTU-09096
+0.00	208	208	S	4041473	                  OTU-49703
+0.00	155	155	S	4041782	                  OTU-19168
+0.00	60	60	S	4042161	                  OTU-48657
+0.00	15	15	S	4040802	                  OTU-45004
+0.19	12170	0	G	4000028	                mgv_g_4000028
+0.19	12170	12170	S	4015742	                  OTU-19170
+0.12	8110	0	G	1623273	                Triavirus
+0.12	8110	8110	S	4030445	                  OTU-56749
+0.10	6855	0	G	4000009	                mgv_g_4000009
+0.10	6855	6855	S	4028260	                  OTU-00169
+0.06	3968	0	G	4000328	                mgv_g_4000328
+0.06	3968	3968	S	4037771	                  OTU-42398
+0.03	2127	0	G	4000018	                mgv_g_4000018
+0.03	1731	1731	S	4034078	                  OTU-21410
+0.01	396	396	S	4015163	                  OTU-18765
+0.02	1147	0	G	4000374	                mgv_g_4000374
+0.02	1147	1147	S	4018213	                  OTU-43463
+0.01	874	0	G	4000964	                mgv_g_4000964
+0.01	874	874	S	4026477	                  OTU-60017
+0.01	630	0	G	4000253	                mgv_g_4000253
+0.01	630	630	S	4052282	                  OTU-61459
+0.01	606	0	G	4001519	                mgv_g_4001519
+0.01	606	606	S	4037372	                  OTU-44246
+0.01	589	0	G	4000003	                mgv_g_4000003
+0.01	589	589	S	4056437	                  OTU-66645
+0.01	394	0	G	4001041	                mgv_g_4001041
+0.01	394	394	S	4014803	                  OTU-29134
+0.01	373	0	G	4001999	                mgv_g_4001999
+0.01	373	373	S	4030991	                  OTU-07192
+0.00	282	0	G	4000001	                mgv_g_4000001
+0.00	178	178	S	4049511	                  OTU-59172
+0.00	104	104	S	4042512	                  OTU-14197
+0.00	113	0	G	4001106	                mgv_g_4001106
+0.00	113	113	S	4047085	                  OTU-41788
+0.00	105	0	G	4000768	                mgv_g_4000768
+0.00	105	105	S	4028493	                  OTU-50535
+0.37	24004	0	G	4000051	              mgv_g_4000051
+0.36	23309	23309	S	4007710	                OTU-13799
+0.01	372	372	S	4007155	                OTU-47952
+0.00	321	321	S	4007030	                OTU-45908
+0.19	12151	0	G	4000221	              mgv_g_4000221
+0.19	12151	12151	S	4029273	                OTU-52919
+0.13	8788	0	G	4000047	              mgv_g_4000047
+0.13	8788	8788	S	4054018	                OTU-20954
+0.12	7812	0	G	4000005	              mgv_g_4000005
+0.12	7812	7812	S	4034102	                OTU-60142
+0.09	6184	0	G	4000106	              mgv_g_4000106
+0.09	6184	6184	S	4038606	                OTU-13066
+0.09	5652	0	G	4000794	              mgv_g_4000794
+0.09	5652	5652	S	4040105	                OTU-14285
+0.06	4141	0	G	4000075	              mgv_g_4000075
+0.06	4141	4141	S	4035568	                OTU-52562
+0.05	3101	0	F	10744	              Podoviridae
+0.04	2936	0	G	4000209	                mgv_g_4000209
+0.04	2936	2936	S	4010215	                  OTU-74495
+0.00	164	0	G	4000089	                mgv_g_4000089
+0.00	164	164	S	4006849	                  OTU-54228
+0.04	2949	0	F	10662	              Myoviridae
+0.02	1484	0	F1	857479	                Peduovirinae
+0.02	1363	0	G	1196844	                  Hpunavirus
+0.02	1363	1363	S	4020246	                    OTU-68690
+0.00	120	0	G	140410	                  Peduovirus
+0.00	120	120	S	4010686	                    OTU-46418
+0.01	762	0	G	2733134	                Taranisvirus
+0.01	762	762	S	2734146	                  Faecalibacterium virus Taranis
+0.01	702	0	G	4000073	                mgv_g_4000073
+0.01	702	702	S	4042203	                  OTU-02174
+0.03	2108	0	G	4000124	              mgv_g_4000124
+0.03	2108	2108	S	4039915	                OTU-12357
+0.03	2087	0	G	4000531	              mgv_g_4000531
+0.03	2087	2087	S	4048563	                OTU-44666
+0.03	1872	0	G	4000020	              mgv_g_4000020
+0.03	1872	1872	S	4013797	                OTU-49120
+0.00	205	0	G	4001863	              mgv_g_4001863
+0.00	205	205	S	4017697	                OTU-20284
+0.00	145	0	G	4000189	              mgv_g_4000189
+0.00	145	145	S	4046474	                OTU-76668
+0.00	62	0	G	4000127	              mgv_g_4000127
+0.00	62	62	S	4035611	                OTU-51474
+0.02	1391	0	D1	2731342	    Monodnaviria
+0.02	1391	0	K	2732091	      Sangervirae
+0.02	1391	0	P	2732412	        Phixviricota
+0.02	1391	0	C	2732413	          Malgrandaviricetes
+0.02	1391	0	O	2732414	            Petitvirales
+0.02	1391	0	F	10841	              Microviridae
+0.02	1310	0	G	4000015	                mgv_g_4000015
+0.02	1310	1310	S	4003570	                  OTU-07194
+0.00	80	0	G	4000942	                mgv_g_4000942
+0.00	80	80	S	4055024	                  OTU-07599
