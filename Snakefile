@@ -85,9 +85,9 @@ rule kraken:
     paired_string = paired_string,
     gzipped_string = gzipped_string,
     confidence_threshold = confidence_threshold
-  threads: 8
+  threads: config['kraken2_threads']
   resources:
-    mem=256,
+    mem=config['kraken2_mem'],
     time=6
   shell: """
     kraken2 --db {params.db} --threads {threads} --output {output.krak} \
@@ -149,7 +149,7 @@ rule bracken:
     possible_2 = join(outdir, "classification/{samp}.krak.report_bracken_species.filtered.temp")
   threads: 1
   resources:
-    mem = 64,
+    mem = config['bracken_mem'],
     time = 1
   shell: """
     # protection against Bracken error
