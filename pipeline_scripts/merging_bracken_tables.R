@@ -42,36 +42,9 @@ merged_table[,1] <- as.character(merged_table[,1])
 outpath <- paste0(outdir, '/', 'counts.txt')
 write.table(merged_table, outpath, quote=FALSE, row.names = FALSE, sep = '\t')
 
-# Next merge tables normalized out of total reads
-
-norm_tot_tables_list <- args[4]
-norm_tot_tables <- as.character(read.csv(norm_tot_tables_list, header=FALSE)[,1])
-
-# initialize data frame
-merged_table <- read.csv(paste0(indir, '/', norm_tot_tables[1]), sep='\t', header=FALSE)
-colnames(merged_table) <- desired_colnames[1:2]
-
-# loop through files and keep merging
-for (i in seq(2,length(norm_tot_tables))) {
-  f <- paste0(indir, '/', norm_tot_tables[i])
-  table_to_merge <- read.csv(f, sep='\t', header=FALSE)
-  colnames(table_to_merge) <- c("Taxon", desired_colnames[i+1])
-  merged_table <- merge(merged_table, table_to_merge, by = c("Taxon"), all=TRUE)
-}
-
-# replace NA with 0
-merged_table[is.na(merged_table)] <- 0
-
-# make the first column a character vector, not a factor
-merged_table[,1] <- as.character(merged_table[,1])
-
-# now output
-outpath <- paste0(outdir, '/', 'counts_norm_out_of_tot.txt')
-write.table(merged_table, outpath, quote=FALSE, row.names = FALSE, sep = '\t')
-
 # Next merge tables normalized out of total Bracken-classified reads
 
-norm_brack_tables_list <- args[5]
+norm_brack_tables_list <- args[4]
 norm_brack_tables <- as.character(read.csv(norm_brack_tables_list, header=FALSE)[,1])
 
 # initialize data frame

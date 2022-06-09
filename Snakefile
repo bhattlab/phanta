@@ -68,7 +68,6 @@ rule all:
   input:
     join(outdir, "final_merged_outputs/total_reads.tsv"),
     join(outdir, "final_merged_outputs/counts.txt"),
-    join(outdir, "final_merged_outputs/counts_norm_out_of_tot.txt"),    
     join(outdir, "final_merged_outputs/counts_norm_out_of_bracken_classified.txt"),
     join(outdir, "final_merged_outputs/merged_community_abundance.txt"),
     join(outdir, "pipeline_completed.txt")
@@ -207,7 +206,6 @@ rule prepare_to_merge_normed: # normalized versions of to_merge files produced i
     counts_files=expand(join(outdir, "classification/{samp}.krak.report_bracken_species.filtered.to_merge"), samp=sample_names),
     tot_reads_file=join(outdir, "final_merged_outputs/total_reads.tsv")
   output:
-    temp(expand(join(outdir, "classification/{samp}.krak.report_bracken_species.filtered.to_merge.norm_tot"), samp=sample_names)),
     temp(expand(join(outdir, "classification/{samp}.krak.report_bracken_species.filtered.to_merge.norm_brack"), samp=sample_names))
   params:
     classdir=join(outdir, "classification")
@@ -218,24 +216,20 @@ rule prepare_to_merge_normed: # normalized versions of to_merge files produced i
 rule merge_counts_normed: # make the 3 tables we want! :)
   input:
     expand(join(outdir, "classification/{samp}.krak.report_bracken_species.filtered.to_merge"), samp=sample_names),
-    expand(join(outdir, "classification/{samp}.krak.report_bracken_species.filtered.to_merge.norm_tot"), samp=sample_names),
     expand(join(outdir, "classification/{samp}.krak.report_bracken_species.filtered.to_merge.norm_brack"), samp=sample_names)
   output:
     list1=temp(join(outdir, "classification/counts_tables.txt")),
-    list2=temp(join(outdir, "classification/norm_tot_tables.txt")),
-    list3=temp(join(outdir, "classification/norm_brack_tables.txt")),
+    list2=temp(join(outdir, "classification/norm_brack_tables.txt")),
     counts=join(outdir, "final_merged_outputs/counts.txt"),
-    norm_tot=join(outdir, "final_merged_outputs/counts_norm_out_of_tot.txt"),
     norm_brack=join(outdir, "final_merged_outputs/counts_norm_out_of_bracken_classified.txt")
   params:
     classdir=join(outdir, "classification"),
     finaldir=join(outdir, "final_merged_outputs")
   shell: """
     ls {params.classdir}/*to_merge | rev | cut -d'/' -f 1 | rev > {params.classdir}/counts_tables.txt
-    ls {params.classdir}/*norm_tot | rev | cut -d'/' -f 1 | rev > {params.classdir}/norm_tot_tables.txt
     ls {params.classdir}/*norm_brack | rev | cut -d'/' -f 1 | rev > {params.classdir}/norm_brack_tables.txt
-    Rscript pipeline_scripts/merging_bracken_tables.R {params.classdir} {params.finaldir} {output.list1} \
-    {output.list2} {output.list3}
+    Rscript pipeline_scripts/merging_bracken_tables.R {params.classdir} {params.finaldir} \
+    {output.list1} {output.list2}
     """
 
 ##### STEP SIX - Correct species abundances reported by Bracken for genome length.
@@ -292,7 +286,6 @@ rule deal_with_intermediate:
   input: # all the outputs except pipeline_completed.txt
     join(outdir, "final_merged_outputs/total_reads.tsv"),
     join(outdir, "final_merged_outputs/counts.txt"),
-    join(outdir, "final_merged_outputs/counts_norm_out_of_tot.txt"),
     join(outdir, "final_merged_outputs/counts_norm_out_of_bracken_classified.txt"),
     join(outdir, "final_merged_outputs/merged_community_abundance.txt")
   output:
