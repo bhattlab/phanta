@@ -22,6 +22,7 @@ merged_table <- merged_table[,c(name_col, taxid_col, community_col)]
 colnames(merged_table) <- desired_colnames[1:3]
 
 # loop through files and keep merging
+if (length(scaled_reports) > 1) {
 for (i in seq(2,length(scaled_reports))) {
   f <- paste0(outdir, '/', scaled_reports[i])
   table_to_merge <- read.csv(f, sep='\t', header=TRUE)
@@ -31,7 +32,7 @@ for (i in seq(2,length(scaled_reports))) {
   table_to_merge <- table_to_merge[,c(name_col, taxid_col, community_col)]
   colnames(table_to_merge) <- c("TaxName", "TaxID", desired_colnames[i+2])
   merged_table <- merge(merged_table, table_to_merge, by = c("TaxName", "TaxID"), all=TRUE)
-}
+}}
 
 # replace NA with 0
 merged_table[is.na(merged_table)] <- 0

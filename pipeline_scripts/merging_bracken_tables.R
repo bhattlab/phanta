@@ -25,12 +25,13 @@ merged_table <- read.csv(paste0(indir, '/', count_tables[1]), sep='\t', header=F
 colnames(merged_table) <- desired_colnames[1:2]
 
 # loop through files and keep merging
+if (length(count_tables) > 1) {
 for (i in seq(2,length(count_tables))) {
   f <- paste0(indir, '/', count_tables[i])
   table_to_merge <- read.csv(f, sep='\t', header=FALSE)
   colnames(table_to_merge) <- c("Taxon", desired_colnames[i+1])
   merged_table <- merge(merged_table, table_to_merge, by = c("Taxon"), all=TRUE)
-}
+}}
 
 # replace NA with 0
 merged_table[is.na(merged_table)] <- 0
@@ -52,12 +53,13 @@ merged_table <- read.csv(paste0(indir, '/', norm_brack_tables[1]), sep='\t', hea
 colnames(merged_table) <- desired_colnames[1:2]
 
 # loop through files and keep merging
+if (length(norm_brack_tables) > 1) {
 for (i in seq(2,length(norm_brack_tables))) {
   f <- paste0(indir, '/', norm_brack_tables[i])
   table_to_merge <- read.csv(f, sep='\t', header=FALSE)
   colnames(table_to_merge) <- c("Taxon", desired_colnames[i+1])
   merged_table <- merge(merged_table, table_to_merge, by = c("Taxon"), all=TRUE)
-}
+}}
 
 # replace NA with 0
 merged_table[is.na(merged_table)] <- 0
