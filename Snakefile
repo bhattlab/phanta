@@ -304,6 +304,7 @@ rule deal_with_intermediate:
     intdir=join(outdir, "classification/intermediate")
   shell: """
     mkdir {params.intdir}
+    mv {params.classdir}/*krak {params.intdir}
     mv {params.classdir}/*krak.report {params.intdir}
     mv {params.classdir}/*krak.report.filtered {params.intdir}
     mv {params.classdir}/*krak.report.filtered.bracken {params.intdir}
