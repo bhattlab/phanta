@@ -6,7 +6,7 @@ If Phanta is helpful to your work, please kindly consider citing our manuscript!
 TODO: insert link to preprint.
 
 ## Table of contents
-* [Testing] (#testing)
+* [Testing](#testing)
 
 ## Testing
 
