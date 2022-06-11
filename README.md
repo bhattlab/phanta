@@ -1,17 +1,23 @@
 # TBD - Phanta
 ### A fast, accurate workflow to simultaneously profile prokaryotes, eukaryotes, and viruses (including phages) directly from short-read metagenomes
 
-##  For citations
+#  For citations
 If Phanta is helpful to your work, please kindly consider citing our manuscript!
 TODO: insert link to preprint.
 
-## Table of contents
-1. [Testing](#testing)
-2. [Testing2](#testing2)
+# Table of contents
+1. [Quickstart](#quickstart)
+	* [Installation](#installation)
+2. Testing
 
-## Testing
+# Quickstart
+## Installation
 
-## Testing2
+#
+
+# Testing
+
+# Testing2
 
 # USAGE
 
