@@ -33,7 +33,7 @@ Check whether you have conda installed by typing:
 
 	conda --help
 
-If this command is not recognized by your system, please follow the instructions provided [here](#https://developers.google.com/earth-engine/guides/python_install-conda) to install conda.
+If this command is not recognized by your system, please follow the instructions provided [here](#https://developers.google.com/earth-engine/guides/python_install-conda/) to install conda.
 
 **Step Three - Create and activate a new conda environment**
 
