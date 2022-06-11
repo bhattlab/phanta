@@ -35,7 +35,7 @@ def taxid_to_lineage(taxid, taxon_name):
   return lineage
 
 with open(temp_file, 'r') as infile:
-  with open(outdir + '/merged_community_abundance.txt', 'w') as outfile:
+  with open(outdir + '/corrected_relative_abundance.txt', 'w') as outfile:
     outfile.write(infile.readline())
     for line in infile:
       line=line.rstrip('\n').split('\t')

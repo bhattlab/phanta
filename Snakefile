@@ -69,7 +69,7 @@ rule all:
     join(outdir, "final_merged_outputs/total_reads.tsv"),
     join(outdir, "final_merged_outputs/counts.txt"),
     join(outdir, "final_merged_outputs/relative_abundance.txt"),
-    join(outdir, "final_merged_outputs/merged_community_abundance.txt"),
+    join(outdir, "final_merged_outputs/corrected_relative_abundance.txt"),
     join(outdir, "pipeline_completed.txt")
 
 ##### STEP THREE - Run Kraken2, and filter report based on user-defined thresholds.
@@ -259,14 +259,14 @@ rule scale_bracken:
     {input.filtering_decisions} {params.readlen} {params.paired}
     """
 
-rule merge_community_abundance:
+rule merge_scaled_bracken:
   input:
     expand(join(outdir, "classification/{samp}.krak.report.filtered.bracken.scaled"), samp=sample_names)
   output:
     list1=temp(join(outdir, "classification/scaled_reports.txt")),
     list2=join(outdir, "classification/samples_that_failed_bracken.txt"),
-    merged_temp=temp(join(outdir, "classification/merged_community_abundance_temp.txt")),
-    merged_final=join(outdir, "final_merged_outputs/merged_community_abundance.txt")
+    merged_temp=temp(join(outdir, "classification/corrected_relative_abundance_temp.txt")),
+    merged_final=join(outdir, "final_merged_outputs/corrected_relative_abundance.txt")
   params:
     repo_dir = config['pipeline_directory'],
     classdir=join(outdir, "classification"),
@@ -283,8 +283,8 @@ rule merge_community_abundance:
     fi
     ls {params.classdir}/*scaled | rev | cut -d'/' -f 1 | rev | grep -v -f {params.classdir}/samples_that_failed_bracken.txt \
     > {params.classdir}/scaled_reports.txt
-    Rscript {params.repo_dir}/pipeline_scripts/merging_community_abundance.R {params.classdir} {output.list1}
-    python {params.repo_dir}/pipeline_scripts/merging_community_abundance.py {params.db} {output.merged_temp} {params.finaldir}
+    Rscript {params.repo_dir}/pipeline_scripts/merging_scaled_bracken.R {params.classdir} {output.list1}
+    python {params.repo_dir}/pipeline_scripts/merging_scaled_bracken.py {params.db} {output.merged_temp} {params.finaldir}
     """
 
 ##### STEP SEVEN - Move and/or delete certain "intermediate" files.
@@ -294,7 +294,7 @@ rule deal_with_intermediate:
     join(outdir, "final_merged_outputs/total_reads.tsv"),
     join(outdir, "final_merged_outputs/counts.txt"),
     join(outdir, "final_merged_outputs/relative_abundance.txt"),
-    join(outdir, "final_merged_outputs/merged_community_abundance.txt")
+    join(outdir, "final_merged_outputs/corrected_relative_abundance.txt")
   output:
     completed=join(outdir, "pipeline_completed.txt")
   params:

@@ -116,13 +116,13 @@ The main outputs are merged tables that list the abundance of each taxon, in eac
 
 * `final_merged_outputs/relative_abundance.txt`: same as `counts.txt` but normalized out of the total number of reads in each sample that were ultimately assigned to any taxon during abundance estimation.
 
-* `final_merged_outputs/merged_community_abundance.txt`: `relative_abundance.txt` corrected for genome length. Only species (and not higher taxonomic levels) are included in this report.
+* `final_merged_outputs/corrected_relative_abundance.txt`: same as `relative_abundance.txt` but corrected for genome length. Only species (and not higher taxonomic levels) are included in this report.
 
-TODO: Edit the above as needed.
+TODO: Edit the above as needed as we change the names of things, etc.
 
 For examples of the above outputs, please see the `testing/final_merged_outputs` subdirectory.
 
-*Note*: To filter `counts.txt` or `relative_abundance.txt` to a specific taxonomic level (e.g., species, genus), or to change `merged_community_abundance.txt` to a higher taxonomic level than species (e.g., genus), please refer to [Obtaining Merged Tables at a Desired Taxonomic Level]((#filtering-merged-tables-to-a-specific-taxonomic-level)) under [Provided Postprocessing Scripts](#provided-postprocessing-scripts).
+*Note*: To filter `counts.txt` or `relative_abundance.txt` to a specific taxonomic level (e.g., species, genus), or to change `corrected_relative_abundance.txt` to a higher taxonomic level than species, please refer to [Filtering Merged Tables to a Specific Taxonomic Level]((#filtering-merged-tables-to-a-specific-taxonomic-level)) under [Provided Postprocessing Scripts](#provided-postprocessing-scripts).
 
 # Advanced
 ## Advanced Usage

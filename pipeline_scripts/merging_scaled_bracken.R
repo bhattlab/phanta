@@ -41,5 +41,5 @@ merged_table[is.na(merged_table)] <- 0
 merged_table[,1] <- as.character(merged_table[,1])
 
 # now output
-outpath <- paste0(outdir, '/', 'merged_community_abundance_temp.txt')
+outpath <- paste0(outdir, '/', 'corrected_relative_abundance_temp.txt')
 write.table(merged_table, outpath, quote=FALSE, row.names = FALSE, sep = '\t')
