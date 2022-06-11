@@ -1,5 +1,5 @@
 # TBD - Phanta
-### A fast, accurate workflow to simultaneously profile prokaryotes, eukaryotes, and viruses (including phages) directly from short-read metagenomes
+### A fast, accurate workflow to simultaneously profile the prokaryotic, eukaryotic, and viral community directly from short-read gut metagenomes
 
 #  For citations
 If Phanta is helpful to your work, please kindly consider citing our manuscript!
@@ -8,18 +8,45 @@ TODO: insert link to preprint.
 # Table of contents
 1. [Quick Start](#quick-start)
 	* [Installation](#installation)
-2. Testing
+	* [Basic Usage](#basic-usage)
+	* [Main Outputs](#main-outputs)
+2. [Advanced](#advanced)
+	* [Advanced Usage](#advanced-usage)
+	* [Additional Outputs](#additional-outputs)
+	* [Provided Postprocessing Scripts](#provided-postprocessing-scripts)
 
 # Quick Start
 ## Installation
 
-#
+*Step One - Clone the repository*
 
-# Testing
+Clone the repository to the desired location on your system using the following command:
 
-# Testing2
+		git clone <insert link here>
 
-# USAGE
+TODO: replace with appropriate link.
+
+*Step Two - Install conda, if not already installed*
+
+Check whether you have conda installed by typing:
+
+		conda --help
+
+If this command is not recognized by your system, please follow the instructions provided [here](#https://developers.google.com/earth-engine/guides/python_install-conda) to install conda.
+
+*Step Three - Create a new conda environment*
+
+Navigate to the location where you cloned the repository using the `cd` command. Then, create a new conda environment via the following command:
+
+
+
+## Basic Usage
+## Main Outputs
+
+# Advanced
+## Advanced Usage
+## Additional Outputs
+## Provided Postprocessing Scripts
 
 Prior to running the pipeline, clone this repository.
 
