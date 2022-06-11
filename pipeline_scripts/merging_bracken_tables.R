@@ -68,5 +68,5 @@ merged_table[is.na(merged_table)] <- 0
 merged_table[,1] <- as.character(merged_table[,1])
 
 # now output
-outpath <- paste0(outdir, '/', 'counts_norm_out_of_bracken_classified.txt')
+outpath <- paste0(outdir, '/', 'relative_abundance.txt')
 write.table(merged_table, outpath, quote=FALSE, row.names = FALSE, sep = '\t')

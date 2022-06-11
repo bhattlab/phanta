@@ -68,7 +68,7 @@ rule all:
   input:
     join(outdir, "final_merged_outputs/total_reads.tsv"),
     join(outdir, "final_merged_outputs/counts.txt"),
-    join(outdir, "final_merged_outputs/counts_norm_out_of_bracken_classified.txt"),
+    join(outdir, "final_merged_outputs/relative_abundance.txt"),
     join(outdir, "final_merged_outputs/merged_community_abundance.txt"),
     join(outdir, "pipeline_completed.txt")
 
@@ -85,9 +85,9 @@ rule kraken:
     paired_string = paired_string,
     gzipped_string = gzipped_string,
     confidence_threshold = confidence_threshold
-  threads: config['kraken2_threads']
+  threads: config['class_threads']
   resources:
-    mem=config['kraken2_mem'],
+    mem=config['class_mem'],
     time=6
   shell: """
     kraken2 --db {params.db} --threads {threads} --output {output.krak} \
@@ -145,13 +145,12 @@ rule bracken:
   params:
     db = config['database'],
     readlen = config['read_length'],
-    level = config['taxonomic_level'],
     threshold = config['filter_thresh'],
     possible_1 = join(outdir, "classification/{samp}.krak.report.filtered.bracken.temp"),
     possible_2 = join(outdir, "classification/{samp}.krak.report_bracken_species.filtered.temp")
   threads: 1
   resources:
-    mem = config['bracken_mem'],
+    mem = config['abund_est_mem'],
     time = 1
   shell: """
     # protection against Bracken error
@@ -160,7 +159,7 @@ rule bracken:
     cp {params.possible_2} {output.brack_report_2} ) \
     || bracken -d {params.db} -i {input.krak_report} \
     -o {output.brack_report_1} -r {params.readlen} \
-    -l {params.level} -t {params.threshold}
+    -l 'S' -t {params.threshold}
     """
 
 ##### STEP FIVE - Merge final Bracken reports into usable tables - 1) counts table, 2) normalized counts - normalize by TOTAL READS in sample, 3) normalized counts - normalize by BRACKEN-CLASSIFIED READS in sample.
@@ -226,7 +225,7 @@ rule merge_counts_normed: # make the 3 tables we want! :)
     list1=temp(join(outdir, "classification/counts_tables.txt")),
     list2=temp(join(outdir, "classification/norm_brack_tables.txt")),
     counts=join(outdir, "final_merged_outputs/counts.txt"),
-    norm_brack=join(outdir, "final_merged_outputs/counts_norm_out_of_bracken_classified.txt")
+    norm_brack=join(outdir, "final_merged_outputs/relative_abundance.txt")
   params:
     repo_dir = config['pipeline_directory'],
     classdir=join(outdir, "classification"),
@@ -274,14 +273,14 @@ rule merge_community_abundance:
     finaldir=join(outdir, "final_merged_outputs"),
     db=config['database']
   shell: """
-    count=`find {params.classdir} -maxdepth 1 -name "*.krak.report.filtered.bracken.scaled.temp" | wc -l` 
+    count=`find {params.classdir} -maxdepth 1 -name "*.krak.report.filtered.bracken.scaled.temp" | wc -l`
     if [[ $count != 0 ]]
     then
       ls {params.classdir}/*.krak.report.filtered.bracken.scaled.temp | rev | \
       cut -d'/' -f 1 | rev | cut -d'.' -f 1 > {params.classdir}/samples_that_failed_bracken.txt
     else
       touch {params.classdir}/samples_that_failed_bracken.txt
-    fi    
+    fi
     ls {params.classdir}/*scaled | rev | cut -d'/' -f 1 | rev | grep -v -f {params.classdir}/samples_that_failed_bracken.txt \
     > {params.classdir}/scaled_reports.txt
     Rscript {params.repo_dir}/pipeline_scripts/merging_community_abundance.R {params.classdir} {output.list1}
@@ -294,7 +293,7 @@ rule deal_with_intermediate:
   input: # all the outputs except pipeline_completed.txt
     join(outdir, "final_merged_outputs/total_reads.tsv"),
     join(outdir, "final_merged_outputs/counts.txt"),
-    join(outdir, "final_merged_outputs/counts_norm_out_of_bracken_classified.txt"),
+    join(outdir, "final_merged_outputs/relative_abundance.txt"),
     join(outdir, "final_merged_outputs/merged_community_abundance.txt")
   output:
     completed=join(outdir, "pipeline_completed.txt")

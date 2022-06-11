@@ -1,5 +1,5 @@
 # TBD - Phanta
-### A fast, accurate workflow to simultaneously profile the prokaryotic, eukaryotic, and viral community directly from short-read gut metagenomes
+### A fast, accurate workflow to simultaneously profile prokaryotes, eukaryotes, and viruses directly from short-read metagenomes originating from the human gut
 
 #  For citations
 If Phanta is helpful to your work, please kindly consider citing our manuscript!
@@ -15,6 +15,7 @@ TODO: insert link to preprint.
 	* [Advanced Usage](#advanced-usage)
 	* [Additional Outputs](#additional-outputs)
 	* [Provided Postprocessing Scripts](#provided-postprocessing-scripts)
+		* [Filtering Merged Tables to a Specific Taxonomic Level](#filtering-merged-tables-to-a-specific-taxonomic-level)
 
 # Quick Start
 ## Installation
@@ -100,16 +101,35 @@ When execution has completed, please check that your `test_phanta` has an empty 
 
 ## Basic Usage
 
-For basic usage, simply replace the four paths indicated in the provided `config.yaml` file and execute the following command:
+For basic usage, copy the provided `config.yaml` file and replace the four paths at the top of the the file as appropriate. You do not need to make any additional changes.
 
+*Exception* - if you did not conduct 150bp paired-end sequencing, you will need to change the argument to `read_length` - near the bottom of the file - as well; please see the Advanced Usage section for more details.
 
+Then execute the same Snakemake command you used to "Test your Installation,"
+simply replacing the path to the `config_test` file with the path to the new config file you just edited.
 
 ## Main Outputs
+
+The main outputs are merged tables that list the abundance of each taxon, in each sample.
+
+* `final_merged_outputs/counts.txt`: gives the number of read (pairs) assigned to each taxon
+
+* `final_merged_outputs/relative_abundance.txt`: same as `counts.txt` but normalized out of the total number of reads in each sample that were ultimately assigned to any taxon during abundance estimation.
+
+* `final_merged_outputs/merged_community_abundance.txt`: `relative_abundance.txt` corrected for genome length. Only species (and not higher taxonomic levels) are included in this report.
+
+TODO: Edit the above as needed.
+
+For examples of the above outputs, please see the `testing/final_merged_outputs` subdirectory.
+
+*Note*: To filter `counts.txt` or `relative_abundance.txt` to a specific taxonomic level (e.g., species, genus), or to change `merged_community_abundance.txt` to a higher taxonomic level than species (e.g., genus), please refer to [Obtaining Merged Tables at a Desired Taxonomic Level]((#filtering-merged-tables-to-a-specific-taxonomic-level)) under [Provided Postprocessing Scripts](#provided-postprocessing-scripts).
 
 # Advanced
 ## Advanced Usage
 ## Additional Outputs
 ## Provided Postprocessing Scripts
+
+### Filtering Merged Tables to a Specific Taxonomic Level
 
 There are six parameters that can be adjusted by the user to change the true/false positive ratio. These are: 1) confidence_threshold, 2) cov_thresh_viral, 3) minimizer_thresh_viral, 4) cov_thresh_bacterial, 5) minimizer_thresh_bacterial, 6) filter_thresh. Each parameter is described in more detail in the config file, and suggested defaults are provided there.   
 
