@@ -1,6 +1,14 @@
-# Phage abundance pipeline (TODO: replace with more creative name)
-## Kraken2/Bracken-based pipeline to determine abundance and properties of phages and other microbes in short-read metagenomes
-### With user-adjustable filtering to minimize false positive results
+# TBD - Phanta
+### A fast, accurate workflow to simultaneously profile prokaryotes, eukaryotes, and viruses (including phages) directly from short-read metagenomes
+
+##  For citations
+If Phanta is helpful to your work, please kindly consider citing our manuscript!
+TODO: insert link to preprint.
+
+## Table of contents
+* [Testing] (#testing)
+
+## Testing
 
 # USAGE
 
@@ -22,15 +30,15 @@ After editing the config file, change directory such that you are "in" the clone
 
 	cd /path/to/cloned/repo
 
-Now you can run the pipeline using Snakemake! I like to do things in the order below. 
+Now you can run the pipeline using Snakemake! I like to do things in the order below.
 
 -Do a dry run to verify everything is working as expected.
 
 	snakemake --dryrun -s /path/to/Snakefile --configfile /path/to/configfile --jobs 999 --reason --profile scg
 
--Run the pipeline! 
+-Run the pipeline!
 
-	snakemake -s /path/to/Snakefile --configfile /path/to/configfile --jobs 999 --reason --profile scg 
+	snakemake -s /path/to/Snakefile --configfile /path/to/configfile --jobs 999 --reason --profile scg
 
 Note: if you are not in the Bhatt Lab, you will need to delete the --profile flag and argument, or edit the argument to the --profile flag.
 
@@ -39,10 +47,10 @@ Note: if you are not in the Bhatt Lab, you will need to delete the --profile fla
 The main outputs are found within the classification subdirectory, specifically:
 - counts.txt
 	- Rows are taxa (across taxonomic levels) and columns are samples
-	- Each cell reports the total number of reads in this sample that were assigned to this taxon after Kraken2/filtering/Bracken. 
+	- Each cell reports the total number of reads in this sample that were assigned to this taxon after Kraken2/filtering/Bracken.
 - counts_norm_out_of_tot.txt
 	- Similar to counts.txt, but each count has been normalized out of the total number of reads in the relevant sample
-- counts_norm_out_of_bracken_classified.txt 
+- counts_norm_out_of_bracken_classified.txt
 	- Similar to counts.txt, but each count has been normalized out of the total number of Bracken-classified reads in the relevant sample
 - merged_community_abundance.txt
 	- Species-level version of counts_norm_out_of_bracken_classified.txt, where each value has been corrected for genome length.
