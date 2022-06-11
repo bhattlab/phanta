@@ -8,6 +8,7 @@ TODO: insert link to preprint.
 # Table of contents
 1. [Quick Start](#quick-start)
 	* [Installation](#installation)
+	* [Test Your Installation](#test-your-installation)
 	* [Basic Usage](#basic-usage)
 	* [Main Outputs](#main-outputs)
 2. [Advanced](#advanced)
@@ -18,27 +19,80 @@ TODO: insert link to preprint.
 # Quick Start
 ## Installation
 
-*Step One - Clone the repository*
+**Step One - Clone the repository**
 
 Clone the repository to the desired location on your system using the following command:
 
-		git clone <insert link here>
+	git clone <insert link here>
 
 TODO: replace with appropriate link.
 
-*Step Two - Install conda, if not already installed*
+**Step Two - Install conda, if not already installed**
 
 Check whether you have conda installed by typing:
 
-		conda --help
+	conda --help
 
 If this command is not recognized by your system, please follow the instructions provided [here](#https://developers.google.com/earth-engine/guides/python_install-conda) to install conda.
 
-*Step Three - Create a new conda environment*
+**Step Three - Create and activate a new conda environment**
 
 Navigate to the location where you cloned the repository using the `cd` command. Then, create a new conda environment via the following command:
 
+	conda env create -n new_env --file env.yaml
 
+Activate the environment by typing:
+
+	conda activate new_env
+
+TODO: replace new_env with whatever we decide to call the workflow and similarly rename env.yaml.
+
+**Step Four - Download the database of genomes**
+
+Download the Kraken2/Bracken-compatible database of genomes by navigating to the desired folder on your system and executing the following command:
+
+TODO: insert the command. Ideally wget-able.
+
+This command should install the following files:
+1. hash.k2d: ~31GB
+2. taxo.k2d: ~21MB
+3. opts.k2d: ~4KB
+4. inspect.out: ~18MB
+5. taxonomy/nodes.dmp: ~11MB
+6. taxonomy/names.dmp: ~16MB
+7. database.kraken: ~24GB
+8. database150mers.kmer_distrib: ~25MB
+9. database150mers.kraken: ~866MB
+
+*Note*: you can check the size of each file by executing `du -hs insert_file_name_here`.
+
+TODO: If the size of any of the files above changes, update both this file and the notes about memory in config.yaml and config_test.yaml.
+
+## Test Your Installation
+
+To test that you are ready to run XXX on your data, first create a new subdirectory of your cloned repository called `test_phanta`. Then navigate to `test_phanta` using `cd` and download the four .fq.gz files required for testing via the following command:
+
+TODO: insert command to download.
+
+The total size of the download should be YYY.
+
+TODO: replace XXX with the decided name of the pipeline and YYY with the total size of the files.
+
+Then edit two files contained in the testing subdirectory of your cloned repository.
+1. Edit `samp_file.txt` by replacing `<path_to_cloned_repo>` in the four locations indicated with the path to your cloned repository.
+2. Edit `config_test.yaml` by replacing:
+* `<path_to_cloned_repo` in the three locations indicated with the path to your cloned repository.
+* `<path_to_downloaded_database>` in the one location indicated with the path to the database of genomes you downloaded during the install.
+
+TODO: edit both of the files indicated above before submission, to make them consistent with the instructions provided above.
+
+Note that you may also
+
+Finally, execute the following command after replacing `path_to_cloned_repo`:
+
+snakemake -s /labs/asbhatt/mchakra/phaging/phage_abundance_pipeline/Snakefile \
+--configfile /labs/asbhatt/mchakra/phaging/phage_abundance_pipeline/testing/config_test.yaml \
+--jobs 999 --cores
 
 ## Basic Usage
 ## Main Outputs
@@ -47,18 +101,6 @@ Navigate to the location where you cloned the repository using the `cd` command.
 ## Advanced Usage
 ## Additional Outputs
 ## Provided Postprocessing Scripts
-
-Prior to running the pipeline, clone this repository.
-
-Then create a new environment as follows:
-
-	conda env create -n phage_abund_env --file phage_abund_env.yaml
-
-Activate the environment:
-
-	conda activate phage_abund_env
-
-Then edit the config.yaml file to suit your needs.
 
 There are six parameters that can be adjusted by the user to change the true/false positive ratio. These are: 1) confidence_threshold, 2) cov_thresh_viral, 3) minimizer_thresh_viral, 4) cov_thresh_bacterial, 5) minimizer_thresh_bacterial, 6) filter_thresh. Each parameter is described in more detail in the config file, and suggested defaults are provided there.   
 

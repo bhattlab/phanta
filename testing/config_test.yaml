@@ -24,7 +24,7 @@ confidence_threshold: 0.1 # increase to reduce false positives for Kraken2
 database: /labs/asbhatt/data/program_indices/kraken2/humgut_mgv_human_refseq
 # are the read files gzipped?
 gzipped: True # True or False
-kraken2_mem: 256 # memory in GB
+kraken2_mem: 32 # memory in GB, must be at least 32
 kraken2_threads: 16
 
 # Specifications for filtering Kraken2 reports prior to running Bracken
@@ -40,4 +40,4 @@ minimizer_thresh_bacterial: 0
 read_length: 150 # if you change this, make sure you have an appropriate Bracken database built for this read length
 taxonomic_level: 'S' # which taxonomic level should reads be distributed to (for Bracken)? Currently can only be 'S' (species)
 filter_thresh: 10 # do not assign reads to species with < this number of reads assigned by Kraken2
-bracken_mem: 64 # memory in GB
+bracken_mem: 26 # memory in GB, must be at least 26
