@@ -91,11 +91,16 @@ Finally, execute the following command after replacing `<path_to_cloned_repo>`: 
 snakemake -s <path_to_cloned_repo>/Snakefile \
 --configfile <path_to_cloned_repo>/testing/config_test.yaml --jobs 99 --cores 1 --max-threads 16
 
-*Note:* Please replace the number provided to max-threads with the maximum number of threads you have available. **If you are in the Bhatt Lab**, you don't need the `--cores` and `--max-threads` options; rather, you can replace them with `--profile scg`
+Since this command will take some time to finish, **it is recommended to run this command in a `tmux` session** or similar setup.
 
+*Note:* Please replace the number provided to max-threads with the maximum number of threads you have available. Note that if this number is greater than 16, you can (but don't need to) also change the argument to kraken2_threads in config_test.yaml. **If you are in the Bhatt Lab**, you don't need the `--cores` and `--max-threads` options; rather, you can replace them with `--profile scg`
 
+When execution has completed, please check that your `test_phanta` has an empty file called pipeline_completed.txt. You should also have two new subdirectories in `test_phanta` - `classification` and `final_merged_outputs` - which should have identical contents to the corresponding subdirectories in the `testing` subdirectory of your cloned repository.
 
 ## Basic Usage
+
+CONTINUE HERE
+
 ## Main Outputs
 
 # Advanced
