@@ -122,7 +122,7 @@ TODO: Edit the above as needed as we change the names of things, etc.
 
 For examples of the above outputs, please see the `testing/final_merged_outputs` subdirectory.
 
-*Note*: To filter `counts.txt` or `relative_abundance.txt` to a specific taxonomic level (e.g., species, genus), or to change `corrected_relative_abundance.txt` to a higher taxonomic level than species, please refer to [Filtering Merged Tables to a Specific Taxonomic Level]((#filtering-merged-tables-to-a-specific-taxonomic-level)) under [Provided Postprocessing Scripts](#provided-postprocessing-scripts).
+*Note*: To filter `counts.txt` or `relative_abundance.txt` to a specific taxonomic level (e.g., species, genus), or to change `corrected_relative_abundance.txt` to a higher taxonomic level than species, please refer to [Filtering Merged Tables to a Specific Taxonomic Level](#filtering-merged-tables-to-a-specific-taxonomic-level) under [Provided Postprocessing Scripts](#provided-postprocessing-scripts).
 
 # Advanced
 ## Advanced Usage
