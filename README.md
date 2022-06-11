@@ -6,11 +6,11 @@ If Phanta is helpful to your work, please kindly consider citing our manuscript!
 TODO: insert link to preprint.
 
 # Table of contents
-1. [Quickstart](#quickstart)
+1. [Quick Start](#quick-start)
 	* [Installation](#installation)
 2. Testing
 
-# Quickstart
+# Quick Start
 ## Installation
 
 #
