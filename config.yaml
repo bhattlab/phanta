@@ -1,33 +1,25 @@
-pipeline_directory: /path/to/cloned/repo
+pipeline_directory: /full/path/to/cloned/repo
 
 # Sample file specifies sample names and names of files containing sample reads
 # Format: Tab-delimited, three columns
 # sample_name  read1_file  [read2_file]
 # if paired end, all samples must be paired end
 # if single end, all samples must be single end
-# If using Bhatt Lab workflows, sample file is also outputted
-# at the end of the preprocessing workflow as
-# preprocessing/01_processing/classification_input.txt
-sample_file: /path/to/sample/file
+# See example (samp_file.txt) in the testing folder
+sample_file: /full/path/to/sample/file
 
 # In which directory should results be outputted?
-outdir: /path/to/output/directory
+outdir: /full/path/to/output/directory
 
-# Delete intermediate files?
-# Kraken report, filtered Kraken report, information about filtering decisions, species-level Bracken report
-delete_intermediate: False # True or False
+database: /full/path/to/downloaded/database
 
-# Specifications for Kraken2
-confidence_threshold: 0.1 # increase to reduce false positives for Kraken2
-# minimum 0.0 (default for Kraken2), maximum 1.0
-# see: https://github.com/DerrickWood/kraken2/blob/master/docs/MANUAL.markdown#confidence-scoring
-database: /path/to/kraken/db
-# are the read files gzipped?
-gzipped: True # True or False
-kraken2_mem: 32 # memory in GB, must be at least 32
-kraken2_threads: 16 # see usage instructions - can increase if you have more threads available; no need to change if you have fewer
+# Specifications for step one - classification of metagenomic reads
+confidence_threshold: 0.1 # increase to reduce false positives - range from 0-1
+gzipped: True # True or False - are the read files gzipped?
+class_mem: 32 # memory in GB, must be at least 32
+class_threads: 16 # see usage instructions - can increase if you have more threads available; no need to change if you have fewer
 
-# Specifications for filtering Kraken2 reports prior to running Bracken
+# Specifications for step two - filtering false positive species
 # what fraction of a viral genome should be covered to consider it a true positive?
 cov_thresh_viral: 0.10
 # how many unique minimizers should be covered in a viral genome ""?
@@ -36,8 +28,10 @@ minimizer_thresh_viral: 0
 cov_thresh_bacterial: 0.01
 minimizer_thresh_bacterial: 0
 
-# Specifications for Bracken
+# Speciications for step three - per-species abundance estimation
 read_length: 150 # if you change this, make sure you have an appropriate Bracken database built for this read length
-taxonomic_level: 'S' # which taxonomic level should reads be distributed to (for Bracken)? Currently can only be 'S' (species)
-filter_thresh: 10 # do not assign reads to species with < this number of reads assigned by Kraken2
-bracken_mem: 26 # memory in GB, must be at least 26
+filter_thresh: 10 # do not assign reads to species X if < this number of reads were classified to it
+abund_est_mem: 26 # memory in GB, must be at least 26
+
+# Delete intermediate files? Examples in testing/classification/intermediate
+delete_intermediate: True # True or False

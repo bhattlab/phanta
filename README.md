@@ -79,28 +79,30 @@ The total size of the download should be YYY.
 TODO: replace XXX with the decided name of the pipeline and YYY with the total size of the files.
 
 Then edit two files contained in the testing subdirectory of your cloned repository.
-1. Edit `samp_file.txt` by replacing `<path_to_cloned_repo>` in the four locations indicated with the path to your cloned repository.
+1. Edit `samp_file.txt` by replacing `/full/path/to/cloned/repo` in the four locations indicated with the full path to your cloned repository.
 2. Edit `config_test.yaml` by replacing:
-* `<path_to_cloned_repo>` in the three locations indicated with the path to your cloned repository.
-* `<path_to_downloaded_database>` in the one location indicated with the path to the database of genomes you downloaded during the install.
+* `/full/path/to/cloned/repo` in the three locations indicated with the full path to your cloned repository.
+* `/full/path/to/downloaded/database` in the one location indicated with the full path to the database of genomes you downloaded during the install.
 
 TODO: edit both of the files indicated above before submission, to make them consistent with the instructions provided above.
 
-Finally, execute the following command after replacing `<path_to_cloned_repo>`: in the two locations indicated:
+Finally, execute the following command after replacing `/full/path/to/cloned/repo`: in the two locations indicated:
 
-	snakemake -s <path_to_cloned_repo>/Snakefile \
-	--configfile <path_to_cloned_repo>/testing/config_test.yaml \
+	snakemake -s /full/path/to/cloned/repo/Snakefile \
+	--configfile /full/path/to/cloned/repo/testing/config_test.yaml \
 	--jobs 99 --cores 1 --max-threads 16
 
 Since this command will take some time to finish, **it is recommended to run this command in a `tmux` session** or similar setup.
 
-*Note:* Please replace the number provided to max-threads with the maximum number of threads you have available. Note that if this number is greater than 16, you can (but don't need to) also change the argument to `kraken2_threads` in `config_test.yaml`. **If you are in the Bhatt Lab**, you don't need the `--cores` and `--max-threads` options; rather, you can replace them with `--profile scg`
+*Note:* Please replace the number provided to max-threads with the maximum number of threads you have available. Note that if this number is greater than 16, you can (but don't need to) also change the argument to `class_threads` in `config_test.yaml`. **If you are in the Bhatt Lab**, you don't need the `--cores` and `--max-threads` options; rather, you can replace them with `--profile scg`
 
 When execution has completed, please check that your `test_phanta` has an empty file called `pipeline_completed.txt`. You should also have two new subdirectories in `test_phanta` - `classification` and `final_merged_outputs` - which should have identical contents to the corresponding subdirectories in the `testing` subdirectory of your cloned repository.
 
 ## Basic Usage
 
-CONTINUE HERE
+For basic usage, simply replace the four paths indicated in the provided `config.yaml` file and execute the following command:
+
+
 
 ## Main Outputs
 
