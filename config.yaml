@@ -25,7 +25,7 @@ database: /path/to/kraken/db
 # are the read files gzipped?
 gzipped: True # True or False
 kraken2_mem: 32 # memory in GB, must be at least 32
-kraken2_threads: 16
+kraken2_threads: 16 # see usage instructions - can increase if you have more threads available; no need to change if you have fewer
 
 # Specifications for filtering Kraken2 reports prior to running Bracken
 # what fraction of a viral genome should be covered to consider it a true positive?

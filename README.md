@@ -81,18 +81,19 @@ TODO: replace XXX with the decided name of the pipeline and YYY with the total s
 Then edit two files contained in the testing subdirectory of your cloned repository.
 1. Edit `samp_file.txt` by replacing `<path_to_cloned_repo>` in the four locations indicated with the path to your cloned repository.
 2. Edit `config_test.yaml` by replacing:
-* `<path_to_cloned_repo` in the three locations indicated with the path to your cloned repository.
+* `<path_to_cloned_repo>` in the three locations indicated with the path to your cloned repository.
 * `<path_to_downloaded_database>` in the one location indicated with the path to the database of genomes you downloaded during the install.
 
 TODO: edit both of the files indicated above before submission, to make them consistent with the instructions provided above.
 
-Note that you may also
+Finally, execute the following command after replacing `<path_to_cloned_repo>`: in the two locations indicated:
 
-Finally, execute the following command after replacing `path_to_cloned_repo`:
+snakemake -s <path_to_cloned_repo>/Snakefile \
+--configfile <path_to_cloned_repo>/testing/config_test.yaml --jobs 99 --cores 1 --max-threads 16
 
-snakemake -s /labs/asbhatt/mchakra/phaging/phage_abundance_pipeline/Snakefile \
---configfile /labs/asbhatt/mchakra/phaging/phage_abundance_pipeline/testing/config_test.yaml \
---jobs 999 --cores
+*Note:* Please replace the number provided to max-threads with the maximum number of threads you have available. **If you are in the Bhatt Lab**, you don't need the `--cores` and `--max-threads` options; rather, you can replace them with `--profile scg`
+
+
 
 ## Basic Usage
 ## Main Outputs
