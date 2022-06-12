@@ -1,6 +1,6 @@
 # Phanta
 ## Rapidly quantify taxa from all domains of life, directly from short-read gut metagenomes
-### The foundation of this workflow is a comprehensive, virome-aware database of genomes with integrated taxonomic information
+### The foundation of this workflow is a comprehensive, virome-aware database of genomes with integrated taxonomic information; and a novel strategy based on genome coverage to eliminate false positive taxa from the output
 
 #  For citations
 If Phanta is helpful to your work, please consider citing our manuscript!
