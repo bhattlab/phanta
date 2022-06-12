@@ -180,14 +180,20 @@ These scripts are provided within the `post_pipeline_scripts` subdirectory of th
 
 There are two scripts provided for this purpose.
 
+**Script One**
+
 `reduce_merged_table_to_specific_rank.py` is a Python script that can be utilized to filter `counts.txt` or `relative_abundance.txt` to a given taxonomic level. The necessary command-line arguments to the script are, in order: 1) full path to the merged table, and 2) the taxonomic level of interest (e.g., species, genus, superkingdom...). An example command is:
 
 	python reduce_merged_table_to_specific_rank.py /full/path/to/dir/counts.txt genus
 
 The output of the above command would be a file called `counts_genus.txt` in the same directory as the original `counts.txt`.
 
-`sum_corrected_relab_to_higher_level.py` is a Python script that can be used to sum up the species-level, genome length-corrected relative abundances provided in `final_merged_outputs/corrected_relative_abundance.txt` to a higher taxonomic level of interest (e.g., genus, superkingdom). The necessary arguments to the script are, in order: 1) full path to the downloaded database of genomes, 2) full path to `corrected_relative_abundance.txt`, 3) full path of desired output file, including the desired file name, 4) taxonomic level of interest.
+**Script Two**
+
+`sum_corrected_relab_to_higher_level.py` is a Python script that can be used to sum up the species-level, genome length-corrected relative abundances provided in `final_merged_outputs/corrected_relative_abundance.txt` to a higher taxonomic level of interest (e.g., genus, superkingdom). The necessary command-line arguments to the script are, in order: 1) full path to the downloaded database of genomes, 2) full path to `corrected_relative_abundance.txt`, 3) full path of desired output file, including the desired file name, 4) taxonomic level of interest.
 
 ### Virulence Score Calculator
 
-TODO: Add the additional scripts.
+TODO: Edit the script such that there's a virulence score instead of a temperate score! Then fill in this section.
+
+TODO: Add the additional scripts uploaded by Yishay.
