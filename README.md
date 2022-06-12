@@ -151,31 +151,32 @@ This section contains a description of the additional parameters in the config f
 
 ### Parameters under *Specifications for step three - per-species abundance estimation*
 
-* `read_length` (default `150`). This parameter specifies the read length. Please note: if you change this, you must first execute the following command, replacing the `/full/path/to/downloaded/database` with the appropriate path, and the `read_len` with the appropriate read length (e.g., 100). You may also need to change the `-t` argument if you have fewer threads available.
+* `read_length` (default `150`). This parameter specifies the read length. Please note: if you change this, you must first execute the following command, replacing the `/full/path/to/downloaded/database` with the appropriate path, and the `read_len` with the appropriate read length (e.g., 100). If you have fewer than 10 threads available, you will also need to change the argument to `-t`.
 
 		bracken-build -d /full/path/to/downloaded/database -t 10 -l read_len
 
-* `filter_thresh` (default `10`). This parameter essentially specifies one last false positive species filter - how many sample reads must have been classified to species X for it to be considered truly present in the sample? This parameter is specific to the Bracken tool that is utilized in abundance estimation and is equivalent to the threshold parameter described in the [original Bracken documentation](https://github.com/jenniferlu717/Bracken). Note that this filter is uniform across all types of species (e.g., viral, bacterial).  
+* `filter_thresh` (default `10`). This parameter specifies one last false positive species filter - how many sample reads must have been classified to species X in step one for it to be considered truly present in the sample? This parameter is specific to the Bracken tool that is utilized in abundance estimation and is equivalent to the threshold parameter described in the [original Bracken documentation](https://github.com/jenniferlu717/Bracken). Note that this filter is uniform across all types of species (e.g., viral, bacterial).  
 
 * `abund_est_mem` (default `26`). This parameter specifies the memory in GB used for the abundance estimation step. As of preprint publication, this value must be at least `26`.
 
 ### Additional parameters
 
-* `delete_intermediate` (default `True`). Should intermediate outputs be deleted? Examples of intermediate files can be found within the `testing/classification/intermediate` subdirectory of the cloned repository.
+* `delete_intermediate` (default `True`). Specify `True` if you would like intermediate outputs to be deleted, otherwise `False`. Intermediate outputs are per-sample outputs generated during the execution of Steps 1 and 2. Examples of these intermediate files can be found within the `testing/classification/intermediate` subdirectory of the cloned repository.
 
 ## Additional Outputs
 
-In addition to merged tables in the `final_merged_outputs` subdirectory (see [Main Output](#main-output)), the pipeline provides per-sample outputs in the `classification` subdirectory. Specifically.
+In addition to the merged tables provided in the `final_merged_outputs` subdirectory (see [Main Output](#main-output), the pipeline provides per-sample outputs in the `classification` subdirectory. Specifically.
 
-* The files ending with .krak.report_bracken_species.filtered correspond to the [Kraken-style report](https://github.com/DerrickWood/kraken2/blob/master/docs/MANUAL.markdown#sample-report-output-format) outputted by [Bracken](https://github.com/jenniferlu717/Bracken) and specify the per-sample abundances that underlie the creation of the merged tables `counts.txt` and `relative_abundance.txt`. Unlike in the merged tables, taxa that are not present in the sample are not included.
+* The files ending with `.krak.report_bracken_species.filtered` correspond to the [Kraken-style report](https://github.com/DerrickWood/kraken2/blob/master/docs/MANUAL.markdown#sample-report-output-format) outputted by [Bracken](https://github.com/jenniferlu717/Bracken) and specify the per-sample abundances that underlie the creation of the final merged tables `counts.txt` and `relative_abundance.txt`. Unlike in the merged tables, taxa that are not present in the sample are not included.
 
-* The files ending with .krak.report.filtered.bracken.scaled essentially correspond to per-sample versions of `final_merged_outputs/corrected_relative_abundance.txt`. Specifically see the `community_abundance` column. Unlike in the merged table, taxa that are not present in the sample are not included. Note that additional normalizations beyond length-corrected relative abundance are provided - e.g., `reads_per_million_bases`, `reads_per_million_reads`, `reads_per_million_bases_per_million_reads (RPMPM)`, `copies_per_million_reads`.
+* The files ending with `.krak.report.filtered.bracken.scaled` essentially correspond to per-sample versions of `final_merged_outputs/corrected_relative_abundance.txt`. Specifically see the `community_abundance` column. Unlike in the merged table, taxa that are not present in the sample are not included.
+	* **Note**: additional normalizations beyond length-corrected relative abundance are also provided - e.g., `reads_per_million_bases`, `reads_per_million_reads`, `reads_per_million_bases_per_million_reads (RPMPM)`, `copies_per_million_reads`.
 
 TODO: replace community abundance with whatever we decide to call it.
 
 There are two final outputs worth noting:
-1. `samples_that_failed_bracken.txt` in the `classification` subdirectory. This file contains names of samples that did not ultimately have any reads directly assigned to the species level. Please note that for these samples, the .krak.report.filtered.bracken.scaled file will be empty.
-2. `total_reads.tsv` in the `final_merged_outputs` subdirectory. This file contains information about the total number of classified/unclassified reads in ach sample, at various steps of the pipeline. Note that the normalization used to create `relative_abundance.txt` from `counts.txt` utilizes the `Classified_Step_Three` column.
+1. `samples_that_failed_bracken.txt` in the `classification` subdirectory. This file contains names of samples that did not ultimately have any reads directly assigned to the species level. Please note that for these samples, the `.krak.report.filtered.bracken.scaled` file will be empty.
+2. `total_reads.tsv` in the `final_merged_outputs` subdirectory. This file contains information about the total number of classified/unclassified reads in each sample, at various steps of the pipeline. Note that the normalization used to create `final_merged_outputs/relative_abundance.txt` from `final_merged_outputs/counts.txt` utilizes the `Classified_Step_Three` column of this file.
 
 ## Provided Postprocessing Scripts
 
@@ -187,7 +188,7 @@ There are two scripts provided for this purpose.
 
 **Script One**
 
-`post_pipeline_scripts/reduce_merged_table_to_specific_rank.py` is a Python script that can be utilized to filter `counts.txt` or `relative_abundance.txt` to a given taxonomic level.
+`post_pipeline_scripts/reduce_merged_table_to_specific_rank.py` is a Python script that can be utilized to filter `final_merged_outputs/counts.txt` or `final_merged_outputs/relative_abundance.txt` to a given taxonomic level.
 
 The necessary command-line arguments to the script are, in order:
 1. Full path to the merged table, and
@@ -195,7 +196,7 @@ The necessary command-line arguments to the script are, in order:
 
 An example command is:
 
-	python reduce_merged_table_to_specific_rank.py /full/path/to/dir/counts.txt genus
+	python reduce_merged_table_to_specific_rank.py /full/path/to/counts.txt genus
 
 The output of the above command would be a file called `counts_genus.txt` in the same directory as the original `counts.txt`.
 
@@ -205,18 +206,18 @@ The output of the above command would be a file called `counts_genus.txt` in the
 
 The necessary command-line arguments to the script are, in order:
 1. Full path to the downloaded database of genomes
-2. Full path to `corrected_relative_abundance.txt`
+2. Full path to `final_merged_outputs/corrected_relative_abundance.txt`
 3. Full path of desired output file, including the desired file name
-4. Taxonomic level of interest.
+4. Taxonomic level of interest
 
 ### Virulence Score Calculator
 
-`post_pipeline_scripts/virulence_score_calculation/virulence_score_calculator.R` is an R script that can be used to estimate the overall virulence of the viral community in a sample, based on per-species virulence estimates that were made using the tool BACPHLIP, for the database described in the preprint. These per-species estimates are listed in the file `post_pipeline_scripts/virulence_score_calculation/species_name_to_vir_score.txt`.
+`post_pipeline_scripts/virulence_score_calculation/virulence_score_calculator.R` is an R script that can be used to estimate the overall virulence of the viral community in a sample, based on per-species virulence predictions that were made using the tool BACPHLIP, for the database described in the preprint. These per-species predictions are listed in the file `post_pipeline_scripts/virulence_score_calculation/species_name_to_vir_score.txt`.
 
 The necessary command-line arguments to the R script are, in order:
 1. The full path to the `species_name_to_vir_score.txt` file
 2. The full path to `final_merged_outputs/corrected_relative_abundance.txt`
-3. The desired output directory for the output of the script.
+3. The desired output directory for the output of the script
 
 The output of the script is a two-column table called `virulence_scores_per_sample.txt`. An example output, based on the testing dataset, is located in the same directory as the R script (`post_pipeline_scripts/virulence_score_calculation/`).
 
