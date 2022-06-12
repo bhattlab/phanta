@@ -182,7 +182,7 @@ There are two scripts provided for this purpose.
 
 **Script One**
 
-`reduce_merged_table_to_specific_rank.py` is a Python script that can be utilized to filter `counts.txt` or `relative_abundance.txt` to a given taxonomic level. The necessary command-line arguments to the script are, in order: 1) full path to the merged table, and 2) the taxonomic level of interest (e.g., species, genus, superkingdom...). An example command is:
+`post_pipeline_scripts/reduce_merged_table_to_specific_rank.py` is a Python script that can be utilized to filter `counts.txt` or `relative_abundance.txt` to a given taxonomic level. The necessary command-line arguments to the script are, in order: 1) full path to the merged table, and 2) the taxonomic level of interest (e.g., species, genus, superkingdom...). An example command is:
 
 	python reduce_merged_table_to_specific_rank.py /full/path/to/dir/counts.txt genus
 
@@ -190,10 +190,14 @@ The output of the above command would be a file called `counts_genus.txt` in the
 
 **Script Two**
 
-`sum_corrected_relab_to_higher_level.py` is a Python script that can be used to sum up the species-level, genome length-corrected relative abundances provided in `final_merged_outputs/corrected_relative_abundance.txt` to a higher taxonomic level of interest (e.g., genus, superkingdom). The necessary command-line arguments to the script are, in order: 1) full path to the downloaded database of genomes, 2) full path to `corrected_relative_abundance.txt`, 3) full path of desired output file, including the desired file name, 4) taxonomic level of interest.
+`post_pipeline_scripts/sum_corrected_relab_to_higher_level.py` is a Python script that can be used to sum up the species-level, genome length-corrected relative abundances provided in `final_merged_outputs/corrected_relative_abundance.txt` to a higher taxonomic level of interest (e.g., genus, superkingdom). The necessary command-line arguments to the script are, in order: 1) full path to the downloaded database of genomes, 2) full path to `corrected_relative_abundance.txt`, 3) full path of desired output file, including the desired file name, 4) taxonomic level of interest.
 
 ### Virulence Score Calculator
 
-TODO: Edit the script such that there's a virulence score instead of a temperate score! Then fill in this section.
+`post_pipeline_scripts/virulence_score_calculation/virulence_score_calculator.R` is an R script that can be used to estimate the overall virulence of the viral community in a sample, based on per-species virulence estimates that were made using the tool BACPHLIP, for the database described in the preprint. These per-species estimates are listed in the file `post_pipeline_scripts/virulence_score_calculation/species_name_to_vir_score.txt`.
+
+The necessary command-line arguments to the R script are, in order: 1) the full path to the `species_name_to_vir_score.txt` file, 2) the full path to `final_merged_outputs/corrected_relative_abundance.txt`, 3) the desired output directory for the output of the script, which is a two-column table called `virulence_scores_per_sample.txt`. An example output, used on the testing dataset, is located in the same directory as the R script (`post_pipeline_scripts/virulence_score_calculation/`).
+
+TODO: link to preprint above.
 
 TODO: Add the additional scripts uploaded by Yishay.
