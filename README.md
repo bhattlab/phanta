@@ -1,5 +1,6 @@
-# TBD - Phanta
-### Rapidly quantify taxa from all domains of life, directly from short-read gut metagenomes
+# Phanta
+## Rapidly quantify taxa from all domains of life, directly from short-read gut metagenomes
+### The foundation of this workflow is a comprehensive, virome-aware database of genomes with integrated taxonomic information
 
 #  For citations
 If Phanta is helpful to your work, please consider citing our manuscript!
@@ -31,7 +32,7 @@ TODO: replace with appropriate link.
 
 **Step Two - Install conda, if not already installed**
 
-Check whether you have conda installed by typing:
+Check whether you have conda installed by executing:
 
 	conda --help
 
@@ -51,7 +52,7 @@ TODO: replace new_env with whatever we decide to call the workflow and similarly
 
 **Step Four - Download the database of genomes**
 
-Download the Kraken2/Bracken-compatible database of genomes by navigating to the desired folder on your system and executing the following command:
+Download the Kraken2/Bracken-compatible database of genomes by navigating to the desired directory on your system and executing the following command:
 
 TODO: insert the command. Ideally wget-able.
 
@@ -72,7 +73,7 @@ TODO: If the size of any of the files above changes, update both this file and t
 
 ## Test Your Installation
 
-To test that you are ready to run XXX on your data, first create a new subdirectory of your cloned repository called `test_phanta`. Then navigate to `test_phanta` using `cd` and download the four .fq.gz files required for testing via the following command:
+To test that you are ready to run XXX on your data, first create a new subdirectory of your cloned repository called `test_phanta`. Then navigate to `test_phanta` using `cd` and download the four `.fq.gz` files required for testing via the following command:
 
 TODO: insert command to download.
 
@@ -88,15 +89,17 @@ Then edit two files contained in the testing subdirectory of your cloned reposit
 
 TODO: edit both of the files indicated above before submission, to make them consistent with the instructions provided above.
 
-Finally, execute the following command after replacing `/full/path/to/cloned/repo`: in the two locations indicated:
+Finally, execute the Snakemake command below, after replacing:
+1. `/full/path/to/cloned/repo` with the path to your cloned repository
+2.  The number provided to `max-threads` with the maximum number of threads you have available. Note that if this number is greater than 16, you can (but don't need to) also increase the argument to `class_threads` in `config_test.yaml`.
+
+**If you are in the Bhatt Lab**, you don't need the `--cores` and `--max-threads` options; rather, you can replace them with `--profile scg`
+
+Since the command will take some time to finish, **it is recommended to execute it in a `tmux` session** or similar setup.
 
 	snakemake -s /full/path/to/cloned/repo/Snakefile \
 	--configfile /full/path/to/cloned/repo/testing/config_test.yaml \
 	--jobs 99 --cores 1 --max-threads 16
-
-Since this command will take some time to finish, **it is recommended to run this command in a `tmux` session** or similar setup.
-
-*Note:* Please replace the number provided to max-threads with the maximum number of threads you have available. Note that if this number is greater than 16, you can (but don't need to) also change the argument to `class_threads` in `config_test.yaml`. **If you are in the Bhatt Lab**, you don't need the `--cores` and `--max-threads` options; rather, you can replace them with `--profile scg`
 
 When execution has completed, please check that your `test_phanta` has an empty file called `pipeline_completed.txt`. You should also have two new subdirectories in `test_phanta` - `classification` and `final_merged_outputs` - which should have identical contents to the corresponding subdirectories in the `testing` subdirectory of your cloned repository.
 
