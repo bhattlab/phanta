@@ -135,11 +135,11 @@ This section contains a description of the additional parameters in the config f
 	* `class_threads` (default `16`). This parameter specifies the number of threads used for the classification step. If more threads are available, this parameter can be increased; otherwise, there is no need to change it. Recall that the maximum number of threads must be specified in the `snakemake` command that executes the pipeline.
 
 * Parameters under *Specifications for step two - filtering false positive species*
-	* `cov_thresh_viral` (default `0.1`). This parameter can range from 0 to 1 and essentially specifies the minimum required "max read-based coverage of any genome under viral species X" for viral species X to be considered a true positive species.
-	* `minimizer_thresh_viral` (default `0`). This parameter can take any value >= 0 and specifies the minimum required "max unique minimizers mapped to any genome under viral species X" for viral species X to be considered a true positive species. For a more detailed description of what unique minimizers are, please see [this link from Kraken2](#https://github.com/DerrickWood/kraken2/blob/master/docs/MANUAL.markdown#distinct-minimizer-count-information).
+	* `cov_thresh_viral` (default `0.1`). This parameter can range from 0 to 1 and essentially specifies a genome coverage requirement for a viral species be considered a "true positive" in a sample. For example, if this parameter is 0.1, that means that for a viral species to be considered a true positive in a sample, at least one genome in the species must be at least 10% covered by sample reads.
+		* Genome coverage is estimated by dividing the number of unique minimizers in the genome that are covered by sample reads, by the total number of unique minimizers in the genome.
+		* Minimizers are very similar to kmers; for a more detailed description of what they are, please see [the Kraken2 paper](#https://genomebiology.biomedcentral.com/articles/10.1186/s13059-019-1891-0).
+	* `minimizer_thresh_viral` (default `0`). This parameter can take any value >= 0 and specifies an additional requirement, beyond genome coverage, for a viral species to be considered a "true positive" in a sample. For example, if this parameter is 10, that means that for a viral species to be considered a true positive in a sample, at least one genome in the species must have 10+ of its unique minimizers covered by sample reads.
 	* `cov_thresh_bacterial` and `minimizer_thresh_bacterial` are the analogous parameters for filtering bacterial species.
-
-TODO: Make the above wording better.
 
 * Parameters under *Specifications for step three - per-species abundance estimation*
 
