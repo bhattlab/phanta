@@ -101,12 +101,11 @@ When execution has completed, please check that your `test_phanta` has an empty 
 
 ## Basic Usage
 
-For basic usage, copy the provided `config.yaml` file and replace the four paths at the top of the the file as appropriate. You do not need to make any additional changes.
+For basic usage, copy the provided `config.yaml` file and replace the four paths at the top of the the file as appropriate.
 
-*Exception* - if you did not conduct 150bp paired-end sequencing, you will need to change the argument to `read_length` - near the bottom of the file - as well; please see the Advanced Usage section for more details.
+You do not need to make any additional changes **except** if: 1) you did not conduct 150bp sequencing, or 2) if your read files are not gzipped. In those cases, you may also need to change the `read_length` or `gzipped` parameters, which are described under [Advanced Usage](#advanced-usage).
 
-Then execute the same Snakemake command you used to "Test your Installation,"
-simply replacing the path to the `config_test` file with the path to the new config file you just edited.
+After you have finished editing your config file, execute the same Snakemake command you used to [Test Your Installation](#test-your-installation), simply replacing the path to the `config_test` file with the path to the new edited config file.
 
 ## Main Outputs
 
@@ -126,41 +125,30 @@ For examples of the above outputs, please see the `testing/final_merged_outputs`
 
 # Advanced
 ## Advanced Usage
+
+This section contains a description of the additional parameters in the config file that were not mentioned under [Basic Usage](#basic-usage) but can be altered if desired.
+
+* Parameters under *Specifications for step one - classification of metagenomic reads*
+	* `confidence_threshold` (default `0.1`). This parameter can range from 0 to 1. Higher values yield more confident classifications but reduce sensitivity. Please see [this link from the Kraken2 documentation](#https://github.com/DerrickWood/kraken2/blob/master/docs/MANUAL.markdown#confidence-scoring) for more details.
+	* `gzipped` (default `True`). This parameter should be `True` if your read files are gzipped, otherwise `False`.
+	* `class_mem` (default `32`). This parameter specifies the memory in GB used for the classification step. As of preprint publication, this value must be at least `32`.
+	* `class_threads` (default `16`). This parameter specifies the number of threads used for the classification step. If more threads are available, this parameter can be increased; otherwise, there is no need to change it. Recall that the maximum number of threads must be specified in the `snakemake` command that executes the pipeline.
+
+* Parameters under *Specifications for step two - filtering false positive species*
+	* `cov_thresh_viral` (default `0.1`). This parameter can range from 0 to 1 and essentially specifies the minimum required "max read-based coverage of any genome under viral species X" for viral species X to be considered a true positive species.
+	* `minimizer_thresh_viral` (default `0`). This parameter can take any value >= 0 and specifies the minimum required "max unique minimizers mapped to any genome under viral species X" for viral species X to be considered a true positive species. For a more detailed description of what unique minimizers are, please see [this link from Kraken2](#https://github.com/DerrickWood/kraken2/blob/master/docs/MANUAL.markdown#distinct-minimizer-count-information).
+	* `cov_thresh_bacterial` and `minimizer_thresh_bacterial` are the analogous parameters for filtering bacterial species.
+
+TODO: Make the above wording better.
+
+* Parameters under *Specifications for step three - per-species abundance estimation*
+
 ## Additional Outputs
 ## Provided Postprocessing Scripts
 
 ### Filtering Merged Tables to a Specific Taxonomic Level
 
-There are six parameters that can be adjusted by the user to change the true/false positive ratio. These are: 1) confidence_threshold, 2) cov_thresh_viral, 3) minimizer_thresh_viral, 4) cov_thresh_bacterial, 5) minimizer_thresh_bacterial, 6) filter_thresh. Each parameter is described in more detail in the config file, and suggested defaults are provided there.   
-
-After editing the config file, change directory such that you are "in" the cloned repository.
-
-	cd /path/to/cloned/repo
-
-Now you can run the pipeline using Snakemake! I like to do things in the order below.
-
--Do a dry run to verify everything is working as expected.
-
-	snakemake --dryrun -s /path/to/Snakefile --configfile /path/to/configfile --jobs 999 --reason --profile scg
-
--Run the pipeline!
-
-	snakemake -s /path/to/Snakefile --configfile /path/to/configfile --jobs 999 --reason --profile scg
-
-Note: if you are not in the Bhatt Lab, you will need to delete the --profile flag and argument, or edit the argument to the --profile flag.
-
-# OUTPUT  
-
-The main outputs are found within the classification subdirectory, specifically:
-- counts.txt
-	- Rows are taxa (across taxonomic levels) and columns are samples
-	- Each cell reports the total number of reads in this sample that were assigned to this taxon after Kraken2/filtering/Bracken.
-- counts_norm_out_of_tot.txt
-	- Similar to counts.txt, but each count has been normalized out of the total number of reads in the relevant sample
-- counts_norm_out_of_bracken_classified.txt
-	- Similar to counts.txt, but each count has been normalized out of the total number of Bracken-classified reads in the relevant sample
-- merged_community_abundance.txt
-	- Species-level version of counts_norm_out_of_bracken_classified.txt, where each value has been corrected for genome length.
+# OLD - OUTPUT  
 
 To filter any of the first three tables to a given taxonomic level, you may use the script reduce_merged_table_to_specific_rank.py within the post_pipeline_scripts subdirectory. The necessary arguments to the script are: 1) full path to the original table (e.g., < output_directory > /counts.txt), and 2) the taxonomic level of interest (e.g., species, genus, superkingdom...)
 
