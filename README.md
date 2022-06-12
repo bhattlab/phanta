@@ -1,8 +1,8 @@
 # TBD - Phanta
-### A fast, accurate workflow to simultaneously profile prokaryotes, eukaryotes, and viruses directly from short-read metagenomes originating from the human gut
+### Rapidly quantify taxa from all domains of life, directly from short-read gut metagenomes
 
 #  For citations
-If Phanta is helpful to your work, please kindly consider citing our manuscript!
+If Phanta is helpful to your work, please consider citing our manuscript!
 TODO: insert link to preprint.
 
 # Table of contents
