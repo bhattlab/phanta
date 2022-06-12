@@ -44,7 +44,7 @@ Navigate to the location where you cloned the repository using the `cd` command.
 
 	conda env create -n new_env --file env.yaml
 
-Activate the environment by typing:
+Activate the environment by executing:
 
 	conda activate new_env
 
@@ -56,7 +56,7 @@ Download the Kraken2/Bracken-compatible database of genomes by navigating to the
 
 TODO: insert the command. Ideally wget-able.
 
-This command should install the following files:
+This command should download the following files:
 1. hash.k2d: ~31GB
 2. taxo.k2d: ~21MB
 3. opts.k2d: ~4KB
@@ -101,7 +101,7 @@ Since the command will take some time to finish, **it is recommended to execute 
 	--configfile /full/path/to/cloned/repo/testing/config_test.yaml \
 	--jobs 99 --cores 1 --max-threads 16
 
-When execution has completed, please check that your `test_phanta` has an empty file called `pipeline_completed.txt`. You should also have two new subdirectories in `test_phanta` - `classification` and `final_merged_outputs` - which should have identical contents to the corresponding subdirectories in the `testing` subdirectory of your cloned repository.
+When execution has completed, please check that your `test_phanta` directory has an empty file called `pipeline_completed.txt`. You should also have two new subdirectories in `test_phanta` - `classification` and `final_merged_outputs` - which should have identical contents to the corresponding subdirectories in the `testing` subdirectory of your cloned repository.
 
 ## Basic Usage
 
@@ -113,13 +113,13 @@ After you have finished editing your config file, execute the same Snakemake com
 
 ## Main Outputs
 
-The main outputs are merged tables that list the abundance of each taxon, in each sample.
+The main outputs are merged tables that list the abundance of each taxon, in each sample. Rows are taxa and columns are samples.
 
 * `final_merged_outputs/counts.txt`: gives the number of read (pairs) assigned to each taxon
 
 * `final_merged_outputs/relative_abundance.txt`: same as `counts.txt` but normalized out of the total number of reads in each sample that were ultimately assigned to any taxon during abundance estimation.
 
-* `final_merged_outputs/corrected_relative_abundance.txt`: same as `relative_abundance.txt` but corrected for genome length. Only species (and not higher taxonomic levels) are included in this report.
+* `final_merged_outputs/corrected_relative_abundance.txt`: same as `relative_abundance.txt` but abundances are corrected for genome length. Only species (and not higher taxonomic levels) are included in this report.
 
 TODO: Edit the above as needed as we change the names of things, etc.
 
@@ -134,24 +134,26 @@ This section contains a description of the additional parameters in the config f
 
 ### Parameters under *Specifications for step one - classification of metagenomic reads*
 
-* `confidence_threshold` (default `0.1`). This parameter can range from 0 to 1. Higher values yield more confident classifications but reduce sensitivity. Please see [this link from the Kraken2 documentation](#https://github.com/DerrickWood/kraken2/blob/master/docs/MANUAL.markdown#confidence-scoring) for more details.
+* `confidence_threshold` (default `0.1`). This parameter can range from 0 to 1. Higher values yield more confident classifications but reduce sensitivity. Please see [this link from the Kraken2 documentation](https://github.com/DerrickWood/kraken2/blob/master/docs/MANUAL.markdown#confidence-scoring) for more details.
 * `gzipped` (default `True`). This parameter should be `True` if your read files are gzipped, otherwise `False`.
 * `class_mem` (default `32`). This parameter specifies the memory in GB used for the classification step. As of preprint publication, this value must be at least `32`.
-* `class_threads` (default `16`). This parameter specifies the number of threads used for the classification step. If more threads are available, this parameter can be increased; otherwise, there is no need to change it. Recall that the maximum number of threads must be specified in the `snakemake` command that executes the pipeline.
+* `class_threads` (default `16`). This parameter specifies the number of threads used for the classification step. If more threads are available, this parameter can be increased; otherwise, there is no need to change it. Recall that you must specify the maximum number of threads available in the `snakemake` command that executes the pipeline.
 
 ### Parameters under *Specifications for step two - filtering false positive species*
 
 * `cov_thresh_viral` (default `0.1`). This parameter can range from 0 to 1 and essentially specifies a genome coverage requirement for a viral species be considered a "true positive" in a sample. For example, if this parameter is 0.1, that means that for a viral species to be considered a true positive in a sample, at least one genome in the species must be at least 10% covered by sample reads.
-	* Genome coverage is estimated by dividing the number of unique minimizers in the genome that are covered by sample reads, by the total number of unique minimizers in the genome.
-	* Minimizers are very similar to kmers; for a more detailed description of what they are, please see [the Kraken2 paper](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-019-1891-0).
+	* Each genome's coverage is estimated by dividing:
+		* The number of unique minimizers in the genome that are covered by sample reads, by
+		* The total number of unique minimizers in the genome.
+	* *Terminology note* - minimizers are very similar to kmers; for a more detailed description of what they are, please see [the Kraken2 paper](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-019-1891-0).
 * `minimizer_thresh_viral` (default `0`). This parameter can take any value >= 0 and specifies an additional requirement, beyond genome coverage, for a viral species to be considered a "true positive" in a sample. For example, if this parameter is 10, that means that for a viral species to be considered a true positive in a sample, at least one genome in the species must have 10+ of its unique minimizers covered by sample reads.
 * `cov_thresh_bacterial` and `minimizer_thresh_bacterial` are the analogous parameters for filtering bacterial species.
 
 ### Parameters under *Specifications for step three - per-species abundance estimation*
 
-* `read_length` (default `150`). This parameter specifies the read length. Please note, if you change this, you must first execute the following command, replacing the `/full/path/to/downloaded/database` with the appropriate path, and the `read_len` with the appropriate read length (e.g., 100). You may also need to change the `-t` argument if you have fewer threads available.
+* `read_length` (default `150`). This parameter specifies the read length. Please note: if you change this, you must first execute the following command, replacing the `/full/path/to/downloaded/database` with the appropriate path, and the `read_len` with the appropriate read length (e.g., 100). You may also need to change the `-t` argument if you have fewer threads available.
 
-	bracken-build -d /full/path/to/downloaded/database -t 10 -l read_len
+		bracken-build -d /full/path/to/downloaded/database -t 10 -l read_len
 
 * `filter_thresh` (default `10`). This parameter essentially specifies one last false positive species filter - how many sample reads must have been classified to species X for it to be considered truly present in the sample? This parameter is specific to the Bracken tool that is utilized in abundance estimation and is equivalent to the threshold parameter described in the [original Bracken documentation](https://github.com/jenniferlu717/Bracken). Note that this filter is uniform across all types of species (e.g., viral, bacterial).  
 
