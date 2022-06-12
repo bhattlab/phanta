@@ -165,7 +165,7 @@ This section contains a description of the additional parameters in the config f
 
 ## Additional Outputs
 
-In addition to the merged tables provided in the `final_merged_outputs` subdirectory (see [Main Output](#main-output), the pipeline provides per-sample outputs in the `classification` subdirectory. Specifically.
+In addition to the merged tables provided in the `final_merged_outputs` subdirectory (see [Main Outputs](#main-outputs)), the pipeline provides per-sample outputs in the `classification` subdirectory. Specifically:
 
 * The files ending with `.krak.report_bracken_species.filtered` correspond to the [Kraken-style report](https://github.com/DerrickWood/kraken2/blob/master/docs/MANUAL.markdown#sample-report-output-format) outputted by [Bracken](https://github.com/jenniferlu717/Bracken) and specify the per-sample abundances that underlie the creation of the final merged tables `counts.txt` and `relative_abundance.txt`. Unlike in the merged tables, taxa that are not present in the sample are not included.
 
