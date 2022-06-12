@@ -16,6 +16,7 @@ TODO: insert link to preprint.
 	* [Additional Outputs](#additional-outputs)
 	* [Provided Postprocessing Scripts](#provided-postprocessing-scripts)
 		* [Filtering Merged Tables to a Specific Taxonomic Level](#filtering-merged-tables-to-a-specific-taxonomic-level)
+		* [Virulence Score Calculator](#virulence-score-calculator)
 
 # Quick Start
 ## Installation
@@ -168,24 +169,25 @@ In addition to merged tables in the `final_merged_outputs` subdirectory (see [Ma
 TODO: replace community abundance with whatever we decide to call it.
 
 There are two final outputs worth noting:
-1. `samples_that_failed_bracken.txt` in the `classification` subdirectory. This file contains names of samples that did not ultimately have any reads directly assigned to the species level.
-2. `total_reads.tsv` in the `final_merged_outputs` subdirectory. This file contains information about the total number of classified/unclassified reads at various steps of the pipeline, for each sample. Note that the normalization used to create `relative_abundance.txt` utilizes the `Classified_Step_Three` column.
+1. `samples_that_failed_bracken.txt` in the `classification` subdirectory. This file contains names of samples that did not ultimately have any reads directly assigned to the species level. Please note that for these samples, the .krak.report.filtered.bracken.scaled file will be empty.
+2. `total_reads.tsv` in the `final_merged_outputs` subdirectory. This file contains information about the total number of classified/unclassified reads in ach sample, at various steps of the pipeline. Note that the normalization used to create `relative_abundance.txt` from `counts.txt` utilizes the `Classified_Step_Three` column.
 
 ## Provided Postprocessing Scripts
 
+These scripts are provided within the `post_pipeline_scripts` subdirectory of the cloned repository.
+
 ### Filtering Merged Tables to a Specific Taxonomic Level
 
-# OLD - OUTPUT  
+There are two scripts provided for this purpose.
 
-To filter any of the first three tables to a given taxonomic level, you may use the script reduce_merged_table_to_specific_rank.py within the post_pipeline_scripts subdirectory. The necessary arguments to the script are: 1) full path to the original table (e.g., < output_directory > /counts.txt), and 2) the taxonomic level of interest (e.g., species, genus, superkingdom...)
+`reduce_merged_table_to_specific_rank.py` is a Python script that can be utilized to filter `counts.txt` or `relative_abundance.txt` to a given taxonomic level. The necessary command-line arguments to the script are, in order: 1) full path to the merged table, and 2) the taxonomic level of interest (e.g., species, genus, superkingdom...). An example command is:
 
-To change the merged_community_abundance.txt to a higher level than species (e.g., genus, superkingdom), you may use the script merged_community_table_summed_to_higher_rank.py within the post_pipeline_scripts subdirectory. The necessary arguments to the script are: 1) full path to the Kraken2 database (which you also specified in the config file), 2) full path to merged_community_abundance.txt, 3) full path of desired output file, 4) taxonomic level of interest.
+	python reduce_merged_table_to_specific_rank.py /full/path/to/dir/counts.txt genus
 
-Additional useful outputs within the classification subdirectory include the following per-sample outputs:
-- The original and filtered Kraken2 reports for each sample (.krak.report and .krak.report.filtered)
-- The Bracken reports for each sample
-	- species-level only: .krak.report.filtered.bracken
-	- all taxonomic levels: .krak.report_bracken_species.filtered
-- A version of the species-level Bracken report where the original fraction_total_reads column has been corrected in various ways for genome length (.krak.report.filtered.bracken.scaled). See especially the new community_abundance column.
+The output of the above command would be a file called `counts_genus.txt` in the same directory as the original `counts.txt`.
 
-Please note that if a sample's filtered Kraken report does not contain any species with more than filter_thresh reads (parameter #6, above), then .krak.report.filtered.bracken and .krak.report.filtered.bracken.scaled will be empty and .krak.report_bracken_species.filtered will not report read counts for any species. Higher taxonomic levels will still be there, with counts equal to or less than the original Kraken2-assigned value.
+`sum_corrected_relab_to_higher_level.py` is a Python script that can be used to sum up the species-level, genome length-corrected relative abundances provided in `final_merged_outputs/corrected_relative_abundance.txt` to a higher taxonomic level of interest (e.g., genus, superkingdom). The necessary arguments to the script are, in order: 1) full path to the downloaded database of genomes, 2) full path to `corrected_relative_abundance.txt`, 3) full path of desired output file, including the desired file name, 4) taxonomic level of interest.
+
+### Virulence Score Calculator
+
+TODO: Add the additional scripts.
