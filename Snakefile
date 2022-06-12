@@ -200,7 +200,7 @@ rule tot_reads_all: # aggregate outputs of the previous rule
   params:
     classdir=join(outdir, "classification")
   shell: """
-    echo -e 'Samp_Name\tTot_Reads\tUnclassified_Krak\tBrack_Classified\tUnclassified_Brack' > {output.outf}
+    echo -e 'Samp_Name\tTot_Samp_Reads\tUnclassified_Step_One\tClassified_Step_Three\tUnclassified_Step_Three' > {output.outf}
     cat {params.classdir}/*total_reads.txt >> {output.outf}
     """
 

@@ -139,13 +139,38 @@ This section contains a description of the additional parameters in the config f
 
 * `cov_thresh_viral` (default `0.1`). This parameter can range from 0 to 1 and essentially specifies a genome coverage requirement for a viral species be considered a "true positive" in a sample. For example, if this parameter is 0.1, that means that for a viral species to be considered a true positive in a sample, at least one genome in the species must be at least 10% covered by sample reads.
 	* Genome coverage is estimated by dividing the number of unique minimizers in the genome that are covered by sample reads, by the total number of unique minimizers in the genome.
-	* Minimizers are very similar to kmers; for a more detailed description of what they are, please see [the Kraken2 paper](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-019-1891-0)
+	* Minimizers are very similar to kmers; for a more detailed description of what they are, please see [the Kraken2 paper](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-019-1891-0).
 * `minimizer_thresh_viral` (default `0`). This parameter can take any value >= 0 and specifies an additional requirement, beyond genome coverage, for a viral species to be considered a "true positive" in a sample. For example, if this parameter is 10, that means that for a viral species to be considered a true positive in a sample, at least one genome in the species must have 10+ of its unique minimizers covered by sample reads.
 * `cov_thresh_bacterial` and `minimizer_thresh_bacterial` are the analogous parameters for filtering bacterial species.
 
 ### Parameters under *Specifications for step three - per-species abundance estimation*
 
+* `read_length` (default `150`). This parameter specifies the read length. Please note, if you change this, you must first execute the following command, replacing the `/full/path/to/downloaded/database` with the appropriate path, and the `read_len` with the appropriate read length (e.g., 100). You may also need to change the `-t` argument if you have fewer threads available.
+
+	bracken-build -d /full/path/to/downloaded/database -t 10 -l read_len
+
+* `filter_thresh` (default `10`). This parameter essentially specifies one last false positive species filter - how many sample reads must have been classified to species X for it to be considered truly present in the sample? This parameter is specific to the Bracken tool that is utilized in abundance estimation and is equivalent to the threshold parameter described in the [original Bracken documentation](https://github.com/jenniferlu717/Bracken). Note that this filter is uniform across all types of species (e.g., viral, bacterial).  
+
+* `abund_est_mem` (default `26`). This parameter specifies the memory in GB used for the abundance estimation step. As of preprint publication, this value must be at least `26`.
+
+### Additional parameters
+
+* `delete_intermediate` (default `True`). Should intermediate outputs be deleted? Examples of intermediate files can be found within the `testing/classification/intermediate` subdirectory of the cloned repository.
+
 ## Additional Outputs
+
+In addition to merged tables in the `final_merged_outputs` subdirectory (see [Main Output](#main-output)), the pipeline provides per-sample outputs in the `classification` subdirectory. Specifically.
+
+* The files ending with .krak.report_bracken_species.filtered correspond to the [Kraken-style report](https://github.com/DerrickWood/kraken2/blob/master/docs/MANUAL.markdown#sample-report-output-format) outputted by [Bracken](https://github.com/jenniferlu717/Bracken) and specify the per-sample abundances that underlie the creation of the merged tables `counts.txt` and `relative_abundance.txt`. Unlike in the merged tables, taxa that are not present in the sample are not included.
+
+* The files ending with .krak.report.filtered.bracken.scaled essentially correspond to per-sample versions of `final_merged_outputs/corrected_relative_abundance.txt`. Specifically see the `community_abundance` column. Unlike in the merged table, taxa that are not present in the sample are not included. Note that additional normalizations beyond length-corrected relative abundance are provided - e.g., `reads_per_million_bases`, `reads_per_million_reads`, `reads_per_million_bases_per_million_reads (RPMPM)`, `copies_per_million_reads`.
+
+TODO: replace community abundance with whatever we decide to call it.
+
+There are two final outputs worth noting:
+1. `samples_that_failed_bracken.txt` in the `classification` subdirectory. This file contains names of samples that did not ultimately have any reads directly assigned to the species level.
+2. `total_reads.tsv` in the `final_merged_outputs` subdirectory. This file contains information about the total number of classified/unclassified reads at various steps of the pipeline, for each sample. Note that the normalization used to create `relative_abundance.txt` utilizes the `Classified_Step_Three` column.
+
 ## Provided Postprocessing Scripts
 
 ### Filtering Merged Tables to a Specific Taxonomic Level
