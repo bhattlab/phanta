@@ -22,16 +22,16 @@ species_to_vir_score$vir_score <- as.numeric(species_to_vir_score$vir_score)
 # Read in abundance data frame
 abundance_df <- read.csv(abundance_fpath, sep='\t')
 # filter down to just Viruses (superkingdom)
-viral_species_positions <- grepl('superkingdom_10239', abundance_df$TaxName, fixed=TRUE)
+viral_species_positions <- grepl('superkingdom_Viruses', abundance_df$Taxon_Lineage_with_Names, fixed=TRUE)
 abundance_df <- abundance_df[viral_species_positions,]
 
-# make a version of the TaxName that is just the part after species
-just_species_name <- substr(abundance_df$TaxName, str_locate(abundance_df$TaxName, 'species_')[,2]+1, nchar(abundance_df$TaxName))
+# make a version of the Taxon_Lineage_with_Names that is just the part after species
+just_species_name <- substr(abundance_df$Taxon_Lineage_with_Names, str_locate(abundance_df$Taxon_Lineage_with_Names, 'species_')[,2]+1, nchar(abundance_df$Taxon_Lineage_with_Names))
 abundance_df$species_name <- just_species_name
 # filter based on the species we have scores for
 abundance_df <- filter(abundance_df, species_name %in% species_to_vir_score$species_name)
 # drop two unnecessary columns
-abundance_df <- select(abundance_df, -TaxName, -TaxID)
+abundance_df <- select(abundance_df, -Taxon_Lineage_with_IDs, -Taxon_Lineage_with_Names)
 # merge
 abundance_df <- merge(abundance_df, species_to_vir_score, by='species_name')
 rownames(abundance_df) <- abundance_df$species_name

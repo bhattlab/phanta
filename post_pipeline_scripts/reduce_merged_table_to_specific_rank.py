@@ -1,6 +1,5 @@
 # command line arguments
 # 1) the original merged output to pare down
-# must be one of: counts.txt, counts_norm_out_of_tot.txt, counts_norm_out_of_brack_classified.txt
 # 2) the desired rank (e.g., genus, species)
 
 import sys
