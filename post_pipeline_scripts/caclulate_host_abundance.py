@@ -28,7 +28,17 @@ def main():
     profile_with_host['genus'] = profile_with_host['Host genus'].str.split(";").str[0:6].str.join(";")
     profile_with_host.drop(columns=['species_taxonomy', 'species_taxa'], inplace=True)
     #creating out file
-    taxon = pd.concat([profile_with_host.groupby('domain').sum(), profile_with_host.groupby('phylum').sum(), profile_with_host.groupby('class').sum(), profile_with_host.groupby('order').sum(), profile_with_host.groupby('family').sum(), profile_with_host.groupby('genus').sum()])
+    d = profile_with_host.groupby('domain').sum()
+    p = profile_with_host.groupby('phylum').sum()
+    c = profile_with_host.groupby('class').sum()
+    o = profile_with_host.groupby('order').sum()
+    f = profile_with_host.groupby('family').sum()
+    g = profile_with_host.groupby('genus').sum()
+    #creating out file
+    if taxon.iloc[1].dtype=='int': #normalize to 1 if relative abundance was given
+        taxon = pd.concat([d,p, c, o, f, g])
+    elif taxon.iloc[1].dtype=='float':
+        taxon = pd.concat([d/d.sum() , p/p.sum(), c/c.sum() , o/o.sum(), f/f.sum(), g/g.sum()])
     taxon.index.name = "Taxon"
     taxon.to_csv(out)
 
