@@ -185,8 +185,16 @@ These scripts are provided within the `post_pipeline_scripts` subdirectory of th
 ### Filtering Merged Tables to a Specific Taxonomic Level
 
 There are two scripts provided for this purpose.
-
 **Script One**
+`post_pipeline_scripts/caclulate_host_abundance.py` is script that calculates host abundance;
+Expected arguments are:
+1. merged output file (e.g final_merged_outputs/counts.txt)
+2. host assignment file (provided with the default database /database/host_prediction_to_genus.tsv . The format is species level taxonomy per virus, and predicted lineage of the host genus in the following format: d_Bacteria;p_Proteobacteria;c_Gammaproteobacteria;o_Enterobacterales;f_Enterobacteriaceae;g_Escherichia
+3. path to outfile. It will return an OTU table for the host, based on the viral abundance and profiles the host landscape in all samples.
+Usage:
+python  calculate_host_abundance.py <merged counts table>  <host prediction file>  <path to outfile>
+
+**Script Two**
 
 `post_pipeline_scripts/reduce_merged_table_to_specific_rank.py` is a Python script that can be utilized to filter `final_merged_outputs/counts.txt` or `final_merged_outputs/relative_abundance.txt` to a given taxonomic level.
 
@@ -200,7 +208,8 @@ An example command is:
 
 The output of the above command would be a file called `counts_genus.txt` in the same directory as the original `counts.txt`.
 
-**Script Two**
+
+**Script Three**
 
 `post_pipeline_scripts/sum_corrected_relab_to_higher_level.py` is a Python script that can be used to sum up the species-level, genome length-corrected relative abundances provided in `final_merged_outputs/corrected_relative_abundance.txt` to a higher taxonomic level of interest (e.g., genus, superkingdom).
 

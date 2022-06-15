@@ -3,9 +3,9 @@ import sys
 
 def main():
     ###step 1- input
-    kraken_db = sys.argv[1] #"/labs/asbhatt/data/program_indices/kraken2/humgut_mgv_human_refseq/"
-    bracken_report = sys.argv[2] # "/labs/asbhatt/mchakra/phaging/phage_abundance_pipeline/testing/classification/sample20.krak.report.filtered.bracken"
-    kraken_filtering_decisions =  sys.argv[3] #"/labs/asbhatt/mchakra/phaging/phage_abundance_pipeline/testing/classification/sample20.krak.report.filtering_decisions.txt"
+    kraken_db = sys.argv[1] 
+    bracken_report = sys.argv[2] 
+    kraken_filtering_decisions =  sys.argv[3] 
     genome_length_path = kraken_db + "/library/species_genome_size.txt"
     read_length = int(sys.argv[4])
     paired = sys.argv[5]
