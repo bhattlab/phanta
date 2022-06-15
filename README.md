@@ -192,7 +192,7 @@ Expected arguments are:
 
 Usage:
 
-python  calculate_host_abundance.py <merged counts table>  <host prediction file>  <path to outfile>
+	python  calculate_host_abundance.py <merged counts table>  <host prediction file>  <path to outfile>
 
 ### Filtering Merged Tables to a Specific Taxonomic Level
 
