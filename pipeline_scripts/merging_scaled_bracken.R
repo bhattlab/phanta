@@ -28,7 +28,7 @@ for (i in seq(2,length(scaled_reports))) {
   taxid_col <- which(colnames(table_to_merge) == 'taxonomy_id')
   community_col <- which(colnames(table_to_merge) == 'community_abundance')
   table_to_merge <- table_to_merge[,c(taxid_col, community_col)]
-  colnames(table_to_merge) <- c("TaxID", desired_colnames[i+2])
+  colnames(table_to_merge) <- c("TaxID", desired_colnames[i+1])
   merged_table <- merge(merged_table, table_to_merge, by = c("TaxID"), all=TRUE)
 }}
 
