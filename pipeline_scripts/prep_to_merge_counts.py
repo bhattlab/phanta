@@ -3,6 +3,8 @@ import sys
 report = sys.argv[1]
 kraken_db = sys.argv[2]
 
+# make a few helpful dictionaries
+
 with open(kraken_db + '/taxonomy/nodes.dmp', 'r') as infile:
 
   # make a child to parent dictionary
@@ -15,32 +17,47 @@ with open(kraken_db + '/taxonomy/nodes.dmp', 'r') as infile:
     child_to_parent[child] = parent
     taxid_to_rank[child] = rank
 
-def taxid_to_lineage(taxid, taxon_name):
+# also want a taxid_to_name dictionary
+# use the inspect.out file
+
+with open(kraken_db + '/inspect.out', 'r') as infile:
+  taxid_to_name = {}
+  for line in infile:
+    line=line.rstrip('\n').split('\t')
+    taxid, name = line[4], line[5].strip()
+    taxid_to_name[taxid] = name
+
+def taxid_to_lineages(taxid):
   # look up the specific taxid,
-  # build the lineage using the dictionaries
+  # build the lineages using the dictionaries
 
   # first deal with the special case of unclassiifed
   if taxid == '0':
     return 'unclassified'
 
   # not unclassified - proceed
-  lineage = taxid_to_rank[taxid] + '_' + taxon_name
+  rank = taxid_to_rank[taxid]
+  lineage_taxids = rank + '_' + taxid
+  lineage_names = rank + '_' + taxid_to_name[taxid]
   child, parent = taxid, None
 
   while not parent == '1':
-    # look up child, add to lineage
+    # look up child, add to lineages
     parent = child_to_parent[child]
-    rank = taxid_to_rank[parent]
-    lineage = rank + '_' + parent + '|' + lineage
+    parent_rank = taxid_to_rank[parent]
+    # look up the name of the parent too
+    parent_name = taxid_to_name[parent]
+    lineage_taxids = parent_rank + '_' + parent + '|' + lineage_taxids
+    lineage_names = parent_rank + '_' + parent_name + '|' + lineage_names
     child = parent # needed for recursion
-  return lineage
+  return lineage_taxids, lineage_names
 
 with open(report, 'r') as infile:
   with open(report + '.to_merge', 'w') as outfile:
     for line in infile:
       line=line.rstrip('\n').split('\t')
       # use the function to figure out what we want to call this line
-      taxid, name = line[4], line[5].strip()
-      proper_name = taxid_to_lineage(taxid, name)
+      taxid = line[4]
+      lin_taxids, lin_names = taxid_to_lineages(taxid)
       num_reads = line[1]
-      outfile.write(proper_name + '\t' + num_reads + '\n')
+      outfile.write('\t'.join([lin_names, lin_taxids, num_reads]) + '\n')

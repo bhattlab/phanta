@@ -28,6 +28,6 @@ for samp in sample_names:
     with open(outf, 'w') as outfile:
       for line in infile:
         line=line.rstrip('\n').split('\t')
-        taxon_name, num_reads = line[0], float(line[1])
+        lin_names, lin_taxids, num_reads = line[0], line[1], float(line[2])
         frac_reads_brack = str(round(num_reads/brack_classified_reads, 10))
-        outfile.write(taxon_name + '\t' + frac_reads_brack + '\n')
+        outfile.write('\t'.join([lin_names, lin_taxids, frac_reads_brack]) + '\n')
