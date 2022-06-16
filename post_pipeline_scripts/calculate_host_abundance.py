@@ -35,9 +35,8 @@ def main():
     f = profile_with_host.groupby('family').sum()
     g = profile_with_host.groupby('genus').sum()
     #creating out file
-    if taxon.iloc[1].dtype=='int': #normalize to 1 if relative abundance was given
-        taxon = pd.concat([d,p, c, o, f, g])
-    elif taxon.iloc[1].dtype=='float':
+    taxon = pd.concat([d,p, c, o, f, g])
+    if taxon.iloc[1].dtype=='float': #normalize to 1 if relative abundance was given
         taxon = pd.concat([d/d.sum() , p/p.sum(), c/c.sum() , o/o.sum(), f/f.sum(), g/g.sum()])
     taxon.index.name = "Taxon"
     taxon.to_csv(out)
