@@ -19,6 +19,8 @@ TODO: insert link to preprint.
 		* [Filtering Merged Tables to a Specific Taxonomic Level](#filtering-merged-tables-to-a-specific-taxonomic-level)
 		* [Virulence Score Calculator](#virulence-score-calculator)
 
+TODO: make sure that table of contents is fully updated and accurate before submission.
+
 # Quick Start
 ## Installation
 
@@ -181,6 +183,8 @@ There are two final outputs worth noting:
 ## Provided Postprocessing Scripts
 
 These scripts are provided within the `post_pipeline_scripts` subdirectory of the cloned repository.
+
+TODO: edit the below section after we consider whether to change the name from host abundance.
 
 ### Calculate viral host abundance
 `post_pipeline_scripts/caclulate_host_abundance.py` is script that calculates host abundance;
