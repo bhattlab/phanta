@@ -16,7 +16,7 @@ database: /labs/asbhatt/data/program_indices/kraken2/humgut_mgv_human_refseq
 # Specifications for step one - classification of metagenomic reads
 confidence_threshold: 0.1 # increase to reduce false positives - range from 0-1
 gzipped: True # True or False - are the read files gzipped?
-class_mem: 32 # memory in GB, must be at least 32
+class_mem: 32 # memory in GB - minimum is the size of the Kraken2 database - must be at least 32 for the default database
 class_threads: 16 # see usage instructions - can increase if you have more threads available; no need to change if you have fewer
 
 # Specifications for step two - filtering false positive species
@@ -31,7 +31,7 @@ minimizer_thresh_bacterial: 0
 # Speciications for step three - per-species abundance estimation
 read_length: 150 # if you change this, make sure you have an appropriate Bracken database built for this read length
 filter_thresh: 10 # do not assign reads to species X if < this number of reads were classified to it
-abund_est_mem: 26 # memory in GB, must be at least 26
+abund_est_mem: 32 # memory in GB - minimum is the size of the Bracken database - must be at least 26 for the default database
 
 # Delete intermediate files? Examples in testing/classification/intermediate
 delete_intermediate: False # True or False
