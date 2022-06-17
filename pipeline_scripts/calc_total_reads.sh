@@ -22,7 +22,7 @@ else
 fi
 
 # next - calculate total BRACKEN-CLASSIFIED reads in the sample
-tot_reads_bracken=$(head -n 1 $2/$1.krak.report_bracken_species.filtered | cut -f 2 | xargs)
+tot_reads_bracken=$(cut -f 6 $2/$1.krak.report.filtered.bracken | tail -n +2 | paste -sd+ | bc)
 
 # how many reads were left out by Bracken?
 unclassified_brack="$((tot_reads-tot_reads_bracken))"
