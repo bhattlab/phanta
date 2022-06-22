@@ -13,27 +13,49 @@ locations <- str_locate(scaled_reports, '\\.')[,1]
 sampnames <- substr(scaled_reports, 1, locations-1)
 desired_colnames <- c("TaxID", sampnames)
 
+# also figure out which samples failed
+failed <- args[3]
+failed_samples <- tryCatch(
+  expr = {
+    as.character(read.csv(failed, header=FALSE)[,1])
+  },
+  error = function(e){
+    return(c())
+  })
+
 # initialize data frame
-merged_table <- read.csv(paste0(outdir, '/', scaled_reports[1]), sep='\t', header=TRUE)
-taxid_col <- which(colnames(merged_table) == 'taxonomy_id')
-community_col <- which(colnames(merged_table) == 'community_abundance')
-merged_table <- merged_table[,c(taxid_col, community_col)]
-colnames(merged_table) <- desired_colnames[1:2]
+sample <- desired_colnames[2]
+if (sample %in% failed_samples) {
+  merged_table <- data.frame(matrix(ncol = 1, nrow = 0))
+  colnames(merged_table) <- desired_colnames[1]
+} else {
+  merged_table <- read.csv(paste0(outdir, '/', scaled_reports[1]), sep='\t', header=TRUE)
+  taxid_col <- which(colnames(merged_table) == 'taxonomy_id')
+  community_col <- which(colnames(merged_table) == 'community_abundance')
+  merged_table <- merged_table[,c(taxid_col, community_col)]
+  colnames(merged_table) <- desired_colnames[1:2]
+}
 
 # loop through files and keep merging
 if (length(scaled_reports) > 1) {
 for (i in seq(2,length(scaled_reports))) {
+  sample <- desired_colnames[i+1]
+  if (sample %in% failed_samples) {
+  } else {
   f <- paste0(outdir, '/', scaled_reports[i])
   table_to_merge <- read.csv(f, sep='\t', header=TRUE)
   taxid_col <- which(colnames(table_to_merge) == 'taxonomy_id')
   community_col <- which(colnames(table_to_merge) == 'community_abundance')
   table_to_merge <- table_to_merge[,c(taxid_col, community_col)]
-  colnames(table_to_merge) <- c("TaxID", desired_colnames[i+1])
+  colnames(table_to_merge) <- c("TaxID", sample)
   merged_table <- merge(merged_table, table_to_merge, by = c("TaxID"), all=TRUE)
-}}
+  # replace NA with 0
+  merged_table[is.na(merged_table)] <- 0
+  }}}
 
-# replace NA with 0
-merged_table[is.na(merged_table)] <- 0
+for (sample in failed_samples) {
+  merged_table[[sample]] <- rep(NA, nrow(merged_table))
+}
 
 # make the first column a character vector, not a factor
 merged_table[,1] <- as.character(merged_table[,1])

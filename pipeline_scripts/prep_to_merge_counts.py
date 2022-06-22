@@ -1,7 +1,7 @@
 import sys
 
-report = sys.argv[1]
-kraken_db = sys.argv[2]
+report, kraken_db, failed_file, sample = \
+sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4]
 
 # make a few helpful dictionaries
 
@@ -26,6 +26,12 @@ with open(kraken_db + '/inspect.out', 'r') as infile:
     line=line.rstrip('\n').split('\t')
     taxid, name = line[4], line[5].strip()
     taxid_to_name[taxid] = name
+
+# also make a set of the samples that failed Bracken
+with open(failed_file, 'r') as infile:
+  failed_samples = set()
+  for line in infile:
+    failed_samples.add(line.rstrip('\n'))
 
 def taxid_to_lineages(taxid):
   # look up the specific taxid,
@@ -54,10 +60,13 @@ def taxid_to_lineages(taxid):
 
 with open(report, 'r') as infile:
   with open(report + '.to_merge', 'w') as outfile:
-    for line in infile:
-      line=line.rstrip('\n').split('\t')
-      # use the function to figure out what we want to call this line
-      taxid = line[4]
-      lin_taxids, lin_names = taxid_to_lineages(taxid)
-      num_reads = line[1]
-      outfile.write('\t'.join([lin_names, lin_taxids, num_reads]) + '\n')
+    if sample in failed_samples:
+      pass
+    else:
+      for line in infile:
+        line=line.rstrip('\n').split('\t')
+        # use the function to figure out what we want to call this line
+        taxid = line[4]
+        lin_taxids, lin_names = taxid_to_lineages(taxid)
+        num_reads = line[1]
+        outfile.write('\t'.join([lin_names, lin_taxids, num_reads]) + '\n')

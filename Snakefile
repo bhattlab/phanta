@@ -122,14 +122,15 @@ rule process_filtered_kraken:
   input:
     krak_report_filtered = join(outdir, "classification/{samp}.krak.report.filtered")
   output:
-    completed = temp(join(outdir, "processed_filtered_kraken/{samp}.txt"))
+    completed = temp(join(outdir, "processed_filtered_kraken/{samp}.txt")),
   params:
     repo_dir = config['pipeline_directory'],
     threshold = config['filter_thresh'],
-    db = config['database']
+    db = config['database'],
+    failed_file = join(outdir, "classification/samples_that_failed_bracken.txt")
   shell: """
     python {params.repo_dir}/pipeline_scripts/process_filtered_kraken.py {input.krak_report_filtered} \
-    {params.threshold} {params.db}
+    {params.threshold} {params.db} {params.failed_file} {wildcards.samp}
     touch {output.completed}
     """
 
@@ -162,18 +163,38 @@ rule bracken:
     -l 'S' -t {params.threshold}
     """
 
+rule samples_failed_bracken: # make a list of samples that failed Bracken
+  input:
+    expand(join(outdir, "processed_filtered_kraken/{samp}.txt"), samp=sample_names)
+  output:
+    failed=join(outdir, "classification/samples_that_failed_bracken.txt")
+  params:
+    classdir = join(outdir, "classification")
+  shell: """
+    count=`find {params.classdir} -maxdepth 1 -name "*.krak.report.filtered.bracken.scaled.temp" | wc -l`
+    if [[ $count != 0 ]]
+    then
+      ls {params.classdir}/*.krak.report.filtered.bracken.scaled.temp | rev | \
+      cut -d'/' -f 1 | rev | cut -d'.' -f 1 > {output.failed}
+    else
+      touch {output.failed}
+    fi
+    """
+
 ##### STEP FIVE - Merge final Bracken reports into usable tables - 1) counts table, 2) normalized counts - normalize by TOTAL READS in sample, 3) normalized counts - normalize by BRACKEN-CLASSIFIED READS in sample.
 
 rule prepare_to_merge_counts: # do this rule for each Bracken report individually
   input:
-    brack_report = join(outdir, "classification/{samp}.krak.report_bracken_species.filtered")
+    brack_report = join(outdir, "classification/{samp}.krak.report_bracken_species.filtered"),
+    failed_file = join(outdir, "classification/samples_that_failed_bracken.txt")
   output:
     brack_to_merge = temp(join(outdir, "classification/{samp}.krak.report_bracken_species.filtered.to_merge"))
   params:
     repo_dir = config['pipeline_directory'],
     db = config['database']
   shell: """
-    python {params.repo_dir}/pipeline_scripts/prep_to_merge_counts.py {input.brack_report} {params.db}
+    python {params.repo_dir}/pipeline_scripts/prep_to_merge_counts.py \
+    {input.brack_report} {params.db} {input.failed_file} {wildcards.samp}
     """
 
 # Now we will calculate the total reads in each sample, for normalization
@@ -207,20 +228,24 @@ rule tot_reads_all: # aggregate outputs of the previous rule
 rule prepare_to_merge_normed: # normalized versions of to_merge files produced in an earlier rule
   input:
     counts_files=expand(join(outdir, "classification/{samp}.krak.report_bracken_species.filtered.to_merge"), samp=sample_names),
-    tot_reads_file=join(outdir, "final_merged_outputs/total_reads.tsv")
+    tot_reads_file=join(outdir, "final_merged_outputs/total_reads.tsv"),
+    failed_file = join(outdir, "classification/samples_that_failed_bracken.txt")
   output:
     temp(expand(join(outdir, "classification/{samp}.krak.report_bracken_species.filtered.to_merge.norm_brack"), samp=sample_names))
   params:
     repo_dir = config['pipeline_directory'],
-    classdir=join(outdir, "classification")
+    classdir=join(outdir, "classification"),
+    failed_file = join(outdir, "classification/samples_that_failed_bracken.txt")
   shell: """
-    python {params.repo_dir}/pipeline_scripts/prep_to_merge_normed.py {input.tot_reads_file} {params.classdir}
+    python {params.repo_dir}/pipeline_scripts/prep_to_merge_normed.py \
+    {input.tot_reads_file} {params.classdir} {input.failed_file}
     """
 
 rule merge_counts_normed: # make the 3 tables we want! :)
   input:
     expand(join(outdir, "classification/{samp}.krak.report_bracken_species.filtered.to_merge"), samp=sample_names),
-    expand(join(outdir, "classification/{samp}.krak.report_bracken_species.filtered.to_merge.norm_brack"), samp=sample_names)
+    expand(join(outdir, "classification/{samp}.krak.report_bracken_species.filtered.to_merge.norm_brack"), samp=sample_names),
+    failed_file = join(outdir, "classification/samples_that_failed_bracken.txt")
   output:
     list1=temp(join(outdir, "classification/counts_tables.txt")),
     list2=temp(join(outdir, "classification/norm_brack_tables.txt")),
@@ -234,7 +259,7 @@ rule merge_counts_normed: # make the 3 tables we want! :)
     ls {params.classdir}/*to_merge | rev | cut -d'/' -f 1 | rev > {params.classdir}/counts_tables.txt
     ls {params.classdir}/*norm_brack | rev | cut -d'/' -f 1 | rev > {params.classdir}/norm_brack_tables.txt
     Rscript {params.repo_dir}/pipeline_scripts/merging_bracken_tables.R {params.classdir} {params.finaldir} \
-    {output.list1} {output.list2}
+    {input.failed_file} {output.list1} {output.list2}
     """
 
 ##### STEP SIX - Correct species abundances reported by Bracken for genome length.
@@ -261,10 +286,10 @@ rule scale_bracken:
 
 rule merge_scaled_bracken:
   input:
-    expand(join(outdir, "classification/{samp}.krak.report.filtered.bracken.scaled"), samp=sample_names)
+    expand(join(outdir, "classification/{samp}.krak.report.filtered.bracken.scaled"), samp=sample_names),
+    failed_file = join(outdir, "classification/samples_that_failed_bracken.txt")
   output:
-    list1=temp(join(outdir, "classification/scaled_reports.txt")),
-    list2=join(outdir, "classification/samples_that_failed_bracken.txt"),
+    list=temp(join(outdir, "classification/scaled_reports.txt")),
     merged_temp=temp(join(outdir, "classification/corrected_relative_abundance_temp.txt")),
     merged_final=join(outdir, "final_merged_outputs/corrected_relative_abundance.txt")
   params:
@@ -273,17 +298,8 @@ rule merge_scaled_bracken:
     finaldir=join(outdir, "final_merged_outputs"),
     db=config['database']
   shell: """
-    count=`find {params.classdir} -maxdepth 1 -name "*.krak.report.filtered.bracken.scaled.temp" | wc -l`
-    if [[ $count != 0 ]]
-    then
-      ls {params.classdir}/*.krak.report.filtered.bracken.scaled.temp | rev | \
-      cut -d'/' -f 1 | rev | cut -d'.' -f 1 > {params.classdir}/samples_that_failed_bracken.txt
-    else
-      touch {params.classdir}/samples_that_failed_bracken.txt
-    fi
-    ls {params.classdir}/*scaled | rev | cut -d'/' -f 1 | rev | grep -v -f {params.classdir}/samples_that_failed_bracken.txt \
-    > {params.classdir}/scaled_reports.txt
-    Rscript {params.repo_dir}/pipeline_scripts/merging_scaled_bracken.R {params.classdir} {output.list1}
+    ls {params.classdir}/*scaled | rev | cut -d'/' -f 1 | rev > {params.classdir}/scaled_reports.txt
+    Rscript {params.repo_dir}/pipeline_scripts/merging_scaled_bracken.R {params.classdir} {output.list} {input.failed_file}
     python {params.repo_dir}/pipeline_scripts/merging_scaled_bracken.py {params.db} {output.merged_temp} {params.finaldir}
     """
 
