@@ -126,11 +126,10 @@ rule process_filtered_kraken:
   params:
     repo_dir = config['pipeline_directory'],
     threshold = config['filter_thresh'],
-    db = config['database'],
-    failed_file = join(outdir, "classification/samples_that_failed_bracken.txt")
+    db = config['database']
   shell: """
     python {params.repo_dir}/pipeline_scripts/process_filtered_kraken.py {input.krak_report_filtered} \
-    {params.threshold} {params.db} {params.failed_file} {wildcards.samp}
+    {params.threshold} {params.db}
     touch {output.completed}
     """
 

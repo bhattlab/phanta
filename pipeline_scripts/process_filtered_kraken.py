@@ -1,7 +1,7 @@
 import sys
 
-kraken_filtered, threshold, kraken_db, sample = \
-sys.argv[1], int(sys.argv[2]), sys.argv[3], sys.argv[4]
+kraken_filtered, threshold, kraken_db = \
+sys.argv[1], int(sys.argv[2]), sys.argv[3]
 
 # make a dictionary that will be later useful
 nodes_file = kraken_db + '/taxonomy/nodes.dmp'
