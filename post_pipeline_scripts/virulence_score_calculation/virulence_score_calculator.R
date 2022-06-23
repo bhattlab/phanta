@@ -45,6 +45,10 @@ if (nrow(abundance_df) > 1) {
   stopifnot(vs == species_to_vir_score$vir_score[which(species_to_vir_score$species_name == spec)])
 }
 
+# rescale abundances to sum to 1
+abundance_df <- sweep(abundance_df,2,colSums(abundance_df),`/`)
+stopifnot(round(colSums(abundance_df),2) == rep(1.00, nrow(abundance_df)))
+
 # now do element-wise multiplication
 abundance_df_multiplied <- abundance_df*vir_scores
 # sum up the columns
