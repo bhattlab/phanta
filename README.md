@@ -68,6 +68,7 @@ This command should download the following files:
 7. database.kraken: ~24GB
 8. database150mers.kmer_distrib: ~25MB
 9. database150mers.kraken: ~866MB
+10. library/species_genome_size.txt: ~6MB
 
 *Note*: you can check the size of each file by executing `du -hs insert_file_name_here`.
 
