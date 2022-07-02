@@ -186,6 +186,7 @@ There are two final outputs worth noting:
 These scripts are provided within the `post_pipeline_scripts` subdirectory of the cloned repository.
 
 TODO: edit the below section after we consider whether to change the name from host abundance.
+TODO: make sure table of contents is up to date.
 
 ### Calculate viral host abundance
 `post_pipeline_scripts/caclulate_host_abundance.py` is script that calculates host abundance;
@@ -227,6 +228,8 @@ The necessary command-line arguments to the script are, in order:
 2. Full path to `final_merged_outputs/corrected_relative_abundance.txt`
 3. Full path of desired output file, including the desired file name
 4. Taxonomic level of interest
+
+TODO: update the below!
 
 ### Virulence Score Calculator
 
