@@ -1,3 +1,0 @@
-Sample	Virulence_Score
-sample18	0.407316604948242
-sample19	0.759758045580333

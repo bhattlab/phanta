@@ -1,0 +1,3 @@
+sample	tot_viral_reads	num_virulent_phages	num_temperate_phages	num_unknown_phages	virulent_phages_abundance	temperate_phages_abundance	ratio_num_virulent_temperate	ratio_abund_virulent_temperate
+sample18	360233	17	28	2	0.345915788493599	0.405593323589442	0.607142857142857	0.85286361578217
+sample19	332938	29	22	1	0.666394826888985	0.0861901542419489	1.31818181818182	7.73168156792379
