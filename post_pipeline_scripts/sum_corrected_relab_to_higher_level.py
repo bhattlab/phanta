@@ -45,13 +45,19 @@ with open(merged_table, 'r') as infile:
         for i in range(2, len(header)):
           sample = header[i]
           abundance = line[i]
-          dict_of_dicts[id_names_short][sample] += float(abundance)
+          if abundance == 'NA':
+            dict_of_dicts[id_names_short][sample] += 0
+          else:
+            dict_of_dicts[id_names_short][sample] += float(abundance)
       else:
         dict_of_dicts[id_names_short] = {}
         for i in range(2, len(header)):
           sample = header[i]
           abundance = line[i]
-          dict_of_dicts[id_names_short][sample] = float(abundance)
+          if abundance == 'NA':
+            dict_of_dicts[id_names_short][sample] = 0
+          else:
+            dict_of_dicts[id_names_short][sample] = float(abundance)
 
 outdf = pd.DataFrame(dict_of_dicts).transpose()
 # make the rownames into a column
