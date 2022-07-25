@@ -58,6 +58,8 @@ Download the Kraken2/Bracken-compatible database of genomes by navigating to the
 
 TODO: insert the command. Ideally wget-able.
 
+TODO: edit this based on pinned message to Yishay 07/25 afternoon.
+
 This command should download the following files:
 1. hash.k2d: ~31GB
 2. taxo.k2d: ~21MB
