@@ -52,7 +52,7 @@ def taxid_to_lineages(taxid):
   return lineage_names, lineage_taxids
 
 with open(temp_file, 'r') as infile:
-  with open(outdir + '/corrected_relative_abundance.txt', 'w') as outfile:
+  with open(outdir + '/relative_taxonomic_abundance.txt', 'w') as outfile:
     # first fix the header
     orig_header = infile.readline().rstrip('\n').split('\t')
     new_header = '\t'.join(['Taxon_Lineage_with_Names', 'Taxon_Lineage_with_IDs'] + orig_header[1:]) + '\n'

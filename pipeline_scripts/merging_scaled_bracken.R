@@ -31,8 +31,8 @@ if (sample %in% failed_samples) {
 } else {
   merged_table <- read.csv(paste0(outdir, '/', scaled_reports[1]), sep='\t', header=TRUE)
   taxid_col <- which(colnames(merged_table) == 'taxonomy_id')
-  community_col <- which(colnames(merged_table) == 'community_abundance')
-  merged_table <- merged_table[,c(taxid_col, community_col)]
+  rel_taxon_col <- which(colnames(merged_table) == 'rel_taxon_abundance')
+  merged_table <- merged_table[,c(taxid_col, rel_taxon_col)]
   colnames(merged_table) <- desired_colnames[1:2]
 }
 
@@ -45,8 +45,8 @@ for (i in seq(2,length(scaled_reports))) {
   f <- paste0(outdir, '/', scaled_reports[i])
   table_to_merge <- read.csv(f, sep='\t', header=TRUE)
   taxid_col <- which(colnames(table_to_merge) == 'taxonomy_id')
-  community_col <- which(colnames(table_to_merge) == 'community_abundance')
-  table_to_merge <- table_to_merge[,c(taxid_col, community_col)]
+  rel_taxon_col <- which(colnames(table_to_merge) == 'rel_taxon_abundance')
+  table_to_merge <- table_to_merge[,c(taxid_col, rel_taxon_col)]
   colnames(table_to_merge) <- c("TaxID", sample)
   merged_table <- merge(merged_table, table_to_merge, by = c("TaxID"), all=TRUE)
   # replace NA with 0
@@ -61,5 +61,5 @@ for (sample in failed_samples) {
 merged_table[,1] <- as.character(merged_table[,1])
 
 # now output
-outpath <- paste0(outdir, '/', 'corrected_relative_abundance_temp.txt')
+outpath <- paste0(outdir, '/', 'relative_taxonomic_abundance_temp.txt')
 write.table(merged_table, outpath, quote=FALSE, row.names = FALSE, sep = '\t')

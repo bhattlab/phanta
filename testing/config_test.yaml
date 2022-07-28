@@ -1,4 +1,4 @@
-pipeline_directory: /labs/asbhatt/mchakra/phaging/phage_abundance_pipeline
+pipeline_directory: /full/path/to/cloned/repo
 
 # Sample file specifies sample names and names of files containing sample reads
 # Format: Tab-delimited, three columns
@@ -6,12 +6,12 @@ pipeline_directory: /labs/asbhatt/mchakra/phaging/phage_abundance_pipeline
 # if paired end, all samples must be paired end
 # if single end, all samples must be single end
 # See example (samp_file.txt) in the testing folder
-sample_file: /labs/asbhatt/mchakra/phaging/phage_abundance_pipeline/testing/samp_file.txt
+sample_file: /full/path/to/cloned/repo/testing/samp_file.txt
 
 # In which directory should results be outputted?
-outdir: /labs/asbhatt/mchakra/phaging/phage_abundance_pipeline/testing
+outdir: /full/path/to/cloned/repo/test_phanta
 
-database: /labs/asbhatt/data/program_indices/kraken2/humgut_mgv_human_refseq
+database: /full/path/to/downloaded/database
 
 # Specifications for step one - classification of metagenomic reads
 confidence_threshold: 0.1 # increase to reduce false positives - range from 0-1

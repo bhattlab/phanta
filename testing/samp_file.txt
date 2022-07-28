@@ -1,2 +1,2 @@
-sample19	/labs/asbhatt/yishay/projects/phAging/benchmarking/simulations/mixed/sample19_R1.fastq.gz	/labs/asbhatt/yishay/projects/phAging/benchmarking/simulations/mixed/sample19_R2.fastq.gz
-sample18	/labs/asbhatt/yishay/projects/phAging/benchmarking/simulations/mixed/sample18_R1.fastq.gz	/labs/asbhatt/yishay/projects/phAging/benchmarking/simulations/mixed/sample18_R2.fastq.gz
+sample19	/full/path/to/cloned/repo/test_phanta/sample19_R1.fastq.gz	/full/path/to/cloned/repo/test_phanta/sample19_R2.fastq.gz
+sample18	/full/path/to/cloned/repo/test_phanta/sample18_R1.fastq.gz	/full/path/to/cloned/repo/test_phanta/sample18_R2.fastq.gz

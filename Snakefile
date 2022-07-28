@@ -68,8 +68,8 @@ rule all:
   input:
     join(outdir, "final_merged_outputs/total_reads.tsv"),
     join(outdir, "final_merged_outputs/counts.txt"),
-    join(outdir, "final_merged_outputs/relative_abundance.txt"),
-    join(outdir, "final_merged_outputs/corrected_relative_abundance.txt"),
+    join(outdir, "final_merged_outputs/relative_read_abundance.txt"),
+    join(outdir, "final_merged_outputs/relative_taxonomic_abundance.txt"),
     join(outdir, "pipeline_completed.txt")
 
 ##### STEP THREE - Run Kraken2, and filter report based on user-defined thresholds.
@@ -220,7 +220,7 @@ rule tot_reads_all: # aggregate outputs of the previous rule
   params:
     classdir=join(outdir, "classification")
   shell: """
-    echo -e 'Samp_Name\tTot_Samp_Reads\tUnclassified_Step_One\tClassified_Step_Three\tUnclassified_Step_Three' > {output.outf}
+    echo -e 'Samp_Name\tTot_Samp_Reads\tUnassigned_Step_One\tAssigned_Step_Three\tUnassigned_Step_Three' > {output.outf}
     cat {params.classdir}/*total_reads.txt >> {output.outf}
     """
 
@@ -249,7 +249,7 @@ rule merge_counts_normed: # make the 3 tables we want! :)
     list1=temp(join(outdir, "classification/counts_tables.txt")),
     list2=temp(join(outdir, "classification/norm_brack_tables.txt")),
     counts=join(outdir, "final_merged_outputs/counts.txt"),
-    norm_brack=join(outdir, "final_merged_outputs/relative_abundance.txt")
+    norm_brack=join(outdir, "final_merged_outputs/relative_read_abundance.txt")
   params:
     repo_dir = config['pipeline_directory'],
     classdir=join(outdir, "classification"),
@@ -289,8 +289,8 @@ rule merge_scaled_bracken:
     failed_file = join(outdir, "classification/samples_that_failed_bracken.txt")
   output:
     list=temp(join(outdir, "classification/scaled_reports.txt")),
-    merged_temp=temp(join(outdir, "classification/corrected_relative_abundance_temp.txt")),
-    merged_final=join(outdir, "final_merged_outputs/corrected_relative_abundance.txt")
+    merged_temp=temp(join(outdir, "classification/relative_taxonomic_abundance_temp.txt")),
+    merged_final=join(outdir, "final_merged_outputs/relative_taxonomic_abundance.txt")
   params:
     repo_dir = config['pipeline_directory'],
     classdir=join(outdir, "classification"),
@@ -308,8 +308,8 @@ rule deal_with_intermediate:
   input: # all the outputs except pipeline_completed.txt
     join(outdir, "final_merged_outputs/total_reads.tsv"),
     join(outdir, "final_merged_outputs/counts.txt"),
-    join(outdir, "final_merged_outputs/relative_abundance.txt"),
-    join(outdir, "final_merged_outputs/corrected_relative_abundance.txt")
+    join(outdir, "final_merged_outputs/relative_read_abundance.txt"),
+    join(outdir, "final_merged_outputs/relative_taxonomic_abundance.txt")
   output:
     completed=join(outdir, "pipeline_completed.txt")
   params:

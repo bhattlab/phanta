@@ -110,5 +110,5 @@ merged_table[,1] <- as.character(merged_table[,1])
 merged_table[,2] <- as.character(merged_table[,2])
 
 # now output
-outpath <- paste0(outdir, '/', 'relative_abundance.txt')
+outpath <- paste0(outdir, '/', 'relative_read_abundance.txt')
 write.table(merged_table, outpath, quote=FALSE, row.names = FALSE, sep = '\t')

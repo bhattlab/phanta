@@ -1,6 +1,6 @@
 # Phanta
-## Rapidly quantify taxa from all domains of life, directly from short-read gut metagenomes
-### The foundation of this workflow is a comprehensive, virome-aware database of genomes with integrated taxonomic information
+## Rapidly quantify taxa from all domains of life, directly from short-read human gut metagenomes
+### The foundation of this workflow is a comprehensive, virus-inclusive database of genomes with integrated taxonomic information
 
 #  For citations
 If Phanta is helpful to your work, please consider citing our manuscript!
@@ -17,7 +17,8 @@ TODO: insert link to preprint.
 	* [Additional Outputs](#additional-outputs)
 	* [Provided Postprocessing Scripts](#provided-postprocessing-scripts)
 		* [Filtering Merged Tables to a Specific Taxonomic Level](#filtering-merged-tables-to-a-specific-taxonomic-level)
-		* [Virulence Score Calculator](#virulence-score-calculator)
+		* [Collapse Viral Abundances by Predicted Host](#collapse-viral-abundances-by-predicted-host)
+		* [Calculate Viral Lifestyle Statistics](#calculate-viral-lifestyle-statistics)
 
 TODO: make sure that table of contents is fully updated and accurate before submission.
 
@@ -44,55 +45,57 @@ If this command is not recognized by your system, please follow the instructions
 
 Navigate to the location where you cloned the repository using the `cd` command. Then, create a new conda environment via the following command:
 
-	conda env create -n new_env --file env.yaml
+	conda env create -n phanta_env --file phanta_env.yaml
 
 Activate the environment by executing:
 
-	conda activate new_env
-
-TODO: replace new_env with whatever we decide to call the workflow and similarly rename env.yaml.
+	conda activate phanta_env
 
 **Step Four - Download the database of genomes**
 
-Download the Kraken2/Bracken-compatible database of genomes by navigating to the desired directory on your system and executing the following command:
+Download Phanta's default Kraken2/Bracken-compatible database of genomes by navigating to the desired directory on your system and executing the following command:
 
 TODO: insert the command. Ideally wget-able.
 
-TODO: edit this based on pinned message to Yishay 07/25 afternoon.
-
 This command should download the following files:
+
+Kraken2 database
 1. hash.k2d: ~31GB
 2. taxo.k2d: ~21MB
 3. opts.k2d: ~4KB
-4. inspect.out: ~18MB
-5. taxonomy/nodes.dmp: ~11MB
-6. taxonomy/names.dmp: ~16MB
-7. database.kraken: ~24GB
-8. database150mers.kmer_distrib: ~25MB
-9. database150mers.kraken: ~866MB
-10. library/species_genome_size.txt: ~6MB
+4. seqid2taxid.map: ~461MB
+
+Bracken database (built for use with 150bp reads)
+1. database150mers.kmer_distrib: ~25MB
+*Note*: Phanta can run with additional read lengths, as described under [Advanced Usage](#advanced-usage).
+
+Additional files required for pipeline to run:
+1. inspect.out: ~18MB
+2. taxonomy/nodes.dmp: ~11MB
+3. taxonomy/names.dmp: ~16MB
+4. library/species_genome_size.txt: ~6MB
+
+For use with post-processing scripts:
+1. host_prediction_to_genus.tsv: ~3MB
+2. species_name_to_vir_score.txt: ~1.5MB
 
 *Note*: you can check the size of each file by executing `du -hs insert_file_name_here`.
 
-TODO: If the size of any of the files above changes, update both this file and the notes about memory in config.yaml and config_test.yaml.
+TODO: check file sizes once more before submission.
+
+*Note*: an alternative version of the default database is also available, where prophage sequences have been "masked" in prokaryotic genomes. Please see [Advanced Usage](#advanced-usage) for more details.
 
 ## Test Your Installation
 
-To test that you are ready to run XXX on your data, first create a new subdirectory of your cloned repository called `test_phanta`. Then navigate to `test_phanta` using `cd` and download the four `.fq.gz` files required for testing via the following command:
+To test that you are ready to run Phanta on your data, first create a new subdirectory of your cloned repository called `test_phanta`. Then navigate to `test_phanta` using `cd` and download the four `.fq.gz` files required for testing via the following command:
 
 TODO: insert command to download.
 
-The total size of the download should be YYY.
-
-TODO: replace XXX with the decided name of the pipeline and YYY with the total size of the files.
-
-Then edit two files contained in the testing subdirectory of your cloned repository.
+Then edit two files contained in the `testing` subdirectory of your cloned repository.
 1. Edit `samp_file.txt` by replacing `/full/path/to/cloned/repo` in the four locations indicated with the full path to your cloned repository.
 2. Edit `config_test.yaml` by replacing:
 * `/full/path/to/cloned/repo` in the three locations indicated with the full path to your cloned repository.
 * `/full/path/to/downloaded/database` in the one location indicated with the full path to the database of genomes you downloaded during the install.
-
-TODO: edit both of the files indicated above before submission, to make them consistent with the instructions provided above.
 
 Finally, execute the Snakemake command below, after replacing:
 1. `/full/path/to/cloned/repo` with the path to your cloned repository
@@ -110,7 +113,7 @@ When execution has completed, please check that your `test_phanta` directory has
 
 ## Basic Usage
 
-For basic usage, copy the provided `config.yaml` file and replace the four paths at the top of the the file as appropriate.
+For basic usage, copy the provided `config.yaml` file to any directory and replace the four paths at the top of the the file as appropriate.
 
 You do not need to make any additional changes **except** if: 1) you did not conduct 150bp sequencing, or 2) if your read files are not gzipped. In those cases, you may also need to change the `read_length` or `gzipped` parameters, which are described under [Advanced Usage](#advanced-usage).
 
@@ -120,17 +123,15 @@ After you have finished editing your config file, execute the same Snakemake com
 
 The main outputs are merged tables that list the abundance of each taxon, in each sample. Rows are taxa and columns are samples.
 
-* `final_merged_outputs/counts.txt`: gives the number of read (pairs) assigned to each taxon
+* `final_merged_outputs/counts.txt`: provides the number of read (pairs) assigned to each taxon
 
-* `final_merged_outputs/relative_abundance.txt`: same as `counts.txt` but normalized out of the total number of reads in each sample that were ultimately assigned to any taxon during abundance estimation.
+* `final_merged_outputs/relative_read_abundance.txt`: same as `counts.txt` but normalized out of the total number of reads in each sample that were ultimately assigned to any taxon during abundance estimation.
 
-* `final_merged_outputs/corrected_relative_abundance.txt`: same as `relative_abundance.txt` but abundances are corrected for genome length. Only species (and not higher taxonomic levels) are included in this report.
-
-TODO: Edit the above as needed as we change the names of things, etc.
+* `final_merged_outputs/relative_taxonomic_abundance.txt`: similar to `relative_read_abundance.txt` but abundances are corrected for genome length. In addition, only species (and not higher taxonomic levels) are included in this report.
 
 For examples of the above outputs, please see the `testing/final_merged_outputs` subdirectory.
 
-*Note*: To filter `counts.txt` or `relative_abundance.txt` to a specific taxonomic level (e.g., species, genus), or to change `corrected_relative_abundance.txt` to a higher taxonomic level than species, please refer to [Filtering Merged Tables to a Specific Taxonomic Level](#filtering-merged-tables-to-a-specific-taxonomic-level) under [Provided Postprocessing Scripts](#provided-postprocessing-scripts).
+*Note*: To filter `counts.txt` or `relative_read_abundance.txt` to a specific taxonomic level (e.g., species, genus), or to change `relative_taxonomic_abundance.txt` to a higher taxonomic level than species, please refer to [Filtering Merged Tables to a Specific Taxonomic Level](#filtering-merged-tables-to-a-specific-taxonomic-level) under [Provided Postprocessing Scripts](#provided-postprocessing-scripts).
 
 # Advanced
 ## Advanced Usage
@@ -162,9 +163,11 @@ This section contains a description of the additional parameters in the config f
 
 * `filter_thresh` (default `10`). This parameter specifies one last false positive species filter - how many sample reads must have been classified to species X in step one for it to be considered truly present in the sample? This parameter is specific to the Bracken tool that is utilized in abundance estimation and is equivalent to the threshold parameter described in the [original Bracken documentation](https://github.com/jenniferlu717/Bracken). Note that this filter is uniform across all types of species (e.g., viral, bacterial).  
 
-* `abund_est_mem` (default `26`). This parameter specifies the memory in GB used for the abundance estimation step. As of preprint publication, this value must be at least `26`.
+* `abund_est_mem` (default `32`). This parameter specifies the memory in GB used for the abundance estimation step. As of preprint publication, this value must be at least `26`.
 
 ### Additional parameters
+
+* `database`. Phanta is typically run with the default database linked above under Step Four of [Installation](#installation). However, as described in our manuscript, an alternative version of Phanta's default database was also created, in which prophage sequences have been "masked" in prokaryotic genomes. The download link for this database is: *coming soon!*
 
 * `delete_intermediate` (default `True`). Specify `True` if you would like intermediate outputs to be deleted, otherwise `False`. Intermediate outputs are per-sample outputs generated during the execution of Steps 1 and 2. Examples of these intermediate files can be found within the `testing/classification/intermediate` subdirectory of the cloned repository.
 
@@ -172,35 +175,24 @@ This section contains a description of the additional parameters in the config f
 
 In addition to the merged tables provided in the `final_merged_outputs` subdirectory (see [Main Outputs](#main-outputs)), the pipeline provides per-sample outputs in the `classification` subdirectory. Specifically:
 
-* The files ending with `.krak.report_bracken_species.filtered` correspond to the [Kraken-style report](https://github.com/DerrickWood/kraken2/blob/master/docs/MANUAL.markdown#sample-report-output-format) outputted by [Bracken](https://github.com/jenniferlu717/Bracken) and specify the per-sample abundances that underlie the creation of the final merged tables `counts.txt` and `relative_abundance.txt`. Unlike in the merged tables, taxa that are not present in the sample are not included.
+* The files ending with `.krak.report_bracken_species.filtered` correspond to the [Kraken-style report](https://github.com/DerrickWood/kraken2/blob/master/docs/MANUAL.markdown#sample-report-output-format) outputted by [Bracken](https://github.com/jenniferlu717/Bracken) and specify the per-sample abundances that underlie the creation of the final merged tables `counts.txt` and `relative_read_abundance.txt`. Unlike in the merged tables, taxa that are not present in the sample are not included.
 
-* The files ending with `.krak.report.filtered.bracken.scaled` essentially correspond to per-sample versions of `final_merged_outputs/corrected_relative_abundance.txt`. Specifically see the `community_abundance` column. Unlike in the merged table, taxa that are not present in the sample are not included.
-	* **Note**: additional normalizations beyond length-corrected relative abundance are also provided - e.g., `reads_per_million_bases`, `reads_per_million_reads`, `reads_per_million_bases_per_million_reads (RPMPM)`, `copies_per_million_reads`.
-
-TODO: replace community abundance with whatever we decide to call it.
+* The files ending with `.krak.report.filtered.bracken.scaled` essentially correspond to per-sample versions of `final_merged_outputs/relative_taxonomic_abundance.txt`. Specifically see the `rel_taxon_abundance` column. Unlike in the merged table, taxa that are not present in the sample are not included.
+	* **Note**: additional normalizations beyond relative taxonomic abundance are also provided - e.g., `reads_per_million_bases`, `reads_per_million_reads`, `reads_per_million_bases_per_million_reads (RPMPM)`, `copies_per_million_reads`.
 
 There are two final outputs worth noting:
-1. `samples_that_failed_bracken.txt` in the `classification` subdirectory. This file contains names of samples that did not ultimately have any reads directly assigned to the species level. Please note that for these samples, the `.krak.report.filtered.bracken.scaled` file will be empty.
-2. `total_reads.tsv` in the `final_merged_outputs` subdirectory. This file contains information about the total number of classified/unclassified reads in each sample, at various steps of the pipeline. Note that the normalization used to create `final_merged_outputs/relative_abundance.txt` from `final_merged_outputs/counts.txt` utilizes the `Classified_Step_Three` column of this file.
+1. `samples_that_failed_bracken.txt` in the `classification` subdirectory. This file contains names of samples that did not ultimately have any reads directly assigned to the species level during step three of the workflow. Please note that for these samples, the `.krak.report.filtered.bracken.scaled` file will be empty and there may be additional associated files in the `classification` subdirectory that end with `.temp`.
+2. `total_reads.tsv` in the `final_merged_outputs` subdirectory. This file contains information about the total number of reads assigned to taxa in each sample, at various steps of the pipeline. Specifically:
+- `Tot_Samp_Reads`: total number of reads in the original sample
+- `Unassigned_Step_One`: number of reads that were not assigned a classification by Kraken2 during the classification step
+- `Assigned_Step_Three`: sum total of reads assigned to a taxon after filtering false positive species and estimating species-level abundances
+- `Unassigned_Step_Three`: difference between `Tot_Samp_Reads` and `Assigned_Step_Three`
+
+Note that the normalization used to create `final_merged_outputs/relative_read_abundance.txt` from `final_merged_outputs/counts.txt` utilizes the `Assigned_Step_Three` column of `total_reads.tsv`.
 
 ## Provided Postprocessing Scripts
 
 These scripts are provided within the `post_pipeline_scripts` subdirectory of the cloned repository.
-
-TODO: edit the below section after we consider whether to change the name from host abundance.
-TODO: make sure table of contents is up to date.
-
-### Calculate viral host abundance
-`post_pipeline_scripts/caclulate_host_abundance.py` is script that calculates host abundance;
-
-Expected arguments are:
-1. merged output file (e.g final_merged_outputs/counts.txt)
-2. host assignment file (provided with the default database /database/host_prediction_to_genus.tsv . The format is species level taxonomy per virus, and predicted lineage of the host genus in the following format: d_Bacteria;p_Proteobacteria;c_Gammaproteobacteria;o_Enterobacterales;f_Enterobacteriaceae;g_Escherichia
-3. path to outfile. It will return an OTU table for the host, based on the viral abundance and profiles the host landscape in all samples.
-
-Usage:
-
-	python  calculate_host_abundance.py <merged counts table>  <host prediction file>  <path to outfile>
 
 ### Filtering Merged Tables to a Specific Taxonomic Level
 
@@ -231,19 +223,32 @@ The necessary command-line arguments to the script are, in order:
 3. Full path of desired output file, including the desired file name
 4. Taxonomic level of interest
 
-TODO: update the below!
+### Collapse Viral Abundances by Predicted Host
+`post_pipeline_scripts/collapse_viral_abundances_by_host.py` is script that calculates host abundance;
 
-### Virulence Score Calculator
+Expected arguments are:
+1. merged abundance file generated by Phanta (e.g., `final_merged_outputs/counts.txt`)
+2. host assignment file (provided with the default database at `/database/host_prediction_to_genus.tsv`). *Note:* the host assignment file has two columns: 1) taxonomy ID of viral species, 2) predicted lineage of host genus, in the following format: d_Bacteria;p_Proteobacteria;c_Gammaproteobacteria;o_Enterobacterales;f_Enterobacteriaceae;g_Escherichia
+3. full desired path to output file (including file name)
 
-`post_pipeline_scripts/virulence_score_calculation/virulence_score_calculator.R` is an R script that can be used to estimate the overall virulence of the viral community in a sample, based on per-species virulence predictions that were made using the tool BACPHLIP, for the database described in the preprint. These per-species predictions are listed in the file `post_pipeline_scripts/virulence_score_calculation/species_name_to_vir_score.txt`.
+Essentially, the script collapses the viral abundances in the input merged abundance file by predicted host genus. So, the output file is a table where predicted host genera are rows, columns are samples, and each cell provides the abundance of viruses with a particular predicted host genus in a particular sample.
+
+Usage:
+
+	python  collapse_viral_abundances_by_host.py <merged abundance table>  <host assignment file>  <path to outfile>
+
+### Calculate Viral Lifestyle Statistics
+
+`post_pipeline_scripts/calculate_lifestyle_stats/lifestyle_stats.R` is an R script that can be used to calculate overall statistics about the lifestyles of the viruses present in each sample (e.g., abundance ratio of temperate to virulent phages). Calculations are based on per-species lifestyle predictions that were made using the tool BACPHLIP, for the database described in the preprint. These per-species predictions are provided with the default database at `/database/species_name_to_vir_score.txt`.
 
 The necessary command-line arguments to the R script are, in order:
-1. The full path to the `species_name_to_vir_score.txt` file
-2. The full path to `final_merged_outputs/corrected_relative_abundance.txt`
-3. The desired output directory for the output of the script
 
-The output of the script is a two-column table called `virulence_scores_per_sample.txt`. An example output, based on the testing dataset, is located in the same directory as the R script (`post_pipeline_scripts/virulence_score_calculation/`).
+1. The BACPHLIP-predicted virulence score above which a virus should be considered 'virulent' (suggestion: `0.5`).
+2. The full path to the `species_name_to_vir_score.txt` file
+3. The full path to a species-level version of `final_merged_outputs/counts.txt` (please see [Filtering Merged Tables to a Specific Taxonomic Level](#filtering-merged-tables-to-a-specific-taxonomic-level))
+4. The full path to `final_merged_outputs/relative_taxonomic_abundance.txt` (or a species-level version of `final_merged_outputs/relative_read_abundance.txt`)
+5. The desired name for the output file (full path)
 
-TODO: link to preprint above.
+An example output file, based on the testing dataset, is located in the same directory as the R script (`post_pipeline_scripts/calculate_lifestyle_stats/example_lifestyle_stats.txt`).
 
-TODO: Add the additional scripts uploaded by Yishay.
+TODO: add correlation script (?)
