@@ -67,6 +67,7 @@ Kraken2 database
 
 Bracken database (built for use with 150bp reads)
 1. database150mers.kmer_distrib: ~25MB
+
 *Note*: Phanta can run with additional read lengths, as described under [Advanced Usage](#advanced-usage).
 
 Additional files required for pipeline to run:
@@ -83,7 +84,7 @@ For use with post-processing scripts:
 
 TODO: check file sizes once more before submission.
 
-*Note*: an alternative version of the default database is also available, where prophage sequences have been "masked" in prokaryotic genomes. Please see [Advanced Usage](#advanced-usage) for more details.
+*Note*: as described in the preprint, an alternative version of the default database was also created, in which prophage sequences have been "masked" in prokaryotic genomes. Please see [Advanced Usage](#advanced-usage) for more details.
 
 ## Test Your Installation
 
@@ -142,7 +143,7 @@ This section contains a description of the additional parameters in the config f
 
 * `confidence_threshold` (default `0.1`). This parameter can range from 0 to 1. Higher values yield more confident classifications but reduce sensitivity. Please see [this link from the Kraken2 documentation](https://github.com/DerrickWood/kraken2/blob/master/docs/MANUAL.markdown#confidence-scoring) for more details.
 * `gzipped` (default `True`). This parameter should be `True` if your read files are gzipped, otherwise `False`.
-* `class_mem` (default `32`). This parameter specifies the memory in GB used for the classification step. As of preprint publication, this value must be at least `32`.
+* `class_mem` (default `32`). This parameter specifies the memory in GB used for the classification step. As of preprint posting, this value must be at least `32`.
 * `class_threads` (default `16`). This parameter specifies the number of threads used for the classification step. If more threads are available, this parameter can be increased; otherwise, there is no need to change it. Recall that you must specify the maximum number of threads available in the `snakemake` command that executes the pipeline.
 
 ### Parameters under *Specifications for step two - filtering false positive species*
@@ -163,7 +164,7 @@ This section contains a description of the additional parameters in the config f
 
 * `filter_thresh` (default `10`). This parameter specifies one last false positive species filter - how many sample reads must have been classified to species X in step one for it to be considered truly present in the sample? This parameter is specific to the Bracken tool that is utilized in abundance estimation and is equivalent to the threshold parameter described in the [original Bracken documentation](https://github.com/jenniferlu717/Bracken). Note that this filter is uniform across all types of species (e.g., viral, bacterial).  
 
-* `abund_est_mem` (default `32`). This parameter specifies the memory in GB used for the abundance estimation step. As of preprint publication, this value must be at least `26`.
+* `abund_est_mem` (default `32`). This parameter specifies the memory in GB used for the abundance estimation step. As of preprint posting, this value must be at least `26`.
 
 ### Additional parameters
 
@@ -200,7 +201,7 @@ There are two scripts provided for this purpose.
 
 **Script one**
 
-`post_pipeline_scripts/reduce_merged_table_to_specific_rank.py` is a Python script that can be utilized to filter `final_merged_outputs/counts.txt` or `final_merged_outputs/relative_abundance.txt` to a given taxonomic level.
+`post_pipeline_scripts/reduce_merged_table_to_specific_rank.py` is a Python script that can be utilized to filter `final_merged_outputs/counts.txt` or `final_merged_outputs/relative_read_abundance.txt` to a given taxonomic level.
 
 The necessary command-line arguments to the script are, in order:
 1. Full path to the merged table, and
@@ -215,23 +216,23 @@ The output of the above command would be a file called `counts_genus.txt` in the
 
 **Script Two**
 
-`post_pipeline_scripts/sum_corrected_relab_to_higher_level.py` is a Python script that can be used to sum up the species-level, genome length-corrected relative abundances provided in `final_merged_outputs/corrected_relative_abundance.txt` to a higher taxonomic level of interest (e.g., genus, superkingdom).
+`post_pipeline_scripts/sum_corrected_relab_to_higher_level.py` is a Python script that can be used to sum up the species-level, genome length-corrected relative abundances provided in `final_merged_outputs/relative_taxonomic_abundance.txt` to a higher taxonomic level of interest (e.g., genus, superkingdom).
 
 The necessary command-line arguments to the script are, in order:
 1. Full path to the downloaded database of genomes
-2. Full path to `final_merged_outputs/corrected_relative_abundance.txt`
+2. Full path to `final_merged_outputs/relative_taxonomic_abundance.txt`
 3. Full path of desired output file, including the desired file name
 4. Taxonomic level of interest
 
 ### Collapse Viral Abundances by Predicted Host
-`post_pipeline_scripts/collapse_viral_abundances_by_host.py` is script that calculates host abundance;
+`post_pipeline_scripts/collapse_viral_abundances_by_host.py` is script that collapses viral abundances in each sample by predicted host.
 
 Expected arguments are:
 1. merged abundance file generated by Phanta (e.g., `final_merged_outputs/counts.txt`)
 2. host assignment file (provided with the default database at `/database/host_prediction_to_genus.tsv`). *Note:* the host assignment file has two columns: 1) taxonomy ID of viral species, 2) predicted lineage of host genus, in the following format: d_Bacteria;p_Proteobacteria;c_Gammaproteobacteria;o_Enterobacterales;f_Enterobacteriaceae;g_Escherichia
 3. full desired path to output file (including file name)
 
-Essentially, the script collapses the viral abundances in the input merged abundance file by predicted host genus. So, the output file is a table where predicted host genera are rows, columns are samples, and each cell provides the abundance of viruses with a particular predicted host genus in a particular sample.
+As of preprint posting, the script collapses the viral abundances in the input merged abundance file by predicted host genus. So, the output file is a table where predicted host genera are rows, columns are samples, and each cell provides the abundance of viruses with a particular predicted host genus in a particular sample.
 
 Usage:
 
@@ -239,7 +240,7 @@ Usage:
 
 ### Calculate Viral Lifestyle Statistics
 
-`post_pipeline_scripts/calculate_lifestyle_stats/lifestyle_stats.R` is an R script that can be used to calculate overall statistics about the lifestyles of the viruses present in each sample (e.g., abundance ratio of temperate to virulent phages). Calculations are based on per-species lifestyle predictions that were made using the tool BACPHLIP, for the database described in the preprint. These per-species predictions are provided with the default database at `/database/species_name_to_vir_score.txt`.
+`post_pipeline_scripts/calculate_lifestyle_stats/lifestyle_stats.R` is an R script that can be used to calculate overall statistics about the lifestyles of the viruses present in each sample (e.g., abundance ratio of temperate to virulent phages). Calculations are based on per-species lifestyle predictions that were made using the tool BACPHLIP, for the default database described in the preprint. These per-species predictions are provided with the default database at `/database/species_name_to_vir_score.txt`.
 
 The necessary command-line arguments to the R script are, in order:
 
