@@ -49,7 +49,7 @@ Activate the environment by executing:
 
 **Step Four - Download Phanta's default database**
 
-Download Phanta's default database of genomes by navigating to the desired directory on your system and executing the following commands:
+Navigate to the directory in which you would like to download Phanta's default database of genomes. Then execute the following commands:
 
 	wget https://www.dropbox.com/sh/3ktsdqlcph6x95r/AACGSj0sxYV6IeUQuGAFPtk8a/database_V1.tar.gz
 
