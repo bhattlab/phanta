@@ -1,4 +1,3 @@
-name: phage_abund_env
 channels:
   - biobakery
   - conda-forge
@@ -203,4 +202,3 @@ dependencies:
     - urllib3==1.26.9
     - wrapt==1.14.0
     - yte==1.2.1
-prefix: /labs/asbhatt/mchakra/tools/miniconda3/envs/phage_abund_env
