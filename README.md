@@ -142,7 +142,7 @@ This section contains a description of the additional parameters in the config f
 * `confidence_threshold` (default `0.1`). This parameter can range from 0 to 1. Higher values yield more confident classifications but reduce sensitivity. Please see [this link from the Kraken2 documentation](https://github.com/DerrickWood/kraken2/blob/master/docs/MANUAL.markdown#confidence-scoring) for more details.
 * `gzipped` (default `True`). This parameter should be `True` if your read files are gzipped, otherwise `False`.
 * `class_mem` (default `32`). This parameter specifies the memory in GB used for the classification step.
-* `class_threads` (default `16`). This parameter specifies the number of threads used for the classification step. Recall that you cannot specify more than your maximum number of threads available in the `snakemake` command that executes the pipeline.
+* `class_threads` (default `16`). This parameter specifies the number of threads used for the classification step. 
 
 ### Parameters under *Specifications for step two - filtering false positive species*
 
