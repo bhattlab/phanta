@@ -104,7 +104,7 @@ Finally, execute the Snakemake command below, after replacing:
 	--configfile /full/path/to/cloned/repo/testing/config_test.yaml \
 	--jobs 99 --cores 1 --max-threads 16
 
-When execution has completed, please check that your `test_dataset` directory has an empty file called `pipeline_completed.txt`. You should also have two new subdirectories in `test_dataset` - `classification` and `final_merged_outputs` - which should have identical contents to the corresponding subdirectories in the `testing` subdirectory of your cloned repository. The intermediate *krak files are not provided in the `classification` subdirectory for size reasons.
+When execution has completed, please check that your `test_dataset` directory has an empty file called `pipeline_completed.txt`. You should also have two new subdirectories in `test_dataset` - `classification` and `final_merged_outputs` - which should have identical contents to the corresponding subdirectories in the `testing` subdirectory of your cloned repository. You will also have two additional files ending in `*krak` within `test_dataset/classification/intermediate`.
 
 ## Basic Usage
 
