@@ -3,8 +3,7 @@
 ### The foundation of this workflow is a comprehensive, virus-inclusive database of genomes with integrated taxonomic information
 
 #  For citations
-If you used Phanta in your work, please cite:
-TODO: insert link to preprint.
+If you used Phanta in your work, please cite our preprint!
 
 # Table of contents
 1. [Quick Start](#quick-start)
@@ -20,8 +19,6 @@ TODO: insert link to preprint.
 		* [Collapse Viral Abundances by Predicted Host](#collapse-viral-abundances-by-predicted-host)
 		* [Calculate Viral Lifestyle Statistics](#calculate-viral-lifestyle-statistics)
 
-TODO: make sure that table of contents is fully updated and accurate before submission.
-
 # Quick Start
 ## Installation
 
@@ -29,9 +26,7 @@ TODO: make sure that table of contents is fully updated and accurate before subm
 
 Clone the repository to the desired location on your system using the following command:
 
-	git clone <insert link here>
-
-TODO: replace with appropriate link.
+	git clone https://github.com/bhattlab/phanta.git
 
 **Step Two - Install conda, if not already installed**
 
@@ -262,5 +257,3 @@ An example command is:
 	lifestyle_stats.txt
 
 An example output file, based on the testing dataset, is located in the same directory as the R script (`post_pipeline_scripts/calculate_lifestyle_stats/example_lifestyle_stats.txt`).
-
-TODO: add correlation script (?)
