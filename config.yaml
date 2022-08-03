@@ -31,7 +31,6 @@ minimizer_thresh_bacterial: 0
 # Speciications for step three - per-species abundance estimation
 read_length: 150 # if you change this, make sure you have an appropriate Bracken database built for this read length
 filter_thresh: 10 # do not assign reads to species X if < this number of reads were classified to it
-abund_est_mem: 32 # # memory in GB - minimum is the size of the Bracken database - must be at least 26 for the default database
 
 # Delete intermediate files? Examples in testing/classification/intermediate
 delete_intermediate: True # True or False

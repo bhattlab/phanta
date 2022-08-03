@@ -3,7 +3,7 @@
 ### The foundation of this workflow is a comprehensive, virus-inclusive database of genomes with integrated taxonomic information
 
 #  For citations
-If Phanta is helpful to your work, please consider citing our manuscript!
+If you used Phanta in your work, please cite:
 TODO: insert link to preprint.
 
 # Table of contents
@@ -35,27 +35,25 @@ TODO: replace with appropriate link.
 
 **Step Two - Install conda, if not already installed**
 
-Check whether you have conda installed by executing:
-
-	conda --help
-
-If this command is not recognized by your system, please follow the instructions provided [here](https://developers.google.com/earth-engine/guides/python_install-conda/) to install conda.
+If you do not already have conda installed, please install using the instructions provided [here](https://developers.google.com/earth-engine/guides/python_install-conda/).
 
 **Step Three - Create and activate a new conda environment**
 
-Navigate to the location where you cloned the repository using the `cd` command. Then, create a new conda environment via the following command:
+Create a new conda environment via the following command, replacing `/full/path/to/cloned/repo` with the appropriate path to your cloned repository:
 
-	conda env create -n phanta_env --file phanta_env.yaml
+	conda env create -n phanta_env --file /full/path/to/cloned/repo/phanta_env.yaml
 
 Activate the environment by executing:
 
 	conda activate phanta_env
 
-**Step Four - Download the database of genomes**
+**Step Four - Download Phanta's default database**
 
-Download Phanta's default Kraken2/Bracken-compatible database of genomes by navigating to the desired directory on your system and executing the following command:
+Download Phanta's default database of genomes by navigating to the desired directory on your system and executing the following commands:
 
-TODO: insert the command. Ideally wget-able.
+	wget https://www.dropbox.com/sh/3ktsdqlcph6x95r/AACGSj0sxYV6IeUQuGAFPtk8a/database_V1.tar.gz
+
+	tar xvzf database_V1.tar.gz
 
 This command should download the following files:
 
@@ -74,23 +72,21 @@ Additional files required for pipeline to run:
 1. inspect.out: ~18MB
 2. taxonomy/nodes.dmp: ~11MB
 3. taxonomy/names.dmp: ~16MB
-4. library/species_genome_size.txt: ~6MB
+4. library/species_genome_size.txt: ~6.3MB
 
 For use with post-processing scripts:
-1. host_prediction_to_genus.tsv: ~3MB
-2. species_name_to_vir_score.txt: ~1.5MB
-
-*Note*: you can check the size of each file by executing `du -hs insert_file_name_here`.
-
-TODO: check file sizes once more before submission.
+1. host_prediction_to_genus.tsv: ~2.6MB
+2. species_name_to_vir_score.txt: ~1.6MB
 
 *Note*: as described in the preprint, an alternative version of the default database was also created, in which prophage sequences have been "masked" in prokaryotic genomes. Please see [Advanced Usage](#advanced-usage) for more details.
 
 ## Test Your Installation
 
-To test that you are ready to run Phanta on your data, first create a new subdirectory of your cloned repository called `test_phanta`. Then navigate to `test_phanta` using `cd` and download the four `.fq.gz` files required for testing via the following command:
+To test that you are ready to run Phanta on your data, navigate to your cloned repository using `cd` and download the four `.fq.gz` files required for testing via the following command:
 
-TODO: insert command to download.
+	wget https://www.dropbox.com/s/o65ibd288ozfb5w/test_dataset.tar.gz
+
+	tar xvzf test_dataset.tar.gz
 
 Then edit two files contained in the `testing` subdirectory of your cloned repository.
 1. Edit `samp_file.txt` by replacing `/full/path/to/cloned/repo` in the four locations indicated with the full path to your cloned repository.
@@ -102,23 +98,25 @@ Finally, execute the Snakemake command below, after replacing:
 1. `/full/path/to/cloned/repo` with the path to your cloned repository
 2.  The number provided to `max-threads` with the maximum number of threads you have available. Note that if this number is greater than 16, you can (but don't need to) also increase the argument to `class_threads` in `config_test.yaml`.
 
-**If you are in the Bhatt Lab**, you don't need the `--cores` and `--max-threads` options; rather, you can replace them with `--profile scg`
-
-Since the command will take some time to finish, **it is recommended to execute it in a `tmux` session** or similar setup.
+**Note** At least 32GB memory is required. Also, you may have to replace the `--cores` and `max-threads` arguments with a profile for SLURM job submission depending on your configuration; example of how this is done [here](https://github.com/bhattlab/slurm).
 
 	snakemake -s /full/path/to/cloned/repo/Snakefile \
 	--configfile /full/path/to/cloned/repo/testing/config_test.yaml \
 	--jobs 99 --cores 1 --max-threads 16
 
-When execution has completed, please check that your `test_phanta` directory has an empty file called `pipeline_completed.txt`. You should also have two new subdirectories in `test_phanta` - `classification` and `final_merged_outputs` - which should have identical contents to the corresponding subdirectories in the `testing` subdirectory of your cloned repository.
+When execution has completed, please check that your `test_dataset` directory has an empty file called `pipeline_completed.txt`. You should also have two new subdirectories in `test_dataset` - `classification` and `final_merged_outputs` - which should have identical contents to the corresponding subdirectories in the `testing` subdirectory of your cloned repository.
 
 ## Basic Usage
 
-For basic usage, copy the provided `config.yaml` file to any directory and replace the four paths at the top of the the file as appropriate.
+For basic usage, replace the four paths at the top of the  provided `config.yaml` file as appropriate.
 
 You do not need to make any additional changes **except** if: 1) you did not conduct 150bp sequencing, or 2) if your read files are not gzipped. In those cases, you may also need to change the `read_length` or `gzipped` parameters, which are described under [Advanced Usage](#advanced-usage).
 
-After you have finished editing your config file, execute the same Snakemake command you used to [Test Your Installation](#test-your-installation), simply replacing the path to the `config_test` file with the path to the new edited config file.
+After you have finished editing your config file, execute a similar Snakemake command to the one you used to [Test Your Installation](#test-your-installation), example below:
+
+	snakemake -s /full/path/to/cloned/repo/Snakefile \
+	--configfile /full/path/to/cloned/repo/config.yaml \
+	--jobs 99 --cores 1 --max-threads 16
 
 ## Main Outputs
 
@@ -143,28 +141,26 @@ This section contains a description of the additional parameters in the config f
 
 * `confidence_threshold` (default `0.1`). This parameter can range from 0 to 1. Higher values yield more confident classifications but reduce sensitivity. Please see [this link from the Kraken2 documentation](https://github.com/DerrickWood/kraken2/blob/master/docs/MANUAL.markdown#confidence-scoring) for more details.
 * `gzipped` (default `True`). This parameter should be `True` if your read files are gzipped, otherwise `False`.
-* `class_mem` (default `32`). This parameter specifies the memory in GB used for the classification step. As of preprint posting, this value must be at least `32`.
-* `class_threads` (default `16`). This parameter specifies the number of threads used for the classification step. If more threads are available, this parameter can be increased; otherwise, there is no need to change it. Recall that you must specify the maximum number of threads available in the `snakemake` command that executes the pipeline.
+* `class_mem` (default `32`). This parameter specifies the memory in GB used for the classification step.
+* `class_threads` (default `16`). This parameter specifies the number of threads used for the classification step. Recall that you cannot specify more than your maximum number of threads available in the `snakemake` command that executes the pipeline.
 
 ### Parameters under *Specifications for step two - filtering false positive species*
 
-* `cov_thresh_viral` (default `0.1`). This parameter can range from 0 to 1 and essentially specifies a genome coverage requirement for a viral species be considered a "true positive" in a sample. For example, if this parameter is 0.1, that means that for a viral species to be considered a true positive in a sample, at least one genome in the species must be at least 10% covered by sample reads.
+* `cov_thresh_viral` (default `0.1`). This parameter can range from 0 to 1 and specifies a genome coverage requirement for a viral species to be considered a "true positive" in a sample. For example, if this parameter is 0.1, that means that for a viral species to be considered a true positive in a sample, at least one genome of the species must be at least 10% covered by sample reads.
 	* Each genome's coverage is estimated by dividing:
 		* The number of unique minimizers in the genome that are covered by sample reads, by
 		* The total number of unique minimizers in the genome.
 	* *Terminology note* - minimizers are very similar to kmers; for a more detailed description of what they are, please see [the Kraken2 paper](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-019-1891-0).
-* `minimizer_thresh_viral` (default `0`). This parameter can take any value >= 0 and specifies an additional requirement, beyond genome coverage, for a viral species to be considered a "true positive" in a sample. For example, if this parameter is 10, that means that for a viral species to be considered a true positive in a sample, at least one genome in the species must have 10+ of its unique minimizers covered by sample reads.
+* `minimizer_thresh_viral` (default `0`). This parameter can take any value >= 0 and specifies an additional requirement for a viral species to be considered true positive in a sample. E.g., if this parameter is 10, that means at least one genome of the species must have 10+ of its unique minimizers covered by sample reads.
 * `cov_thresh_bacterial` and `minimizer_thresh_bacterial` are the analogous parameters for filtering bacterial species.
 
 ### Parameters under *Specifications for step three - per-species abundance estimation*
 
-* `read_length` (default `150`). This parameter specifies the read length. Please note: if you change this, you must first execute the following command, replacing the `/full/path/to/downloaded/database` with the appropriate path, and the `read_len` with the appropriate read length (e.g., 100). If you have fewer than 10 threads available, you will also need to change the argument to `-t`.
+* `read_length` (default `150`). This parameter specifies the read length. Please note: if you change this value, you must first execute the following command to create an appropriate Bracken database:
 
-		bracken-build -d /full/path/to/downloaded/database -t 10 -l read_len
+		bracken-build -d /full/path/to/downloaded/database -t <threads> -l <read_length>
 
-* `filter_thresh` (default `10`). This parameter specifies one last false positive species filter - how many sample reads must have been classified to species X in step one for it to be considered truly present in the sample? This parameter is specific to the Bracken tool that is utilized in abundance estimation and is equivalent to the threshold parameter described in the [original Bracken documentation](https://github.com/jenniferlu717/Bracken). Note that this filter is uniform across all types of species (e.g., viral, bacterial).  
-
-* `abund_est_mem` (default `32`). This parameter specifies the memory in GB used for the abundance estimation step. As of preprint posting, this value must be at least `26`.
+* `filter_thresh` (default `10`). This parameter specifies one last false positive species filter - how many sample reads must have been classified to species X (in step one) for it to be considered truly present in the sample? This parameter is specific to the Bracken tool used for abundance estimation and is equivalent to the threshold parameter described in the [original Bracken documentation](https://github.com/jenniferlu717/Bracken). Note that this filter is uniform across all types of species (e.g., viral, bacterial).  
 
 ### Additional parameters
 
@@ -229,7 +225,7 @@ The necessary command-line arguments to the script are, in order:
 
 Expected arguments are:
 1. merged abundance file generated by Phanta (e.g., `final_merged_outputs/counts.txt`)
-2. host assignment file (provided with the default database at `/database/host_prediction_to_genus.tsv`). *Note:* the host assignment file has two columns: 1) taxonomy ID of viral species, 2) predicted lineage of host genus, in the following format: d_Bacteria;p_Proteobacteria;c_Gammaproteobacteria;o_Enterobacterales;f_Enterobacteriaceae;g_Escherichia
+2. host assignment file (provided with the default database at `/full/path/to/downloaded/database/host_prediction_to_genus.tsv`). *Note:* the host assignment file has two columns: 1) taxonomy ID of viral species, 2) predicted lineage of host genus, in the following format: d_Bacteria;p_Proteobacteria;c_Gammaproteobacteria;o_Enterobacterales;f_Enterobacteriaceae;g_Escherichia
 3. full desired path to output file (including file name)
 
 As of preprint posting, the script collapses the viral abundances in the input merged abundance file by predicted host genus. So, the output file is a table where predicted host genera are rows, columns are samples, and each cell provides the abundance of viruses with a particular predicted host genus in a particular sample.

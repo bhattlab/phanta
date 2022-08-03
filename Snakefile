@@ -150,7 +150,7 @@ rule bracken:
     possible_2 = join(outdir, "classification/{samp}.krak.report_bracken_species.filtered.temp")
   threads: 1
   resources:
-    mem = config['abund_est_mem'],
+    mem = 8,
     time = 1
   shell: """
     # protection against Bracken error
