@@ -142,7 +142,7 @@ This section contains a description of the additional parameters in the config f
 * `confidence_threshold` (default `0.1`). This parameter can range from 0 to 1. Higher values yield more confident classifications but reduce sensitivity. Please see [this link from the Kraken2 documentation](https://github.com/DerrickWood/kraken2/blob/master/docs/MANUAL.markdown#confidence-scoring) for more details.
 * `gzipped` (default `True`). This parameter should be `True` if your read files are gzipped, otherwise `False`.
 * `class_mem` (default `32`). This parameter specifies the memory in GB used for the classification step.
-* `class_threads` (default `16`). This parameter specifies the number of threads used for the classification step. 
+* `class_threads` (default `16`). This parameter specifies the number of threads used for the classification step.
 
 ### Parameters under *Specifications for step two - filtering false positive species*
 
@@ -220,6 +220,13 @@ The necessary command-line arguments to the script are, in order:
 3. Full path of desired output file, including the desired file name
 4. Taxonomic level of interest
 
+An example command is:
+
+	python sum_corrected_relab_to_higher_level.py \
+	/full/path/to/downloaded/database \
+	/full/path/to/final_merged_outputs/relative_taxonomic_abundance.txt \
+	summed.txt genus
+
 ### Collapse Viral Abundances by Predicted Host
 `post_pipeline_scripts/collapse_viral_abundances_by_host.py` is script that collapses viral abundances in each sample by predicted host.
 
@@ -245,6 +252,14 @@ The necessary command-line arguments to the R script are, in order:
 3. The full path to a species-level version of `final_merged_outputs/counts.txt` (please see [Filtering Merged Tables to a Specific Taxonomic Level](#filtering-merged-tables-to-a-specific-taxonomic-level))
 4. The full path to `final_merged_outputs/relative_taxonomic_abundance.txt` (or a species-level version of `final_merged_outputs/relative_read_abundance.txt`)
 5. The desired name for the output file (full path)
+
+An example command is:
+
+	Rscript lifestyle_stats.R \
+	0.5 /full/path/to/downloaded/database/species_name_to_vir_score.txt \
+	final_merged_outputs/counts_species.txt \
+	final_merged_outputs/relative_taxonomic_abundance.txt \
+	lifestyle_stats.txt
 
 An example output file, based on the testing dataset, is located in the same directory as the R script (`post_pipeline_scripts/calculate_lifestyle_stats/example_lifestyle_stats.txt`).
 
