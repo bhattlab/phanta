@@ -92,7 +92,7 @@ Then edit two files contained in the `testing` subdirectory of your cloned repos
 1. Edit `samp_file.txt` by replacing `/full/path/to/cloned/repo` in the four locations indicated with the full path to your cloned repository.
 2. Edit `config_test.yaml` by replacing:
 * `/full/path/to/cloned/repo` in the three locations indicated with the full path to your cloned repository.
-* `/full/path/to/downloaded/database` in the one location indicated with the full path to the database of genomes you downloaded during the install.
+* `/full/path/to/downloaded/database` in the one location indicated with the full path to the database you downloaded during the install.
 
 Finally, execute the Snakemake command below, after replacing:
 1. `/full/path/to/cloned/repo` with the path to your cloned repository
@@ -104,7 +104,7 @@ Finally, execute the Snakemake command below, after replacing:
 	--configfile /full/path/to/cloned/repo/testing/config_test.yaml \
 	--jobs 99 --cores 1 --max-threads 16
 
-When execution has completed, please check that your `test_dataset` directory has an empty file called `pipeline_completed.txt`. You should also have two new subdirectories in `test_dataset` - `classification` and `final_merged_outputs` - which should have identical contents to the corresponding subdirectories in the `testing` subdirectory of your cloned repository.
+When execution has completed, please check that your `test_dataset` directory has an empty file called `pipeline_completed.txt`. You should also have two new subdirectories in `test_dataset` - `classification` and `final_merged_outputs` - which should have identical contents to the corresponding subdirectories in the `testing` subdirectory of your cloned repository. The intermediate *krak files are not provided in the `classification` subdirectory for size reasons.
 
 ## Basic Usage
 
