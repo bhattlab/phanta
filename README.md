@@ -1,6 +1,7 @@
 # Phanta
 ## Rapidly quantify taxa from all domains of life, directly from short-read human gut metagenomes
 ### The foundation of this workflow is a comprehensive, virus-inclusive database of genomes with integrated taxonomic information
+![Workflow Figure](https://user-images.githubusercontent.com/86688164/182999134-ac970691-0db4-4ebe-9b80-d39ce5e5a923.png)
 
 #  For citations
 If you used Phanta in your work, please cite our preprint!
@@ -54,7 +55,12 @@ Create a directory to store Phanta's default database of genomes. For example:
 
 Then execute the following commands:
 
+	Create a directory or the DB. For example:
+	mkdir -p phanta_dbs/default_V1
+	cd phanta_dbs/default_V1
+	Download the database:
 	wget https://www.dropbox.com/sh/3ktsdqlcph6x95r/AACGSj0sxYV6IeUQuGAFPtk8a/database_V1.tar.gz
+	Extract files:
 	tar xvzf database_V1.tar.gz
 
 These commands should download and extract the following files:
@@ -297,7 +303,7 @@ To make the output compatible with fastspar, please use the script that modifies
 
 	python post_pipeline_scripts/make_otu.py counts_genus_filtered.txt counts_genus_filtered.otu
 
-Now we can execute the correlation script:
+The next step actually correlates abundances. This module requires fastspar (https://github.com/scwatts/fastspar) to be installed in your environment. If fastspar is not compatible with your phanta environment, you can create a new environment for that step.
 
 	bash post_pipeline_scripts/correl.sh counts_genus_filtered.otu <outdir>
 
