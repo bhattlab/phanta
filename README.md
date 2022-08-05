@@ -287,6 +287,7 @@ An example output file, based on the testing dataset, is located in the same dir
 This module calculates cross-domain abundance correlations. A later step of this module will require fastspar (https://github.com/scwatts/fastspar - please see below).  Please note that fastspar may not be compatible with your phanta env so you may need to create a new environment for the step that requires it.
 
 Fastspar calculates all-vs-all correlation and can be memory- and disk usage-intensive.
+
 We first recommend to filter your merged counts table to a specific rank (e.g., genus). Please see [Filtering Merged Tables to a Specific Taxonomic Level](#filtering-merged-tables-to-a-specific-taxonomic-level).
 
 Next, we recommend filtering by prevalence. Please see [Filtering Merged Tables by Prevalence of Taxa](#filtering-merged-tables-by-prevalence-of-taxa). Example command for this use case:
