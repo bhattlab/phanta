@@ -3,6 +3,8 @@
 ### The foundation of this workflow is a comprehensive, virus-inclusive database of genomes with integrated taxonomic information
 ![Workflow Figure](https://user-images.githubusercontent.com/86688164/182999134-ac970691-0db4-4ebe-9b80-d39ce5e5a923.png)
 
+Workflow figure created on BioRender.com.
+
 #  For citations
 If you used Phanta in your work, please cite our preprint!
 
