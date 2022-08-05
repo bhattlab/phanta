@@ -47,13 +47,17 @@ Activate the environment by executing:
 
 **Step Four - Download Phanta's default database**
 
-Navigate to the directory in which you would like to download Phanta's default database of genomes. Then execute the following commands:
+Create a directory to store Phanta's default database of genomes. For example:
+
+	mkdir -p phanta_dbs/default_V1
+	cd phanta_dbs/default_V1
+
+Then execute the following commands:
 
 	wget https://www.dropbox.com/sh/3ktsdqlcph6x95r/AACGSj0sxYV6IeUQuGAFPtk8a/database_V1.tar.gz
-
 	tar xvzf database_V1.tar.gz
 
-This command should download the following files:
+These commands should download and extract the following files:
 
 Kraken2 database
 1. hash.k2d: ~31GB
