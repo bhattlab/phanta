@@ -6,7 +6,7 @@
 Workflow figure created on BioRender.com.
 
 #  For citations
-If you used Phanta in your work, please cite our preprint!
+If you used Phanta in your work, please cite our [preprint](https://www.biorxiv.org/content/10.1101/2022.08.05.502982v1.full.pdf)!
 
 # Table of contents
 1. [Quick Start](#quick-start)
