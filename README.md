@@ -321,7 +321,7 @@ Now we can filter for correlations between viruses and bacteria, underneath a ma
 # Troubleshooting
 ## Environment Creation
 
-If you have trouble creating the environment specified by `phanta_env.yaml` following the instructions [above](#installation), you can alternatively install a minimal set of packages into a fresh conda environment as follows.
+If you have trouble creating the environment specified by `phanta_env.yaml` following the instructions [above](#installation), you can alternatively install a minimal set of packages into a fresh conda environment.
 
 Minimal set of packages:
 1. bracken v2.7
