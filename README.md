@@ -24,6 +24,8 @@ If you used Phanta in your work, please cite our [preprint](https://www.biorxiv.
 		* [Collapse Viral Abundances by Predicted Host](#collapse-viral-abundances-by-predicted-host)
 		* [Calculate Viral Lifestyle Statistics](#calculate-viral-lifestyle-statistics)
 		* [Calculation of Cross-Domain Correlations](#calculation-of-cross-domain-correlations)
+3. [Troubleshooting](#troubleshooting)
+		* [Environment Creation](#environment-creation)
 
 # Quick Start
 ## Installation
@@ -47,6 +49,8 @@ Create a new conda environment via the following command, replacing `/full/path/
 Activate the environment by executing:
 
 	conda activate phanta_env
+
+If you have trouble creating the environment using the above commands, you can alternatively install a minimal set of packages using the instructions [here](#environment-creation).
 
 **Step Four - Download Phanta's default database**
 
@@ -313,3 +317,26 @@ Optional positional arguments to the correlation script above:
 Now we can filter for correlations between viruses and bacteria, underneath a maximal p-value, using the following command:
 
 	python post_pipeline_scripts/filter_cross_domain.py <pref_correl.txt> <pref_pvalues.tsv> <maximal p-value>  <cross_domain_correlations.txt>
+
+# Troubleshooting
+## Environment Creation
+
+If you have trouble creating the environment specified by `phanta_env.yaml` following the instructions [above](#installation), you can alternatively install a minimal set of packages into a fresh conda environment as follows.
+
+Minimal set of packages:
+1. bracken v2.7
+2. kraken2 v2.1.2
+3. pandas (pipeline developed with v1.4.2 but anything higher should also work)
+4. numpy ("" 1.22.4 "")
+5. r-base ("" 4.1.3 "")
+6. r-stringr ("" 1.4.0 "")
+7. snakemake ("" 7.3.8 "")
+
+Example set of commands that should install all of the above into a fresh environment:
+
+	conda create -n phanta_env_minimal
+	conda activate phanta_env_minimal
+	conda install -c bioconda bracken=2.7
+	conda install pandas
+	conda install -c conda-forge r-base r-stringr
+	pip install snakemake
