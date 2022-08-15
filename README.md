@@ -25,7 +25,7 @@ If you used Phanta in your work, please cite our [preprint](https://www.biorxiv.
 		* [Calculate Viral Lifestyle Statistics](#calculate-viral-lifestyle-statistics)
 		* [Calculation of Cross-Domain Correlations](#calculation-of-cross-domain-correlations)
 3. [Troubleshooting](#troubleshooting)
-		* [Environment Creation](#environment-creation)
+	* [Environment Creation](#environment-creation)
 
 # Quick Start
 ## Installation
