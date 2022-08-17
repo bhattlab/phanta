@@ -330,7 +330,8 @@ Minimal set of packages:
 4. numpy ("" 1.22.4 "")
 5. r-base ("" 4.1.3 "")
 6. r-stringr ("" 1.4.0 "")
-7. snakemake ("" 7.3.8 "")
+7. r-dplyr ("" 1.0.9 "")
+8. snakemake ("" 7.3.8 "")
 
 Example set of commands that should install all of the above into a fresh environment:
 
@@ -338,5 +339,5 @@ Example set of commands that should install all of the above into a fresh enviro
 	conda activate phanta_env_minimal
 	conda install -c bioconda bracken=2.7
 	conda install pandas
-	conda install -c conda-forge r-base r-stringr
-	pip install snakemake
+	conda install -c conda-forge r-base r-stringr r-dplyr
+	conda install -c bioconda snakemake
