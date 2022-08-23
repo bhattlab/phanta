@@ -24,7 +24,8 @@ with open(merged_table, 'r') as infile:
     # header already taken care of
     line=line.rstrip('\n').split('\t')
     id_names, id_taxids = line[0], line[1]
-    if desired_rank in id_names:
+    if "|"+desired_rank in id_names:
+   
       # then we care about this line!
 
       # cut id_names and id_taxids down to just the desired rank
