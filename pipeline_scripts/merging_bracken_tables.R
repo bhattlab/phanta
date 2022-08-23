@@ -23,7 +23,7 @@ failed_samples <- tryCatch(
 
 # figure out what column names we'll want for the merged data frame
 # find locations of '.' in the file names
-locations <- str_locate(count_tables, '\\.')[,1]
+locations <- str_locate(count_tables, '\\.krak.report')[,1]
 sampnames <- substr(count_tables, 1, locations-1)
 desired_colnames <- c("Taxon_Lineage_with_Names", "Taxon_Lineage_with_IDs", sampnames)
 
@@ -72,7 +72,7 @@ norm_brack_tables_list <- args[5]
 norm_brack_tables <- as.character(read.csv(norm_brack_tables_list, header=FALSE)[,1])
 
 # the samples should be in the same order - do a sanity check
-locations <- str_locate(norm_brack_tables, '\\.')[,1]
+locations <- str_locate(norm_brack_tables, '\\.krak.report')[,1]
 sampnames <- substr(norm_brack_tables, 1, locations-1)
 desired_colnames_test <- c("Taxon_Lineage_with_Names", "Taxon_Lineage_with_IDs", sampnames)
 stopifnot(desired_colnames == desired_colnames_test)
