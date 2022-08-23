@@ -127,6 +127,8 @@ After you have finished editing your config file, execute a similar Snakemake co
 	--configfile /full/path/to/cloned/repo/config.yaml \
 	--jobs 99 --cores 1 --max-threads 16
 
+When the pipeline is done, you will have an empty file in your designated output directory called `pipeline_completed.txt`.
+
 ## Main Outputs
 
 The main outputs are merged tables that list the abundance of each taxon, in each sample. Rows are taxa and columns are samples.

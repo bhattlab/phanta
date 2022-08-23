@@ -9,7 +9,7 @@ scaled_reports <- as.character(read.csv(scaled_reports_list, header=FALSE)[,1])
 
 # figure out what column names we'll want for the merged data frame
 # find locations of '.' in the file names
-locations <- str_locate(scaled_reports, '\\.')[,1]
+locations <- str_locate(scaled_reports, '\\.krak.report')[,1]
 sampnames <- substr(scaled_reports, 1, locations-1)
 desired_colnames <- c("TaxID", sampnames)
 

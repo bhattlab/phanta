@@ -1,4 +1,3 @@
-name: phanta_env_new
 channels:
   - biobakery
   - conda-forge
@@ -274,4 +273,3 @@ dependencies:
   - zipp=3.8.1=pyhd8ed1ab_0
   - zlib=1.2.12=h166bdaf_2
   - zstd=1.5.2=h8a70e8d_4
-prefix: /labs/asbhatt/mchakra/tools/miniconda3/envs/phanta_env_new
