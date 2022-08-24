@@ -26,6 +26,7 @@ If you used Phanta in your work, please cite our [preprint](https://www.biorxiv.
 		* [Calculation of Cross-Domain Correlations](#calculation-of-cross-domain-correlations)
 3. [Troubleshooting](#troubleshooting)
 	* [Environment Creation](#environment-creation)
+	* [Stalled Snakemake Pipeline](#stalled-snakemake-pipeline)
 
 # Quick Start
 ## Installation
@@ -343,3 +344,7 @@ Example set of commands that should install all of the above into a fresh enviro
 	conda install pandas
 	conda install -c conda-forge r-base r-stringr r-dplyr
 	conda install -c bioconda snakemake
+
+## Stalled Snakemake Pipeline
+
+Occasionally, Snakemake stalls when submitting SLURM jobs (e.g., see [link](#https://github.com/snakemake/snakemake/issues/759)). If it appears that the Snakemake command is still running but new jobs have long stopped being submitted, please cancel all current jobs using the `scancel` command and post a GitHub issue. We can help you determine how to proceed to ensure that the pipeline completes both: 1) without error and 2) accurately. This is an easily fixable problem but there is no universal solution. The exact steps will depend on when the pipeline stalled. The Snakemake log file (in the hidden .snakemake directory) will be of use.
