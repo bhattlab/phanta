@@ -51,7 +51,7 @@ Activate the environment by executing:
 
 	conda activate phanta_env
 
-If you have trouble creating the environment using the above commands, you can alternatively install a minimal set of packages using the instructions [here](#environment-creation).
+If you have trouble creating the environment using the above commands, you can alternatively follow the instructions [here](#environment-creation).
 
 **Step Four - Download Phanta's default database**
 
@@ -324,9 +324,9 @@ Now we can filter for correlations between viruses and bacteria, underneath a ma
 # Troubleshooting
 ## Environment Creation
 
-If you have trouble creating the environment specified by `phanta_env.yaml` following the instructions [above](#installation), you can alternatively install a minimal set of packages into a fresh conda environment.
+If you have trouble creating the environment specified by `phanta_env.yaml` following the instructions [above](#installation), you can alternatively install the required packages stepwise, into a fresh conda environment, using the instructions below.
 
-Minimal set of packages:
+Package list:
 1. bracken v2.7
 2. kraken2 v2.1.2
 3. pandas (pipeline developed with v1.4.2 but anything higher should also work)
@@ -336,10 +336,10 @@ Minimal set of packages:
 7. r-dplyr ("" 1.0.9 "")
 8. snakemake ("" 7.3.8 "")
 
-Example set of commands that should install all of the above into a fresh environment:
+Example set of commands that should install all of the above (including the dependencies) into a fresh environment:
 
-	conda create -n phanta_env_minimal
-	conda activate phanta_env_minimal
+	conda create -n phanta_env_alternate
+	conda activate phanta_env_alternate
 	conda install -c bioconda bracken=2.7
 	conda install pandas
 	conda install -c conda-forge r-base r-stringr r-dplyr
