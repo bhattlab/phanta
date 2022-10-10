@@ -172,6 +172,8 @@ This section contains a description of the additional parameters in the config f
 
 		bracken-build -d /full/path/to/downloaded/database -t <threads> -l <read_length>
 
+		* **Important note** It was discovered on 10/10/22 that the currently available version of the downloaded database does not support this feature. Updates to come soon.
+
 * `filter_thresh` (default `10`). This parameter specifies one last false positive species filter - how many sample reads must have been classified to species X (in step one) for it to be considered truly present in the sample? This parameter is specific to the Bracken tool used for abundance estimation and is equivalent to the threshold parameter described in the [original Bracken documentation](https://github.com/jenniferlu717/Bracken). Note that this filter is uniform across all types of species (e.g., viral, bacterial).  
 
 ### Additional parameters
