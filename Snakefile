@@ -87,8 +87,8 @@ rule kraken:
     confidence_threshold = confidence_threshold
   threads: config['class_threads']
   resources:
-    mem=config['class_mem'],
-    time=6
+    mem_mb=config['class_mem'],
+    runtime=6*60,
   shell: """
     kraken2 --db {params.db} --threads {threads} --output {output.krak} \
     --report {output.krak_report} --report-minimizer-data {params.paired_string} \
@@ -150,8 +150,8 @@ rule bracken:
     possible_2 = join(outdir, "classification/{samp}.krak.report_bracken_species.filtered.temp")
   threads: 1
   resources:
-    mem = 8,
-    time = 1
+    mem_mb = 8*1024,
+    runtime = 1*60,
   shell: """
     # protection against Bracken error
     [ -f {params.possible_1} ] && \
