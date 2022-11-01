@@ -87,7 +87,7 @@ rule kraken:
     confidence_threshold = confidence_threshold
   threads: config['class_threads']
   resources:
-    mem_mb=config['class_mem'],
+    mem_mb=config['class_mem_mb'],
     runtime=6*60,
   shell: """
     kraken2 --db {params.db} --threads {threads} --output {output.krak} \
