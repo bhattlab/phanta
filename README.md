@@ -155,7 +155,7 @@ This section contains a description of the additional parameters in the config f
 
 * `confidence_threshold` (default `0.1`). This parameter can range from 0 to 1. Higher values yield more confident classifications but reduce sensitivity. Please see [this link from the Kraken2 documentation](https://github.com/DerrickWood/kraken2/blob/master/docs/MANUAL.markdown#confidence-scoring) for more details.
 * `gzipped` (default `True`). This parameter should be `True` if your read files are gzipped, otherwise `False`.
-* `class_mem` (default `32`). This parameter specifies the memory in GB used for the classification step.
+* `class_mem_mb` (default `32768`). This parameter specifies the memory in megabytes used for the classification step.
 * `class_threads` (default `16`). This parameter specifies the number of threads used for the classification step.
 
 ### Parameters under *Specifications for step two - filtering false positive species*
@@ -176,7 +176,7 @@ This section contains a description of the additional parameters in the config f
 
 	* **Important note** It was discovered on 10/10/22 that the currently available version of the downloaded database does not support this feature. Updates to come soon.
 
-* `filter_thresh` (default `10`). This parameter specifies one last false positive species filter - how many sample reads must have been classified to species X (in step one) for it to be considered truly present in the sample? This parameter is specific to the Bracken tool used for abundance estimation and is equivalent to the threshold parameter described in the [original Bracken documentation](https://github.com/jenniferlu717/Bracken). Note that this filter is uniform across all types of species (e.g., viral, bacterial).  
+* `filter_thresh` (default `10`). This parameter specifies one last false positive species filter - how many sample reads must have been classified to species X (in step one) for it to be considered truly present in the sample? This parameter is specific to the Bracken tool used for abundance estimation and is equivalent to the threshold parameter described in the [original Bracken documentation](https://github.com/jenniferlu717/Bracken). Note that this filter is uniform across all types of species (e.g., viral, bacterial).
 
 ### Additional parameters
 
