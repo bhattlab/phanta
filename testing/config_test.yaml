@@ -16,7 +16,7 @@ database: /full/path/to/downloaded/database
 # Specifications for step one - classification of metagenomic reads
 confidence_threshold: 0.1 # increase to reduce false positives - range from 0-1
 gzipped: True # True or False - are the read files gzipped?
-class_mem: 32 # memory in GB - minimum is the size of the Kraken2 database - must be at least 32 for the default database
+class_mem_mb: 32768 # memory in MB - minimum is the size of the Kraken2 database - must be at least 32GB for the default database
 class_threads: 16 # see usage instructions - can increase if you have more threads available; no need to change if you have fewer
 
 # Specifications for step two - filtering false positive species
