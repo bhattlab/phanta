@@ -108,9 +108,9 @@ Then edit two files contained in the `testing` subdirectory of your cloned repos
 
 Finally, execute the Snakemake command below, after replacing:
 1. `/full/path/to/cloned/repo` with the path to your cloned repository
-2.  The quoted statement after `cluster` with the appropriate job submission command for your cluster, see additional documentation [here](#https://snakemake.readthedocs.io/en/stable/executing/cluster.html). Note that you will definitely have to replace `insert_account_here`.
+2.  The quoted statement after `cluster` with the appropriate job submission command for your cluster, see additional documentation [here](https://snakemake.readthedocs.io/en/stable/executing/cluster.html). Note that you will definitely have to replace `insert_account_here`.
 
-**Note** At least 32GB memory is required. Also, to make job submission easier (i.e., the command shorter), you can consider setting up a [Snakemake profile for job submission](#https://github.com/Snakemake-Profiles/). This way, you can replace everything after `--jobs 99` with `--profile insert_profile_name_here`.
+**Note** At least 32GB memory is required. Also, to make job submission easier (i.e., the command shorter), you can consider setting up a [Snakemake profile for job submission](https://github.com/Snakemake-Profiles/). This way, you can replace everything after `--jobs 99` with `--profile insert_profile_name_here`.
 
 **Note**: We recommend executing Phanta on a high-performance cluster, therefore the command provided below is for cluster execution. However, you can also run Phanta on your local machine, replacing the portion of the command after `jobs 99` with `--cores 1 --max-threads 16` (replacing 16 accordingly, according to how many threads you have available).
 
