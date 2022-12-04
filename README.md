@@ -62,7 +62,7 @@ Create a directory to store Phanta's default database of genomes. For example:
 
 Then execute the following commands:
 
-	wget https://www.dropbox.com/sh/3ktsdqlcph6x95r/AACGSj0sxYV6IeUQuGAFPtk8a/database_V1.tar.gz
+	wget http://Phanta_DBs.ab_phanta.os.scg.stanford.edu/database_V1.tar.gz
 	tar xvzf database_V1.tar.gz
 
 These commands should download and extract the following files:
@@ -96,7 +96,7 @@ For use with post-processing scripts:
 
 To test that you are ready to run Phanta on your data, navigate to your cloned repository using `cd` and download the four `.fq.gz` files required for testing via the following command:
 
-	wget https://www.dropbox.com/s/o65ibd288ozfb5w/test_dataset.tar.gz
+	wget http://Phanta_DBs.ab_phanta.os.scg.stanford.edu/test_dataset.tar.gz
 
 	tar xvzf test_dataset.tar.gz
 
