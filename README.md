@@ -184,7 +184,7 @@ This section contains a description of the additional parameters in the config f
 
 ### Additional parameters
 
-* `database`. Phanta is typically run with the default database linked above under Step Four of [Installation](#installation). However, as described in our manuscript, an alternative version of Phanta's default database was also created, in which prophage sequences have been "masked" in prokaryotic genomes. The download link for this database is: *coming soon!*
+* `database`. Phanta is typically run with the default database linked above under Step Four of [Installation](#installation). However, as described in our manuscript, an alternative version of Phanta's default database was also created, in which prophage sequences have been "masked" in prokaryotic genomes. The download link for this database is: http://Phanta_DBs.ab_phanta.os.scg.stanford.edu/masked_db_v1.tar.gz
 
 * `delete_intermediate` (default `True`). Specify `True` if you would like intermediate outputs to be deleted, otherwise `False`. Intermediate outputs are per-sample outputs generated during the execution of Steps 1 and 2. Examples of these intermediate files can be found within the `testing/classification/intermediate` subdirectory of the cloned repository.
 
