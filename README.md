@@ -62,7 +62,7 @@ Create a directory to store Phanta's default database of genomes. For example:
 
 Then execute the following commands:
 
-	wget http://Phanta_DBs.ab_phanta.os.scg.stanford.edu/database_V1.tar.gz
+	wget http://ab_phanta.os.scg.stanford.edu/Phanta_DBs/database_V1.tar.gz
 	tar xvzf database_V1.tar.gz
 
 These commands should download and extract the following files:
@@ -96,7 +96,7 @@ For use with post-processing scripts:
 
 To test that you are ready to run Phanta on your data, navigate to your cloned repository using `cd` and download the four `.fq.gz` files required for testing via the following command:
 
-	wget http://Phanta_DBs.ab_phanta.os.scg.stanford.edu/test_dataset.tar.gz
+	wget http://ab_phanta.os.scg.stanford.edu/Phanta_DBs/test_dataset.tar.gz
 
 	tar xvzf test_dataset.tar.gz
 
@@ -184,7 +184,7 @@ This section contains a description of the additional parameters in the config f
 
 ### Additional parameters
 
-* `database`. Phanta is typically run with the default database linked above under Step Four of [Installation](#installation). However, as described in our manuscript, an alternative version of Phanta's default database was also created, in which prophage sequences have been "masked" in prokaryotic genomes. The download link for this database is: http://Phanta_DBs.ab_phanta.os.scg.stanford.edu/masked_db_v1.tar.gz
+* `database`. Phanta is typically run with the default database linked above under Step Four of [Installation](#installation). However, as described in our manuscript, an alternative version of Phanta's default database was also created, in which prophage sequences have been "masked" in prokaryotic genomes. The download link for this database is: http://ab_phanta.os.scg.stanford.edu/Phanta_DBs/masked_db_v1.tar.gz
 
 * `delete_intermediate` (default `True`). Specify `True` if you would like intermediate outputs to be deleted, otherwise `False`. Intermediate outputs are per-sample outputs generated during the execution of Steps 1 and 2. Examples of these intermediate files can be found within the `testing/classification/intermediate` subdirectory of the cloned repository.
 
