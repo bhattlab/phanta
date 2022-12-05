@@ -73,10 +73,11 @@ Kraken2 database
 3. opts.k2d: ~4KB
 4. seqid2taxid.map: ~461MB
 
-Bracken database (built for use with 150bp reads)
-1. database150mers.kmer_distrib: ~25MB
-
-*Note*: Phanta can run with additional read lengths, as described under [Advanced Usage](#advanced-usage).
+Bracken databases (built for use with various read lengths):
+1. database75mers.kmer_distrib: ~28MB
+2. database100mers.kmer_distrib: ~27MB
+3. database120mers.kmer_distrib: ~26MB
+4. database150mers.kmer_distrib: ~25MB
 
 Additional files required for pipeline to run:
 1. inspect.out: ~18MB
@@ -174,11 +175,7 @@ This section contains a description of the additional parameters in the config f
 
 ### Parameters under *Specifications for step three - per-species abundance estimation*
 
-* `read_length` (default `150`). This parameter specifies the read length. Please note: if you change this value, you must first execute the following command to create an appropriate Bracken database:
-
-		bracken-build -d /full/path/to/downloaded/database -t <threads> -l <read_length>
-
-	* **Important note** It was discovered on 10/10/22 that the currently available version of the downloaded database does not support this feature. Updates to come soon.
+* `read_length` (default `150`). This parameter specifies the read length. Currently can be 75, 100, 120, or 150 for the default database, and 100 or 150 for the masked database.
 
 * `filter_thresh` (default `10`). This parameter specifies one last false positive species filter - how many sample reads must have been classified to species X (in step one) for it to be considered truly present in the sample? This parameter is specific to the Bracken tool used for abundance estimation and is equivalent to the threshold parameter described in the [original Bracken documentation](https://github.com/jenniferlu717/Bracken). Note that this filter is uniform across all types of species (e.g., viral, bacterial).
 
