@@ -109,16 +109,13 @@ Then edit two files contained in the `testing` subdirectory of your cloned repos
 
 Finally, execute the Snakemake command below, after replacing:
 1. `/full/path/to/cloned/repo` with the path to your cloned repository
-2.  The quoted statement after `cluster` with the appropriate job submission command for your cluster, see additional documentation [here](https://snakemake.readthedocs.io/en/stable/executing/cluster.html). Note that you will definitely have to replace `insert_account_here`.
+2.  The number provided to `max-threads` with the maximum number of threads you have available. Note that if this number is greater than 16, you can (but don't need to) also increase the argument to `class_threads` in `config_test.yaml`.
 
-**Note** At least 32GB memory is required. Also, to make job submission easier (i.e., the command shorter), you can consider setting up a [Snakemake profile for job submission](https://github.com/Snakemake-Profiles/). This way, you can replace everything after `--jobs 99` with `--profile insert_profile_name_here`.
-
-**Note**: We recommend executing Phanta on a high-performance cluster, therefore the command provided below is for cluster execution. However, you can also run Phanta on your local machine, replacing the portion of the command after `jobs 99` with `--cores 1 --max-threads 16` (replacing 16 accordingly, according to how many threads you have available).
+**Note** At least 32GB memory is required. Also, you may have to replace the `--cores` and `max-threads` arguments with a [profile for Snakemake execution](https://github.com/Snakemake-Profiles/) depending on your setup (e.g., replace with `--profile slurm`).
 
 	snakemake -s /full/path/to/cloned/repo/Snakefile \
 	--configfile /full/path/to/cloned/repo/testing/config_test.yaml \
-	--jobs 99 --default-resources "runtime='1:00:00'" "threads='1'" "mem_mb=max(2*input.size_mb, 1000)" "disk_mb=max(2*input.size_mb, 1000)" \
-	--cluster "sbatch -A insert_account_here -t {resources.runtime} -p batch -c {threads} --mem={resources.mem_mb}"
+	--jobs 99 --cores 1 --max-threads 16
 
 When execution has completed, please check that your `test_dataset` directory has an empty file called `pipeline_completed.txt`. You should also have two new subdirectories in `test_dataset` - `classification` and `final_merged_outputs` - which should have identical contents to the corresponding subdirectories in the `testing` subdirectory of your cloned repository. You will also have two additional files ending in `*krak` within `test_dataset/classification/intermediate`.
 
@@ -132,8 +129,7 @@ After you have finished editing your config file, execute a similar Snakemake co
 
 	snakemake -s /full/path/to/cloned/repo/Snakefile \
 	--configfile /full/path/to/cloned/repo/config.yaml \
-	--jobs 99 --default-resources "runtime='1:00:00'" "threads='1'" "mem_mb=max(2*input.size_mb, 1000)" "disk_mb=max(2*input.size_mb, 1000)" \
-	--cluster "sbatch -A insert_account_here -t {resources.runtime} -p batch -c {threads} --mem={resources.mem_mb}"
+	--jobs 99 --cores 1 --max-threads 16
 
 When the pipeline is done, you will have an empty file in your designated output directory called `pipeline_completed.txt`.
 
