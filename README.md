@@ -146,7 +146,7 @@ This section contains a description of the additional parameters in the config f
 
 ### Parameters under *Specifications for step three - per-species abundance estimation*
 
-* `read_length` (default `150`). This parameter specifies the read length. Currently the default database is compatible with 75, 100, 120, or 150, and the alternative databases are compatible with 100 or 150. Additional read length can be requested [here](https://github.com/bhattlab/phanta/discussions/categories/phanta-dbs).
+* `read_length` (default `150`). This parameter specifies the read length. Currently the default database is compatible with 75, 100, 120, or 150, and the alternative databases are compatible with 100 or 150. Additional read lengths can be requested [here](https://github.com/bhattlab/phanta/discussions/categories/phanta-dbs).
 
 * `filter_thresh` (default `10`). This parameter specifies one last false positive species filter - how many sample reads must have been classified to species X (in step one) for it to be considered truly present in the sample? This parameter is specific to the Bracken tool used for abundance estimation and is equivalent to the threshold parameter described in the [original Bracken documentation](https://github.com/jenniferlu717/Bracken). Note that this filter is uniform across all types of species (e.g., viral, bacterial).
 
