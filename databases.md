@@ -24,7 +24,7 @@ For use with post-processing scripts:
  
 *Note*: Phanta was developed with human gut metagenomes in mind. Phanta's default database was built based on human-gut viral and bacterial genomes. If you wish to apply Phanta on non human gut metagenomes you'll probably need to supply a custom database. In such cases please open new [discussion](https://github.com/bhattlab/phanta/discussions/categories/phanta-dbs) and we can discuss the best way to help/collaborate on that.
 
-The total tar.gz file should be about 20-25 GB (depends on exact version).
+The total tar.gz file should be about 20-25 GB (depends on the exact version).
 
  ## Version 1
 * Default database (as described in our manuscript)- http://ab_phanta.os.scg.stanford.edu/Phanta_DBs/test_dataset.tar.gz
