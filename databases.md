@@ -1,4 +1,4 @@
-These are the current databases that are available to use with Phanta:
+# Currently available Phanta databases
 
 Each database should include the following files:
 
