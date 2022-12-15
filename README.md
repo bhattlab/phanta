@@ -65,33 +65,8 @@ Then execute the following commands:
 	wget http://ab_phanta.os.scg.stanford.edu/Phanta_DBs/database_V1.tar.gz
 	tar xvzf database_V1.tar.gz
 
-These commands should download and extract the following files:
-
-Kraken2 database
-1. hash.k2d: ~31GB
-2. taxo.k2d: ~21MB
-3. opts.k2d: ~4KB
-4. seqid2taxid.map: ~461MB
-
-Bracken databases (built for use with various read lengths):
-1. database75mers.kmer_distrib: ~28MB
-2. database100mers.kmer_distrib: ~27MB
-3. database120mers.kmer_distrib: ~26MB
-4. database150mers.kmer_distrib: ~25MB
-
-Additional files required for pipeline to run:
-1. inspect.out: ~18MB
-2. taxonomy/nodes.dmp: ~11MB
-3. taxonomy/names.dmp: ~16MB
-4. library/species_genome_size.txt: ~6.3MB
-
-For use with post-processing scripts:
-1. host_prediction_to_genus.tsv: ~2.6MB
-2. species_name_to_vir_score.txt: ~1.6MB
-
-*Note*: as described in the preprint, an alternative version of the default database was also created, in which prophage sequences have been "masked" in prokaryotic genomes. Please see [Advanced Usage](#advanced-usage) for more details.
-
-*Note*: Phanta was developed with human gut metagenomes in mind. Phanta's default database was built based on human-gut viral and bacterial genomes. If you wish to apply Phanta on non human gut metagenomes you'll probably need to supply a custom database. In such cases please open new [discussion](https://github.com/bhattlab/phanta/discussions/categories/phanta-dbs) and we can discuss the best way to help/collaborate on that.
+The list of files that should be extracted is detailed [here](https://github.com/bhattlab/phanta/blob/main/databases.md).
+*Note* alternative databases are also available, please see our [databases list](https://github.com/bhattlab/phanta/blob/main/databases.md).
 
 ## Test Your Installation
 
@@ -171,13 +146,13 @@ This section contains a description of the additional parameters in the config f
 
 ### Parameters under *Specifications for step three - per-species abundance estimation*
 
-* `read_length` (default `150`). This parameter specifies the read length. Currently can be 75, 100, 120, or 150 for the default database, and 100 or 150 for the masked database.
+* `read_length` (default `150`). This parameter specifies the read length. Currently the default database is compatible with 75, 100, 120, or 150, and the alternative databases are compatible with 100 or 150. Additional read length can be requested [here](https://github.com/bhattlab/phanta/discussions/categories/phanta-dbs).
 
 * `filter_thresh` (default `10`). This parameter specifies one last false positive species filter - how many sample reads must have been classified to species X (in step one) for it to be considered truly present in the sample? This parameter is specific to the Bracken tool used for abundance estimation and is equivalent to the threshold parameter described in the [original Bracken documentation](https://github.com/jenniferlu717/Bracken). Note that this filter is uniform across all types of species (e.g., viral, bacterial).
 
 ### Additional parameters
 
-* `database`. Phanta is typically run with the default database linked above under Step Four of [Installation](#installation). However, as described in our manuscript, an alternative version of Phanta's default database was also created, in which prophage sequences have been "masked" in prokaryotic genomes. The download link for this database is: http://ab_phanta.os.scg.stanford.edu/Phanta_DBs/masked_db_v1.tar.gz
+* `database`. Phanta is typically run with the default database linked above under Step Four of [Installation](#installation). However, as described in our manuscript, an alternative version of Phanta's default database was also created, in which prophage sequences have been "masked" in prokaryotic genomes. The download link for this database is: http://ab_phanta.os.scg.stanford.edu/Phanta_DBs/masked_db_v1.tar.gz . All available databases are described [here](https://github.com/bhattlab/phanta/blob/main/databases.md).
 
 * `delete_intermediate` (default `True`). Specify `True` if you would like intermediate outputs to be deleted, otherwise `False`. Intermediate outputs are per-sample outputs generated during the execution of Steps 1 and 2. Examples of these intermediate files can be found within the `testing/classification/intermediate` subdirectory of the cloned repository.
 
@@ -272,7 +247,7 @@ Usage:
 
 ### Calculate Viral Lifestyle Statistics
 
-`post_pipeline_scripts/calculate_lifestyle_stats/lifestyle_stats.R` is an R script that can be used to calculate overall statistics about the lifestyles of the viruses present in each sample (e.g., abundance ratio of temperate to virulent phages). Calculations are based on per-species lifestyle predictions that were made using the tool BACPHLIP, for the default database described in the preprint. These per-species predictions are provided with the default database at `/database/species_name_to_vir_score.txt`.
+`post_pipeline_scripts/calculate_lifestyle_stats/lifestyle_stats.R` is an R script that can be used to calculate overall statistics about the lifestyles of the viruses present in each sample (e.g., abundance ratio of temperate to virulent phages). Calculations are based on per-species lifestyle predictions that were made using the tool BACPHLIP, for the default database described in the preprint. These per-species predictions are provided with our database at `/database/species_name_to_vir_score.txt`.
 
 The necessary command-line arguments to the R script are, in order:
 
