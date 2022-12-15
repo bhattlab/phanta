@@ -10,7 +10,7 @@ Kraken2 database
 4. seqid2taxid.map
 
 Bracken databases (built for use with various read lengths N):
-1. database<N>mers.kmer_distrib
+1. databaseNmers.kmer_distrib
 
 Additional files required for pipeline to run:
 1. inspect.out
