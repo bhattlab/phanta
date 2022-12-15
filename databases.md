@@ -1,5 +1,8 @@
 These are the current databases that are available to use with Phanta:
+
 Each database should include the following files:
+
+
 Kraken2 database
 1. hash.k2d
 2. taxo.k2d
