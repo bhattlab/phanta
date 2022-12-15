@@ -28,5 +28,5 @@ The total tar.gz file should be about 20-25 GB (depends on exact version).
 
  # Version 1
 * Default database (as described in our manuscript)- http://ab_phanta.os.scg.stanford.edu/Phanta_DBs/test_dataset.tar.gz
-* Prophage masked database (as described in our manuscript) http://ab_phanta.os.scg.stanford.edu/Phanta_DBs/masked_db_v1.tar.gz. See [Advanced Usage](https://github.com/bhattlab/phanta#advanced-usage).
+* Prophage masked database (as described in our manuscript) http://ab_phanta.os.scg.stanford.edu/Phanta_DBs/masked_db_v1.tar.gz
 * Default database that uses the GTDB taxonomy for bacteria and Archaea (instead of NCBI taxonomy). http://ab_phanta.os.scg.stanford.edu/Phanta_DBs/unmasked_db_v1_gtdb.tar.gz This taxonomy is equivalent to that provided by HumGut, with the exception that taxonomic IDs for GTDB nodes starts with 5,000,000 rather than 4,000,000. See Humgut [documentation](https://arken.nmbu.no/~larssn/humgut/)
