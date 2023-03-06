@@ -24,6 +24,7 @@ If you used Phanta in your work, please cite our [preprint](https://www.biorxiv.
 		* [Collapse Viral Abundances by Predicted Host](#collapse-viral-abundances-by-predicted-host)
 		* [Calculate Viral Lifestyle Statistics](#calculate-viral-lifestyle-statistics)
 		* [Calculation of Cross-Domain Correlations](#calculation-of-cross-domain-correlations)
+		* [Determine Which Detected Viruses are Likely Integrated Prophages](#determine-which-detected-viruses-are-likely-integrated-prophages)
 3. [Troubleshooting](#troubleshooting)
 	* [Environment Creation](#environment-creation)
 	* [Stalled Snakemake Pipeline](#stalled-snakemake-pipeline)
@@ -297,6 +298,11 @@ Optional positional arguments to the correlation script above:
 Now we can filter for correlations between viruses and bacteria, underneath a maximal p-value, using the following command:
 
 	python post_pipeline_scripts/filter_cross_domain.py <pref_correl.txt> <pref_pvalues.tsv> <maximal p-value>  <cross_domain_correlations.txt>
+
+
+### Determine Which Detected Viruses are Likely Integrated Prophages
+
+Documentation will be updated soon.
 
 # Troubleshooting
 ## Environment Creation
