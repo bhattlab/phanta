@@ -1,8 +1,7 @@
 # Phanta
 ## Rapidly quantify taxa from all domains of life, directly from short-read human gut metagenomes
 ### The foundation of this workflow is a comprehensive, virus-inclusive database of genomes with integrated taxonomic information
-![Workflow Figure](https://user-images.githubusercontent.com/86688164/182999134-ac970691-0db4-4ebe-9b80-d39ce5e5a923.png)
-
+![Workflow Figure](https://user-images.githubusercontent.com/86688164/223526361-9d0c141e-c977-445c-b2e9-3aeff368f274.png)
 Workflow figure created on BioRender.com.
 
 #  For citations
