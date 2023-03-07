@@ -4,9 +4,9 @@ import sys
 sample_file = sys.argv[1]
 db = sys.argv[2]
 scaled_bracken_reports = sys.argv[3]
-se_fwd = sys.argv[4]
-se_rev = sys.argv[5]
-outfolder = sys.argv[6]
+#se_fwd = sys.argv[4]
+#se_rev = sys.argv[5]
+outfolder = sys.argv[4]
 
 # define dictionaries and a function that will be helpful later
 
@@ -78,8 +78,7 @@ for sample in samples:
 # open the outfile
 outf = outfolder + '/integrated_prophages_detection_results.txt'
 with open(outf, 'w') as outfile:
-	header = ['sample', 'identified_virus', 'mgv_prophage_evidence', 'identified_bacteria', 'correct_host_genus_mgv',
-	'correct_host_species_mgv', 'chimeric_pairs']
+	header = ['sample', 'identified_virus', 'identified_bacteria', 'chimeric_pairs']
 	outfile.write('\t'.join(header) + '\n')
 
 	for sample in samples:
@@ -91,8 +90,8 @@ with open(outf, 'w') as outfile:
 		viruses_id, bacteria_id = sample_to_viruses[sample], \
 		sample_to_bacteria[sample]
 
-		with open(se_fwd + '/' + sample + '.krak', 'r') as fwd_run, \
-		open(se_rev + '/' + sample + '.krak', 'r') as rev_run:
+		with open(scaled_bracken_reports + '/single_end/fwd_run/' + sample + '.krak', 'r') as fwd_run, \
+		open(scaled_bracken_reports + '/single_end/rev_run/' + sample + '.krak', 'r') as rev_run:
 
 			for fwd_end, rev_end in zip(fwd_run, rev_run):
 
