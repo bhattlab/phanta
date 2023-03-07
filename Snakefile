@@ -115,12 +115,18 @@ rule filter_kraken:
     db = config['database'],
     cov_thresh_bacterial = config['cov_thresh_bacterial'],
     cov_thresh_viral = config['cov_thresh_viral'],
+    cov_thresh_arc = config['cov_thresh_arc'],
+    cov_thresh_euk = config['cov_thresh_euk'],
     minimizer_thresh_bacterial = config['minimizer_thresh_bacterial'],
-    minimizer_thresh_viral = config['minimizer_thresh_viral']
+    minimizer_thresh_viral = config['minimizer_thresh_viral'],
+    minimizer_thresh_arc = config['minimizer_thresh_arc'],
+    minimizer_thresh_euk = config['minimizer_thresh_euk']
   shell: """
     python {params.repo_dir}/pipeline_scripts/filter_kraken_reports.py {input.krak_report} {params.db} \
     {params.cov_thresh_bacterial} {params.cov_thresh_viral} {params.minimizer_thresh_bacterial} \
-    {params.minimizer_thresh_viral}
+    {params.minimizer_thresh_viral} \
+    {params.cov_thresh_arc} {params.cov_thresh_euk} {params.minimizer_thresh_arc} \
+    {params.minimizer_thresh_euk} 
   """
 
 # need the below rule for protection against Bracken erroring if all species with

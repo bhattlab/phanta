@@ -7180,11 +7180,7 @@
   0.00	5	0	515	335	O	2158	            Methanobacteriales
   0.00	5	0	515	335	F	2159	              Methanobacteriaceae
   0.00	5	0	420	249	G	2172	                Methanobrevibacter
-  0.00	4	0	193	93	S	2173	                  Methanobrevibacter smithii
-  0.00	4	4	104	9	S1	3015110	                    HumGut_15110
   0.00	1	0	159	90	G1	2638681	                  unclassified Methanobrevibacter
-  0.00	1	0	159	90	S	1915489	                    Methanobrevibacter sp. UBA586
-  0.00	1	1	22	17	S1	3010877	                      HumGut_10877
   3.19	210300	1	7626634	441997	D	10239	  Viruses
   2.85	187636	0	6704270	435195	D1	2731341	    Duplodnaviria
   2.85	187636	0	6704270	435195	K	2731360	      Heunggongvirae

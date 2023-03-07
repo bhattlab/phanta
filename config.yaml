@@ -21,13 +21,18 @@ class_threads: 16 # see usage instructions - can increase if you have more threa
 single_end_krak: False # change if you would like to use the integrated prophage detection postprocessing script
 
 # Specifications for step two - filtering false positive species
-# what fraction of a viral genome should be covered to consider it a true positive?
+# essentially - what fraction of a viral genome should be covered to consider it a true positive?
 cov_thresh_viral: 0.10
 # how many unique minimizers should be covered in a viral genome ""?
 minimizer_thresh_viral: 0
-# same for bacterial
+# same for bacteria
 cov_thresh_bacterial: 0.01
 minimizer_thresh_bacterial: 0
+# archaea, eukaryotes
+cov_thresh_arc: 0.01
+minimizer_thresh_arc: 0
+cov_thresh_euk: 0
+minimizer_thresh_euk: 0
 
 # Speciications for step three - per-species abundance estimation
 read_length: 150 # if you change this, make sure you have an appropriate Bracken database built for this read length

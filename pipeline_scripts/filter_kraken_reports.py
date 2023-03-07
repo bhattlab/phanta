@@ -4,13 +4,15 @@ Import required libraries.
 Also get arguments from the command line
 1. Kraken report file (full path)
 2. Kraken database (full path)
-3. The threshold for "maximum Kraken-based coverage of any genome in this species"
-above which a BACTERIAL species should be counted as a TRUE POSITIVE
+3. The threshold for "maximum Kraken-based coverage of any genome in this species" above which a BACTERIAL species should be counted as a TRUE POSITIVE
 4. same as #3 but for VIRAL species
-5. The threshold for "maximum unique minimizers in the sample mapped to any genome
-in this species" above which a BACTERIAL species should be counted as a TRUE POSITIVE
+5. The threshold for "maximum unique minimizers in the sample mapped to any genome in this species" above which a BACTERIAL species should be counted as a TRUE POSITIVE
 6. same as #5 but for VIRAL species
-Note: only 3 or 5, or 4 or 6, have to be "passed" for a species to be counted as true positive.
+7. Coverage threshold for archaeal species
+8. Coverage threshold for eukaryotic species
+9. Minimizer threshold for archaeal species
+10. Minimizer threshold for eukaryotic species
+Note: for each domain, BOTH the cov threshold and the minimizer threshold have to be "passed" for a species to be counted as true positive.
 """
 
 import sys
@@ -18,9 +20,11 @@ import pandas as pd
 import numpy as np
 
 kraken_report, kraken_db, max_cov_bacteria, max_cov_virus, \
-max_minimizers_bacteria, max_minimizers_virus = \
+max_minimizers_bacteria, max_minimizers_virus, max_cov_arc, \
+max_cov_euk, max_minimizers_arc, max_minimizers_euk = \
 sys.argv[1], sys.argv[2], float(sys.argv[3]), float(sys.argv[4]), \
-int(sys.argv[5]), int(sys.argv[6])
+int(sys.argv[5]), int(sys.argv[6]), float(sys.argv[7]), float(sys.argv[8]), \
+int(sys.argv[9]), int(sys.argv[10])
 
 """
 STEP TWO
@@ -59,7 +63,7 @@ def taxid_to_desired_rank(taxid, desired_rank, child_parent, taxid_rank):
     if rank == desired_rank:
       return parent
     child = parent # needed for recursion
-  return 'error - taxid above desired rank'
+  return 'error - taxid above desired rank, or not annotated at desired rank'
 
 """
 STEP THREE
@@ -229,67 +233,29 @@ with open(out_fname, 'w') as outfile:
       if (max_cov >= max_cov_bacteria) and (max_minimizers >= max_minimizers_bacteria):
         species_to_keep.add(species)
 
-      # write out to file
-      if species in species_to_keep:
-        keep = 'True'
-      else:
-        keep = 'False'
-      outfile.write('\t'.join([species, superkingdom, str(max_cov), str(max_minimizers), keep]) + '\n')
+    elif superkingdom == '2157': # archaea
+      if (max_cov >= max_cov_arc) and (max_minimizers >= max_minimizers_arc):
+        species_to_keep.add(species)
+
+    elif superkingdom == '2759': # eukaryotes
+      if (max_cov >= max_cov_euk) and (max_minimizers >= max_minimizers_euk):
+        species_to_keep.add(species)
 
     elif superkingdom == '10239': # viruses
       if (max_cov >= max_cov_virus) and (max_minimizers >= max_minimizers_virus):
         species_to_keep.add(species)
 
-      # write out to file
-      if species in species_to_keep:
-        keep = 'True'
-      else:
-        keep = 'False'
-      outfile.write('\t'.join([species, superkingdom, str(max_cov), str(max_minimizers), keep]) + '\n')
-
     else:
       species_to_keep.add(species)
 
-      # write out to file
-      outfile.write('\t'.join([species, superkingdom, str(max_cov), str(max_minimizers), 'True']) + '\n')
+    if species in species_to_keep:
+      keep = 'True'
+    else:
+      keep = 'False'
+    outfile.write('\t'.join([species, superkingdom, str(max_cov), str(max_minimizers), keep]) + '\n')
 
 """
 STEP SIX
-Use taxid_to_lowest_rank to make a version of the .krak.report.species file that
-includes information about whether each taxid is a 'lowest rank' taxid or not.
-
-with open(kraken_report + '.species', 'r') as infile:
-  with open(kraken_report + '.species.final', 'w') as outfile:
-
-    # figure out the column number for the ncbi_taxid
-
-    header=infile.readline()
-    header=header.rstrip('\n').split('\t')
-
-    taxid_col = None
-
-    for i in range(len(header)):
-      if header[i] == 'ncbi_taxa':
-        taxid_col = i
-
-    assert taxid_col != None
-
-    # write a version of the header out to file
-    header.append('lowest_rank')
-    outfile.write('\t'.join(header) + '\n')
-
-    for line in infile:
-      line=line.rstrip('\n').split('\t')
-      taxid = line[taxid_col]
-      # lowest_rank?
-      lowest_rank = taxid_to_lowest_rank[taxid]
-      # write out
-      line.append(lowest_rank)
-      outfile.write('\t'.join(line) + '\n')
-"""
-
-"""
-STEP SEVEN
 Go through the original Kraken report and make a new filtered version,
 where lines from species to filter out are removed.
 """
