@@ -62,6 +62,12 @@ confidence_threshold = config['confidence_threshold']
 # define output directory
 outdir = config['outdir']
 
+# get set up to run the single ended Kraken2 if that is the user's desire
+single_end_files = []
+if config["single_end_krak"]:
+    single_end_files.append(expand(join(outdir, "classification/single_end/fwd_run/{samp}.krak"), samp=sample_names))
+    single_end_files.append(expand(join(outdir, "classification/single_end/rev_run/{samp}.krak"), samp=sample_names))
+
 ##### STEP TWO - Define desired pipeline outputs.
 
 rule all:
@@ -70,7 +76,8 @@ rule all:
     join(outdir, "final_merged_outputs/counts.txt"),
     join(outdir, "final_merged_outputs/relative_read_abundance.txt"),
     join(outdir, "final_merged_outputs/relative_taxonomic_abundance.txt"),
-    join(outdir, "pipeline_completed.txt")
+    join(outdir, "pipeline_completed.txt"),
+    single_end_files
 
 ##### STEP THREE - Run Kraken2, and filter report based on user-defined thresholds.
 
@@ -131,6 +138,29 @@ rule process_filtered_kraken:
     python {params.repo_dir}/pipeline_scripts/process_filtered_kraken.py {input.krak_report_filtered} \
     {params.threshold} {params.db}
     touch {output.completed}
+    """
+
+# single ended Kraken2 (optional - user will specify whether also to run this, in config file)
+rule kraken_single_end:
+  input:
+    fwd_reads = lambda wildcards: sample_reads[wildcards.samp][0],
+    rev_reads = lambda wildcards: sample_reads[wildcards.samp][1]
+  output:
+    fwd_krak = join(outdir, "classification/single_end/fwd_run/{samp}.krak"),
+    rev_krak = join(outdir, "classification/single_end/rev_run/{samp}.krak")
+  params:
+    db = config['database'],
+    gzipped_string = gzipped_string,
+    confidence_threshold = confidence_threshold
+  threads: config['class_threads']
+  resources:
+    mem_mb=config['class_mem_mb'],
+    runtime=6*60,
+  shell: """
+    kraken2 --db {params.db} --threads {threads} --output {output.fwd_krak} \
+    {params.gzipped_string} {input.fwd_reads} --confidence {params.confidence_threshold}
+    kraken2 --db {params.db} --threads {threads} --output {output.rev_krak} \
+    {params.gzipped_string} {input.rev_reads} --confidence {params.confidence_threshold}
     """
 
 ##### STEP FOUR - Run Bracken on filtered Kraken2 report.

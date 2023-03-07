@@ -18,6 +18,7 @@ confidence_threshold: 0.1 # increase to reduce false positives - range from 0-1
 gzipped: True # True or False - are the read files gzipped?
 class_mem_mb: 32768 # memory in MB - minimum is the size of the Kraken2 database - must be at least 32GB for the default database
 class_threads: 16 # see usage instructions - can increase if you have more threads available; no need to change if you have fewer
+single_end_krak: False # change if you would like to use the integrated prophage detection postprocessing script
 
 # Specifications for step two - filtering false positive species
 # what fraction of a viral genome should be covered to consider it a true positive?
