@@ -320,7 +320,7 @@ The third argument is the full path to the `classification` subdirectory of the 
 
 The output file will be called `integrated_prophages_detection_results.txt` and will have one line per pair of viral and bacterial species that had "chimeric" reads detected. Example line:
 
-	sample2	4034362	1680	48
+	sample2   4034362   1680   48
 
 This line means that in sample2, there were 48 read pairs for which one end (e.g., forward read) would be independently classified to viral species 4034362, while the other end (e.g., reverse read) would be independently classified to bacterial species 1680. Thus, 4034362 is likely one of the viral species in sample2 that can be found as an integrated prophage, at least to some extent. 
 
