@@ -302,7 +302,27 @@ Now we can filter for correlations between viruses and bacteria, underneath a ma
 
 ### Determine Which Detected Viruses are Likely Integrated Prophages
 
-Documentation will be updated soon.
+`post_pipeline_scripts/integrated_prophage_detector.py` is a Python script that can be used to identify which viruses detected in each sample are likely integrated prophages, based on detecting "junctions" between viruses and bacteria. Specifically, the script leverages paired-end information (when available) to find cases where one end (e.g., forward read) would be independently classified to a viral species, while the other end (e.g., reverse read) would be independently classified to a bacterial species.
+
+To enable the usage of this script, please specify the `single_end_krak` parameter in the config file as `True` before running Phanta. This will create a directory that stores separate Kraken2 classifications for forward and reverse reads. This does not affect other Phanta processes.
+
+If you've already run Phanta for a set of samples, don't worry! You can simply change the `single_end_krak` parameter in the original config to `True` and rerun the Snakemake command that you used to run Phanta. 
+
+Then you can run the post-processing script as follows:
+
+	python integrated_prophages_detector.py \
+	/full/path/to/sample_file/used/for/Phanta \
+	/full/path/to/Phanta/database \
+	/full/path/to/Phanta/classification/outdir \
+	<desired_output_directory>
+
+The third argument is the full path to the `classification` subdirectory of the Phanta results. 
+
+The output file will be called `integrated_prophages_detection_results.txt` and will have one line per pair of viral and bacterial species that had "chimeric" reads detected. Example line:
+
+	sample2	4034362	1680	48
+
+This line means that in sample2, there were 48 read pairs for which one end (e.g., forward read) would be independently classified to viral species 4034362, while the other end (e.g., reverse read) would be independently classified to bacterial species 1680. Thus, 4034362 is likely one of the viral species in sample2 that can be found as an integrated prophage, at least to some extent. 
 
 # Troubleshooting
 ## Environment Creation
