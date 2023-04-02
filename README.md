@@ -57,8 +57,8 @@ If you have trouble creating the environment using the above commands, you can a
 
 Create a directory to store Phanta's default database of genomes. For example:
 
-	mkdir -p phanta_dbs/default_V1
-	cd phanta_dbs/default_V1
+	mkdir phanta_dbs
+	cd phanta_dbs
 
 Then execute the following commands:
 
