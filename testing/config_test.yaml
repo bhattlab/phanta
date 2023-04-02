@@ -28,6 +28,11 @@ minimizer_thresh_viral: 0
 # same for bacterial
 cov_thresh_bacterial: 0.01
 minimizer_thresh_bacterial: 0
+# archaea, eukaryotes
+cov_thresh_arc: 0.01
+minimizer_thresh_arc: 0
+cov_thresh_euk: 0
+minimizer_thresh_euk: 0
 
 # Speciications for step three - per-species abundance estimation
 read_length: 150 # if you change this, make sure you have an appropriate Bracken database built for this read length
