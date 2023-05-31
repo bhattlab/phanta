@@ -4,9 +4,6 @@
 ![Workflow Figure](https://user-images.githubusercontent.com/86688164/223526361-9d0c141e-c977-445c-b2e9-3aeff368f274.png)
 Workflow figure created on BioRender.com.
 
-#  For citations
-If you used Phanta in your work, please cite our [preprint](https://www.biorxiv.org/content/10.1101/2022.08.05.502982v1.full.pdf)!
-
 # Table of contents
 1. [Quick Start](#quick-start)
 	* [Installation](#installation)
@@ -323,6 +320,10 @@ The output file will be called `integrated_prophages_detection_results.txt` and 
 	sample2   4034362   1680   48
 
 This line means that in sample2, there were 48 read pairs for which one end (e.g., forward read) would be independently classified to viral species 4034362, while the other end (e.g., reverse read) would be independently classified to bacterial species 1680. Thus, 4034362 is likely one of the viral species in sample2 that can be found as an integrated prophage, at least to some extent. 
+
+# Citation
+Pinto, Y., Chakraborty, M., Jain, N. et al. Phage-inclusive profiling of human gut microbiomes with Phanta. Nat Biotechnol (2023). https://doi.org/10.1038/s41587-023-01799-4
+https://www.nature.com/articles/s41587-023-01799-4
 
 # Troubleshooting
 ## Environment Creation
