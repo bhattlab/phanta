@@ -14,6 +14,12 @@ def main():
     host_prediction = pd.read_csv(host_file, sep="\t")
     #filteing-in only viral species
     profile_viral_species = profile[(profile.Taxon_Lineage_with_Names.str.contains("superkingdom_Viruses")) & (profile.Taxon_Lineage_with_Names.str.contains("species"))]
+    if profile_viral_species.empty:
+        header = "Taxon," + ",".join(profile.columns[2:])
+        with open(out, "w") as outf:
+            sys.stderr.write("No viral species present; exiting\n")
+            outf.write(header + "\n")
+        sys.exit()
     #merging dataframes by species taxonomy id
     species_taxa = profile_viral_species.Taxon_Lineage_with_IDs.str.split("_").str[-1]
     profile_viral_species.insert(loc=2, column='species_taxonomy', value=species_taxa.astype(int))
