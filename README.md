@@ -1,11 +1,12 @@
 # Phanta
 ## Rapidly quantify taxa from all domains of life, directly from short-read human gut metagenomes
-### The foundation of this workflow is a comprehensive, virus-inclusive database of genomes with integrated taxonomic information
-![Workflow Figure](https://user-images.githubusercontent.com/86688164/223526361-9d0c141e-c977-445c-b2e9-3aeff368f274.png)
-Workflow figure created on BioRender.com.
 
 # Important note through July 3, 2022
 You may not be able to download the databases until July 3, due to maintenance that is being performed on our servers. We apologize for the inconvenience!
+
+### The foundation of this workflow is a comprehensive, virus-inclusive database of genomes with integrated taxonomic information
+![Workflow Figure](https://user-images.githubusercontent.com/86688164/223526361-9d0c141e-c977-445c-b2e9-3aeff368f274.png)
+Workflow figure created on BioRender.com.
 
 # Citation
 Pinto, Y., Chakraborty, M., Jain, N. et al. Phage-inclusive profiling of human gut microbiomes with Phanta. Nat Biotechnol (2023). https://doi.org/10.1038/s41587-023-01799-4
