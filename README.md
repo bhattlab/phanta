@@ -1,8 +1,8 @@
 # Phanta
 ## Rapidly quantify taxa from all domains of life, directly from short-read human gut metagenomes
 
-# Important note through July 3, 2023
-You may not be able to download the databases until July 3, due to maintenance that is being performed on our servers. We apologize for the inconvenience!
+# Important note through July 5, 2023
+You may not be able to download the databases until July 5, due to maintenance that is being performed on our servers. We apologize for the inconvenience!
 
 ### The foundation of this workflow is a comprehensive, virus-inclusive database of genomes with integrated taxonomic information
 ![Workflow Figure](https://user-images.githubusercontent.com/86688164/223526361-9d0c141e-c977-445c-b2e9-3aeff368f274.png)
