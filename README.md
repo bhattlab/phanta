@@ -2,7 +2,7 @@
 ## Rapidly quantify taxa from all domains of life, directly from short-read human gut metagenomes
 
 # Important note 
-We apologize that due to recent maintenance on our computer servers, you may not be able to currently download the databases; we are actively looking into the issue and thank you for your patience while we sort this out. 
+We apologize that due to recent maintenance on our computer servers, you may not be able to currently download the databases; we are actively looking into the issue (as of 7/7) and thank you for your patience while we sort this out. 
 
 ### The foundation of this workflow is a comprehensive, virus-inclusive database of genomes with integrated taxonomic information
 ![Workflow Figure](https://user-images.githubusercontent.com/86688164/223526361-9d0c141e-c977-445c-b2e9-3aeff368f274.png)
