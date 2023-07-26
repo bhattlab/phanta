@@ -47,6 +47,8 @@ If you do not already have conda installed, please install using the instruction
 
 Create a new conda environment via the following command, replacing `/full/path/to/cloned/repo` with the appropriate path to your cloned repository:
 
+        # If you use strict or flexible channel priority, first remove the setting
+	conda config --set channel_priority false
 	conda env create -n phanta_env --file /full/path/to/cloned/repo/phanta_env.yaml
 
 Activate the environment by executing:
