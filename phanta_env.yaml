@@ -1,5 +1,5 @@
+name: phanta_envs
 channels:
-  - biobakery
   - conda-forge
   - bioconda
   - defaults
@@ -17,6 +17,7 @@ dependencies:
   - attrs=22.1.0=pyh71513ae_1
   - backports=1.0=py_2
   - backports.functools_lru_cache=1.6.4=pyhd8ed1ab_0
+  - bc=1.07.1=h7f98852_0
   - bcrypt=3.2.2=py310h5764c6d_0
   - binutils_impl_linux-64=2.36.1=h193b22a_2
   - blast=2.5.0=hc0b0e79_3
@@ -29,10 +30,10 @@ dependencies:
   - bwidget=1.9.14=ha770c72_1
   - bzip2=1.0.8=h7f98852_4
   - c-ares=1.18.1=h7f98852_0
-  - ca-certificates=2022.6.15=ha878542_0
+  - ca-certificates=2023.7.22=hbcca054_0
   - cachetools=5.2.0=pyhd8ed1ab_0
   - cairo=1.16.0=ha61ee94_1012
-  - certifi=2022.6.15=py310hff52083_0
+  - certifi=2023.7.22=pyhd8ed1ab_0
   - cffi=1.15.1=py310h255011f_0
   - charset-normalizer=2.1.0=pyhd8ed1ab_0
   - coin-or-cbc=2.10.8=h3786ebc_0
@@ -44,7 +45,7 @@ dependencies:
   - commonmark=0.9.1=py_0
   - configargparse=1.5.3=pyhd8ed1ab_0
   - connection_pool=0.0.3=pyhd3deb0d_0
-  - cryptography=37.0.1=py310h9ce1e76_0
+  - cryptography=38.0.2=py310h600f1e7_2
   - curl=7.83.1=h2283fc2_0
   - dataclasses=0.8=pyhc8e2a94_3
   - datrie=0.8.2=py310h6acc77f_3
@@ -151,7 +152,7 @@ dependencies:
   - ncurses=6.3=h27087fc_1
   - numpy=1.23.2=py310h53a5b5f_0
   - oauth2client=4.1.3=py_0
-  - openssl=3.0.5=h166bdaf_1
+  - openssl=3.1.1=hd590300_0
   - packaging=21.3=pyhd8ed1ab_0
   - pandas=1.4.3=py310h769672d_0
   - pango=1.50.9=hc4f8a73_0
