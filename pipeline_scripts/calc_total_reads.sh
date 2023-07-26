@@ -2,6 +2,12 @@
 
 # arguments: 1) sample name, 2) directory where Kraken2/Bracken reports are, 3) path to output file
 
+# Check if "bc" command is available
+if ! command -v bc &> /dev/null; then
+    echo "Error: 'bc' calculator is not installed."
+    exit 1
+fi
+
 # first - calculate total reads in the sample - add total reads classified under root
 # by Kraken2 and total reads unclassified by Kraken2
 
