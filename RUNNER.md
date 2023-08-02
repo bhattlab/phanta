@@ -47,6 +47,11 @@ optional arguments:
 * `-c CORES`: number of cores to use for the pipeline
 * `--run`: will run snakemake, otherwise will just create the configuration files and print the command to run
 
+If your FASTQ files are not denoted by `_R1` and `_R2` to demark the paired ends,
+you can specify the suffixes with `--fwd` and `--rev`:
+* `--fwd`: forward read suffix [default: `_R1`]
+* `--rev`: reverse read suffix [default: `_R2`]
+
 ## Environment variables
 
 To avoid passing the database path, you can set:
