@@ -1,7 +1,7 @@
 # Run Phanta
 
 At the root of this repository you will find a helper script to automatically
-run Phanta given an input directory with the FASTQ files: `run_phanta.py`.
+run Phanta given an input directory with the FASTQ files: `run_phanta.py` - contributed by @telatin.
 
 The script will create a config file (`config.yaml`) and a samplesheet (`mapping.txt`)
 and can be run, from the same environment as Phanta, as follows:
