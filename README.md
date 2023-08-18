@@ -10,7 +10,7 @@ Pinto, Y., Chakraborty, M., Jain, N. et al. Phage-inclusive profiling of human g
 https://www.nature.com/articles/s41587-023-01799-4
 
 # Updates
-* 18 Aug 2023 - Thanks to Phanta user @telatin, we now have added a runner script (run_phanta.py) to the root of this repository. This runner script may simplify regular Phanta execution. For usage instructions, please see [RUNNER.md](https://github.com/bhattlab/phanta/blob/main/RUNNER.md). Please note that we have not tested this extensively and we recommend reading through the below information before trying to execute Phanta with the runner script.
+* **18 Aug 2023** - Thanks to Phanta user @telatin, we now have added a runner script (run_phanta.py) to the root of this repository. This runner script may simplify Phanta execution, especially if you use Phanta regularly. For usage instructions, please see [RUNNER.md](https://github.com/bhattlab/phanta/blob/main/RUNNER.md). Please note that we have not tested this extensively and we recommend reading through the below information before trying to execute Phanta with the runner script.
 
 # Table of contents
 1. [Quick Start](#quick-start)
