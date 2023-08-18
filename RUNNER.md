@@ -7,12 +7,10 @@ The script will create a config file (`config.yaml`) and a samplesheet (`mapping
 and can be run, from the same environment as Phanta, as follows:
 
 ```text
-usage: python run_phanta.py [-h] [-i INPUT_DIR] [-s SAMPLE_SHEET] [-p PHANTA_DIR]
-                  [-d DB_DIR] -o OUTPUT_DIR [-l READ_LENGTH] [-c CORES]
-                  [-t THREADS] [-w WORK_DIR] [-b BAC_COV] [-v VIR_COV]
-                  [-e EUK_COV] [-a ARC_COV] [-f CONFIDENCE]
-                  [-br BRACKEN_FILTER] [-ng] [-k] [--fwd FWD] [--rev REV]
-                  [--verbose] [--run] [--wait]
+usage: python run_phanta.py [-h] [-i INPUT_DIR] [-s SAMPLE_SHEET] [-p PHANTA_DIR] [-d DB_DIR] -o OUTPUT_DIR
+                  [-l READ_LENGTH] [-c CORES] [-t THREADS] [-w WORK_DIR] [-b BAC_COV] [-v VIR_COV]
+                  [-e EUK_COV] [-a ARC_COV] [-f CONFIDENCE] [-br BRACKEN_FILTER] [-ng] [-k] [--fwd FWD]
+                  [--rev REV] [--verbose] [--run] [--wait]
 
 optional arguments:
   -h, --help            show this help message and exit
@@ -21,13 +19,13 @@ optional arguments:
   -s SAMPLE_SHEET, --sample-sheet SAMPLE_SHEET
                         Alternative to input directory
   -p PHANTA_DIR, --phanta-dir PHANTA_DIR
-                        Phanta directory
+                        Phanta directory [default: /oak/stanford/scg/lab_asbhatt/mchakra/phaging/phanta]
   -d DB_DIR, --db-dir DB_DIR
                         Phanta directory [default: None]
   -o OUTPUT_DIR, --output-dir OUTPUT_DIR
                         Output directory
   -l READ_LENGTH, --read_length READ_LENGTH
-                        Read length
+                        Read length [default: 150]
   -c CORES, --cores CORES
                         Total cores [default: 1]
   -t THREADS, --threads THREADS
@@ -35,20 +33,20 @@ optional arguments:
   -w WORK_DIR, --work-dir WORK_DIR
                         Scripts directory [default: tempdir]
   -b BAC_COV, --bac_cov BAC_COV
-                        Bacterial coverage threshold
+                        Bacterial coverage threshold [default: 0.01]
   -v VIR_COV, --vir_cov VIR_COV
-                        Viral coverage threshold
+                        Viral coverage threshold [default: 0.1]
   -e EUK_COV, --euk_cov EUK_COV
-                        Eukaryotic coverage threshold
+                        Eukaryotic coverage threshold [default: 0]
   -a ARC_COV, --arc_cov ARC_COV
-                        Archaeal coverage threshold
+                        Archaeal coverage threshold [default: 0.01]
   -f CONFIDENCE, --confidence CONFIDENCE
-                        Kraken2 classiifcation confidence
+                        Kraken2 classification confidence [default: 0.1]
   -br BRACKEN_FILTER, --bracken_filter BRACKEN_FILTER
-                        Bracken reads threshold
+                        Bracken reads threshold [default: 10]
   -ng, --nongzipped     Specify if your files aren't gzipped
   -k, --keepintermediate
-                        Specify if you want to keep inte files
+                        Specify if you want to keep intermediate files
   --fwd FWD             Forward read suffix [default: _R1]
   --rev REV             Reverse read suffix [default: _R2]
   --verbose             Verbose output
