@@ -143,7 +143,7 @@ if __name__=="__main__":
     args.add_argument("-b", "--bac_cov", help="Bacterial coverage threshold [default: 0.01]", type=float, default=0.01)
     args.add_argument("-v", "--vir_cov", help="Viral coverage threshold [default: 0.1]", type=float, default=0.1)
     args.add_argument("-e", "--euk_cov", help="Eukaryotic coverage threshold [default: 0]", type=float, default=0)
-    args.add_argument("-a", "--arc_cov", help="Archaeal coverage threshold [default: 0.01]", type=float, default=0.1)
+    args.add_argument("-a", "--arc_cov", help="Archaeal coverage threshold [default: 0.01]", type=float, default=0.01)
     args.add_argument("-f", "--confidence", help="Kraken2 classification confidence [default: 0.1]", type=float, default=0.1)
     args.add_argument("-br", "--bracken_filter", help="Bracken reads threshold [default: 10]", type=int, default=10)
     
