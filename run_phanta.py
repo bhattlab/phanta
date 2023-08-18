@@ -133,12 +133,12 @@ if __name__=="__main__":
     args.add_argument("-s", "--sample-sheet", help="Alternative to input directory")
 
     args.add_argument("-p", "--phanta-dir", help="Phanta directory [default: %(default)s]", default=DEFAULT_PHANTA_DIR)
-    args.add_argument("-d", "--db-dir", help="Phanta directory [default: %(default)s]", default=DEFAULT_PHANTA_DB_DIR)
+    args.add_argument("-d", "--db-dir", help="Phanta database directory [default: %(default)s]", default=DEFAULT_PHANTA_DB_DIR)
     args.add_argument("-o", "--output-dir", help="Output directory", required=True)
     args.add_argument("-l", "--read_length", help="Read length [default: 150]", type=int, default=150)
     args.add_argument("-c", "--cores", help="Total cores [default: %(default)s]", type=int, default=1)
     args.add_argument("-t", "--threads", help="Total threads [default: %(default)s]", type=int, default=16)
-    args.add_argument("-w", "--work-dir", help="Scripts directory [default: tempdir]")
+    args.add_argument("-w", "--work-dir", help="Directory for the newly created config + sample sheet files [default: tempdir]")
     
     args.add_argument("-b", "--bac_cov", help="Bacterial coverage threshold [default: 0.01]", type=float, default=0.01)
     args.add_argument("-v", "--vir_cov", help="Viral coverage threshold [default: 0.1]", type=float, default=0.1)
