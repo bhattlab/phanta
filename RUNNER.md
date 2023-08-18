@@ -19,7 +19,7 @@ optional arguments:
   -s SAMPLE_SHEET, --sample-sheet SAMPLE_SHEET
                         Alternative to input directory
   -p PHANTA_DIR, --phanta-dir PHANTA_DIR
-                        Phanta directory [default: /oak/stanford/scg/lab_asbhatt/mchakra/phaging/phanta]
+                        Phanta directory 
   -d DB_DIR, --db-dir DB_DIR
                         Phanta directory [default: None]
   -o OUTPUT_DIR, --output-dir OUTPUT_DIR
