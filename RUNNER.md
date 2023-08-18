@@ -21,7 +21,7 @@ optional arguments:
   -p PHANTA_DIR, --phanta-dir PHANTA_DIR
                         Phanta directory 
   -d DB_DIR, --db-dir DB_DIR
-                        Phanta directory [default: None]
+                        Phanta database directory [default: None]
   -o OUTPUT_DIR, --output-dir OUTPUT_DIR
                         Output directory
   -l READ_LENGTH, --read_length READ_LENGTH
