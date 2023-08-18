@@ -6,12 +6,6 @@ run Phanta given an input directory with the FASTQ files: `run_phanta.py`.
 The script will create a config file (`config.yaml`) and a samplesheet (`mapping.txt`)
 and can be run, from the same environment as Phanta, as follows:
 
-```bash
-python run_phanta.py --db <DB_DIR> -i <input_dir> -o <output_dir>  [--run]
-```
-
-## Synopsis
-
 ```text
 usage: python run_phanta.py [-h] [-i INPUT_DIR] [-s SAMPLE_SHEET] [-p PHANTA_DIR]
                   [-d DB_DIR] -o OUTPUT_DIR [-l READ_LENGTH] [-c CORES]
