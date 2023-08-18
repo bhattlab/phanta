@@ -31,7 +31,7 @@ optional arguments:
   -t THREADS, --threads THREADS
                         Total threads [default: 16]
   -w WORK_DIR, --work-dir WORK_DIR
-                        Scripts directory [default: tempdir]
+                        Directory for the newly created config + sample sheet files [default: tempdir]
   -b BAC_COV, --bac_cov BAC_COV
                         Bacterial coverage threshold [default: 0.01]
   -v VIR_COV, --vir_cov VIR_COV
