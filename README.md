@@ -12,7 +12,7 @@ https://www.nature.com/articles/s41587-023-01799-4
 # Updates
 * **28 Sep 2023** - New Phanta [Databases](https://github.com/bhattlab/phanta/blob/main/databases.md)!
 1) Utilizing the Unified Human Gut Virome Catalog [(UHGV)](https://github.com/snayfach/UHGV) for the viral portion of Phanta database instead of MGV+Refseq Viral.
-2) The default Phanta database used HumGut for its prokaryotic portion. As HumGut filtered out low prevalent bacteria (like Salmonela Enterica) we have compiled an additional database with UHGG2.0 as the dource for the prokaryotic portion.
+2) The default Phanta database used HumGut for its prokaryotic portion. As HumGut filtered out lowly prevalent bacteria (like Salmonella enterica) we have compiled an additional database with UHGG2.0 as the source for the prokaryotic portion.
 * **18 Aug 2023** - Thanks to Phanta user @telatin, we now have added a runner script (run_phanta.py) to the root of this repository. This runner script may simplify Phanta execution, especially if you use Phanta regularly. For usage instructions, please see [RUNNER.md](https://github.com/bhattlab/phanta/blob/main/RUNNER.md). Please note that we have not tested this extensively and we recommend reading through the below information before trying to execute Phanta with the runner script.
 
 # Table of contents
