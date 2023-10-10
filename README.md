@@ -6,7 +6,7 @@
 Workflow figure created on BioRender.com.
 
 # Citation
-Pinto, Y., Chakraborty, M., Jain, N. et al. Phage-inclusive profiling of human gut microbiomes with Phanta. Nat Biotechnol (2023). https://doi.org/10.1038/s41587-023-01799-4
+Pinto, Y., Chakraborty, M., Jain, N. et al. Phage-inclusive profiling of human gut microbiomes with Phanta. Nature Biotechnology (2023). https://doi.org/10.1038/s41587-023-01799-4
 
 # Updates
 * **28 Sep 2023** - New Phanta [Databases](https://github.com/bhattlab/phanta/blob/main/databases.md)!
