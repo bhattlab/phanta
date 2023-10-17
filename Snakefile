@@ -52,9 +52,9 @@ sample_names = sample_reads.keys()
 # also determine whether gzipped
 # print(config['gzipped'] == True)
 if config['gzipped'] == True:
-   gzipped_string = '--gzip-compressed'
+  gzipped_string = '--gzip-compressed'
 else:
-   gzipped_string = ''
+  gzipped_string = ''
 
 # also read in desired confidence threshold for Kraken
 confidence_threshold = config['confidence_threshold']
@@ -278,23 +278,24 @@ rule prepare_to_merge_normed: # normalized versions of to_merge files produced i
 
 rule merge_counts_normed: # make the 3 tables we want! :)
   input:
-    expand(join(outdir, "classification/{samp}.krak.report_bracken_species.filtered.to_merge"), samp=sample_names),
-    expand(join(outdir, "classification/{samp}.krak.report_bracken_species.filtered.to_merge.norm_brack"), samp=sample_names),
-    failed_file = join(outdir, "classification/samples_that_failed_bracken.txt")
+    to_merge_list = expand(join(outdir, "classification/{samp}.krak.report_bracken_species.filtered.to_merge"), samp=sample_names),
+    to_merge_norm_list = expand(join(outdir, "classification/{samp}.krak.report_bracken_species.filtered.to_merge.norm_brack"), samp=sample_names)
   output:
-    list1=temp(join(outdir, "classification/counts_tables.txt")),
-    list2=temp(join(outdir, "classification/norm_brack_tables.txt")),
-    counts=join(outdir, "final_merged_outputs/counts.txt"),
-    norm_brack=join(outdir, "final_merged_outputs/relative_read_abundance.txt")
+    counts = join(outdir, "final_merged_outputs/counts.txt"),
+    norm_brack = join(outdir, "final_merged_outputs/relative_read_abundance.txt")
   params:
-    repo_dir = config['pipeline_directory'],
-    classdir=join(outdir, "classification"),
-    finaldir=join(outdir, "final_merged_outputs")
+    repo_dir = config['pipeline_directory']
+  threads: config['class_threads']
   shell: """
-    ls {params.classdir}/*to_merge | rev | cut -d'/' -f 1 | rev > {params.classdir}/counts_tables.txt
-    ls {params.classdir}/*norm_brack | rev | cut -d'/' -f 1 | rev > {params.classdir}/norm_brack_tables.txt
-    Rscript {params.repo_dir}/pipeline_scripts/merging_bracken_tables.R {params.classdir} {params.finaldir} \
-    {input.failed_file} {output.list1} {output.list2}
+    python {params.repo_dir}/pipeline_scripts/merge.py \
+    --threads {threads} \
+    --input-file {input.to_merge_list} \
+    --output-file {output.counts}
+
+    python {params.repo_dir}/pipeline_scripts/merge.py \
+    --threads {threads} \
+    --input-file {input.to_merge_norm_list} \
+    --output-file {output.norm_brack}
     """
 
 ##### STEP SIX - Correct species abundances reported by Bracken for genome length.
@@ -321,21 +322,18 @@ rule scale_bracken:
 
 rule merge_scaled_bracken:
   input:
-    expand(join(outdir, "classification/{samp}.krak.report.filtered.bracken.scaled"), samp=sample_names),
-    failed_file = join(outdir, "classification/samples_that_failed_bracken.txt")
+    to_merge_list = expand(join(outdir, "classification/{samp}.krak.report.filtered.bracken.scaled"), samp=sample_names)
   output:
-    list=temp(join(outdir, "classification/scaled_reports.txt")),
-    merged_temp=temp(join(outdir, "classification/relative_taxonomic_abundance_temp.txt")),
-    merged_final=join(outdir, "final_merged_outputs/relative_taxonomic_abundance.txt")
+    merged_final = join(outdir, "final_merged_outputs/relative_taxonomic_abundance.txt")
   params:
     repo_dir = config['pipeline_directory'],
-    classdir=join(outdir, "classification"),
-    finaldir=join(outdir, "final_merged_outputs"),
-    db=config['database']
+    db = config['database']
   shell: """
-    ls {params.classdir}/*scaled | rev | cut -d'/' -f 1 | rev > {params.classdir}/scaled_reports.txt
-    Rscript {params.repo_dir}/pipeline_scripts/merging_scaled_bracken.R {params.classdir} {output.list} {input.failed_file}
-    python {params.repo_dir}/pipeline_scripts/merging_scaled_bracken.py {params.db} {output.merged_temp} {params.finaldir}
+    python {params.repo_dir}/pipeline_scripts/merging_scaled_bracken.py \
+    --db {params.db} \
+    --threads {threads} \
+    --input-file {input.to_merge_list} \
+    --output-file {output.merged_final}
     """
 
 ##### STEP SEVEN - Move and/or delete certain "intermediate" files.
