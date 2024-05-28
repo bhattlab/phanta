@@ -111,7 +111,7 @@ Usage: `python calculate_genome_size.py /path/to/database/folder`
 
 There are two files you will need to create:
 
-1. host_prediction_to_genus.tsv
+1. host_prediction_to_genus.tsv - for usage of the `post_pipeline_scripts/collapse_viral_abundances_by_host.py` script.
     1. This tab-separated file should contain two columns, named `species_taxa` and `Host genus`. The first column should contain viral species taxids, and the second should contain the predicted host.  
     2. You can predict a host using many different tools, for example using [iPHoP](https://bitbucket.org/srouxjgi/iphop/src/main/). You do not need to assign a host for every viral species and thus you can omit some viral species from the host_prediction_to_genus file.
     3. Here are the first five lines of host_prediction_to_genus.tsv for the default Phanta database, as an example:
@@ -124,9 +124,9 @@ species_taxa	Host genus
 4005427	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Oscillospirales;f__Oscillospiraceae;g__UBA738
 ```
 
-1. species_name_to_vir_score.txt
+2. species_name_to_vir_score.txt - for usage of the `post_pipeline_scripts/calculate_lifestyle_stats/lifestyle_stats.R` script.
     1. This tab-separated file should contain two columns with no header.
-    2. First column contains the species name - second column contains the predicted ‘virulence score’ (from 0 to 1). To get this score, you can use [BACPHLIP](https://github.com/adamhockenberry/bacphlip) or a similar tool.
+    2. First column contains the viral species name - second column contains the predicted ‘virulence score’ (from 0 to 1). To get this score, you can use [BACPHLIP](https://github.com/adamhockenberry/bacphlip) or a similar tool.
     3. Here are the first five lines of species_name_to_vir_score.txt for the default Phanta database, as an example:
 
 ```jsx
