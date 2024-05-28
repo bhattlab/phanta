@@ -66,7 +66,7 @@ Each line of the nodes.dmp file specifies a parent-child taxonomic relationship.
 nodes_file.write(str(taxid) + "\t|\t" + str(parent_taxid) + "\t|\t" + rank + "\t|\t-\t|\n")
 ```
 
-If you would like some suggestions about how to designate taxonomic relationships between viral genomes, please see “Suggestions for viral taxonomy” below.
+If you would like some suggestions about how to designate taxonomic relationships between viral genomes, please see “Suggestions for viral taxonomy” [below](https://github.com/bhattlab/phanta/blob/main/databases.md#suggestions-for-viral-taxonomy).
 
 Now, create a new empty folder for your database. **Put the names.dmp/nodes.dmp** into a subfolder called `taxonomy`.
 
