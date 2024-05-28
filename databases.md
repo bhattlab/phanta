@@ -41,11 +41,11 @@ Phanta is based on Kraken2/Bracken. As a result, as you can see above, the main 
 
 ### Steps to make a Phanta database
 
-### Step one: create a custom Kraken2 database.
+### Step 1: create a custom Kraken2 database.
 
 You can either follow the recommendations of the Kraken2 developers [here](https://github.com/DerrickWood/kraken2/blob/master/docs/MANUAL.markdown#custom-databases), or the recommendations below. 
 
-#### Step 1A: define taxonomic relationships between the genomes in your database.
+### Step 1A: define taxonomic relationships between the genomes in your database.
 
 For every genome in the database, you will need to have both a taxonomic ID and the name. Additionally, you will need this information for all higher taxonomic ranks in the lineage of each genome. 
 
@@ -70,7 +70,7 @@ If you would like some suggestions about how to designate taxonomic relationship
 
 Now, create a new empty folder for your database. **Put the names.dmp/nodes.dmp** into a subfolder called `taxonomy`.
 
-#### Step 1B: gather all the genomes that you would like to include in your database.
+### Step 1B: gather all the genomes that you would like to include in your database.
 
 Create a multifasta file with all the genomes that you would like to add to your database. Then assign each genome a unique taxonomic ID. Put this unique taxonomic ID in the header line for each genome, in the following format:
 
@@ -85,11 +85,11 @@ Then formally “add” them to the database using the following command (adjust
 
 `kraken2-build --add-to-library path_to_fasta_file --db path_to_database_folder --threads 8`
 
-#### Step 1C: create the Kraken2 database via the following command.
+### Step 1C: create the Kraken2 database via the following command.
 
 `kraken2-build --build --db path_to_database_folder --threads 8`  
 
-#### Step 1D: “inspect” the Kraken2 database to check that the taxonomic relationships in the database are consistent with what you aimed to specify.
+### Step 1D: “inspect” the Kraken2 database to check that the taxonomic relationships in the database are consistent with what you aimed to specify.
 
 `kraken2-inspect --db path_to_database_folder --report-zero-counts --threads 8 > inspect.out`
 
@@ -101,13 +101,13 @@ This command will generate an “inspection report” - we recommend checking th
 
 Adjust the threads and -l argument as necessary (this specifies the read length for the sequences that will be classified with this Bracken database). Note that you can create multiple Bracken DBs for each database, for each of the different read lengths you desire.
 
-#### Step 3: calculate genome size.
+### Step 3: calculate genome size.
 
 Utilize the `calculate_genome_size.py` script provided in the `pipeline_scripts` subfolder of this repo. 
 
 Usage: `python calculate_genome_size.py /path/to/database/folder` 
 
-#### Step 4 (optional): create files necessary for using the postprocessing scripts.
+### Step 4 (optional): create files necessary for using the postprocessing scripts.
 
 There are two files you will need to create:
 
@@ -137,7 +137,7 @@ Rotavirus C     0.8118782016546136
 Alfalfa mosaic virus    0.8118782016546136
 ```
 
-#### Suggestions for viral taxonomy
+### Suggestions for viral taxonomy
 
 - Cluster the genomes to the species-level using a 95% ANI threshold (85% alignment fraction), as recommended by [MIUViG](https://www.nature.com/articles/nbt.4306). In the default Phanta database, we chose to include all the genomes in the final database; we designated each genome as a “strain” of the relevant species cluster.
 - Then assign higher ranks. As described in the [methods](https://www.nature.com/articles/s41587-023-01799-4#Sec19) of the Phanta paper, you can use clustering to assign some of the higher ranks (e.g., genus). However, as also mentioned in the methods, we recommend to eventually merge the clustering-based taxonomy with a well-recognized viral taxonomy, such as ICTV.
