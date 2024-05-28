@@ -75,7 +75,7 @@ Then execute the following commands:
 	tar xvzf database_V1.tar.gz
 
 The list of files that should be extracted is detailed [here](https://github.com/bhattlab/phanta/blob/main/databases.md).
-*Note* alternative databases are also available, please see our [databases list](https://github.com/bhattlab/phanta/blob/main/databases.md).
+*Note* alternative databases are also available, please see our [databases list](https://github.com/bhattlab/phanta/blob/main/databases.md). As described on that page, you can also make a custom Phanta DB.
 
 ## Test Your Installation
 
