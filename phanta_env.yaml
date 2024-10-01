@@ -9,4 +9,4 @@ dependencies:
   - r-base
   - r-stringr
   - r-dplyr
-  - snakemake=7.12
+  - snakemake>=7.15.2
