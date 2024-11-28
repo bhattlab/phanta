@@ -9,6 +9,7 @@
 | [HumGut + UHGV "MQ+"](http://ab_phanta.os.scg.stanford.edu/Phanta_DBs/humgut_uhgv_mqplus_v1.tar.gz)  | HumGut | UHGV ($\ge$ medium-quality genomes)  | N | NCBI | Same as default database but replacing the viral portion with new viral genome catalog [UHGV](https://github.com/snayfach/UHGV). Here we included UHGV genomes $\ge$ medium-quality |
 | [HumGut + UHGV "HQ+"](http://ab_phanta.os.scg.stanford.edu/Phanta_DBs/humgut_uhgv_hqplus_v1.tar.gz)  | HumGut | UHGV ($\ge$ high-quality genomes)  | N | NCBI | Same as previous line but using only $\ge$ high-quality UHGV genomes |
 | [UHGGv2 + UHGV "MQ+"](http://ab_phanta.os.scg.stanford.edu/Phanta_DBs/uhgg2_uhgv_v2.tar.gz)  | UHGGV2 | UHGV ($\ge$ medium-quality genomes)  | N | GTDB | UHGGv2 for prokaryotic portion; UHGV for viral portion ($\ge$ medium-quality genomes) |
+| [MAGIC](https://zenodo.org/doi/10.5281/zenodo.10369093) | MAGIC_pMAGs | MAGIC_vMAGs |  N | GTDB |The Metagenome-Assembled Genome Inventory for Children (MAGIC) facilitates early-life gut bacteriome and virome studies |
 
 ## Each database should include the following files:
 
