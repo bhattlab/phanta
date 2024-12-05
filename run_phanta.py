@@ -70,9 +70,12 @@ def make_mapping(input_dir, output_file, for_tag, rev_tag):
     found = 0
     with open(output_file, "w") as fh:
         for basename, paths in files.items():
-            if "forward" in paths and "reverse" in paths:
+            if "forward" in paths:
                 found += 1
-                print(basename, paths["forward"], paths["reverse"], sep="\t", file=fh)
+                if "reverse" in paths:
+                    print(basename, paths["forward"], paths["reverse"], sep="\t", file=fh)
+                else:
+                    print(basename, paths["forward"], sep="\t", file=fh)
                 logger.debug("Adding sample: %s" % basename)
     logger.info("Found %d samples" % found)
     
