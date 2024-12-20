@@ -65,6 +65,8 @@ you can specify the suffixes with `--fwd` and `--rev`:
 * `--fwd`: forward read suffix [default: `_R1`]
 * `--rev`: reverse read suffix [default: `_R2`]
 
+Samples will be treated as single-end if a file is found for the forward reads but not for the reverse reads.
+
 ## Environment variables
 
 To avoid having to pass the database path as an argument, you can set:
