@@ -33,7 +33,7 @@ for samp in sample_names:
         pass
       else:
         # look up bracken_classified_reads
-        brack_classified_reads = int(samp_name_to_reads[samp])
+        brack_classified_reads = 0 if samp_name_to_reads[samp] == '' else int(samp_name_to_reads[samp])
         for line in infile:
           line=line.rstrip('\n').split('\t')
           lin_names, lin_taxids, num_reads = line[0], line[1], float(line[2])
