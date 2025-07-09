@@ -10,3 +10,4 @@ dependencies:
   - r-stringr
   - r-dplyr
   - snakemake=7.15.2
+  - kraken2=2.1.6
