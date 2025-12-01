@@ -338,26 +338,7 @@ This line means that in sample2, there were 48 read pairs for which one end (e.g
 # Troubleshooting
 ## Environment Creation
 
-If you have trouble creating the environment specified by `phanta_env.yaml` following the instructions [above](#installation), you can alternatively install the required packages stepwise, into a fresh conda environment, using the instructions below.
-
-Package list:
-1. bracken v2.7
-2. kraken2 v2.1.2
-3. pandas (pipeline developed with v1.4.3 but anything higher should also work)
-4. numpy ("" 1.23.2 "")
-5. r-base ("" 4.1.3 "")
-6. r-stringr ("" 1.4.0 "")
-7. r-dplyr ("" 1.0.9 "")
-8. snakemake (pipeline developed with v7.12.1 and we have heard of issues with v7.3+)
-
-Example set of commands that should install all of the above (including the dependencies) into a fresh environment:
-
-	conda create -n phanta_env_alternate
-	conda activate phanta_env_alternate
-	conda install -c bioconda bracken=2.7
-	conda install pandas
-	conda install -c conda-forge r-base r-stringr r-dplyr
-	conda install -c bioconda snakemake=7.12
+If you have trouble creating the environment specified by `phanta_env.yaml` following the instructions [above](#installation), you can alternatively install the required packages stepwise, into a fresh conda environment. Then you can proceed with testing the pipeline as specified [above](#test-your-installation).
 
 ## Stalled Snakemake Pipeline
 
