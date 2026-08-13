@@ -2,7 +2,7 @@
 
 | Name/Link  | Prokaryotic Portion | Viral Portion  | Prophage-masked? | Taxonomy for Prokaryotic Portion | Comments |
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
-| [Default database](http://ab_phanta.os.scg.stanford.edu/Phanta_DBs/unmasked_db_v1.01.tar.gz)  | HumGut | MGV + RefSeq viral  | N | NCBI | Default database (as described in our manuscript) |
+| [Default database](http://ab_phanta.os.scg.stanford.edu/Phanta_DBs/unmasked_db_v1.01.tar.gz)  | HumGut | MGV + RefSeq viral  | N | NCBI | Default database (as described in our manuscript). In addition to the files described below, you can download the “library” folder, which contains FASTA files for the genomes in the database, [here](http://ab_phanta.os.scg.stanford.edu/Phanta_DBs/database_V1.library.tar.gz).|
 | [Masked version of default database](http://ab_phanta.os.scg.stanford.edu/Phanta_DBs/masked_db_v1.tar.gz)  | HumGut | MGV + RefSeq viral  | Y | NCBI | Prophage-masked version of default database (as described in our manuscript) |
 | [Default database - GTDB](http://ab_phanta.os.scg.stanford.edu/Phanta_DBs/unmasked_db_v1_gtdb.tar.gz)  | HumGut | MGV + RefSeq viral  | N | GTDB | Default database with GTDB taxonomy for prokaryotic portion |
 | [UHGGV2 + MGV](http://ab_phanta.os.scg.stanford.edu/Phanta_DBs/uhgg2_mgv_v1.tar.gz)  | UHGGV2 | MGV + RefSeq viral  | N | GTDB | Default database with UHGGv2 replacing HumGut. UHGGv2 includes low-prevalence prokaryotes filtered by HumGut |
